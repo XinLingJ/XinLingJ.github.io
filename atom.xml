@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
     <title>LLW</title>
-    <updated>2019-07-11T13:55:45.812Z</updated>
+    <updated>2019-07-11T14:02:04.225Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
     <link rel="self" href="https://XinLingJ.github.io//atom.xml"/>
@@ -17,8 +17,8 @@
         </link>
         <updated>2019-07-11T02:13:13.000Z</updated>
         <content type="html"><![CDATA[<table>
-        <caption>Css</caption>
-        <tr style="margin:5px;">
+        <caption style="color: #317fd8;font-size:15px;">Css</caption>
+        <tr>
             <td style="background: rgba(151, 214, 241, 0.7);">1</td>
 					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
 					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
@@ -30,7 +30,7 @@
 	      <tr>
             <td style="background: rgba(151, 214, 241, 0.7);">1</td>
 					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
+					  <td style="background: rgba(151, 214, 241, 0.7); text-algin:center">asdddddddd1</td>
 					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
 					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
 					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
