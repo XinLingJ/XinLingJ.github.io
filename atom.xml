@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
     <title>LLW</title>
-    <updated>2019-07-11T05:17:22.777Z</updated>
+    <updated>2019-07-11T13:26:35.423Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
     <link rel="self" href="https://XinLingJ.github.io//atom.xml"/>
@@ -16,8 +16,38 @@
         <link href="https://XinLingJ.github.io//post/biao-ti-yi">
         </link>
         <updated>2019-07-11T02:13:13.000Z</updated>
-        <content type="html"><![CDATA[<p>测试一下</p>
-]]></content>
+        <content type="html"><![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+    td{
+        background: rgba(151, 214, 241, 0.7);
+        box-shadow: 1px 1px 1px 0px #378cee;
+    }
+</style>
+<body>
+    <table cellspacing="8" cellpadding="5">
+        <caption>Css</caption>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2asddddddddddddddd</td>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+    </table>
+</body>
+</html>]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
