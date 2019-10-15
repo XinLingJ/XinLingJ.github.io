@@ -3,8 +3,8 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>阿达 | LLW</title>
-<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1570966949825">
+<title>React | LLW</title>
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1571126325476">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://XinLingJ.github.io/">
-  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1570966949825" alt="">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1571126325476" alt="">
   </a>
   <h1 class="site-title">
     LLW
@@ -74,17 +74,298 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              阿达
+              React
             </h2>
             <div class="post-info">
               <time class="post-time">
                 · 2019-10-13 ·
               </time>
               
+                <a href="https://XinLingJ.github.io//tag/gridea" class="post-tag">
+                  # Gridea
+                </a>
+              
             </div>
             
+              <div class="post-feature-image" style="background-image: url('https://XinLingJ.github.io//post-images/a-da.jpeg')">
+              </div>
+            
             <div class="post-content">
-              <p>刚刚</p>
+              <p>三大框架：
+vue（mvvm）最火的:知道的人越来越多，国产的
+react（v）最流行的：使用的人最多，欧洲比较火
+angular（mvc）最早的</p>
+<!-- more -->
+<p>库：小而巧，可以从一个库切换到另一个库，比较方便使用
+框架：大而全：框架提供了一整套的解决方案，如果中途想换框架，比较难</p>
+<!-- more -->
+<p>react：用于构建用户界面的 JavaScript 库
+react和vue对比：
+模块化:从代码的复用角度来分析的，主要将一些可以重复利用的代码抽离形成单独的文件，利于项目的维护和开发
+组件化:从ui界面的角度来分析的，主要将一些可以复用的ui元素抽离为单独的组件，利于项目的维护和开发
+组件：
+vue:Vue.component()
+xxx.vue
+template(结构)   script(行为)   style(样式)
+react:组件中结构、行为、样式都使用js语言实现。
+团队：
+react团队比较强大，发行时间早</p>
+<!-- more -->
+<p>1:下载使用：
+react.js     reactDOM.js     babel.js
+react:https:// unpkg.com/react@16/umd/react.development.js
+// https://unpkg.com/react@16/umd/react.production.min.js
+react-dom:// https://unpkg.com/react-dom@16/umd/react-dom.development.js
+// https://unpkg.com/react-dom@16/umd/react-dom.production.min.js</p>
+<p>babel:Babel 是一个 JavaScript 编译器
+用于将 ECMAScript 2015+ 版本的代码转换为向后兼容的 JavaScript 语法，以便能够运行在当前和旧版本的浏览器或其他环境中
+https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js</p>
+<pre><code>	2:元素渲染： ReactDOM.render(x,挂载点元素)
+</code></pre>
+<h2 id="3组件定义31-标签组件var-xreactcreateelementdivtitlexxxdiv的内容32-jsx语法script-typetextbabelvar-xh1-title1111a-hrefxxx我是超链接abra-hrefxxx我是超链接2ah1reactdomrenderx挂载点元素33-函数式的组件var-elementfunctionreturn-h1-title1111a-hrefxxx我是超链接abra-hrefxxx我是超链接2ah1reactdomrenderxdocumentgetelementbyidapp首字母大写reactdomrenderelementelementdocumentgetelementbyidappreactdomrenderelementdocumentgetelementbyidapp34-es6语法class-els-extends-reactcomponentrenderreturn-ulli11111lili11111lili11111lili11111lili11111liul4数据绑定-变量-表达式-双向绑定thissetstatexxxxxx属性绑定-titlexxx-v-bind-类名绑定-classname-classactivetrue样式绑定-style-thisobj-stylethisobjcoloryellow事件绑定-onclickthisfn3-v-on-click循环绑定条件绑定作业悬浮变色-thisstatebxxxxxxxxxxxx">3:组件定义：
+3.1 标签组件
+var x=React.createElement(&quot;div&quot;,{title:xxx},&quot;div的内容&quot;)
+3.2 JSX语法
+script type=&quot;text/babel&quot;
+var x=<h1 title="1111">
+<a href="xxx">我是超链接</a>
+<br/>
+<a href="xxx">我是超链接2</a>
+</h1>
+ReactDOM.render(x,挂载点元素)
+3.3 函数式的组件：
+var Element=function(){
+return (
+<h1 title="1111">
+<a href="xxx">我是超链接</a>
+<br/>
+<a href="xxx">我是超链接2</a>
+</h1>
+)
+}
+//ReactDOM.render(x(),document.getElementById(&quot;app&quot;))
+首字母大写
+//ReactDOM.render(<Element></Element>,document.getElementById(&quot;app&quot;))
+ReactDOM.render(<Element/>,document.getElementById(&quot;app&quot;))
+3.4 es6语法：
+class Els extends React.Component{
+render(){
+return (
+<ul>
+<li>11111</li>
+<li>11111</li>
+<li>11111</li>
+<li>11111</li>
+<li>11111</li>
+</ul>
+)
+}
+}
+4:数据绑定：     {变量、表达式}            {{}}
+双向绑定：this.setState({xxx:xxx})
+属性绑定：     title={xxx}               v-bind   :
+类名绑定       className={}             :class={active:true}
+样式绑定       style={ this.obj }       :style={}
+this.obj={color:&quot;yellow&quot;}
+事件绑定       onClick={()=&gt;{this.fn(3)}}                  v-on  @click
+循环绑定
+条件绑定<br>
+作业
+悬浮变色：  this.state.b==xxxx?xxxx:xxxx</h2>
+<h2 id="react02回顾三个文件reactjs-react-domjs-babeljs高版本的js向后兼容让浏览器可以识别渲染元素reactdomrenderels挂在点组件元素组件jsx-javascript-xmlscript-typetextbabelscriptvar-elsdivdiv函数式var-elsfunctionreturn-div11111divreactdomrenderelsappes6语法class-els-extends-reactcomponentstateconstructorsuperthisstatea10renderreturn-div11111div数据渲染-thissetstateaxxx属性绑定titlethisstatea-v-bind-类名绑定classname-classactivetrue样式绑定styleobj-objcolorred-style事件绑定onclickthisfnxx">react02
+回顾
+三个文件：react.js   react-dom.js   babel.js(高版本的js向后兼容，让浏览器可以识别)
+渲染元素：
+ReactDOM.render(<Els/>,挂在点)
+组件：
+元素组件：JSX---javaScript XML
+<script type="text/babel"></script>
+var Els=<div></div>
+函数式：
+var els=function(){
+return (<div>11111<div>)
+}
+ReactDOM.render(els(),app)
+ES6语法：
+class Els extends React.Component{
+//state={}
+constructor(){
+super()
+this.state={
+a:10
+}
+}
+render(){
+return (<div>11111</div>)
+}
+}
+数据渲染：{}                        {{}}
+this.setState({a:xxx})
+属性绑定：title={this.state.a}      v-bind :
+类名绑定：className={}              :class={active:true}
+样式绑定：style={obj}  obj={color:red}   :style={}
+事件绑定：onClick={()=&gt;{this.fn(xx)}}</h2>
+<h2 id="1悬浮变色2条件绑定thisstatea5thisstatea10li11111lili33333lili22222lithisstatea5-liaaaaalithisstatea5-libbbbbli如果组件的内容比较长可以单独设置为独立的js文件然后引入到页面中3循环渲染arrmapfunctionvireturn-livli4fetch发送ajaxfetchhttplocalhost3000vuenums0thenfunctionres-consolelogresreturn-resjsonthenfunctiond-_thissetstatearrdarr5lunbo练习lunbo26生命周期httpsreact-1251415695cos-websiteap-chengdumyqcloudcomdocsreact-componenthtml创建前-后-挂在前-后-更新前-后-销毁前-后61-挂载当组件实例被创建并插入-dom-中时constructorstatic-getderivedstatefrompropsrendercomponentdidmount主要62-更新当组件的-props-或-state-发生变化时会触发更新static-getderivedstatefrompropsrendercomponentdidupdate主要63-卸载当组件从-dom-中移除时会调用componentwillunmount64-错误处理当渲染过程生命周期或子组件的构造函数中抛出错误时static-getderivedstatefromerrorcomponentdidcatch7组件传值父-子props父组件-stateaaaa子组件-自定义属性xxxx子组件子组件中thispropsshu子-父子组件-自定义事件父的属性函数子组件中thisprops自定义事件data父组件中属性nthissetstatexxn">1:悬浮变色
+2:条件绑定：
+{this.state.a&gt;=5?this.state.a&lt;10?(<li>11111</li>):(<li>33333</li>):(<li>22222</li>)}
+{this.state.a&gt;5 &amp;&amp; (<li>aaaaa</li>)}
+{this.state.a&lt;=5 &amp;&amp; (<li>bbbbb</li>)}
+如果组件的内容比较长，可以单独设置为独立的js文件，然后引入到页面中		
+3:循环渲染：
+arr.map(function(v,i){return (<li>{v}</li>)})
+4:fetch:发送ajax
+fetch(&quot;http://localhost:3000/vue?nums=0&quot;)
+.then(function(res){
+// console.log(res)
+return res.json()
+})
+.then(function(d){  						
+_this.setState({arr:d.arr})
+})
+5:lunbo练习：lunbo2
+6:生命周期：https://react-1251415695.cos-website.ap-chengdu.myqcloud.com/docs/react-component.html
+创建前、后----挂在前、后---更新前、后---销毁前、后
+6.1 挂载：当组件实例被创建并插入 DOM 中时
+constructor
+static getDerivedStateFromProps()
+render()
+componentDidMount():主要
+6.2 更新：当组件的 props 或 state 发生变化时会触发更新
+static getDerivedStateFromProps()
+render()
+componentDidUpdate:主要
+6.3 卸载：当组件从 DOM 中移除时会调用
+componentWillUnmount()
+6.4 错误处理：当渲染过程，生命周期，或子组件的构造函数中抛出错误时
+static getDerivedStateFromError()
+componentDidCatch()
+7:组件传值：
+父--子：props
+父组件 state={a:aaa}
+&lt;子组件  自定义属性=xxxx&gt;&lt;/子组件&gt;
+子组件中：this.props.shu
+子--父：子组件  自定义事件={父的属性：函数}<br>
+子组件中：this.props.自定义事件(data)
+父组件中：属性=(n)=&gt;{
+this.setState({xx:n}
+)</h2>
+<h2 id="zuoye轮播自动">zuoye:轮播自动</h2>
+<p>reac03
+复习：
+生命周期：
+挂载:constructor---- static getDerivedStateFromProps()----render----componentDidMount
+更新:static getDerivedStateFromProps()---render---componentDidUpdate
+卸载:componentWillUnmount()
+报错:componentDidCatch()
+组件的传值：
+父--子：<my-com shu={this.state.a}/>
+<div>this.props.shu</div>
+子--父：子：b=100;
+<my-com ziC={this.fn}/>
+&lt;button onClick={()=&gt;{this.fn1()}}&gt;</button>
+fn1(){
+this.props.ziC(this.state.b)
+}
+父:
+fn(n){
+this.setState({a:n})
+}
+1:插槽：slot:组件中的内容可以在子组件中显示
+this.props.children
+2:脚手架：
+node:express-generator
+vue:vue-cli
+react:create-react-app:一个构建React单页面应用的脚手架工具
+3:安装：
+全局安装：
+npm install create-react-app -g
+构建项目：
+create-react-app xxx
+cd  xxx
+npm  start：运行
+3:文件的组成
+node_modules---依赖包
+public:静态文件
+src:源码：app.js   index.js
+packgage.json---配置文件</p>
+<p>public：index.html是首页
+src:index.js---渲染文件
+App.js:组件的内容</p>
+<p>4:npm cache clean --force:清除npm缓存
+5:修改端口地址：
+node_modules---react-scripts---scripts---start.js--xxx
+6:卸载：npm uninstall -g create-react-app
+7:vs code----编辑器
+8:src中创建一个components文件
+组件为jsx文件
+格式：
+import React,{Component} from &quot;react&quot;;</p>
+<pre><code>  class A1 extends  React.Component{
+  	 render(){
+  		 return (
+  		   &lt;div&gt;111111&lt;/div&gt;
+  		 )
+  	 }
+  }
+  
+  export default A1;
+</code></pre>
+<h2 id="引入appjs中import-a1-from-componentsmod1使用-a1a1或者-a19jsx注释-mainmain">引入：app.js中
+import A1 from &quot;./components/mod1&quot;
+使用: <A1></A1>或者  <A1/>
+9:jsx:注释：  {/**  <Main></Main> */}</h2>
+<p>作业
+在组件的基础上
+点击按钮时：切换轮播图和悬浮变色
+轮播为完整轮播图</p>
+<h2 id="悬浮的标记为数据库的数据形成分页">悬浮的标记为数据库的数据，形成分页</h2>
+<p>react04
+1:作业
+图片：public：直接同级文件找就可以
+组件中：require(&quot;./img/xxx.jpg&quot;)
+&lt;img src={require(&quot;./img/banner&quot;+(i+1)+&quot;.jpg&quot;)}/&gt;
+2:返回的数据是标记时:__html固定的</p>
+  <p dangerouslySetInnerHTML={{__html:v.password}}></p>
+3:路由：react-router-dom
+  3.1 安装：
+      npm install react-router-dom --save
+  3.2 引入：
+      import {BrowserRouter,Link,Route} from "react-router-dom"
+  3.3 使用：
+      <BrowserRouter>
+	       超链接的格式
+           <Link to="/">demo01</Link>/
+           <Link to="/bb">lunbo</Link>/
+           <Link to="/cc">demo02</Link>/
+<pre><code>	   路由地址
+      &lt;Route exact path=&quot;/&quot; component={Demo01}&gt;&lt;/Route&gt;
+      &lt;Route exact path=&quot;/bb&quot; component={Lunbo}&gt;&lt;/Route&gt;
+      &lt;Route exact path=&quot;/cc&quot; component={Demo02}&gt;&lt;/Route&gt;
+  &lt;/BrowserRouter&gt;
+</code></pre>
+<p>3.4 exact:精确匹配
+3.5 路由传参：
+<Route path="/cc">
+<Route exact path="/cc" component={Demo02}></Route>
+<Route exact path="/cc/:nums" component={Demo02}></Route>
+</Route>
+传参：
+<Link to="/cc/30">demo02传参1</Link>/
+获取数据：
+constructor和componentDidUpdate()中获取
+constructor(props){//props需要写入
+super(props)
+console.log(this.props.match.params.nums)//字符类型
+}
+3.6 子路由
+需要在父路由地址的基础上，写子路有
+父路由：/aaa
+子路由：/aaa/xxx/:n
+在组件中如果需要写子路有，不需要引入BrowserRouter,需要引入Link和Route
+4:componentDidUpdata(pre)：
+在这个中不能直接使用setState():会陷入无限循环，所以，需要判断
+pre:之前的数据
+if(this.props.match.params.n!=prevState.match.params.n)</p>
 
             </div>
           </article>
@@ -93,9 +374,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://XinLingJ.github.io//post/shi-shi-zhe-ge">
+            <a href="https://XinLingJ.github.io//post/biao-ti-yi">
               <h3 class="post-title">
-                试试这个
+                Vue
               </h3>
             </a>
           </div>

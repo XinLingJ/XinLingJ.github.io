@@ -3,8 +3,8 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>标题一 | LLW</title>
-<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1570966949825">
+<title>Vue | LLW</title>
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1571126325476">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://XinLingJ.github.io/">
-  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1570966949825" alt="">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1571126325476" alt="">
   </a>
   <h1 class="site-title">
     LLW
@@ -74,7 +74,7 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              标题一
+              Vue
             </h2>
             <div class="post-info">
               <time class="post-time">
@@ -83,28 +83,864 @@
               
             </div>
             
+              <div class="post-feature-image" style="background-image: url('https://XinLingJ.github.io//post-images/biao-ti-yi.jpeg')">
+              </div>
+            
             <div class="post-content">
-              <table>
-        <caption style="color: #317fd8;">Css</caption>
-        <tr>
-            <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);text-algin:center">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-				  	<td style="background: rgba(151, 214, 241, 0.7);">1</td>
-        </tr>
-	      <tr>
-            <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7); text-algin:center">asdddddddd1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-					  <td style="background: rgba(151, 214, 241, 0.7);">1</td>
-				  	<td style="background: rgba(151, 214, 241, 0.7);">1</td>
-        </tr>
-    </table>
+              <p>vue.js:</p>
+<p>库:jq----js的库
+插件:实现某个功能：轮播图
+框架:库和插件同时使用，有自己的语法：bootstrap</p>
+<p>vue\react\angular
+Vue.js是一套构建用户界面的框架，只关注是图层，容易上手等。
+vue:可以实现数据的双向绑定：MVVM
+Vue:可以做到结构和数据的分离，类似于ejs</p>
+<p>##优点:
+轻量
+数据双向绑定
+组件化/模块化
+有内置指令或自定义指令
+提供了其他功能：路由、ajax等</p>
+<p>MVC和MVVM设计模式?
+MVC:Module(模型)  view(视图)  controller(控制器)
+MVC是单向通信
+View跟Model，必须通过Controller来承上启下</p>
+<h2 id="mvvmvuemmodule指的是后端传递的数据vview指的是所看到的页面vmviewmodule它是连接view和model的桥梁-一是将模型转化成视图即将后端传递的数据转化成所看到的页面-实现的方式是数据绑定二是将视图转化成模型即将所看到的页面转化成后端的数据-实现的方式是dom-事件监听视图和模型是不能直接通信的1什么是vue渐进式框架-使用mvvm设计模式将数据和页面进行分离同时可以实现数据的双向绑定2mvvm和mvchttpbaijiahaobaiducomsid1596277899370862119wfrspiderforpc">MVVM:vue
+M:module:指的是后端传递的数据
+v:view:指的是所看到的页面
+vm:viewModule:它是连接view和model的桥梁。
+一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定
+二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是：DOM 事件监听
+视图和模型是不能直接通信的
+1:什么是vue?
+渐进式框架   使用mvvm设计模式将数据和页面进行分离，同时可以实现数据的双向绑定
+2:mvvm和mvc?
+http://baijiahao.baidu.com/s?id=1596277899370862119&amp;wfr=spider&amp;for=pc</h2>
+<p>vue01:
+1:怎么使用vue？
+1.1 下载vue，script引入
+1.2 CDN地址
+1.3 npm下载
+2:实例化vue
+new Vue({
+el:&quot;#app&quot;,//挂载vue实例的位置
+data:{
+message:&quot;hello world&quot;
+}</p>
+<h2 id="3模板语言变量语句message4指令v-xxx写在元素上类似属性的格式41-v-cloak不需要表达式在vue实例没有准备好之前不显示xxxx内容当实例加载成功才显示数据通常与cssv-cloakdisplaynone配合使用42-v-textmsg代替msg显示数据p-v-textmsgp43-v-htmlmsg修改元素的innerhtml将标记渲染44-v-showxx根据变量的布尔值切换元素的displaynoneblocktrue-blockfalse-none先进行boolean转换在判断显示隐藏45-v-ifxx如果表达式成立添加该元素如果不成立移除元素他与v-show不同是dom操作移除和渲染元素-div-v-ifbool12bool120我是div1divv-else不需要表达式前一个必须是v-if或者v-else-if如果条件不成立执行该语句div-v-ifbool12bool120我是div1divdiv-v-else我是div2divv-else-ifxxxxif的多个条件div-v-ifbool12bool110我是div1divdiv-v-else-ifbool110bool120我是div2divdiv-v-else我是div3div46-v-forxxxx循环循环数组li-v-fori-in-arrili加索引和元素li-v-foritemidx-in-arridxitemli如果是对象表示属性值-属性名li-v-forvk-in-objkvli47-v-once不需要表达式只渲染元素和组件一次-48-v-model在表单控件或者组件上创建双向绑定-divmsgdivinput-typetext-v-modelmsg5template不会显示该标记但是可以显示其内容可以用作一次渲染多个元素时template-v-ifbooldiv11111diva-href超链接1atemplate6数组的修改操作原数组pushshiftunshiftpopsplicesortreverse不操作原数组需要使用新数组替换当前数组filter-concat-slicevmarrvmarrconcatbbbccc7获取数据实例化的对象数据vmarr8v-on绑定事件81-v-on事件名fnv-onclickadd82-简写clickadd83-js中需要将事件写在methods对象上var-vmnew-vueelappdatacount0arr123methodsaddfunctionstrethiscountconsoleloge如果不传参数可以不写括号如果有参数加括号84-事件修饰符使用表示的指令后缀来调用修饰符-stop阻止事件冒泡div-clickstoppreventseconddivprevent阻止默认事件capture添加事件监听时使用事件捕获模式self当事件在元素本身不是子元素触发时触发回调once事件只执行一次-按键修饰符监听键盘事件时可以使用按键修饰符enter回车tabtab键delete删除和后退esc退出space空格updownleftright上下左右ctrlaltshiftmetawindow键-commond键或者keycode键盘码为13时-v-onkeyup13xx或者keyup13">})
+3:模板语言：{{变量,语句}}
+{{message}}
+4:指令：
+v-xxx:写在元素上，类似属性的格式
+4.1 v-cloak:不需要表达式
+在vue实例没有准备好之前，不显示{{xxxx}}内容，当实例加载成功，才显示数据
+通常与css:[v-cloak]{display:none}配合使用
+4.2 v-text=&quot;msg&quot;:代替{{msg}},显示数据
+<p v-text="msg"></p>
+4.3 v-html=&quot;msg&quot;:修改元素的innerHTML：将标记渲染	
+4.4 v-show=&quot;xx&quot;:根据变量的布尔值，切换元素的display:none/block
+true----block
+false---none
+先进行boolean转换，在判断显示隐藏
+4.5 v-if=&quot;xx&quot;:如果表达式成立，添加该元素，如果不成立，移除元素
+他与v-show不同，是dom操作，移除和渲染元素。
+<div v-if="bool1>2&&bool1<20">我是div1</div>
+v-else:不需要表达式：前一个必须是v-if或者v-else-if
+如果条件不成立，执行该语句
+<div v-if="bool1>2&&bool1<20">我是div1</div>
+<div v-else>我是div2</div>
+v-else-if=&quot;xxxx&quot;:if的多个条件
+<div v-if="bool1>2&&bool1<10">我是div1</div>
+<div v-else-if="bool1>=10&&bool1<=20">我是div2</div>
+<div v-else>我是div3</div>
+4.6 v-for=&quot;xxxx&quot;:循环：
+循环数组：
+<li v-for="i in arr">{{i}}</li>
+加索引和元素;
+<li v-for="(item,idx) in arr">
+{{idx}}.{{item}}
+</li>
+如果是对象：表示属性值、属性名
+<li v-for="(v,k) in obj">
+{{k}}:{{v}}
+</li>
+4.7 v-once:不需要表达式:只渲染元素和组件一次。
+4.8 v-model:在表单控件或者组件上创建双向绑定。
+<div>{{msg}}</div>
+<input type="text" v-model="msg">
+5:template:不会显示该标记，但是可以显示其内容，可以用作一次渲染多个元素时
+<template v-if="bool">
+<div>11111</div>
+<a href="">超链接1</a>
+</template>
+6:数组的修改：
+操作原数组：
+push\shift\unshift\pop\splice\sort\reverse:
+不操作原数组，需要使用新数组替换当前数组：
+filter、concat、slice
+vm.arr=vm.arr.concat([&quot;bbb&quot;,&quot;ccc&quot;])
+7:获取数据：
+实例化的对象.数据
+vm.arr
+8:v-on:绑定事件：
+8.1 v-on:事件名=&quot;fn&quot;
+v-on:click=&quot;add&quot;
+8.2 简写：@click=&quot;add&quot;
+8.3 js中：
+需要将事件写在methods对象上
+var vm=new Vue({
+el:&quot;#app&quot;,
+data:{
+count:0,
+arr:[1,2,3]
+},
+methods:{
+add:function(str,e){
+this.count++;
+console.log(e)
+}
+}
+})
+如果不传参数，可以不写括号，如果有参数，加括号
+8.4 事件修饰符：使用.表示的指令后缀来调用修饰符。
+.stop:阻止事件冒泡:&lt;div @click.stop.prevent=&quot;second&quot;&gt;</div>
+.prevent：阻止默认事件
+.capture:添加事件监听时使用事件捕获模式
+.self:当事件在元素本身（不是子元素）触发时触发回调
+.once:事件只执行一次
+-按键修饰符：监听键盘事件时，可以使用按键修饰符:
+.enter:回车
+.tab:tab键
+.delete:删除和后退
+.esc:退出
+.space:空格
+.up/.down/.left/.right:上下左右
+.ctrl/.alt/.shift/.meta(window键、commond键)
+或者keyCode:
+键盘码为13时。
+v-on:keyup.13=&quot;xx&quot;
+或者
+@keyup.13=&quot;&quot;</h2>
+<h2 id="1加减2tab栏3项目">1:加减
+2:tab栏
+3:项目</h2>
+<p>vue2
+1:MVVM----m:model   v---view   vm--viewModel
+2:实例化：
+new Vue({
+el:&quot;#app&quot;,
+data:{</p>
+<pre><code> },
+ methods:{
+	 
+ }
+</code></pre>
+<h2 id="3模板语言xxxx4指令v-textv-html渲染标记v-showdisplaynoneblockv-if操纵domv-else-ifv-elsev-forvalidx-in-arrv-forvalkeys-in-objv-once只渲染一次v-cloak在数据加载之前不显示标记v-cloakdisplaynonev-onclick-clickstop-prevent-enter-esc-v-model实现数据双向绑定">})
+3:模板语言：
+{{xxxx}}
+4:指令：
+v-text
+v-html:渲染标记
+v-show:display:none/block
+v-if:操纵DOM
+v-else-if
+v-else
+v-for=&quot;(val,idx) in arr&quot;
+v-for=&quot;(val,keys) in obj&quot;
+v-once:只渲染一次
+v-cloak:在数据加载之前，不显示标记，[v-cloak]{display:none}
+v-on:click=&quot;&quot;------@click=&quot;&quot;
+.stop    .prevent   .enter   .esc .....
+v-model:实现数据双向绑定</h2>
+<p>1：Vue类的属性和方法
+new Vue({}):属性和方法
+el  data  methods
+var vm=new Vue()---vm:属性和方法
+vm.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>v</mi><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">el
+	   vm.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">m</span><span class="mord">.</span></span></span></span>data
+Vue静态类
+指令
+2:指令:
+v-pre:正常输出内容，不进行渲染数据，怎么写的怎么输出。
+v-bind:用来绑定属性，或者class、style等
+语法糖：:src=&quot;a&quot;
+<img v-bind:src="a" alt="">
+<div v-for="(item,idx) in arr" :id="'box'+item.id">
+{{item.desc}}
+</div>
+绑定class：
+通过对象的形式，判断属性值，如果为true，则使用该类名
+<p :class="{'active':a,'boxs':b}">1111</p>
+通过数组的形式，直接将数据的值作为类名
+<div :class="[isActive,isBox]"></div>
+isActive:&quot;active&quot;,
+isBox:&quot;boxs&quot;
+绑定style:
+<div :style="{'color':cols,'font-size':size+'px'}">11111</div>
+<div :style="styles">11111</div>
+styles:{
+color:'yellow',
+fontSize:&quot;30px&quot;
+}
+v-model:数据绑定
+text：
+<p>{{msg}}</p>
+<input type="text" v-model="msg">
+radio：
+单一的单选按钮：直接绑定checked属性，变量为true，则选中
+<input type="radio" :checked="res" >
+多个单选：v-model的变量与任意一个value值相同，则选中
+<input type="radio" name="sex" value="js" v-model="che">js
+<input type="radio" name="sex" value="html" v-model="che">html
+<input type="radio" name="sex" value="css" v-model="che">css
+js:  che:&quot;html&quot;
+checkbox:
+单独的多选，也是绑定checked属性,与单选一致
+多个多选按钮时，需要设置数组，数组的值与value值相等的就被选中
+<input type="checkbox" value="111" v-model="arr">html
+<input type="checkbox" value="222" v-model="arr">js
+<input type="checkbox" value="333" v-model="arr">css
+arr:[&quot;111&quot;&quot;222&quot;]
+select:
+单选时，
+<select v-model="sel">
+<option>html</option>
+<option>css</option>
+<option value="javascript">js</option>
+</select>
+js:  sel:&quot;javascript&quot;
+多选时，使用数组，与多选按钮一致。
+3:计算属性:解决模板内表达式过长或复杂。</p>
+<ul>
+<li>计算属性中可以完成各种复杂的逻辑，包括运算、函数调用等，只要最后返回一个值即可。</li>
+<li>写在computed选项中，内部是不同的函数，最后返回值即可。  <div id="app">
+	{{res}}
+  </div>
+  computed:{
+  	res:function(){
+  		return this.msg.split(",").reverse().join(".")
+  	}
+  }
+</li>
+<li>多个实例之间可以互相使用数据，
+app2使用app1的数据，需要app1.xxxx</li>
+<li>计算属性缓存与method区别：缓存与method的区别
+<ul>
+<li>使用methods也可以实现computed的效果，区别是什么？
+计算属性缓存：计算属性只有在相关依赖发生改变时才会重新求值，只有相应数据变化时，才会执行对应的getter
+而methods内的所有方法，在事件执行时就会都重新触发。
+所以计算属性用在较大量的计算和改变频率较低的属性</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h2 id="vue03new-vueeldatamethodscomputedvar-vmnew-vuevm-el-datavue静态类component指令v-textv-htmlv-showv-ifv-else-ifv-elsev-forv-modelv-on-clickv-bind-srcxxv-cloakv-once1shopping2操作数据库ajax分页ajax发送请求-路由查询数据库反数据-len12arrajax接收数据并给vue中设置-页面中展示vue的数据-3vue的生命周期及钩子函数也属于选项vue从创建到销毁的一个过程创建前-后-挂载前-后-更新前-后-销毁前-后beforecreate组件实例刚被创建但是数据挂载等都还没有写入created数据挂载完毕beforemount渲染数据之前mounted数据渲染完毕beforeupdate更新前updated更新后activated组件激活时deactivated组件移除时beforedestroy销毁前destroyed销毁后errorcaptured子孙组件错误时被调用">vue03:
+new Vue({}):el,data,methods,computed,
+var vm=new Vue():vm: $el  $data
+Vue静态类：component
+指令：v-text\v-html\v-show\v-if\v-else-if\v-else\v-for\v-model\v-on---@click
+v-bind--:src=&quot;xx&quot;\v-cloak\v-once
+1:shopping
+2:操作数据库：ajax+分页：
+ajax：发送请求---
+路由：查询数据库，反数据----len:12,arr:[]
+ajax接收数据，并给vue中设置。
+页面中展示vue的数据。
+3：vue的生命周期及钩子函数：也属于选项
+vue从创建到销毁的一个过程：
+创建前、后---挂载前、后-----更新前、后-----销毁前、后
+beforeCreate：组件实例刚被创建，但是数据，挂载等都还没有写入
+created:数据挂载完毕
+beforeMount：渲染数据之前
+mounted：数据渲染完毕
+beforeUpdate:更新前
+updated：更新后
+activated:组件激活时
+deactivated：组件移除时
+beforeDestroy：销毁前
+destroyed：销毁后
+errorCaptured：子孙组件错误时被调用</h2>
+<h2 id="练习1修改为jqueryajax2vue写轮播图组件08component2">练习：
+1：修改为jqueryAjax
+2；vue写轮播图
+组件：08component2</h2>
+<h2 id="vue041轮播图2组件是可复用的-vue-实例且带有一个名字使代码提高重用性-不需要写el但是需要写template21-全局组件vuecomponent名字必须在实例化之前注册-任何实例中都可以使用当前的组件-名字是自己定义的组件名template写标记注意如果有多个同级元素需要使用一个标记包裹-datafunctionreturn-data是函数需要返回一个数据methods事件正常使用可以进行嵌套组件的使用-22-局部组件在某个实例内部注册只能在当前实例挂载的dom元素内使用其他挂载元素不能用componentsvar-vmnew-vueelapp1datamsghello1componentsmy-comchildaaachild13组件之间的传值31-父组件-子组件props单向的只能父-子my-com-kkmsgmy-com组件中propskktemplatedivkkdiv实例中datamsg11111如果组件绑定的属性有连字符-props中定义的时候需要写成驼峰式命名法my-msg-mymsg32-子组件-父组件使用自定义事件321-子组件emit自定义事件传输的数据-my-button-nnums-jianshaochangesmy-button-组件-methodsdownthisemitjianshaothisdatas实例methodschangesnthisnumsn322-父组件用v-model来监听子组件触发的自定义事件-v-model也可以用在父组件上默认触发的是input事件emit中第一个事件设置为input-my-button-nnums-v-modelnumsmy-buttonmethodsdownthisemitinputthisdatas33-非父子组件之间1创建一个空的vue实例bus作为中间仓库传值2使用busemit传值-3使用buson接收值">vue04:
+1:轮播图
+2:组件：是可复用的 Vue 实例，且带有一个名字,使代码提高重用性。
+不需要写el，但是需要写template
+2.1 全局组件：Vue.component(&quot;名字&quot;,{})
+必须在实例化之前注册。
+任何实例中都可以使用当前的组件。
+名字：是自己定义的组件名
+{}：template:写标记，注意，如果有多个同级元素，需要使用一个标记包裹。
+data:function(){
+return {}
+}:data是函数，需要返回一个数据
+methods:{}:事件正常使用
+可以进行嵌套组件的使用。
+2.2 局部组件：在某个实例内部注册：只能在当前实例挂载的dom元素内使用，其他挂载元素不能用
+components:{}
+var vm=new Vue({
+el:&quot;#app1&quot;,
+data:{
+msg:&quot;Hello1&quot;
+},
+components:{
+&quot;my-com&quot;:Child,
+&quot;aaa&quot;:child1
+}
+})
+3:组件之间的传值：
+3.1 父组件--子组件：props：单向的，只能父-子
+<my-com :kk="msg"></my-com>
+组件中：props:[&quot;kk&quot;]
+template:&quot;<div>{{kk}}</div>&quot;
+实例中：data:{
+msg:&quot;11111&quot;
+}
+如果组件绑定的属性有连字符-，props中定义的时候，需要写成驼峰式命名法
+:my-msg-----myMsg
+3.2 子组件--父组件：使用自定义事件
+3.2.1 子组件:<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …(){
+						this.'>emit(&quot;自定义事件&quot;,传输的数据)
+			  &lt;my-button :n=&quot;nums&quot; @jianshao=&quot;changes&quot;&gt;&lt;/my-button&gt;
+			  组件：
+				  methods:{
+					down(){
+						this.</span>emit(&quot;jianshao&quot;,this.datas)
+}
+}
+实例;
+methods:{
+changes(n){			
+this.nums=n	
+}
+}
+3.2.2 父组件用v-model来监听子组件触发的自定义事件。
+- v-model也可以用在父组件上，默认触发的是input事件
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …(){
+						this.'>emit()中第一个事件设置为input
+			 &lt;my-button :n=&quot;nums&quot;  v-model=&quot;nums&quot;&gt;&lt;/my-button&gt;
+				methods:{
+					down(){
+						this.</span>emit(&quot;input&quot;,this.datas)
+}
+}<br>
+3.3 非父子组件之间：
+1：创建一个空的Vue实例bus，作为中间仓库传值
+2：使用bus.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>i</mi><mi>t</mi><mo>(</mo><mo>)</mo><mo>:</mo><mi mathvariant="normal">传</mi><mi mathvariant="normal">值</mi><mn>3</mn><mi mathvariant="normal">：</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi>b</mi><mi>u</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">emit():传值
+      3：使用bus.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">传</span><span class="mord cjk_fallback">值</span><span class="mord">3</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">b</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>on():接收值。</h2>
+<p>练习
+作业
+1:数值减少增加：必须写
+2:输入值改变：</p>
+<p>数字输入框组件 input-number
++ - 按钮可以增加或减少，当大于或小于最大值、最小值时，需要按钮不能点击
+max--min绑定在组件上：</p>
+<pre><code>	 需要父子数据同步，用到自定义事件。
+	 
+     失去焦点时，判断是否是数字，如果是判断数字是不是在min-max之间，如果不再则等于min或max，如果在则等于输入的值。
+</code></pre>
+<hr>
+<h2 id="全局vuecomponent名字templatedatamethoddatafunctionreturn-局部-components名字组件传值父-子props子-父自定义事件-thisemit事件名传值-非父子new-vue-busemit-buson">全局：Vue.component(&quot;名字&quot;,{template,data,method}):data:function(){return {}}
+局部: components:{名字:{}}
+组件传值：
+父--子：props:[]
+子--父：自定义事件：  this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>i</mi><mi>t</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">事</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi mathvariant="normal">传</mi><mi mathvariant="normal">值</mi><mo>)</mo><mi mathvariant="normal">非</mi><mi mathvariant="normal">父</mi><mi mathvariant="normal">子</mi><mi mathvariant="normal">：</mi><mi>n</mi><mi>e</mi><mi>w</mi><mi>V</mi><mi>u</mi><mi>e</mi><mo>(</mo><mo>)</mo><mo>−</mo><mo>−</mo><mo>−</mo><mo>−</mo><mi>b</mi><mi>u</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">emit(&quot;事件名&quot;,传值)
+   非父子：new Vue()----bus.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord cjk_fallback">事</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">名</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">传</span><span class="mord cjk_fallback">值</span><span class="mclose">)</span><span class="mord cjk_fallback">非</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mopen">(</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord mathdefault">b</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>emit()    bus.$on()</h2>
+<p>vue05:
+1:自定义指令：
+1.1 全局指令：任何实例中都可以使用。
+Vue.directive(&quot;名字&quot;,{钩子函数})
+钩子函数：
+bind：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置
+inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。
+update：数据变化时
+componentUpdated：指令所在组件的 VNode 及其子 VNode 全部更新后调用。
+unbind：只调用一次，指令与元素解绑时调用。
+函数中的参数：api
+el:使用该命令的元素
+binding:是个对象，含有所需要的数据等属性。
+vnode、oldVnode
+1.2 局部：只能该实例中使用。
+directives:{
+&quot;colors&quot;:{
+bind:function(el,binding){
+el.style.background=&quot;red&quot;
+}
+}
+}
+练习：增加删除元素。
+2:过滤器：filter
+全局：
+{{num | filter}}
+Vue.filter(&quot;Fixed&quot;,function(v){
+return v.toFixed(2)
+})
+局部：
+filters:{
+&quot;aa&quot;:function(v){
+return &quot;!!!!&quot;
+}
+}</p>
+<ul>
+<li>可以使用多个过滤器：{{num | filter | aa}}</li>
+<li>可以传参数：{{num | filter(2)}}
+Vue.filter(&quot;Fixed&quot;,function(v,n){
+return v.toFixed(n)
+})
+3:watch:监听某个变量的变化。属于new Vue({})里面的选项
+4:render:渲染：可以用来渲染标记,可以写在组件中，替代template
+c:createElement:创建标签
+render:function(c){
+参数为：标记名，内容
+return c(&quot;h1&quot;,22222)
+可以嵌套，参数为数组
+return c(&quot;h1&quot;,[
+&quot;hello&quot;,
+c(&quot;span&quot;,&quot;world&quot;),
+])
+}</li>
+</ul>
+<hr>
+<h2 id="作业练习1指令v-colorsred背景颜色随参数改变v-animatenum点击按钮向左向右元素移动对应的numpx2过滤器sij-内容截取i-j的部分">作业：
+练习
+1：指令：v-colors=“red”：背景颜色随参数改变
+v-animate=&quot;num&quot;:点击按钮，向左向右：元素移动对应的numpx；
+2：过滤器：.s(i,j)----内容截取i-j的部分</h2>
+<p>vue：MVVM--M:model   v--view   vm--viewModel
+var  vm = new Vue({
+选项：
+el:&quot;#app&quot;,
+data:{},
+methods:{},
+computed:{},
+components:{},
+filters:{},
+directives:{},
+生命周期钩子函数：
+创建前/后----挂在前/后----更新前/后----销毁前/后
+beforeCreate---created
+beforeMount---mounted
+beforeUpdate--updated
+beforeDestroy---destroyed
+})
+Vue.component(&quot;名字&quot;，{})
+Vue.filter(&quot;名字&quot;,{})
+Vue.directive(&quot;名字&quot;,{})</p>
+<p>vm.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>v</mi><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">el
+vm.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">m</span><span class="mord">.</span></span></span></span>data</p>
+<h2 id="指令v-text输出数据v-htmlv-showtrue显示v-ifv-else-ifv-elsev-forvi-in-arr-v数组的每一项-i-索引vk-in-obj-v-属性值-k-属性名v-modelmsg-数据的双向绑定v-once-只渲染一次v-bind绑定属性-srcxxxv-on绑定事件-clickaddevent-stop-prevent-v-cloak数据加载之前不显示-v-cloakdisplaynone-v-pre怎么写入怎么输出组件传值-父-子props子-父自定义事件-thisemit事件名数据v-modelmsgthisemitinput数据非父子创建一个新的vue实例作为中间仓库-busemit事件数据buson事件">指令：
+v-text:输出数据
+v-html
+v-show=&quot;true&quot;:显示
+v-if
+v-else-if
+v-else
+v-for=&quot;(v,i) in arr &quot;---v:数组的每一项   i---索引
+(v,k) in obj  v--属性值   k---属性名
+v-model=&quot;msg&quot;---数据的双向绑定
+v-once---只渲染一次
+v-bind:绑定属性：   :src=&quot;xxx&quot;
+v-on:绑定事件       @click=&quot;add(<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>v</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>)</mo><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">.</mi><mi>s</mi><mi>t</mi><mi>o</mi><mi>p</mi><mi mathvariant="normal">.</mi><mi>p</mi><mi>r</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi>v</mi><mo>−</mo><mi>c</mi><mi>l</mi><mi>o</mi><mi>a</mi><mi>k</mi><mo>:</mo><mi mathvariant="normal">数</mi><mi mathvariant="normal">据</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">载</mi><mi mathvariant="normal">之</mi><mi mathvariant="normal">前</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">显</mi><mi mathvariant="normal">示</mi><mi mathvariant="normal">。</mi><mo>[</mo><mi>v</mi><mo>−</mo><mi>c</mi><mi>l</mi><mi>o</mi><mi>a</mi><mi>k</mi><mo>]</mo><mrow><mi>d</mi><mi>i</mi><mi>s</mi><mi>p</mi><mi>l</mi><mi>a</mi><mi>y</mi><mo>:</mo><mi>n</mi><mi>o</mi><mi>n</mi><mi>e</mi></mrow><mi>v</mi><mo>−</mo><mi>p</mi><mi>r</mi><mi>e</mi><mo>:</mo><mi mathvariant="normal">怎</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">写</mi><mi mathvariant="normal">入</mi><mi mathvariant="normal">怎</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">输</mi><mi mathvariant="normal">出</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">传</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">父</mi><mo>−</mo><mo>−</mo><mi mathvariant="normal">子</mi><mi mathvariant="normal">：</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi>s</mi><mo>:</mo><mo>[</mo><mo>]</mo><mi mathvariant="normal">子</mi><mo>−</mo><mo>−</mo><mi mathvariant="normal">父</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">义</mi><mi mathvariant="normal">事</mi><mi mathvariant="normal">件</mi><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">event)&quot;
+	      .stop   .prevent   ...
+	 v-cloak:数据加载之前不显示。[v-cloak]{display:none}
+	 v-pre:怎么写入怎么输出
+组件传值：
+    父--子：props:[]
+	子--父：自定义事件
+	        this.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mord">&quot;</span><span class="mord">.</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">据</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">载</span><span class="mord cjk_fallback">之</span><span class="mord cjk_fallback">前</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">显</span><span class="mord cjk_fallback">示</span><span class="mord cjk_fallback">。</span><span class="mopen">[</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mclose">]</span><span class="mord"><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord cjk_fallback">怎</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">写</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">怎</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">输</span><span class="mord cjk_fallback">出</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">传</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">父</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.7777700000000001em;vertical-align:-0.19444em;"></span><span class="mord">−</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">[</span><span class="mclose">]</span><span class="mord cjk_fallback">子</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">事</span><span class="mord cjk_fallback">件</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>emit(&quot;事件名&quot;,数据)
+v-model=&quot;msg&quot;
+this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>i</mi><mi>t</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>i</mi><mi>n</mi><mi>p</mi><mi>u</mi><mi>t</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi mathvariant="normal">数</mi><mi mathvariant="normal">据</mi><mo>)</mo><mi mathvariant="normal">非</mi><mi mathvariant="normal">父</mi><mi mathvariant="normal">子</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">创</mi><mi mathvariant="normal">建</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">新</mi><mi mathvariant="normal">的</mi><mi>v</mi><mi>u</mi><mi>e</mi><mi mathvariant="normal">实</mi><mi mathvariant="normal">例</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">间</mi><mi mathvariant="normal">仓</mi><mi mathvariant="normal">库</mi><mi>b</mi><mi>u</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">emit(&quot;input&quot;,数据)
+	非父子：创建一个新的vue实例，作为中间仓库
+	        bus.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">据</span><span class="mclose">)</span><span class="mord cjk_fallback">非</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">创</span><span class="mord cjk_fallback">建</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">新</span><span class="mord cjk_fallback">的</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">例</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">间</span><span class="mord cjk_fallback">仓</span><span class="mord cjk_fallback">库</span><span class="mord mathdefault">b</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>emit(&quot;事件&quot;,数据)
+bus.$on(&quot;事件&quot;)</h2>
+<h2 id="vue061vue全家桶vue20-vue-router-vuex-axios-vue-cli-element-uivue-cli是vue官方提供的快速搭建项目的工具vuex是vue提供的状态管理工具vue-router是vue生态里面的路由工具axiosajax的插件element-ui基于vue20的组件库2vmoptions获取自定义属性值时使用-myoptionsfoo-mountedfunctionconsolelogthiselconsolelogthisoptionsmyoptions-vmparent获取组件的父实例vmchildren获取组件的子组件-vmroot根实例3插槽slot31-单个插槽显示组件中的内容slot写在哪就在哪显示32-具名插槽只有对应名字的才能写入slot-namep1slotp-slotp1p没有写name则没有作用-4插件axiosaxios-是一个基于-promise-的-http-库可以用在浏览器和-nodejs-中-ajax的插件下载引入使用axiosgetaxiospost5vue-router构建单页面应用51下载引入52-配置121-写几个组件122-实例化一个vueroutervar-vrnew-vuerouterroutesxxx123-定义xxx变量是一个数组对象pathcomponentchildren等参数124-使用实例化的vue中routervr125-点击不使用超链接router-link-topath1newsrouter-linkrouter-link-topath2newsrouter-link126-显示超链接点击的组件router-viewrouter-view注意如果不好使换vue版本20版本以上2拆分路由抛出export-default-接收import-xx-from-routersxxxcomponents放所有的组件的coms1js-coms2js-coms3jsroutes放路由indexhtml写router-link主页面">vue06:
+1:vue全家桶：vue2.0   vue-router   vuex   axios  vue-cli   element-ui
+vue-cli：是vue官方提供的快速搭建项目的工具
+vuex:是vue提供的状态管理工具
+vue-router:是vue生态里面的路由工具
+axios：ajax的插件
+element-ui:基于vue2.0的组件库
+2:vm.<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …nsole.log(this.'>options:获取自定义属性值时，使用。
+	  myOptions:&quot;foo&quot;,
+	  mounted:function(){
+		console.log(this.</span>el)
+console.log(this.<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 23: ….myOptions)
+	  }̲
+  vm.'>options.myOptions)
+	  }
+  vm.</span>parent:获取组件的父实例
+vm.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>h</mi><mi>i</mi><mi>l</mi><mi>d</mi><mi>r</mi><mi>e</mi><mi>n</mi><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">子</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">件</mi><mi>v</mi><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">children:获取组件的子组件
+  vm.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">件</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">m</span><span class="mord">.</span></span></span></span>root:根实例
+....
+3:插槽：slot
+3.1 单个插槽：显示组件中的内容，slot写在哪，就在哪显示
+3.2 具名插槽：只有对应名字的才能写入
+<slot name="p1"></slot>
+<p slot="p1"></p>	
+没有写name则没有作用。
+4:插件：
+axios:Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
+ajax的插件
+下载,引入
+使用：axios.get()
+axios.post()
+5:vue-router:构建单页面应用
+5.1:下载：引入
+5.2 配置：
+1.2.1 写几个组件：
+1.2.2 实例化一个VueRouter
+var vr=new VueRouter({
+routes:xxx
+})
+1.2.3 定义xxx变量，是一个数组对象，path，component，children等参数
+1.2.4 使用：实例化的Vue中：
+router:vr
+1.2.5 点击不使用超链接：
+<router-link to="/path1">news</router-link>
+<router-link to="/path2">news</router-link>
+1.2.6 显示超链接点击的组件：
+<router-view></router-view>
+注意：如果不好使，换vue版本，2.0版本以上
+2:拆分路由
+抛出：export default  {}
+接收：import  xx  from  &quot;./routers/xxx&quot;;
+components：放所有的组件的
+coms1.js   coms2.js  coms3.js
+routes:放路由
+index.html:写router-link，主页面</h2>
+<p>vue复习：
+1:设计模式：MVVM
+M--model
+v--view
+vm--viewModel
+2:vue
+var  vm=new Vue({
+el:&quot;#app&quot;,
+data:{
+msg:1111
+},
+methods:{
+fn(){}
+},
+components:{//局部组件
+my-com:{
+render(c){
+//return c(&quot;h1&quot;,1111)
+return c(&quot;h1&quot;,c(&quot;span&quot;,121212))
+}
+}
+},
+computed:{//计算属性
+sum(){
+return xxxx
+}
+},
+directives:{//自定义指令</p>
+<pre><code>	},
+	filters:{//过滤器
+		
+	}
+	生命周期钩子
+	创建前、后----挂载前、后----更新前、后---销毁前、后
+	beforeCreate(){},
+	created(){},
+	beforeMount(){},
+	mounted(){},
+	beforeUpdate(){},
+	updated(){},
+	beforeDestory(),
+	destoryed(){},
+	watch:{//监听某个变量的变化
+		a(news,old){
+			
+		}
+	}
+})
+</code></pre>
+<h2 id="组件传值父-子子props接收值-子-父自定义事件子thisemit事件data父v-on绑定事件-v-modelmsg-非父子需要一个中间仓库-var-busnew-vue-内部busemit另一个busonvue全家桶vue-vuex-vue-cli-vue-router-axiosajax-element-ui">组件传值
+父--子:子：props:接收值。
+子--父：自定义事件：
+子：this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>i</mi><mi>t</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">事</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo>)</mo><mi mathvariant="normal">父</mi><mi mathvariant="normal">：</mi><mi>v</mi><mo>−</mo><mi>o</mi><mi>n</mi><mi mathvariant="normal">绑</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">事</mi><mi mathvariant="normal">件</mi><mi>v</mi><mo>−</mo><mi>m</mi><mi>o</mi><mi>d</mi><mi>e</mi><mi>l</mi><mo>=</mo><mi mathvariant="normal">&quot;</mi><mi>m</mi><mi>s</mi><mi>g</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">非</mi><mi mathvariant="normal">父</mi><mi mathvariant="normal">子</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">需</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">间</mi><mi mathvariant="normal">仓</mi><mi mathvariant="normal">库</mi><mi mathvariant="normal">：</mi><mi>v</mi><mi>a</mi><mi>r</mi><mi>b</mi><mi>u</mi><mi>s</mi><mo>=</mo><mi>n</mi><mi>e</mi><mi>w</mi><mi>V</mi><mi>u</mi><mi>e</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">内</mi><mi mathvariant="normal">部</mi><mi mathvariant="normal">：</mi><mi>b</mi><mi>u</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">emit(&quot;事件&quot;,data)
+					父：v-on绑定事件
+					    v-model=&quot;msg&quot;
+	 非父子：需要一个中间仓库： var bus=new Vue()
+		        内部：bus.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord cjk_fallback">事</span><span class="mord cjk_fallback">件</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord cjk_fallback">绑</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">事</span><span class="mord cjk_fallback">件</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">m</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord">&quot;</span><span class="mord cjk_fallback">非</span><span class="mord cjk_fallback">父</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">需</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">间</span><span class="mord cjk_fallback">仓</span><span class="mord cjk_fallback">库</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">b</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">内</span><span class="mord cjk_fallback">部</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">b</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>emit()
+另一个：bus.$on()
+Vue全家桶：vue  vuex   vue-cli   vue-router   axios(ajax) element-ui</h2>
+<p>vue07:
+1:vue-cli:脚手架：为单页面应用快速搭建繁杂的脚手架
+用于自动生成vue.js+webpack的项目模板
+1.1 全局安装cli
+npm install vue-cli -g
+检查版本：vue -V
+1.2 创建项目目录：
+vue init webpack 项目名
+选项：回车即可
+Install vue-router?(y/n)y
+cd:项目中
+npm install
+运行：npm run start
+npm run dev
+2: npm cache clean --force:清除npm缓存
+3:目录文件:单页面应用
+build:webpack的文件
+config:vue的配置信息---端口号：index.js---8080
+node_modules---依赖包
+src:资源文件夹：
+assets:静态文件：css等
+components:组件：.vue
+router:路由
+static:静态资源
+index.html:首页
+4:组件格式：
+template：写标记内容
+script：抛出组件
+style：样式
+5:子路由：
+routes:[
+{
+path:&quot;/aa&quot;,
+component:aa,
+children:[
+{
+path:&quot;/bb&quot;,//aa下的子路由bb
+component:bb
+}
+]
+}
+]</p>
+<h2 id="7httpsmhelijiacom小项目">7:https://m.helijia.com/:小项目</h2>
+<p>vue08
+1:路由守卫
+1.1 通过？传输数据
+使用watch对象：监听变化：<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;}&#039;, got &#039;EOF&#039; at end of input: …nsole.log(this.'>route.vue
+           先使用created获取数据。
+      				created(){
+      					console.log(this.</span>route)
+其中query获取的是地址中的数据
+console.log(this.<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 27: ….id)
+      				}̲,
+      				 但是…'>route.query.id)
+      				},
+      				 但是当路由没变化,数据改变时,不能再一次触发该函数,所以需要watch
+      				 &lt;router-link to=&quot;/rou?id=20&quot;&gt;ddd&lt;/router-link&gt;
+           watch:{
+      					&#039;</span>route'(to,from){
+to:新的数据
+from:之前的数据
+console.log(to.query.id)
+}
+}
+1.2 动态路由：
+path:&quot;/apple/:id&quot;:id就是属性名
+访问：
+<router-link to="/apple/5/test/a3">news</router-link>
+http://localhost:8080/#/apple/2
+获取：json的格式
+this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi mathvariant="normal">.</mi><mi>p</mi><mi>a</mi><mi>r</mi><mi>a</mi><mi>m</mi><mi>s</mi><mo>−</mo><mo>−</mo><mo>−</mo><mo>−</mo><mrow><mi>i</mi><mi>d</mi><mo>:</mo><mn>2</mn></mrow><mi mathvariant="normal">注</mi><mi mathvariant="normal">意</mi><mi mathvariant="normal">：</mi></mrow><annotation encoding="application/x-tex">route.params----{id:2}
+		注意：</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">a</span><span class="mord mathdefault">m</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">−</span><span class="mord"><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">2</span></span><span class="mord cjk_fallback">注</span><span class="mord cjk_fallback">意</span><span class="mord cjk_fallback">：</span></span></span></span>route不是<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mn>2</mn><mo>:</mo><mi mathvariant="normal">脚</mi><mi mathvariant="normal">手</mi><mi mathvariant="normal">架</mi><mi mathvariant="normal">生</mi><mi mathvariant="normal">成</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">项</mi><mi mathvariant="normal">目</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi>a</mi><mi>x</mi><mi>i</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">：</mi><mn>2.1</mn><mi mathvariant="normal">安</mi><mi mathvariant="normal">装</mi><mi mathvariant="normal">：</mi><mi>n</mi><mi>p</mi><mi>m</mi><mi>i</mi><mi>n</mi><mi>s</mi><mi>t</mi><mi>a</mi><mi>l</mi><mi>l</mi><mi>a</mi><mi>x</mi><mi>i</mi><mi>o</mi><mi>s</mi><mo>−</mo><mo>−</mo><mi>s</mi><mi>a</mi><mi>v</mi><mi>e</mi><mn>2.2</mn><mi>m</mi><mi>a</mi><mi>i</mi><mi>n</mi><mi mathvariant="normal">.</mi><mi>j</mi><mi>s</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">引</mi><mi mathvariant="normal">入</mi><mi mathvariant="normal">：</mi><mi>i</mi><mi>m</mi><mi>p</mi><mi>o</mi><mi>r</mi><mi>t</mi><mi>a</mi><mi>x</mi><mi>i</mi><mi>o</mi><mi>s</mi><mi>f</mi><mi>r</mi><mi>o</mi><mi>m</mi><mi mathvariant="normal">&quot;</mi><mi>a</mi><mi>x</mi><mi>i</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">&quot;</mi><mn>2.3</mn><mi mathvariant="normal">将</mi><mi>a</mi><mi>x</mi><mi>i</mi><mi>o</mi><mi>s</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">入</mi><mi mathvariant="normal">到</mi><mi>v</mi><mi>u</mi><mi>e</mi><mi mathvariant="normal">中</mi><mi>V</mi><mi>u</mi><mi>e</mi><mi mathvariant="normal">.</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>t</mi><mi>o</mi><mi>t</mi><mi>y</mi><mi>p</mi><mi>e</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">router
+2:脚手架生成的项目中，使用axios：
+  2.1 安装：npm install axios --save
+  2.2 main.js中引入：
+      import  axios from &quot;axios&quot;
+  2.3 将axios加入到vue中
+      Vue.prototype.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">2</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord cjk_fallback">脚</span><span class="mord cjk_fallback">手</span><span class="mord cjk_fallback">架</span><span class="mord cjk_fallback">生</span><span class="mord cjk_fallback">成</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">项</span><span class="mord cjk_fallback">目</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mord cjk_fallback">：</span><span class="mord">2</span><span class="mord">.</span><span class="mord">1</span><span class="mord cjk_fallback">安</span><span class="mord cjk_fallback">装</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">n</span><span class="mord mathdefault">p</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">−</span><span class="mord mathdefault">s</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord">2</span><span class="mord">.</span><span class="mord">2</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">s</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">i</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">m</span><span class="mord">&quot;</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mord">&quot;</span><span class="mord">2</span><span class="mord">.</span><span class="mord">3</span><span class="mord cjk_fallback">将</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">到</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord cjk_fallback">中</span><span class="mord mathdefault" style="margin-right:0.22222em;">V</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord">.</span></span></span></span>http=axios;
+2.4 使用：任何组件中都能使用
+点击时发送ajax:
+this.$http.get(&quot;&quot;,{}).then(function(d){}).catch(function(){})
+3:组件中使用其他的组件：
+在该组件中使用import引入其它组件：
+import zi from &quot;./zi&quot;
+然后设置为局部组件：
+components:{
+zi,
+// child
+}
+使用组件：<zi></zi>
+4:Vuex
+跨页面传输数据：
+？动态路由
+cookie
+localstorage
+Vuex：vue框架中状态管理
+应用场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车
+4.1 安装：npm install vuex --save
+4.2 引入：main.js
+4.3 使用：Vue.use(Vuex)
+4.4 实例化:
+const store = new Vuex.Store({
+state: {
+page: 10
+},
+mutations: {
+add (state) {
+state.page++
+}
+}
+})
+4.5 在vue的原型中加入Vuex
+Vue.prototype.store=store
+4.6 组件中使用：
+this.store.state.page:获取
+this.store.commit(&quot;add&quot;):调用mutations中的add事件
+4.7 拆分：
+创建一个store文件夹，在创建一个xxx.js
+import Vue from &quot;vue&quot;
+import Vuex from &quot;vuex&quot;</p>
+<pre><code>		 Vue.use(Vuex)
+		 
+		 const store = new Vuex.Store({
+		   state: {
+			 page: 10,
+			 a:16
+		   },
+		   mutations: {
+			 add (state) {
+			   state.page++
+			 },
+			down(state){
+				state.a--
+			}
+		   }
+		 })
+		 
+		 export default store
+  在main.js中引入即可
+4.8 数据拆分：
+    创建modules文件夹-----mod1.js  mod2.js
+	vuex2.js---引入mod1，mod2
+	实例化中使用：
+	      modules:{
+			  first:mod1,
+			  second:mod2
+		  }
+    使用：
+	     this.store.state.first.xxx
+	     this.store.state.second.xxx
+    方法调用：
+	      this.store.commit(&quot;add&quot;)
+	      this.store.commit(&quot;down&quot;)
+</code></pre>
+<hr>
+<h2 id="ivew插件elementui">ivew插件
+elementUI</h2>
+<p>vue09:
+1:vue-cli：
+1.1 vue init webpack xxx
+1.2 安装依赖：npm install
+1.3 cd xxx
+1.4 npm run dev
+2:组件的创建：
+2.1 Vue.component(&quot;my-com&quot;,{})
+new Vue({
+components:{}
+})
+2.2 组件文件   xxx.vue
+template(结构)   script(行为)   style(样式)
+3:使用插件：axios   vuex<br>
+main.js
+import axios from &quot;axios&quot;
+4:使用组件：
+router---index.js
+import  xxx from  &quot;@/components/xxx&quot;</p>
+<h2 id="pathxxxxnamexxxcomponentxxxchildrenpath">{
+path:&quot;/xxxx&quot;,
+name:&quot;xxx&quot;
+component:xxx,
+children:[
+{path}
+]
+}</h2>
+<h2 id="iview一套基于-vuejs-的高质量ui-组件库1使用11-script引入js-css-不在脚手架中使用12-npm-install-iview-save13-mainjs中引入import-iview-from-iviewimport-iviewdiststylesiviewcssvueuseiview14-组件中使用xxxvue中写入程序即可">iview:一套基于 Vue.js 的高质量UI 组件库
+1:使用：
+1.1 script引入js css  不在脚手架中使用
+1.2 npm install iview  --save
+1.3 main.js中引入：
+import iView from 'iview';
+import 'iview/dist/styles/iview.css';
+Vue.use(iView)
+1.4 组件中使用：
+xxx.vue中写入程序即可</h2>
+<h2 id="element-ui组件库1使用11-npm-install-element-ui-save12-mainjs中引入import-elementui-from-element-uiimport-element-uilibtheme-chalkindexcssvueuseelementui13-组件中使用">element UI:组件库
+1:使用：
+1.1   npm install element-ui --save
+1.2   main.js中引入
+import  ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.use(ElementUI);
+1.3   组件中使用</h2>
+<p>vue复习：
+1：vue.js
+vue-router
+axios:ajax
+vuex:状态管理：页面之间共享数据
+elementUI---组件库
+2：vue
+2.1 生命周期：
+创建前、后---beforeCreate    created
+挂在前、后---beforeMounte    mounted
+更新前、后---beforeUpdate    updated
+销毁前、后---beforeDestory   destoryed
+2.2 指令：
+{{xxx}}
+v-text   v-html   v-for  v-if  v-else-if  v-else   v-show   v-model   v-on:@   v-bind :
+v-pre    v-cloak  v-once
+自定义指令：全局：Vue.directive(&quot;hide&quot;,{
+bind(el,binding){},
+inserted(){},
+update(){},
+unbind(){}
+})
+v-hide=&quot;xxx&quot;
+局部:directives:{}
+2.3 组件：
+全局：Vue.component(&quot;&quot;,data:function(){})
+局部：components:{}
+2.4 过滤器：
+全局：Vue.filter(&quot;名字&quot;,fn(){return})
+局部：filters:{名字：fn}
+xxxx|名字|名字2
+2.5 选项：new Vue({})
+el:挂载元素
+data:数据
+methods
+生命周期函数
+组件
+过滤器
+指令
+计算属性：computed
+watch：{}：监听变量的改变
+template：内容需要在一个大的父元素中去写
+render：渲染标记：createElement()
+2.6 props:组件之间的传值
+父--子：props:[]
+子--父：自定义事件
+this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>i</mi><mi>t</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>x</mi><mi>x</mi><mi>x</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi>d</mi><mi>a</mi><mi>t</mi><mi>a</mi><mo>)</mo><mi>v</mi><mo>−</mo><mi>o</mi><mi>n</mi><mo>=</mo><mi mathvariant="normal">&quot;</mi><mi>x</mi><mi>x</mi><mi>x</mi><mi mathvariant="normal">&quot;</mi><mi>v</mi><mo>−</mo><mi>m</mi><mi>o</mi><mi>d</mi><mi>e</mi><mi>l</mi><mo>=</mo><mi mathvariant="normal">&quot;</mi><mi>m</mi><mi>a</mi><mi>g</mi><mi mathvariant="normal">&quot;</mi><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">emit(&quot;xxx&quot;,data)
+				v-on=&quot;xxx&quot;
+				v-model=&quot;mag&quot;   this.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">x</span><span class="mord mathdefault">x</span><span class="mord mathdefault">x</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.77777em;vertical-align:-0.08333em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">x</span><span class="mord mathdefault">x</span><span class="mord mathdefault">x</span><span class="mord">&quot;</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord">&quot;</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>emit(&quot;input&quot;,xxx)
+非父子：创建新的中间仓库：var  bus=new Vue()
+bus.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>i</mi><mi>t</mi><mo>(</mo><mo>)</mo><mi>b</mi><mi>u</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">emit()
+				bus.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord mathdefault">b</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>on()
+2.7 实例：vm
+vm.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>l</mi><mi>v</mi><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">el
+		vm.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">m</span><span class="mord">.</span></span></span></span>data
+vm.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>p</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi>v</mi><mi>m</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">parent
+		vm.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">m</span><span class="mord">.</span></span></span></span>root
+vm.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>c</mi><mi>h</mi><mi>i</mi><mi>l</mi><mi>d</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mi mathvariant="normal">.</mi><mn>2.8</mn><mi mathvariant="normal">插</mi><mi mathvariant="normal">槽</mi><mi>s</mi><mi>l</mi><mi>o</mi><mi>t</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">将</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">义</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">内</mi><mi mathvariant="normal">容</mi><mi mathvariant="normal">渲</mi><mi mathvariant="normal">染</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">独</mi><mo separator="true">;</mo><mo>&lt;</mo><mi>s</mi><mi>l</mi><mi>o</mi><mi>t</mi><mo>&gt;</mo><mo>&lt;</mo><mi mathvariant="normal">/</mi><mi>s</mi><mi>l</mi><mi>o</mi><mi>t</mi><mo>&gt;</mo><mi mathvariant="normal">具</mi><mi mathvariant="normal">名</mi><mo>:</mo><mo>&lt;</mo><mi>s</mi><mi>l</mi><mi>o</mi><mi>t</mi><mi>n</mi><mi>a</mi><mi>m</mi><mi>e</mi><mo>=</mo><mi mathvariant="normal">&quot;</mi><mi>x</mi><mi>x</mi><mi mathvariant="normal">&quot;</mi><mo>&gt;</mo><mo>&lt;</mo><mi mathvariant="normal">/</mi><mi>s</mi><mi>l</mi><mi>o</mi><mi>t</mi><mo>&gt;</mo><mo>&lt;</mo><mi>d</mi><mi>i</mi><mi>v</mi><mi>s</mi><mi>l</mi><mi>o</mi><mi>t</mi><mo>=</mo><mi mathvariant="normal">&quot;</mi><mi>x</mi><mi>x</mi><mi mathvariant="normal">&quot;</mi><mo>&gt;</mo><mo>&lt;</mo><mi>d</mi><mi>i</mi><mi>v</mi><mo>&gt;</mo><mn>3</mn><mo>:</mo><mi>v</mi><mi>u</mi><mi>e</mi><mo>−</mo><mi>r</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo>:</mo><mi mathvariant="normal">构</mi><mi mathvariant="normal">建</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">页</mi><mi mathvariant="normal">面</mi><mi mathvariant="normal">应</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">组</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">：</mi><mo>&lt;</mo><mi>r</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>l</mi><mi>i</mi><mi>n</mi><mi>k</mi><mi>t</mi><mi>o</mi><mo>=</mo><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">/</mi><mi>x</mi><mi>x</mi><mi>x</mi><mo>?</mo><mi>i</mi><mi>d</mi><mo>=</mo><mn>1</mn><mi mathvariant="normal">&quot;</mi><mo>&gt;</mo><mo>&lt;</mo><mi mathvariant="normal">/</mi><mi>r</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo>−</mo><mi>l</mi><mi>i</mi><mi>n</mi><mi>k</mi><mo>&gt;</mo><mi>w</mi><mi>a</mi><mi>t</mi><mi>c</mi><mi>h</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">children
+		.....
+	2.8 插槽slot：可以将自定义组件的内容渲染
+	    单独;&lt;slot&gt;&lt;/slot&gt;
+		具名:&lt;slot name=&quot;xx&quot;&gt;&lt;/slot&gt;
+		     &lt;div slot=&quot;xx&quot;&gt;&lt;div&gt;
+3:vue-router:构建单页面应用
+   组件：&lt;router-link to=&quot;/xxx?id=1&quot;&gt;&lt;/router-link&gt;
+         watch:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord">2</span><span class="mord">.</span><span class="mord">8</span><span class="mord cjk_fallback">插</span><span class="mord cjk_fallback">槽</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">将</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">内</span><span class="mord cjk_fallback">容</span><span class="mord cjk_fallback">渲</span><span class="mord cjk_fallback">染</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">独</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord cjk_fallback">具</span><span class="mord cjk_fallback">名</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">x</span><span class="mord mathdefault">x</span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">s</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord">&quot;</span><span class="mord mathdefault">x</span><span class="mord mathdefault">x</span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">d</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.66666em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mord cjk_fallback">构</span><span class="mord cjk_fallback">建</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">页</span><span class="mord cjk_fallback">面</span><span class="mord cjk_fallback">应</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">组</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">：</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69841em;vertical-align:-0.08333em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">&quot;</span><span class="mord">/</span><span class="mord mathdefault">x</span><span class="mord mathdefault">x</span><span class="mord mathdefault">x</span><span class="mclose">?</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord">1</span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span>route
+组件：<router-link to="/xxx/ddd/xxx"></router-link>
+path:&quot;/xxx/:id/:name&quot;
+<router-view></router-view></p>
+
             </div>
           </article>
         </div>
