@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
     <title>LLW</title>
-    <updated>2019-10-15T07:58:48.028Z</updated>
+    <updated>2019-10-24T01:22:49.259Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
     <link rel="self" href="https://XinLingJ.github.io//atom.xml"/>
@@ -10,6 +10,2098 @@
     <logo>https://XinLingJ.github.io//images/avatar.png</logo>
     <icon>https://XinLingJ.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, LLW</rights>
+    <entry>
+        <title type="html"><![CDATA[node.js]]></title>
+        <id>https://XinLingJ.github.io//post/nodejs</id>
+        <link href="https://XinLingJ.github.io//post/nodejs">
+        </link>
+        <updated>2019-10-18T02:03:59.000Z</updated>
+        <content type="html"><![CDATA[<pre><code>                  node.js
+</code></pre>
+<p>1.引入fs模块： var fs=require(&quot;fs&quot;)
+2.异步读取文件：fs.readFile(&quot;文件路径&quot;，“回调函数”）
+例：
+fs.readFile('./123.tex',function(err,data){
+console.log(err);
+console.log(data.toString())  转化为可以读取的文字
+3.文件的同步读取：fs.readfilesync(‘路径’，utf-8）
+tuf-8:转化为可以读取的文字；
+4.文件的写操作：fs.writeFile(&quot;路径&quot;，&quot;内容&quot;，{flag:&quot;a&quot;},&quot;回调函数&quot;）注意：内容
+变量更改一次，内容就会追加一次；{flag:&quot;a&quot;}在里面是追加参数的意思；
+例：  var d1=&quot;aaaaa&quot;
+fs.writeFile(&quot;路径&quot;，&quot;内容&quot;，{flag:&quot;a&quot;},&quot;回调函数&quot;）
+5.创建文件夹：fs.mkdir(&quot;路径&quot;，&quot;回调函数&quot;）
+if(!err){console.log(&quot;创建成功&quot;)}
+6.删除文件夹：（删除空的文件夹）fs.rmdir（&quot;路径&quot;，&quot;回调函数&quot;）
+7.删除文件：fs.unlink(&quot;路径&quot;，&quot;回调函数&quot;)
+8.文件重命名：fs.rename（&quot;路径&quot;，&quot;替换的名称&quot;,&quot;回调函数&quot;）
+9.判断一个文件/文件夹是否存在：fs.exists(&quot;路径&quot;，function(f){ }
+自带模块：fs模块/Http模块
+需下载模块：express模块/ejs模块/body-parser
+multer模块；</p>
+<pre><code>     node.js第二天
+</code></pre>
+<p>引入Http模块： var http=require(&quot;http&quot;)
+创建http服务器：var server=http.createserver(function(req,res){
+req:客户端请求信息；
+res:给客户端回应信息；
+读取文件：fs.readerFile(&quot;-1&quot;+req.url,function(err,data){
+if(!err){
+res.writeflead(200,{&quot;content-Type&quot;;mime.getType(req.url)});请求头信息
+res.write(data);写入内容
+res.end();结束
+}
+（引入mime模块： var mime=require(&quot;mime&quot;) 作用：补全格式类型）
+else{<br>
+fs.readFile(&quot;,/404.html&quot;,function(err,data){
+res.writeHead(404,{
+&quot;content-Type&quot;:mime.getType(req.url)
+})
+res.write(data);
+res.end()
+})<br>
+}
+}</p>
+<pre><code> node.js第三天
+</code></pre>
+<p>express模块：
+1.引入  var express=require(&quot;express&quot;)
+2.引入方法，实例化一个express对象
+var app=express();
+3. 使用express的get方法:设置路由：
+app.get(&quot;/&quot;,function(req,res){
+res.send(&quot;hello world&quot;)
+或res.sendFile(__dirname+&quot;/index.html&quot;)  引入相对路径
+res.sendFile(&quot;./index.html&quot;)  绝对路径，不能发送
+}
+4.app路由的监听：
+app.listen(8080,function(){
+console.log(&quot;启动成功，端口号是8080&quot;)
+}</p>
+<pre><code> 一个路径匹配多个规则（配置）
+</code></pre>
+<p>1.引入router方法：实例化一个Router对象：
+var express=require(&quot;express&quot;)
+var router=express.Router()
+router.get(&quot;/&quot;,function(req,res){
+res.send(&quot;hello world&quot;)
+}</p>
+<pre><code>  在别一个路径的引用————use方法
+</code></pre>
+<p>首先引入路径：
+var index=require(&quot;./index&quot;)
+var user=require(&quot;./user&quot;)
+app.use(&quot;/&quot;,index);  前缀是/
+app.use(&quot;/user&quot;,user);前缀/user
+为避免发生冲突，改变引用的前缀即可；</p>
+<pre><code>  模板引擎
+</code></pre>
+<p>首先：引用不改变：
+添加渲染内容即可：
+router.get(&quot;/index&quot;,function(req,res){
+res.render(&quot;aaa&quot;,{title:&quot;hello express&quot;,arr1:[1111,2222,33333]
+})
+}
+其次执行到页面：</p>
+<body>
+<h3> 你好 <span><%=title %></span></h3>
+<ul>
+   <% for(var i=0;i<arr.length;i++){%>
+   <li><%=arr[i]%></li>
+    <%}%>
+</ul>
+</body>
+<pre><code> node.js 第四天
+</code></pre>
+<p>1.app.use(express.static(&quot;public&quot;))  （public是路径） 托管静态文件
+（1）引入公共页面：（同一路径）
+&lt;% include ./head.ejs %&gt;  ./当前目录
+&lt;% include ./footer.ejs%&gt;
+include 引入公共页面
+（2） res.render(&quot;aaa&quot;,{content:&quot;<div><h3>234</h3></div>})
+备注：aaa 是渲染的页面     content里的是渲染到页面的内容
+标签内容的引入：&lt;%- content %&gt;用&quot;-&quot;引入：
+（3）引入css.js.image图片：
+用&quot;/&quot;来引入：例如：<link rel="stylesheet" href="/css/index.css"/></p>
+  <script src="/js/index.js"></script>
+<p>2.body-parser:解析请求主体（中间件）
+var bodyparser= require(&quot;body-parser&quot;)
+app.use(bodyparser.json());</p>
+<p>get 和 post的区别：
+1.get 是从服务器获取数据，post是向服务器传送数据；
+2.get是把参数数据队列加到提交表单的Action属性所指的URL中，值和表单内名字端一
+一对应，在URL中可以看到。
+post是通过http-post机制，将表单各个字段语气内容防止在HTML header内一起传送
+到Action属性所指的URL地址，用户看不到这个过程。
+3.get方式：服务端用Request.Querystring获取变量值；
+post方式:服务器端用Request.body获取提交的数据；
+4.get安全性 非常低，post安全性较高。
+5.get传送的数据长度有限制，post没有。
+app.use(bodyparser.urlencoded({ extended:false})); extend:延伸；扩大；推广</p>
+ <form attion=" " method="get/post"> </form>
+ action=跳转的路径  method:跳转的方法；
+ get与post的区别：
+  get方法：router.get("/cc",function(req,res){
+   var data=req.query;
+   console.log(data)}
+  post方式： router.post("/cc",function(req,res){
+             var data=req.body;
+             console.log(data)}
+<p>jsonp与ajax跨域的区别：
+jsonp利用script标签没有跨域限制的漏洞来达到与第三方通讯的目的；jsonp只支持
+get请求，ajax支持get.post请求，ajax的核心是通过xmlHttpRequest获取非本页内容。
+jsonp的可信是动态添加script标签调用服务器提供的js脚本，jsonp是一种方式或者
+非强制性的协议，ajax也不一定非要json格式来传递数据。</p>
+<pre><code>       node.js第五天
+</code></pre>
+<p>1.下载express应用生成器：npm install express -generator -g; -g是全局的意思；
+（2）新建文件夹： express --view ejs web12  （在cmd控制台内）
+cd web12
+npm install  （运用npm start 进行刷新）
+（3）自动刷新：npm install -g nodemon
+(将package中的node设为nodemon,然后重新打开控制台，那会自动重启服务器)
+ajax 实例
+1.创建一个ajax对象：
+var ajax=new xmlHttpRequest();
+发起请求：
+ajax.open(&quot;GET&quot;,&quot;/username?name=&quot;+name,true);true为异步读取，false同步读取；
+router.get(&quot;/register&quot;,function(req,res){res.render(&quot;reg&quot;)})
+服务器发出的响应：
+router.get(&quot;/username&quot;,function(req,res){
+var name= req.query.name  （接收，并响应请求）
+if（name==&quot;xiaoming&quot;）{
+res.json({
+res.json({ userexist:1})
+}else{
+res.json({userexist:0})
+}
+})
+页面接收响应：
+ajax.onreadystatechange=function(){
+onreadystatechange:此事件时当服务器响应已经做好被处理的准备时所执行的任务；
+if(ajax.readystate==4&amp;&amp;ajax.status==200){
+readystate：ajax状态就绪完毕；  ajax.status：浏览器就绪完毕
+var res=JSON。parse(ajax.responseText);
+responseText：获得字符串形式的响应式数据；
+if(res.userexist==1){
+tip.innerHTML=&quot;用户已经存在&quot;
+tip.style.color=&quot;#foo&quot;;
+}else{ tip.innerHTML=&quot;OK&quot;;
+tip.style.color=&quot;green&quot;;}}</p>
+<pre><code>         node.js 第六天
+</code></pre>
+<p>ajax:readystate:
+0:请求未初始化
+1:服务器连接已建立
+2:请求已接收
+3:请求处理中
+4:请求已完成，切响应已就绪
+Http：常用状态码：
+/..:消息
+/00:continue (客户端应当继续发送请求）
+/01:switching protocols（服务器已经理解了客户端请求）
+/02:Processing(处理将被继续执行）
+200：OK（请求成功）
+300：multiple choices（被请求的资源有一系列可供选择的回馈信息）
+404：Not Found（请求失败，请求所希望得到的资源未被在服务器上发现）
+500：Internal server Error（服务器遇到一个未曾预料的状况，导致了它无法完成
+对请求的处理）
+303：see other（对应当前请求的响应可以在另一个url上被找到）
+ajax中的post方法：
+btn.onclick=function(){
+var ajax=new xmlHttpRequest; ajax对象
+ajax.open('post','/a1')  post方法
+请求头：ajax.setRequestHeader(&quot;content-type&quot;,&quot;application/x-www-form-urlecoded&quot;)
+ajax.send(&quot;id=100&amp;name=xiaoming&quot;)
+ajax.onreadystatechange=function(){
+if(ajax.readystate==4&amp;&amp;ajax.status==200){
+var data=ajax.responseTex;
+console.log(data)
+}
+}
+}
+router.post('/a',function(req,res){
+var d=req.body;
+res.json=({name:&quot;xiaoming&quot;})
+}
+ajax封装方法：
+（1） $.ajax({
+url:&quot;/a2&quot;,
+data:{id:100,name:&quot;aaa&quot;}
+type:&quot;get&quot;, 方法
+async:true,   同/异步
+timeout:5000   超时
+success:function(msg){
+console.log(msg)
+}
+})
+（2） $.get(&quot;/a2&quot;,{id:124},function(data){
+console.log(data)}
+（3） $.post('/a1',{id:124},function(data){
+console.log(data)
+}</p>
+<pre><code>     node.js第七天
+</code></pre>
+<p>1 . 下载一个新的模块：
+npm multer --save
+2. 在app中引入multer 模块： （app.js文件内）
+var multer=require(&quot;multer&quot;)
+3. 配置multer文件：
+var uplood=multer ({dest:'./public/upload'}).fields([{name:'pic',max(ount:
+2}])
+dest:'./public/upload':upload文件路径（需创建此文件夹）
+max:文件数，最多两个，如多于两个，需新建一行；
+app.use(upload)
+4. 页面：</p>
+  <form action="/users/upload" enctype="multipart/form-data" method="post">
+   action="/users/upload":路由配置正确；
+   enctype="multipart/form-data"：可传输的文件视频音频等
+   method:"post":方法正确（post/get）
+  <p><span>姓名</span><input type="text" name="username"></p>
+  <p><span>电话</span><input type="text" name="tel"></p> 
+  <p><input type="file" name="pic"></p> 此name="pic"与multer配置文件中的name一致
+  <input type="submit">
+5. 路由
+  router.post('/unload',function(req,res){
+    var b = req.body;  接收数据；
+    var files= req.files;  接收上传文件内容
+    console.log(b);
+    console.log(files);
+  var ext=path.extname(files.pic[0].originalname);获取文件后缀，extname：后缀
+    var p1=files.pic[0].path; 获取文件路径；
+    fs.rename(p1,p1+ext,function(err){
+     if(!err){
+          res.send("文件上传成功")
+}
+}
+}
+<pre><code>    mysql 第一天
+</code></pre>
+<p>1.MYSQL 数据类型：数值，日期/事件和字符串；
+2.MYSQL 语句：以分号结束
+（1）. show databases;  显示所有数据库；
+（2）. create database （数据库名称）； 创建一个新的数据库
+（3）. use web13(数据库名称)：更新数据库：添加web13数据库；
+3. 创建表格：     desc 表单名：描述表单；
+create table users（
+id int auto_increament primary key,
+username varchar(100)，
+age int（3）
+）;
+set names gbk;识别中文编码
+4. show tables:显示创建的表单
+5.insert into users(username,age)value('小名'，13)；insert：插入表单内容；
+users：表单名称，注意是要全英文模式；
+6. select * from users;  从。。。表单查询表单内容；</p>
+<pre><code>                MySQL 第二天
+</code></pre>
+<p>MySQL语句中的增删改查：（表单）
+（1）增：insert into 表单名（name ,age ,sex,tel）values(“黎明”，18，‘男’，123)
+（2）删：delete from 表单名 where id =number;
+(3) 改：update 表名 set 字段二值 where 限制条件
+（4）查：select * from 表名 where 字段名
+1.and操作符：例：select * from shuju where name =&quot;沈涛&quot; and id =6；
+2. or操作符：例：select * from shuju where id=4 or id=2;
+3.in操作符：用来指定条件范围，范围中的每个条件都可以进行匹配。（匹配具体的值）
+select * from shuju where name in('小明’）；
+select * from shuju where name in(2,3）；
+4.not操作符：用来指定条件范围，除去指定的值的值。
+select * from shuju where name not in ('小明')
+5. like操作符：由字面值通配符或两者组合构成的搜索条件。
+select * from shuju where name Like '%小';
+select * from shuju where name Like '%小_';
+select * from 表名 where 字表段 is null: 查询某字段为空的数据；
+select * from 表名 order by 字段名 desc/asc: 根据某个字段降序排列,asc是开序。
+select count(<em>) 字段名 from 表名 where 限制条件：（查询行数）
+select max(</em>) from 表名：（查询最大值，最小值为min）
+select count(*) from 表名 in (条件1，条件2）：根据条件查询
+select avg(字段名）from 表名： 求某一字段的平均值；
+select aum(字段名）from 表名：求某一字段的总和；</p>
+<pre><code>           MySQL 第三天
+</code></pre>
+<ol>
+<li>首先下载MySQL模板： npm install MySQL。</li>
+<li>引入：路由页  var mysql = require('mysql')</li>
+<li>连接配置： var connect=mysql.createConnection({
+host:'127.0.0.1',
+user:'root',
+password:'123456',
+database:'web13',
+})</li>
+<li>在路由内连接：
+router.past('/shuju',function(req,res){
+var d =req.body;
+console.log(d);
+connection.connect()；路由连接
+connection.query('insert into data[name,age,sex,password,tel]value
+(?,?,?,?,?)',[d.name,d.age,d.sex,md(d.pass),d.tel],function(err,data){
+console.log(err);
+console.log(data);
+if(!err){ res.send('ok 插入成功'）}
+})<br>
+connect.end();<br>
+})</li>
+</ol>
+<p>为了方便更多个路由的使用： 写一个MySQL的封装函数；
+（1） var mysql= require('mysql');引入MySQL的模板；
+（2） function query(){
+let connection=mysql.createConnection({
+host:'127.0.0.1',
+user:'root',
+password:'123456',
+database:'web13'
+})
+connection.connect();
+if(arguments.length==2){        //argument(函数参数)
+var sql= arguments[0]
+fn=arguments[1];
+connection.query(sql.function(err,data){
+fn(err,data)
+});
+connection.end();
+if(arguments.length==3){
+var sql= arguments[0];
+arr=arguments[1];
+fn=arguments[2];
+connection.query(sql,arr,function(err,data){
+fn(err.data)
+})
+connection.end();
+}
+)
+module.exports=query;   输出封装函数
+路由为：
+router.post('./shuju',function(req,res){
+var d=req.body;
+console.log(d);
+query('insert into data (name,age,sex,password,tel)value(?,?,?,?,?).arr,function(
+err,data){
+console.log(err);
+console.log(data);
+if(!err){
+res.send('插入成功')
+}
+})
+});</p>
+<pre><code>             MySQL第四天
+</code></pre>
+<p>页面数据的修改和删除：
+lists 页面：</p>
+<table>
+<thead> 建立一个表头
+  <tr>
+       <td> id </td>
+       <td> 姓名</td>
+       <td> 年龄</td>
+       <td> 性别</td>
+       <td> 电话</td>
+       <td> 操作</td>
+  </tr>
+ </thead>
+ <tbody>
+ <% for(var i=0;i<shuju.length;i++){%>
+  <tr>
+     <td><%= shuju[i].id%></td>   导入表单中的每一项对应的值；
+     <td><%= shuju[i].name%></td>
+     <td><%= shuju[i].age%></td>
+     <td><%= shuju[i].sex%></td>
+     <td><%= shuju[i].tel%></td>
+     <td><a href="/edit?id=<%=shuju[i].id%>
+编辑</a></td> (编辑按钮）
+ <td><a href="/edit?id=<%=shuju[i].id%>删除</a></td> (删除按钮)
+  </tr>
+  <%}%>
+ </tbody>
+ </table>
+<p>路由测试：
+router.get('/',function(req,res){
+query('select * from shuju',funciton(err,data){
+console.log(err);
+res.send(data);
+});将数据返回到页面
+}
+router.get('/lists',function(req,res){
+query('select * from shuju',function(err,data){
+res.render('lists',{shuju:data}) 添加的数据内容
+}）；渲染lists页面
+});
+router.get('/edit',function(req,res){
+var id=req.query.id;
+query('select * from shuju where id=?',id,function(err,data){
+if(!err){
+res.render(&quot;edit&quot;,{shuju:dat[0]}) id为数据内的第0项，索引为0.
+}
+})
+}</p>
+<p>修改页面内容：
+router.post('/update',function(req,res){
+var data=req.body;
+console.log(data)  可有可无
+var arr=[date.name,date.age,date.sex,date.tel,date.id];
+query('update shuju set name=?,age=?,sex=?,tel=?,where id=?',arr,function(
+err,data){
+console.log(err);
+console.log(data);
+if(!err){
+res.redirect(&quot;/lists&quot;/ 跳转页面}
+}）
+}）；
+删除一项内容（通过id）
+router.get('/del',function(req,res){
+var id=req.query.id;
+query(&quot;delete from shuju where id=?&quot;,id,function(err,data){
+if(!err){
+res.redirect(&quot;/lists&quot;)
+}
+})
+}</p>
+<pre><code>          MySQL第五天
+</code></pre>
+<p>分页显示： npm install pagination-api --save;
+引入: var pagination = require('pagination-api')
+router.get('/lists',function(req,res){
+var per_page=4; 每页的条数
+var per_pages=1; 当前页
+var base_url=&quot;/lists?&quot;; 分页的那个页面的路由
+if(req,query.per_page){
+per_pages=req.query.per_page;
+};</p>
+<p>query(&quot;select count(*) as s from shuju&quot;,function(err,data){   //as s 别名
+if(!err){
+var total_rows=data[0].s    总条数
+create_links=pagination.create_links(total_rows,per_page,per_pages,base_url);
+query(&quot;select * from shuju limit ?,?&quot;[(per_pages-1)*per_page,per_page],
+function(err,data){
+res.render('lists',{shuju:data,links:create_links})
+}
+})</p>
+<p>}
+引入到页面： &lt;%- links %&gt;</p>
+<pre><code>              JQuery 分页
+</code></pre>
+<p>html:注意（要引入<script src="/js/jqpaginator.min.js"></script>）</p>
+ <table class="table" page="<%=sum %>">
+ <thead>
+   <tr>
+       <tr>
+       <td> id </td>
+       <td> 姓名</td>
+       <td> 年龄</td>
+       <td> 性别</td>
+       <td> 电话</td>
+       <td> 操作</td>
+  </tr>
+ </thead>
+ <tbody id="td">
+   </tbody>
+ </table>
+ <ul class="pagination" id="pagination1"></ul>显示分页
+ <script>
+      var p=$(".table").attr('page')总条数
+   $.jqpaginator('#pagination1',{
+   totalpages:Math.ceil(p/5),可以分几页
+   visiblepages:3  可显示分页
+   currentpage:1,  当前页
+   onpageChange:function(num,type){
+   $.ajax({
+          url:"./api",
+          data:{page:num},总页数
+          type:"post" 传输方式
+      success:function(data){
+          var str="  ";
+      for(var i=0;i<data.list.length;i++){
+   str+="<tr>"+"<td>"+data.list[i].id+"</td>"+"<td>"+data.list[i].name+"</td>"
+   +"<td>"+data.list[i].age+"</td>"+"<td>"+data.list[i].sex+"</td>"+"<td>"+
+   data.list[i].tel+"</td>"+"<td>"+"编辑"+"</td>"+"</tr>"
+}
+$("#tb").html(str)
+}
+})
+}
+})
+</script>
+路由：
+ router.get('/fenye',function(req,res){
+ query('select count(*)as s from shuju',function(err,data){
+ res.render("list1",{sum:data[0].s}) 渲染list页面，并携带数据
+}）
+}）；
+router.post('/api',function(req,res){
+    var p= req.body.page;  总页数
+ query("select * from shuju limit?,?",[(p-1)*5,5],function(err,data){
+      res.json({list.data})  以json对象格式传输数据
+}）
+}）
+<pre><code>       node.js  cookie（缓存）
+</code></pre>
+<p>router.post('/check',function(req,res){
+var d =req.body;
+query('select * from data where name=?',d.name,function(err,data){
+if(!err&amp;&amp;data.length&gt;0){
+if(data[0].password==md(d.pass){    数据密码与输入密码一致
+res.cookie('user',{userId:data[0].id,userName:d.name},
+{express:new Date(Date.now()+60000}); 缓存数据
+res.redirec(&quot;/success&quot;)
+}
+}
+})
+}
+router.get('/success',function(req,res){
+var c= req.cookies;  获取缓存
+if(c.user){
+res.render(&quot;success&quot;,{user:c.user})
+}else{
+res.redirect(&quot;/login&quot;) 跳转
+}
+}）</p>
+<p>router.get('/logout&quot;,function(req,res){
+res.clearCookie(&quot;user&quot;);   清除缓存
+res.redirect(&quot;/login&quot;)
+})</p>
+<pre><code>           node.js session 缓存
+</code></pre>
+<p>session和cookie的区别？</p>
+<ol>
+<li>session在服务器端，cookie在客户端（浏览器）内存小（4k左右）</li>
+<li>session默认被存在在服务器的一个文件里（不是内存）
+3.session的运行以来session id,而session id 是存在cookie中的，也就是说，如果
+浏览器禁用cookie，同事session也会失效（但是可以通过其他方式实现，比如在url
+中传递session_id）
+4.session可以放在文件，数据库，或内存中都可以。
+5.用户验证这种场合一般会用session
+注：因此，维持一个会话的核心就是客户端唯一标识，既：session id;</li>
+</ol>
+<p>首先下载session模块：npm install express-session --save
+在路由中设置session：
+req.session.user=d.username   可跟json对象
+获取session：var s=req.session;
+if(s.user){
+res.render('success',{user:s.user})
+}else{<br>
+res.redirect('/login')
+}
+}
+清除session：req.session=null;</p>
+<pre><code>       node.js ajax 获取form中的数据
+</code></pre>
+<p>HTML：</p>
+  <form action=" " id="fm" enctype="multipart/form-data">
+       <input type="text" name="name">
+       <input type="password" name="pass">
+       <input type="text" name="age">
+       <input type="file" name="pic" id="file">
+       <input type="button" id="btn" value="提交">
+  </form>
+ <script>
+     $('#btn').on('click',function(){
+       引入formdata 对象；
+      var formdata=new FormData($("#fm"[0]);
+ $.ajax({
+       url:"/dd",
+       data:formdata, 
+       type:"post",
+       processData:false,  不处理数据
+       contentype:false,
+      success:function(msg){
+           console.log(msg)
+}
+})
+<p>方法二：
+var formdata=new FormData();
+不需要通过form表单获取内容。
+var file = $('#file')[0].file[0];
+formdata.append(&quot;name&quot;,&quot;aaa&quot;);通过append方法直接传值
+formdata.append(&quot;pass&quot;,&quot;123123&quot;);
+formdata.append(&quot;age&quot;,&quot;女&quot;）;
+formdata.append(&quot;pic&quot;,file); 手动在页面上传文件；（pic与配置文件一致）
+路由：
+router.post('/dd',function(req,res){
+var d=req.body;
+var f=req.files; 获取文件内容
+res.json({ok:1})
+});
+设置全局数据：
+router.use(function(req,res,next){
+query('select * from atl where cate id=17 and id=37',function(arr,data){
+if(!err){
+req.app.locals.atl=data[0];
+next()
+}
+})</p>
+<pre><code>     文章论坛编辑器ueditor
+</code></pre>
+<p>1.首先下载：npm install ueditor --save
+配置注意：1.multer模块与ueditor模块要在path配置模块之后。
+2.multer配置文件在ueditor模块后进行配置。
+2.引入编辑器文件到页面：（将ueditor下载文件放置public文件内）</p>
+<script src="/ueditor/ueditor.config.js"></script>
+<script src="/ueditor/ueditor.all.js"></script>
+<p>注：配置到head标签内
+3.加载编辑器的容器（配置到body标签内）</p>
+<script id="container" name="content" type="text/plain" style="height:500px">
+注：这里是你初始化的内容
+</script>
+<p>&lt;input type=&quot;button' value=&quot;发布&quot; id=&quot;btn&quot;&gt;</p>
+<script>
+  实例化编辑器
+   var ve=VE.getEditor('container');  与编辑器容器id一致；
+事件：
+  $('#btn').on('click',function(){
+   var c= ve.getcontent();获取编辑器内容
+   $.ajax({
+         url:"/show",
+         type:"post",
+         data:{content:c}
+      success:function(){  }
+})
+}
+路由页：  var d=req.body.content;获取编辑器内容（data:{content:c}）
+ query('insert into artide(content)values(?):d,
+ function(err,data){  console.log(err);  console.log(data);
+res.json({ok:123})
+})
+})
+发送到页面：<% -info.content %>
+  qurey('select * from article where id=2',function(err,data){
+  res.render('add',{info:data[0]})
+})
+})
+           异步请求，路由中间件
+
+1.下载async模块：（异步请求，同步执行）npm install async --save
+  引入到路由页：
+    var async = require('async');
+nodejs结束；
+
+
+这是第二天的内容：
+这是app内容：
+1,引入http;
+var http=require('http');
+2,读html内容；
+request:请求 ;  response:响应; 
+var app=http.createServer(function(req,res){
+console.log('11111');
+console.log(req.url);
+这是读html里面的h3标签
+if(req.url=='/index.html'){
+res.write('<html><head><title>index</title></head><body><h3>zheshiindex</h3></body></html>')
+}else{
+res.write('hello')
+}
+这是结束，不写报错·
+res.end();
+});
+	监听。端口号默认80：
+app.listen(8080.function(){
+Console.log('服务器启动成功端口号是8080')
+})
+文件读写操作：
+引入fs模块：
+var fs=require("fs");
+异步读取文件，错误文件优先回调,readFile读取的意思
+console.log("1111111");
+fs.readFile('./123.txt','utf8',function(err,date){
+console.log(err);
+console.log(date)
+});
+console.log("2222222");
+同步读取文件readFileSync
+console.log("3333333");
+vard=fs.readFileSync('./123.txt','utf8');
+console.log(d);
+console.log("44444");
+文件写入方法wirteFile.缺点：会替换原本元素
+var d="hahhaha";  
+fs.writeFile('./1234.txt',d,{flag:'a'},function(err){
+
+console.log(err)
+})
+追加方法appendFile
+var b=fs.appendFile('./123.txt',d,function(err){
+console.log("添加成功");
+});
+添加文件夹mkdir
+fs.mkdir('./imgage',function(){
+});
+删除文件夹，只能删除空文件夹rmdir
+fs.rmdir('./imgage',function(){
+
+})
+删除文件unlink：
+Fs.unlink('url和回调函数')
+文件重命名：
+Fs.rename("路径"替换名称，回调函数)
+exits检测文件夹是否存在,有的话就出现true,没有就是false;
+fs.exists('./html',function(a){
+console.log(a)
+})
+
+
+
+
+
+复习第二天：
+这是app里面的内容：
+Var http=require('http');
+fs是模块
+Var fs=require('fs');
+Var mime=require('mime');
+createServer这是创建服务器的意思：
+varapp=http.createServer(function(req,res){
+
+这是路由：
+Var url=req.url;
+console.log(url)
+异步读取的意思
+fs.readFile('./html'+url,function(err,data){
+console.log(err)
+console.log(data.toString())转化为可读取的文字
+'Content-Type获取文档类型。
+这是请求头部信息：
+if(!err){
+res.writeHead(200,{'Content-Type':mime.getType(url)});
+这是写入内容：
+res.write(data);
+res.end();
+}else{
+res.writeHead(404,{'Content-Type':'text/plain'});
+res.write('404NOTFOUND');
+这是结束的意思：end。不写报错
+res.end()
+}
+})
+
+这是第三天课讲：
+创建两个文件测试是否接收成功：
+这是app的内容：
+
+获取express模块
+Var  express=require('express');
+用app接收express
+Var  app=express();
+Index , user是另外文件，这是模块接收
+Var index=require('./router/index.js')router是文件名字，这是一个url路径
+Var user=require('./router/user.js');
+这是一个模块输出，需要写在路由里面，就是index,user里面；
+Module.exports=router;
+这是一个路由：
+App.use('/',index);
+App.use('/',user);
+/是端口号后面的
+这是监听服务器：
+Var server=app.listen(3000,function(){
+获取服务器地址：
+Var host=server.address().address;
+服务器端口
+Var port=server.address().port;
+Console.log('Example app listening at  http://%s:%s',host,port')
+})
+
+
+这是index里面的：
+Var express=require('express');
+Var router=express.Router();
+router.get('/',function(req,res){
+
+res.send("hello express")
+});
+这是注册页面，后缀写的是zhuce
+router.get("/zhuce",function(req,res){
+res.send("注册页面")
+})
+模块输出：
+Module.exports=router;
+
+这是user代码：
+定义：
+Var express=require('express');
+Var router=express.Router();
+默认/,会输出hello userl；
+router.get("/",function(req,res){
+res.send("hello userl")
+
+})
+在页面加后缀hau，写在/后面；
+router.get("/hau",function(req,res){
+res,send("hahhh")
+
+})
+模块输出：
+Module.exports=router;
+
+
+
+
+这是第四天的内容：
+Get,post获取；
+下载express应用生成器:npm install   express-generator   -g(全局)；
+Express   --view  ejs   web01创建一个叫web01文件的文件名； 
+下载：npm init  express  --save;      npm install ;
+ npm  strat开始；
+按照控制台显示完成三个步骤；会出现一个新建文件夹，里面有写好的基础app,index,user等基础模块；
+自动刷新：npm install   nodemon  -g;不用老是重启 ；
+在app里面把start里面的node改为nodemon,如："start":"nodemon./bin/www"
+
+
+  Npm install  multer --save安装文件上传模块
+
+
+get和post的区别：  
+官方解释：
+1，get是从服务器上获取数据，post是向服务器传送数据；
+2，get是把参数跟据队列加到提交表单action属性所指的url中 ,值和表单内各字段一一对应，在URL中可以看到；
+post是通过http-post机制，将表单各字段与其内容放置在HTML  hearder内在一起传送到action属性所致的URL地址；用户是看不到的这个过程的；
+3，get方式：服务器端用request . query获取变量值；
+post方式：服务器端用 request , body获取提交的数据；
+4，get安全性低，post安全性较高；
+
+
+自我理解：
+get在网页输出的有后缀，如input，会在网址后面出现username的值（用户输出的值）
+get是req.query获取；
+post是网页上输出没有后缀，post需要安装body-parser;
+post是req.body获取；两者在控制台都会有输出；
+
+课讲：
+这是app里面的内容：
+Var express=require('express');
+这是为了用post方法的引入：
+Var bodyParser=require('body-parser');
+这是index文件的引入：
+Var index=require('./router/index');
+Var app=express();
+//配置body-parser模块解析post提交过来的数据
+app.use(bodyParser.json({
+type:'application/*+json'
+}))
+
+//创建application/x-www-form-urlencoded编码解析
+varurlencodedParser=bodyParser.urlencoded({extended:false});
+app.use(urlencodedParser)
+//路由
+app.use('/',index);
+这是服务器监听：
+app.listen(3000,function(){
+console.log('服务器启动成功')
+});
+
+这是index的内容：
+Var express=require('express');
+这是实例化router的方法；
+Var router= new express.Router();
+Var path=require('path');
+
+这是get方法：
+router,get('/zhuce',function(req,res){
+Var p1=path,jion('__dirname',"../")
+../是路径，是为了找文件的上一级，__是两个下划线：
+Console.log(p1);
+这是寻找一个叫HTML文件里面的zhuce文件，这个文件在app文件外面文件的上一级；
+res.sendFile(p1+"/html/zhuce.html")
+})
+
+
+这是get方法：
+router.get("/reg",function(req,res){
+console.log("aaaaaaaaaaa")
+Var data=req.query;
+console.log(data);
+res.send("提交成功")
+
+})
+
+
+这是post方法：
+router.post('/reg1',function(req,res){
+//安装一下body-parser
+vard=req.body;
+console.log(d)
+})
+
+这是模块输出：
+Module.exports=router;
+
+
+
+这是zhuce.html界面，正常写样式：
+<formaction="./reg"method="get">
+二者用其一即可
+<formaction="./reg1"method="post">
+<p>
+<span>姓名</span>
+<inputtype="text"name="username"/>
+</p>
+<p>
+<span>密码</span>
+<inputtype="password"name="pass"/>
+</p>
+<p>
+<span>提交</span>
+<inputtype="submit">
+</p>
+</form>
+
+
+
+这是第五天的内容：
+
+模板共用，超链接，- content添加元素；不加  -  不解析，ajax讲解
+模板共用：
+
+这是index.js里面的
+这是list和list2共用一个模板：
+render是渲染的意思：
+在list.ejs里面用<%= title%>,等于号后面有空格
+router.get('/list',function(req,res,next){
+res.render('list',{title:'list页面123'});
+});
+arr是用for循环遍历;
+router.get('/list2',function(req,res,next){
+res.render('list',{title:'list页面123',arr:["hhhhh","hhhh","gggggg"]});
+});
+这是list.ejs里面for循环：
+<ul>
+<%for(vari=0;i<arr.length;i++){%>
+<li><%=arr[i]%></li>
+<%}%>
+</ul>
+固定样式也可以共用模板，但是需要另外建立ejs文件，用include引入；<%include./head.ejs%>这是建立一个head文件；
+//这是添加超链接
+router.get('/list3',function(req,res){
+这是三个超链接：
+Var data=[{
+title:"djaldhcnajkdncjkdanc",
+url:"http://baidu.com"
+},
+{
+title:"djaldhcnajkdncjkdanc",
+url:"http://baidu.com"
+},
+{
+title:"djaldhcnajkdncjkdanc",
+url:"http://baidu.com"
+}
+];
+
+res.render('list',{title:"list页面2222222",arr:data,content:"<div><p>aaaaaaaaa</p></div>"})
+});
+
+module.exports=router;
+在list.ejs里面需要用for循环：
+在上面index.js里面输出；
+<ul>
+<%for(vari=0;i<arr.length;i++){%>
+<li>
+这是数组的路径
+<ahref="<%=arr[i].url%>">
+这是文本内容
+<%=arr[i].title%>
+</a>
+</li>
+<%}%>
+</ul>
+这是在数组后面添加了一个p标签；
+<%-content%>
+
+
+
+
+ajax讲解
+AJAX 优点：无刷新页面;
+AJAX = Asynchronous JavaScript and XML（异步的 JavaScript 和 XML）。
+AJAX 不是新的编程语言，而是一种使用现有标准的新方法。
+AJAX 最大的优点是在不重新加载整个页面的情况下，可以与服务器交换数据并更新部分
+网页内容。
+AJAX 不需要任何浏览器插件，但需要用户允许JavaScript在浏览器上执行。
+
+来自 <http://www.runoob.com/ajax/ajax-tutorial.html> 这是ajax网址；
+
+创建 XMLHttpRequest 对象的语法：
+variable=new XMLHttpRequest();
+一般都支持，如果不支持新的就是用老版本；
+老版本的 Internet Explorer （IE5 和 IE6）使用 ActiveX 对象：
+variable=new ActiveXObject("Microsoft.XMLHTTP");
+
+
+XMLHttpRequest 对象用于和服务器交换数据。
+
+如需将请求发送到服务器，我们使用 XMLHttpRequest 对象的 open() 和 send() 方法：
+xmlhttp.open("GET","ajax_info.txt",true);
+xmlhttp.send();
+
+
+
+
+方法：
+open(method,url,async)
+规定请求的类型、URL 以及是否异步处理请求。
+? method：请求的类型；GET 或 POST
+? url：文件在服务器上的位置
+? async：true（异步）或 false（同步）；默认为true
+
+
+Send(string)
+将请求发送到服务器。
+? string：仅用于 POST 请求;
+
+
+什么情况下使用post：
+与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。
+然而，在以下情况中，请使用 POST 请求：
+? 无法使用缓存文件（更新服务器上的文件或数据库）
+? 向服务器发送大量数据（POST 没有数据量限制）
+? 发送包含未知字符的用户输入时，POST 比 GET 更稳定也更可靠
+
+readyState存有 XMLHttpRequest 的状态。从 0 到 4 发生变化。
+? 0: 请求未初始化
+? 1: 服务器连接已建立
+? 2: 请求已接收
+? 3: 请求处理中
+? 4: 请求已完成，且响应已就绪
+
+
+	服务器常用的状态码及其对应的含义如下：
+	? 200：服务器响应正常。
+	? 304：该资源在上次请求之后没有任何修改（这通常用于浏览器的缓存机制，使用GET请求时尤其需要注意）。
+	? 400：无法找到请求的资源。
+	? 401：访问资源的权限不够。
+	? 403：没有权限访问资源。
+	? 404：需要访问的资源不存在。
+	? 405：需要访问的资源被禁止。
+	? 407：访问的资源需要代理身份验证。
+	? 414：请求的URL太长。
+	? 500：服务器内部错误。
+	
+
+
+
+
+
+如何使用ajax:
+这是get方法：
+这是list.ejs里面的：
+先建立一个input和sapn标签；
+<inputtype="text"id="username"/>
+span是为与服务器交换数据经过if判断后输出innerhtml;
+<spanid="tip"></span>
+在写一个script;
+<script>
+varuser=document.getElementById("username");
+vartip=document.getElementById("tip");
+写一个inblur事件，在失去焦点的时候输出innerhtnl;
+user.onblur=function(){
+获取text的value
+Var username=this.value;
+创建ajax对象
+Var ajax=newXMLHttpRequest();
+向服务器发起请求
+ajax.open('get','/checkuser?name='+username)
+定义请求的方式与地址
+ajax.send();
+接收服务器的响应
+ajax.onreadystatechange=function(){
+? 200是服务器响应正常。4是有4种状态；
+
+if(ajax.readyState==4&&ajax.status==200){
+
+console.log(ajax.responseText)
+
+console.log(typeofajax.responseText)
+
+vardata=JSON.parse(ajax.responseText)字符型转对象
+判断是否注册过
+if(data.isRegisted==1){
+
+tip.innerHTML="此用户名已被注册"
+}else{
+
+tip.innerHTML="ok"
+}}}}
+
+</script>
+<p>这是index.js里面的：
+router.get(&quot;/checkuser&quot;,function(req,res){</p>
+<p>Var d=req.query;</p>
+<p>console.log(d);
+这是判断xiaoming在数据里是否存在，存在就显示1，表示已经被别人注册过了；
+if(d.name=='xiaoming'){</p>
+<p>res.json({isRegisted:1})</p>
+<p>}else{</p>
+<p>res.json({isRegisted:0})</p>
+<p>}
+})</p>
+<p>module.exports=router;</p>
+<p>这是post的方法：(未写完)</p>
+<p>这是list.ejs里面的：
+先建立一个input和sapn标签；
+&lt;inputtype=&quot;text&quot;id=&quot;username&quot;/&gt;
+span是为与服务器交换数据经过if判断后输出innerhtml;
+&lt;spanid=&quot;tip&quot;&gt;</span>
+在写一个script;</p>
+<script>
+varuser=document.getElementById("username");
+vartip=document.getElementById("tip");
+写一个inblur事件，在失去焦点的时候输出innerhtnl;
+user.onblur=function(){
+获取text的value
+Var username=this.value;
+创建ajax对象
+Var ajax=newXMLHttpRequest();
+向服务器发起请求
+//定义请求的方式与地址
+ajax.open('post','/checkuser2')
+
+//这是请求头
+ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+
+ajax.send("name="+username);
+
+
+//接收服务器的响应
+ajax.onreadystatechange=function(){
+
+if(ajax.readyState==4&&ajax.status==200){
+//这是响应text
+console.log(ajax.responseText)
+//这是typeoftext的原型
+console.log(typeofajax.responseText)
+
+vardata=JSON.parse(ajax.responseText)//字符型转对象
+//判断是否注册过
+if(data.isRegisted==1){
+
+tip.innerHTML="此用户名已被注册"
+}else{
+
+tip.innerHTML="ok"
+}
+
+}
+}
+}
+
+
+
+
+这是index，js里面的：
+//这是post方法
+router.post("/checkuser2",function(req,res){
+
+vard=req.body;
+
+console.log(d);
+
+if(d.name=='xiaoming'){
+
+res.json({isRegisted:1})
+
+}else{
+
+res.json({isRegisted:0})
+
+}
+})
+Module.exposts=router;
+
+
+
+这是第六天的内容：
+jq添加数据；post方法获取（放在第五天，和get方法放在一起）；
+这是index.ejs里面的：
+在ul里面，li的后面通过对象的形式添加数据
+1，先引入jquery-3.3.1.min.js
+<ulid="ul">
+<li>aaaaaaaa</li>
+</ul>
+<inputtype="button"id="aaa"value="获取数据"/>
+直接在下面写script：
+
+这是用jq写的获取数据：
+给按钮一个点击事件；
+$("#aaa").click(function(){
+$.ajax({
+这是路径：
+url:"/news",
+这是请求方法：
+type:"get",
+data:{page:2},
+success:function(msg){
+console.log(msg)
+$.each(msg.list,function(k,v){
+varli=$("<li>")
+console.log(k)
+console.log(v)
+li.text(v.title);
+$("#ul").append(li)
+})
+}
+})
+})
+
+这是index.js里面的：
+
+这是获取文件名路径
+router.get('/news',function(req,res){
+用对象的形式添加：
+res.json({
+list:[{
+title:"djaldhcnajkdncjkdanc",
+url:"http://baidu.com"
+},
+{
+title:"djaldhcnajkdncjkdanc",
+url:"http://baidu.com"
+},
+{
+title:"djaldhcnajkdncjkdanc",
+url:"http://baidu.com"
+}
+]
+});
+});
+
+
+module.exports=router;
+
+
+
+5.23学习
+  select * from 文件名 limit 0,3;后面的第一个数是索引，第二个数是几条数据；
+分页如何实现
+  <a href="/list?page=1">1</a>
+  select * from 文件名 limit (page-1)*3,3;(第一个3是多少条)
+  select count(*) from 文件名；（求总条数），如果想用别的名。在count(*)后加as 另一个名字；
+下载分页模块：pagination-api;
+然后调用里面的create_links;
+  tatal_rows:总条数；
+per_page :每页条数；
+per_pages:当前页；
+base_url:分页的路由；
+然后依次给与他们命名变量；
+
+6.1学习
+如何查询：select * from 文件名 where cid=1 order by id desc limit 0,3;
+下载异步流程控制：Async;
+series:多个函数从上至下依次执行，
+
+6.5学习
+密码如何加密：下载MD5
+
+                          6.6vue第一天
+
+下载vue,并引入vue.js
+实例化一个vue对象：
+      var V=new Vue（{
+           el：“”，
+           data:{ 
+               title:"",
+               content:"",
+},
+       methods:{
+           abc:function(){
+          }
+       }
+     }）
+1.普通的渲染：
+      {{title}}
+2.标签内的渲染：
+       <div v-html="content">  </div>
+3.数组的渲染：
+      <li v-for=" item in arr ">{{ item }}</li>
+   或<li v-for="（item，index）in arr ">{{ item }}{{index}}</li>
+4.绑定事件：
+        <input type="button" v-on:click="abc">或（v-on等同于@）
+        <input type="button" @click="abc">
+阻止事件冒泡：
+          v-on:click.stop="abc"
+阻止默认事件：
+          v-on:click.stop.prevent="abc"或v-on:click.prevent
+7.self:
+    v-on:click.stop.prevent.self 会阻止所有的点击
+    v-on:click.self.prevent   只会阻止对元素自身的点击；
+8.once： 
+     v-on:click.once="abc"   点击事件只会触发一次；
+父级数据传输给子级：
+       给父级定义一个属性：
+例如：
+<shop-item v-for="(item,index) in goodspata" :item></shop-item>
+    子级：
+        export default{
+          props:{
+          item:{ 
+                type:object
+                } 
+            }
+          }  
+
+                           6.7vue第二天：
+
+ 1.computed:计算属性：
+      例如：sum:function(){
+                 var s=0;
+        for(var i=0;i<this.arr.lengh;i++){
+         s+=this.arr[i].price*this.arr[i].num;
+         }
+     returns;
+}
+ 2.条件渲染：
+     v-if   v-else   v-else-if   v-show
+ 3.class与style绑定
+   class:v-bind:class=""
+   :style="",然后在data里设置样式，如下：
+       data：{
+         w:"200px",
+         h:"200px",
+ 或      ss:{
+          width:"200px",
+          height:"200px",
+}
+}
+ v-model 指定：她能轻松实现表单输入和应用状态之间的双向绑定；如下：
+   <div>
+       <input v-model="message">
+</div>
+
+                          6.9vue第三天：
+
+1 . 过渡动画  transition;
+例如： 
+     <transition name='fade'> 需要transition标签包裹
+      <div class='d' v-show='f'></div> 并给一个name名
+      </transition>
+<style>
+.d{
+      width:200px;
+      height:200px;
+      background-color:red;
+}
+.fade-enter-active（定义进入的过渡状态）,fade-leave-active（离开的过渡状态）{
+       transition:all  .5s
+}
+.fade-enter（定义进入的开始状态）,fade-leave-to（离开的结束状态）{
+      opacity:0;
+      width:0；
+      height:0;
+}
+</style>
+<p>动画插件：link rel=&quot; stylesheet&quot; href=&quot;animate.css&quot;&gt;引入
+用法：<transition enter-active-class="animated bounceinDown"
+       leave-active-class="animate bounceout">
+<div class="d" v-show='f'></div>
+</transition>
+注意：enter-active-class  对应的进入的动画类名
+leave-active-class  对应的进入的动画类名</p>
+<p>1.下载 npm install vue-cli -g
+vue init webpack 文件名
+下载后除了第一个yes,其他都选择No。
+也可以在网上下载WS里识别vue的插件；
+然后根据提示输入cd 文件名；npm run dev;最后弹出一个8080，就成功。
+2.子组件引入父组件；局部引用
+父组件引入：import 文件名 from 文件路径；
+子组件输出：
+export default{
+name:'news',
+data:function(){
+return{
+t1:&quot; &quot;
+}
+}
+}
+3.全局引入（main.js中配置）
+引入：import com from './components/com'
+配置：Vue.component (&quot;cc&quot;,com)；（vue首字母大写）
+4.路由（index.js中引入）
+引入文件：import list from &quot;@components/list&quot;
+路由配置：
+expprt default new Router({
+routes:[
+{  path:&quot;/&quot;,（path：如果没有可显示路由，跳转此路由）
+name:&quot;Helloworld&quot;,
+component:Helloworld       （component:模板名称）
+},
+{   path:&quot;/list&quot;,
+nameL&quot;list&quot;,
+component:list
+}
+]
+}）
+5.父组件引入子组件：（事件监听）
+&lt;input type=&quot;button&quot; value=&quot;点我吧&quot; @click=&quot;aa&quot;&gt;
+methods:{
+aa:function(){
+this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>e</mi><mi>m</mi><mi>i</mi><mi>t</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>t</mi><mi>o</mi><mi>p</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>t</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">我</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">来</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">）</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">emit(&quot;toparent&quot;,&quot;我是来自。。。&quot;）//this.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">&quot;</span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">。</span><span class="mord">&quot;</span><span class="mord cjk_fallback">）</span><span class="mord">/</span><span class="mord">/</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>emit固定写法
+toparent:也可跟对象和数组；<br>
+}
+})
+父组件监听事件：</p>
+<p>{{ title }}</p>
+<cc @toparent="bb"></cc>
+methods:{
+    bb:function(msg){  //此msg是事件监听附带的数据
+        this.tt=msg
+             }
+          }
+6.路由的引入：（app.vue）
+<router-link to="/list">Go to list</router-link>
+使用router-link组件来导航
+通过传入“to”属性指定链接
+<router-view> 定义内容显示页
+<pre><code>                     vue第五天：命名路由
+</code></pre>
+<p>1.模式一：
+路由：import name from &quot;@/componts/name&quot;  这里的name是文件名
+export default new Router({
+router:[
+{    path:'/name/:id',   这里的id指定义参数
+name:&quot;name&quot;,
+component:name
+}
+]<br>
+})
+引入模板内：</p>
+<ul>
+   <li v-for="item in arr">
+<router-link  :to="{name:"name",params:{id:item.id}}">{{item.item}}</router-link>
+</li>
+ </ul>
+ export default{
+          name:"name",
+          data:function(){
+       return{
+        arr:[{title:"aaa",id:1},{title:"bbb",id:2},{title:"ccc",id=3]
+ }
+<p>}
+生命周期（在路转页面内设置）
+mounted:function(){
+console.log(this.route.Params.id)
+}
+2.模式 2
+未携带参数{
+path:'/detail',
+name:'detail',
+component:detail
+redirect:'list'跳转list页面
+}
+引入模板中：
+<a href="router-link:to=%22%7Bname:%22detail%22,query:%7Bid:item.id%7D%7D%22">router-link:to=&quot;{name:&quot;detail&quot;,query:{id:item.id}}&quot;</a>{{item.title}}</router-link>
+生命周期
+mounted:function(){
+console.log(this.<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 17: …oute.query.id)
+}̲
+3.跳转路由（通过事件）
+ …'>route.query.id)
+}
+3.跳转路由（通过事件）
+ 例：&lt;button @click=&quot;tolist&quot;&gt;跳转到list路由&lt;/button&gt;
+   methods:{
+         tolist:function(){
+     方法1：this.</span>router.push(&quot;/list&quot;)
+方法2：this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi mathvariant="normal">.</mi><mi>p</mi><mi>u</mi><mi>s</mi><mi>h</mi><mo>(</mo><mrow><mi>n</mi><mi>a</mi><mi>m</mi><mi>e</mi><mo>:</mo><mi mathvariant="normal">&quot;</mi><mi>l</mi><mi>i</mi><mi>s</mi><mi>t</mi><mi mathvariant="normal">&quot;</mi></mrow><mo>)</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mn>3</mn><mi mathvariant="normal">：</mi><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">router.push({name:&quot;list&quot;})
+      方法3：this.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault">u</span><span class="mord mathdefault">s</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">&quot;</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mord">&quot;</span></span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord">3</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>router.push(name:&quot;detail&quot;,params:{id:123})
+}
+}
+4.前进一页，后退一页
+methods:{
+click(){
+this.<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>r</mi><mi>o</mi><mi>u</mi><mi>t</mi><mi>e</mi><mi>r</mi><mi mathvariant="normal">.</mi><mi>g</mi><mi>o</mi><mo>(</mo><mo>−</mo><mn>1</mn><mo>)</mo><mi mathvariant="normal">/</mi><mi>t</mi><mi>h</mi><mi>i</mi><mi>s</mi><mi mathvariant="normal">.</mi></mrow><annotation encoding="application/x-tex">router.go(-1)/this.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">o</span><span class="mopen">(</span><span class="mord">−</span><span class="mord">1</span><span class="mclose">)</span><span class="mord">/</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord">.</span></span></span></span>router.go(1)   负是后退，正值是前进。
+}
+5.定义父路由以及子路由
+{
+path:&quot;/cate&quot;,
+name:&quot;cate&quot;,
+component:cate,
+children:[  子路由由数组对象组成
+{<br>
+path:&quot;name1&quot;,
+name:&quot;name1&quot;,
+component:name1
+},
+{    path:&quot;name2&quot;,
+name:&quot;name2&quot;,
+component:name2
+}]
+}
+引入到模板须携带父路由前缀：
+<router-link to ="/cate/name1">name</router-link></p>
+ <div class="f">
+      <router-view></router-view>  内容展示路由部分
+  </div>
+<pre><code>                     vue第六天-跨域
+</code></pre>
+<p>方法一：js跨域
+首先声明一个函数：
+function abc(msg){
+console.log('111')
+$(&quot;#a&quot;).text(msg.name)<br>
+}
+通过script标签中的src属性进行跨域请求：</p>
+  <script src="http://127.0.0.1:8000/ccc?callback=abc></script>
+<p>通过callback获取信息                端口号8000，路由为ccc
+路由传值：
+router.get(&quot;/ccc&quot;,function(req,res,next){
+var cb=req.query.callback;
+var data={id:123,name:&quot;hello&quot;};
+data=Json.stringify(data) 将json对象转为字符串
+var d= cb+'('+data+')' data为字符串
+res.send(id)
+}
+方法2：jsonp方法跨域
+$(&quot;#btn&quot;).on(‘click’,function(){
+$.ajax({
+url:&quot;http://127.0.0.1:8000/bbb&quot;,
+type:&quot;get&quot;,
+dataType:'jsonp',   数据格式：jsonp格式
+success:function(msg){
+console.log(msg)
+}
+})
+}
+路由设置：
+router.get(&quot;/bbb&quot;,function(req,res,next){
+res.jsonp({id:123,name:&quot;aaa&quot;})
+}
+方法3：前端设置方法跨域
+$('#btn').on('click',function(){
+$.ajax({
+url:&quot;http://127.0.0.1:8000/api2&quot;,
+type:&quot;get&quot;,
+success:function(msg){
+console.log(msg.list)<br>
+}</p>
+<p>})
+}
+路由设置：（请求头）
+router.get('/api2',function(req,res,next){
+res.header(&quot;Access-Control-Allow-Origin&quot;, &quot;*&quot;);</p>
+<pre><code>  res.header(&quot;Access-Control-Allow-Headers&quot;, &quot;X-Requested-With&quot;);  
+
+  res.header(&quot;Access-Control-Allow-Methods&quot;,&quot;PUT,POST,GET,DELETE,OPTIONS&quot;);  
+res.header(&quot;X-Powered-By&quot;,' 3.2.1')  
+
+  res.header(&quot;x-Powered-By&quot;,'3.2.1')
+  res.header(&quot;Content-Type&quot;, &quot;application/json;charset=utf-8&quot;)
+  res.json({id:111,content:&quot;hello aaa&quot;})
+  }
+</code></pre>
+<p>vue axios跨域：
+首先下载 npm install axios -s;
+main.js中配置
+import axios from &quot;axios&quot;
+vue.prototype.http=axios;   与后面要对应</p>
+   <ul>
+        <li v-for="item in arr">{{item}}</li>
+    </ul>
+     <input type="button" value="获取数据" @click="aa">
+    methods:{
+         aa:function(){
+           var that=this; 先保存一下this
+          this.http.get("http://127.0.0.1:8000/api2").then(function(r){
+            that.arr=r.data.list
+          })
+    }
+ }
+   mounted:function(){
+        var that=this;
+        this.http.get('http://127.0.0.1:8000/api2').then(fucntion(r){
+           that.arr=r.data.list
+       })
+    }
+ }
+ 路由：
+ router.get("/api2",function(req,res,next){
+         res.json({ list:["hello1214","fagaghago","aaaa","bbbb"]
+})
+   vue第七天   Element-ui
+首先：npm安装
+        npm i element-ui -s;
+在main.js中写入一下内容：
+       import Element from "element-ui";
+       import "Element-ui/lib/theme-chalk/index.css";
+       vue.use(ElementUI);
+   vue打包：npm run build
+<p>vue由三个部分组成，template,script,style;
+template
+script:export default{
+data:function(){
+return();
+}
+methods:{     }，
+computed：{   }，
+props:{     }
+}</p>
+<p>style：如何分开样式，在style里写scoped。
+Prop:组件传值；
+vue的路由配置：1，创建好组件
+2.创建好路由
+3.创建好对象
+4，挂载
+router-view路由出口
+顶级路径：</p>
+<p>router-link：路由路径；
+嵌套路由：
+动态路由组件：
+步骤：添加router里的 index内的路径和子内容，
+在components里添加index内的索引的内容，
+在App.vue里引入所要呈现的界面。
+命名路由：
+如果使用问号路由的话，必须把params改成query;例子如下：
+<router-link  :to="'/news2/detail?id='+item.id" > {{ item.title }} </router-link>
+var id = this.$route.query;
+path:'detail',</p>
+<p>编程式导航：
+router.push();规范书写，不会出现问题；
+去#号，在export default new Router里的routes上面加mode:&quot;history&quot;
+router.go():实现上一页下一页的功能；</p>
+<p>6.11日重点理解6.9学习课件里的components里的Guoji.vue和Detail.vue之间的联系；
+Axios预习，ajax跨域；</p>
+<p>6.13
+跨域读取数据：cros方法读取；
+post的方法；在6.12学习课件的web02文件里，跨域到6.9vue学习课件，
+在List.vue里，传输数据；
+子组件传值给父组件；
+vue的生命周期:beforeCreate
+created
+befroemount
+mounted
+钩子就是回调函数；
+兄弟组件间传值：通过中间人传值；
+6.14
+在cmd里用指令npm i element-ui -S下载element，
+然后在main.js里引入import ElementUI from 'element-ui'；
+import 'element-ui/lib/theme-chalk/index.css';
+Vue.prototype.axios = axios;
+然后创建element.vue,在index.js的export default new Router里设置好路径，开始你的旅程吧。</p>
+<p>element的功能主要与jqery的bootstrap的功能都是大相径庭的。多练多熟悉就可以了。
+6.19复习
+vue
+mvvm
+组件化
+数据驱动视图
+spa 单页应用
+axios</p>
+<p>apm run build vue 打包
+打包好后，创建好文件名；把dist里的文件index替换到创建好的目录里的index.ejs里，再
+把static复制放到public里去就可以了。</p>
+<p>移动端页面布局
+1 pc 固定尺寸布局
+响应式布局  Pc pad 手机 bootstrap media  query
+自适应布局 常见手机端页面
+百分比布局
+flex布局
+rem布局
+什么是rem;1rem=20px;</p>
+<p>6.20
+用vue写移动端页面。
+在cmd用vue init webpack 文件名  下载好
+建好后在components创建你要的页面（vue）
+vue创建由三部分组成：template,script,style;
+template:只能有一个div.
+script里由export default{     }</p>
+<pre><code>    6.21angular学习第一天
+</code></pre>
+<p>vuex</p>
+<p>angular：
+1.首先：npm install -g @angular/cli
+2.创建新项目：ng new my-app
+3.启动开发服务器:cd my-app
+npm serve --open
+npm start（离线启动项目）
+@component:是个装饰器函数，用于为该组件指定angular所需的元数据
+1.selector:组件的选择器（css元素选择器）
+2.templateUrl:组件模板文件的位置
+3.styleUrls:组件私有样式表文件的位置
+入门：
+1.新建模板文件：
+import{component}from '@angular/core',(angular核心模块)
+@component({
+selector:&quot;bb&quot;,
+template:'<h1>发哈</h1>'
+})
+export class bb component{    } 输出bb模板
+2.在opp。module.ts文件中配置
+引入模板：import {bbComponent}from './bb.component';
+@Ngmodule({
+declarations:[
+Appcomponent,
+bbcomponent
+],
+imports:[
+Browsermodule
+],
+Providers:[],
+bootstrap:[Appcomponent]
+})
+export class Appmodule{  }</p>
+<p>angular 第三天
+编译器的安装：
+下载：studio Cole / vscodesetup-x64-1.22.2.exe 直接安装
+安装Typescript npm包：
+npm install -g typescript(安装完成后我们可以使用Typescript编译器，名称叫tsc,
+可以将编译结果生成js文件）。
+要编译typescript文件，可使用如下命令：
+tsc filename.ts
+需要添加 tscomfig 文件：可将ts-&gt;js 没有此文件必须手动翻译
+运动任务：ctrl + shift + b
+tsc:build 运行一次把目录下所有ts文件转为js文件。
+tsc:watch 监听运行；</p>
+<pre><code>  angular第四天
+</code></pre>
+<p>定义事件：用小括号
+例：<button click='ck()'>点击</button>
+定义控制样式：用中括号</p>
+<div [style.display]='dis'>aa</div>
+定义负值：用{ } ；
+ng-style:可以跟对象；
+ng-class:可以在样式表里面设置样式。
+<pre><code> angular 第五天
+</code></pre>
+<p>模板语法：
+1.数据绑定-插值表达式{{...}}
+（1）里面可以是表达式的计算：{{1+1}}
+（2）也可以调用宿主组件的方法：{{1+1+getval()}}
+2.属性绑定[ngstyle]
+例如：&lt;div [ngstyle]=&quot;ts&quot;&gt;你好</div>
+默认显示：
+st={'font-size':&quot;20px&quot;,
+'width':'100px',
+'height':&quot;100px&quot;
+}
+点击事件：
+chg(){
+this.st['background-color']=&quot;#foo&quot;;单个更改。
+多行更改：
+st={
+'background-color':&quot;#ccc&quot;,
+'font-size':'20px',
+'width':&quot;100px&quot;
+}
+2.[ngClass]</p>
+<div class="mn gh xy" [ngclass]="zz">a</div>
+style:['.mn{   }.abc{   }.abd{  }']
+ 定义显示：
+       zz="abc";
+ 事件：
+    chg(){
+           this.zz="abc"
+         }
+3.[class.abc]="bb"
+   bb=false/true;
+<pre><code> angular 第六天
+</code></pre>
+<p>指令：属性</p>
+<ol>
+<li>*ngIf=&quot;&quot;  添加节点，删除节点/可以条件语句或者变量
+例：&lt;div *ngIf=&quot;show&quot;&gt;
+&lt;button (click)=&quot;show=!show&quot;&gt;点击</button>
+&lt;button (click)=&quot;ab(c)&quot;&gt;点击</button>
+export class DemooqComponent implements OnInt{
+show:boolean=true;
+abc(c){
+this.show=!this.show;
+}
+}
+2.*ngFor=&quot;let x of 数组对象&quot; 循环
+例： &lt;div *ngFor=&quot;let a of arr;let i=index&quot;&gt;
+{{a}}。。。{{i}}  </div>
+</li>
+</ol>
+<p>例：
+arr：Array<number>=[22,45,89]
+数组对象：</p>
+   <div class="one" *ngFor="let item of Jsonarr">
+    <p>{{item.dt}}</p>
+     <p>{{item.title}}</p>
+     <p>{{item.desc}}</p>
+    </div>
+jsonarr=[
+     {   "dt":"2018-05-04",
+         "title":"faghgaoga",
+         "desc":"中国"}，
+       {。。。}，
+       {。。。}]
+3  switch case
+[ngSwitch]
+*ngSwitchCase
+*ngSwitchDefault
+例如：
+     <div [ngSwitch]="a">
+      <div *ngSwitchCase="1">aa</div>
+      <div *ngSwitchCase="2">bb</div>
+      <div *ngSwitchCase="3">cc</div>
+      <div *ngSwitchDefault>dd</div>
+      </div>
+4.结构嵌套：每层只能放一个结构指令，添加很多天意义的层级结构。
+[ng-Container] 可以放结构指令
+例：九九乘法表：
+ <div *ngFor="let a of arr;let i=index">
+  <ng-Container *ngFor="let b of arr;let j=index">
+  <ng-Container *ngIf="b<=a">
+   {{ a }}*{{b}}={{a*b}}
+   </ng-Container>
+   </ng-Container>
+   </div>
+arr=[1,2,3,4,5,6,7,8,9]
+<pre><code>angular 第七天
+</code></pre>
+<p>1.绑定双向数据绑定===表单
+[cngmodel]
+&lt;input type=&quot;text&quot; [cngmodel]=&quot;vv&quot;&gt;</p>
+<div> {{vv}}</div>  时时输入变值；
+<p>&lt;input type=&quot;text&quot; [value]=&quot;vv&quot; (keydown)=&quot;vv=$event(事件).target(原目标节点)
+.value&quot;&gt;</p>
+<div>{{vv}}</div>
+在app.module.ts引入 import{FormsModule}from '@angular/forms';
+<p>2.路由
+新建路由表：router.module.ts （与app.module.ts同级）
+快捷输入：a-module-routing
+在路由中引入要跳转的组件。
+配置路由：
+const  router:Routes=[
+{  path:&quot; &quot;,Component:nameCompnent},
+{  path:&quot;link&quot;,Component:demo12Compnent},]
+forchild forRoot
+@Ngmodule({
+imports:[RouterModule.forRoot(routes)]  注：forRoot必须要更改；
+exports:[RouterModule],
+})
+export class AppRoutingModule{  }</p>
+<p>在app.module中引入并声明
+import{AppRoutingModule}from'./router.module';
+imports:[
+AppRoutingModule  声明。
+]</p>
+<p><a routerLink="1">首页</a>
+<a routerLink="lintrl:12345">品牌</a>   传参
+<a routerLink="/Link">联系我们</a>
+<myhead></myhead>
+<router-outlet></router-outlet> 占位符
+<myfoot></myfoot>
+想要往哪个组件传参就引入：
+import{ ActivatedRoute} from '@angular/router',
+shopID:any;
+constractor(Priate rout:ActivatedRoute){  }
+ngonImit(){
+this.shopID=this.rout.snapshot.params.xyz;
+}</p>
+<p>angular结束；</p>
+<p>6.22
+再创建一个组件
+ng generate component 组件名称
+typeScript</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Jquery]]></title>
+        <id>https://XinLingJ.github.io//post/jquery</id>
+        <link href="https://XinLingJ.github.io//post/jquery">
+        </link>
+        <updated>2019-10-18T01:58:31.000Z</updated>
+        <content type="html"><![CDATA[<h2 id="jqueryjs-jq什么是jqueryjquery是一个快速小巧功能丰富的javascript库-它通过易于使用的api在大量浏览器中运行使得html文档遍历和操作事件处理动画和ajax变得更加简单jquery1xx版本的仍然在继续优化兼容ie低版本在20版本以上逐渐舍弃一些内容不在兼容ie低版本1使用jq11-下载到本地未压缩的文件最适合在开发或调试期间使用压缩文件可以节省带宽并提高生产性能-script-srcjquery-341minjsscript12-使用cdn地址httpscodejquerycomjquery-341minjs2入口函数jswindowonloadhtmlcssimage等加载完毕以后再执行吧每个html只能有一个windowonloadjq当页面中的dom结构加载完毕后就执行-每个html可以有多个jquery入口函数-21-入口函数1documentreadyfunctionxxxx程序22-入口函数2readyfunctionxxxxx23-入口函数3functionxxxxx3获取元素选择器元素通过选择器选择对应的元素如果写了第二个参数表示在第二个参数所匹配的内容中查找第一个参数选择的元素-返回一个jquery对象这个jquery对象才能使用jquery的方法-var-lis-li可以赋值给变量变量中的只是一个标识作用4选择器-41-基本选择器-idboxclassbox-元素li42-层级关系选择器后代空格-ul-li子代-ulli相邻兄弟-lisli之后所有的兄弟元素~-lis~p并集-pabox43-基本伪类选择器first选择一类中的第一个元素-lifirstlast选择一类中的最后一个元素-lilasteven选择索引值为偶数的元素-lievenodd选择索引值为奇数的元素-lioddltidx-idx选择小于指定索引的元素最后一项为-1-lilt3-2gtidx-idx选择大于指定索引的元素最后一项为-1-ligt3-3eqidx-idx选择指定索引的元素最后一项为-1-lieq2-1-not选择器去除所有与给定选择器匹配的元素-header匹配如-h1-h2-h3之类的标题元素-root获取根元素html-44-内容选择器-containstext匹配包含给定文本的元素licontains2csscolorredempty获取内容为空的元素has选择器匹配含有选择器所匹配的元素的元素lihasa-parent匹配含有子元素或者文本的元素5js对象与jq对象转换-51-js-jqxxx-this-this52-jq-jsgetindex或者indexliget0-或者-li0liget2stylecolorred6点击事件clickdivclickfunctionxxxxx鼠标悬浮事件mouseoverdivmouseoverfunctionxxxxx7index获取元素的索引lisindex获取lis元素在同级元素中的索引位置-lisindex选择器获取lis元素在选择器匹配的元素中的索引位置-lisindexol-li5给元素设置样式js获取内联或外部样式windowgetcomputedstylep1color获取元素最终的显示效果的值51-设置单一样式jquery自带循环机制所以不需要写循环就可以给一组元素都添加样式-jquery元素csscolorred设置color为redul-licsscolorred-元素csscolor获取color的值-consolelogp1csscolor52-设置多个样式元素csswidth100pxheight200pxbackgroundcolorredborder-width20px6each循环元素eachfunctionivv元素i索引">jQuery.js---jq
+什么是jquery？
+jQuery是一个快速，小巧，功能丰富的JavaScript库。它通过易于使用的API在大量浏览器中运行，使得HTML文档遍历和操作，事件处理，动画和Ajax变得更加简单
+jquery1.x.x:版本的仍然在继续优化兼容ie低版本，在2.0版本以上逐渐舍弃一些内容，不在兼容ie低版本
+1:使用jq
+1.1 下载到本地：
+未压缩的文件最适合在开发或调试期间使用;
+压缩文件可以节省带宽并提高生产性能。
+<script src="../jquery-3.4.1.min.js"></script>
+1.2 使用CDN地址：
+https://code.jquery.com/jquery-3.4.1.min.js
+2:入口函数：
+js:window.onload:html\css\image等加载完毕以后再执行吧，每个html只能有一个window.onload
+jq:当页面中的dom结构加载完毕后就执行。每个html可以有多个jquery入口函数。
+2.1 入口函数1：
+$(document).ready(function(){
+xxxx程序
+})
+2.2 入口函数2:
+$().ready(function(){
+xxxxx
+})
+2.3 入口函数3:
+$(function(){
+xxxxx
+})
+3:获取元素：
+$(&quot;选择器&quot;,&quot;元素&quot;):通过选择器选择对应的元素
+如果写了第二个参数，表示在第二个参数所匹配的内容中查找第一个参数选择的元素。
+返回一个jquery对象，这个jquery对象才能使用jquery的方法。
+var <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>l</mi><mi>i</mi><mi>s</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">lis =</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>(&quot;li&quot;);//可以赋值给变量，变量中的<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">只</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">标</mi><mi mathvariant="normal">识</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">用</mi><mn>4</mn><mo>:</mo><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">：</mi><mn>4.1</mn><mi mathvariant="normal">基</mi><mi mathvariant="normal">本</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">：</mi><mi>i</mi><mi>d</mi><mi mathvariant="normal">：</mi></mrow><annotation encoding="application/x-tex">只是一个标识作用
+4:选择器：
+  4.1 基本选择器：
+      id：</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">只</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">标</span><span class="mord cjk_fallback">识</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">用</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord cjk_fallback">器</span><span class="mord cjk_fallback">：</span><span class="mord">4</span><span class="mord">.</span><span class="mord">1</span><span class="mord cjk_fallback">基</span><span class="mord cjk_fallback">本</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord cjk_fallback">器</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord cjk_fallback">：</span></span></span></span>(&quot;#box&quot;)
+class：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi mathvariant="normal">.</mi><mi>b</mi><mi>o</mi><mi>x</mi><mi mathvariant="normal">&quot;</mi><mo>)</mo><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">：</mi></mrow><annotation encoding="application/x-tex">(&quot;.box&quot;)
+      元素：</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord">.</span><span class="mord mathdefault">b</span><span class="mord mathdefault">o</span><span class="mord mathdefault">x</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">：</span></span></span></span>(&quot;li&quot;)
+<em>：$(&quot;</em>&quot;)
+4.2 层级关系选择器：
+后代：空格  $(&quot;ul li&quot;)
+子代：&gt;     $(&quot;ul&gt;li&quot;)
+相邻兄弟：+  $(&quot;.lis+li&quot;)
+之后所有的兄弟元素：~  $(&quot;.lis~p&quot;)
+并集：,   $(&quot;p,a,#box&quot;)
+4.3 基本伪类选择器：
+:first:选择一类中的第一个元素。                     $(&quot;li:first&quot;)
+:last:选择一类中的最后一个元素                      $(&quot;li:last&quot;)
+:even:选择索引值为偶数的元素                        $(&quot;li:even&quot;)
+:odd:选择索引值为奇数的元素                         $(&quot;li:odd&quot;)
+:lt(idx|-idx):选择小于指定索引的元素,最后一项为-1   $(&quot;li:lt(3|-2)&quot;)
+:gt(idx|-idx):选择大于指定索引的元素,最后一项为-1   $(&quot;li:gt(3|-3)&quot;)
+:eq(idx|-idx):选择指定索引的元素,最后一项为-1       <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>l</mi><mi>i</mi><mo>:</mo><mi>e</mi><mi>q</mi><mo>(</mo><mn>2</mn><mi mathvariant="normal">∣</mi><mo>−</mo><mn>1</mn><mo>)</mo><mi mathvariant="normal">&quot;</mi><mo>)</mo><mo>:</mo><mi>n</mi><mi>o</mi><mi>t</mi><mo>(</mo><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi mathvariant="normal">器</mi><mo>)</mo><mi mathvariant="normal">：</mi><mi mathvariant="normal">去</mi><mi mathvariant="normal">除</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">与</mi><mi mathvariant="normal">给</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">匹</mi><mi mathvariant="normal">配</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mo>:</mo><mi>h</mi><mi>e</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>r</mi><mo>:</mo><mi mathvariant="normal">匹</mi><mi mathvariant="normal">配</mi><mi mathvariant="normal">如</mi><mi>h</mi><mn>1</mn><mo separator="true">,</mo><mi>h</mi><mn>2</mn><mo separator="true">,</mo><mi>h</mi><mn>3...</mn><mi mathvariant="normal">之</mi><mi mathvariant="normal">类</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">标</mi><mi mathvariant="normal">题</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mo>:</mo><mi>r</mi><mi>o</mi><mi>o</mi><mi>t</mi><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">根</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">：</mi><mi>h</mi><mi>t</mi><mi>m</mi><mi>l</mi><mn>4.4</mn><mi mathvariant="normal">内</mi><mi mathvariant="normal">容</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">：</mi><mo>:</mo><mi>c</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>a</mi><mi>i</mi><mi>n</mi><mi>s</mi><mo>(</mo><mi>t</mi><mi>e</mi><mi>x</mi><mi>t</mi><mo>)</mo><mo>:</mo><mi mathvariant="normal">匹</mi><mi mathvariant="normal">配</mi><mi mathvariant="normal">包</mi><mi mathvariant="normal">含</mi><mi mathvariant="normal">给</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">本</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">(&quot;li:eq(2|-1)&quot;)
+      :not(选择器)：去除所有与给定选择器匹配的元素
+      :header:匹配如 h1, h2, h3...之类的标题元素
+      :root:获取根元素：html
+  4.4 内容选择器：
+      :contains(text):匹配包含给定文本的元素:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mopen">(</span><span class="mord">2</span><span class="mord">∣</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">1</span><span class="mclose">)</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">n</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord cjk_fallback">器</span><span class="mclose">)</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">去</span><span class="mord cjk_fallback">除</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">与</span><span class="mord cjk_fallback">给</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord cjk_fallback">器</span><span class="mord cjk_fallback">匹</span><span class="mord cjk_fallback">配</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">h</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord cjk_fallback">匹</span><span class="mord cjk_fallback">配</span><span class="mord cjk_fallback">如</span><span class="mord mathdefault">h</span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">h</span><span class="mord">2</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">h</span><span class="mord">3</span><span class="mord">.</span><span class="mord">.</span><span class="mord">.</span><span class="mord cjk_fallback">之</span><span class="mord cjk_fallback">类</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">标</span><span class="mord cjk_fallback">题</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.61508em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">o</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">根</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">h</span><span class="mord mathdefault">t</span><span class="mord mathdefault">m</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord">4</span><span class="mord">.</span><span class="mord">4</span><span class="mord cjk_fallback">内</span><span class="mord cjk_fallback">容</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord cjk_fallback">器</span><span class="mord cjk_fallback">：</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord cjk_fallback">匹</span><span class="mord cjk_fallback">配</span><span class="mord cjk_fallback">包</span><span class="mord cjk_fallback">含</span><span class="mord cjk_fallback">给</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">本</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span>(&quot;li:contains(2)&quot;).css(&quot;color&quot;,&quot;red&quot;)
+:empty:获取内容为空的元素
+:has(选择器):匹配含有选择器所匹配的元素的元素:<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>l</mi><mi>i</mi><mo>:</mo><mi>h</mi><mi>a</mi><mi>s</mi><mo>(</mo><mi>a</mi><mo>)</mo><mi mathvariant="normal">&quot;</mi><mo>)</mo><mo>:</mo><mi>p</mi><mi>a</mi><mi>r</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>:</mo><mi mathvariant="normal">匹</mi><mi mathvariant="normal">配</mi><mi mathvariant="normal">含</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">子</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">或</mi><mi mathvariant="normal">者</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">本</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mn>5</mn><mo>:</mo><mi>j</mi><mi>s</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">与</mi><mi>j</mi><mi>q</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">转</mi><mi mathvariant="normal">换</mi><mi mathvariant="normal">：</mi><mn>5.1</mn><mi>j</mi><mi>s</mi><mo>−</mo><mo>−</mo><mi>j</mi><mi>q</mi><mo>:</mo></mrow><annotation encoding="application/x-tex">(&quot;li:has(a)&quot;)
+      :parent:匹配含有子元素或者文本的元素
+5:js对象与jq对象转换：
+  5.1 js--jq:</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">h</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mclose">)</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.80952em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">匹</span><span class="mord cjk_fallback">配</span><span class="mord cjk_fallback">含</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">子</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">或</span><span class="mord cjk_fallback">者</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">本</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord">5</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">s</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">与</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">转</span><span class="mord cjk_fallback">换</span><span class="mord cjk_fallback">：</span><span class="mord">5</span><span class="mord">.</span><span class="mord">1</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">s</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.85396em;vertical-align:-0.19444em;"></span><span class="mord">−</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span></span></span>(xxx)---this--$(this)
+5.2 jq--js:get(index)或者[index]
+$(&quot;li&quot;).get(0) 或者 $(&quot;li&quot;)[0]
+$(&quot;li&quot;).get(2).style.color=&quot;red&quot;
+6:点击事件：click
+$(&quot;div&quot;).click(function(){
+xxxxx
+})
+鼠标悬浮事件：mouseover
+$(&quot;div&quot;).mouseover(function(){
+xxxxx
+})
+7:index():获取元素的索引
+$(&quot;.lis&quot;).index():获取lis元素在同级元素中的索引位置。
+$(&quot;.lis&quot;).index(选择器):获取lis元素在选择器匹配的元素中的索引位置。
+$(&quot;#lis&quot;).index(&quot;ol li&quot;)
+5:给元素设置样式：
+js获取内联或外部样式：window.getComputedStyle(p1).color//获取元素最终的显示效果的值
+5.1 设置单一样式：
+jquery自带循环机制，所以不需要写循环，就可以给一组元素都添加样式。
+jquery元素.css(&quot;color&quot;,&quot;red&quot;):设置color为red
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>u</mi><mi>l</mi><mi>l</mi><mi>i</mi><mi mathvariant="normal">&quot;</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>c</mi><mi>s</mi><mi>s</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>c</mi><mi>o</mi><mi>l</mi><mi>o</mi><mi>r</mi><mi mathvariant="normal">&quot;</mi><mo separator="true">,</mo><mi mathvariant="normal">&quot;</mi><mi>r</mi><mi>e</mi><mi>d</mi><mi mathvariant="normal">&quot;</mi><mo>)</mo><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">.</mi><mi>c</mi><mi>s</mi><mi>s</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>c</mi><mi>o</mi><mi>l</mi><mi>o</mi><mi>r</mi><mi mathvariant="normal">&quot;</mi><mo>)</mo><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi>c</mi><mi>o</mi><mi>l</mi><mi>o</mi><mi>r</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">。</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>o</mi><mi>l</mi><mi>e</mi><mi mathvariant="normal">.</mi><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo></mrow><annotation encoding="application/x-tex">(&quot;ul li&quot;).css(&quot;color&quot;,&quot;red&quot;)
+      元素.css(&quot;color&quot;):获取color的值。
+                        console.log(</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">&quot;</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">&quot;</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">d</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord">.</span><span class="mord mathdefault">c</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">。</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">(</span></span></span></span>(&quot;#p1&quot;).css(&quot;color&quot;))
+5.2 设置多个样式
+元素.css({
+width:&quot;100px&quot;,
+height:&quot;200px&quot;,
+backgroundColor:&quot;red&quot;,
+&quot;border-width&quot;:&quot;20px&quot;
+})
+6:each循环：
+元素.each(function(i,v){
+v:元素
+i:索引
+})</h2>
+<h2 id="作业1知识点2输入一个数值的范围在li索引内选择索引为输入的数字的元素背景颜色改变-五星评价tab效果分页页-14-index-页4-元素显示">作业：
+1：知识点
+2：输入一个数，值的范围在li索引内，选择索引为输入的数字的元素，背景颜色改变。
+五星评价：★☆
+tab效果:
+分页:（页-1）<em>4 &lt;=  index &lt; 页</em>4   元素显示</h2>
+<h2 id="jq21htmltextvalhtml-innerhtml元素html获取元素htmlxxxx赋值boxhtml12212text-innertext元素text获取元素textxxx赋值val-value元素val获取元素val赋值iptblurfunctionthisvalcjeiwi-2each和each21-元素eachfunctioniv只用来遍历元素22-eachobjcallback可以循环数组-对象-元素遍历元素eachlifunctionivconsolelogi索引consolelogv元素遍历数组eacharrfunctionivconsolelogi索引consolelogv数组元素遍历对象eachobjfunctioniv-consolelogi属性名-consolelogv属性值-3size方法与length属性一致都是获取长度的但是2x版本以上就不能使用了-4选择器-41-可见性-hidden获取隐藏的元素-visible获取没有隐藏的元素-42-属性选择器-attr获取有该属性名的元素-attrval获取有该属性名及属性值的元素-attrval获取不是该属性值的元素-attrval获取属性值以指定值开始的元素-attrval获取属性值以指定值结尾的元素attrval获取属性值中存在指定值得元素-attr1val1attr2val2获取满足多个条件的元素-43-子元素选择器first-childlast-childnth-childnth-last-child2从后向前找第n个元素only-child获取唯一的子元素-first-of-type获取一类子元素中的第一个-div-inputfirst-of-typecssbackgroundredlast-of-type获取一类子元素中的最后一个nth-of-typen获取一类子元素中的第n个元素n从1开始nth-last-of-type从后向前获取一类子元素中的第n个元素only-of-type获取一类中唯一的子元素-44-表单元素input获取所有form表单中的元素text获取type为text的元素passwordradiocheckbox45-表单元素属性disabled获取设置了disabled属性的元素-enabled获取可以使用的元素-checked获取设置了checked属性的元素selected获取option中设置了selected属性的元素-6class类61-addclass添加类名-divaddclassbox-box262-removeclass移除类名-divremoveclassbox63-toggleclass切换类名存在类名就移除不存在就添加divtoggleclassbox7属性元素attrxxpropxxx一个参数为获取属性元素attrxx222propxxx33332个参数为设置属性attr设置和获取自定义或者自身存在的属性prop设置和获取自身存在的属性checked-truefalse-selected-truefalse元素removeattrxxx使用该方法任何属性都可以移除元素removepropxxx移除自身属性但是后来不允许移除-8尺寸widthheight获取元素设置的宽高innerwidthinnerheight获取带有padding的宽高-outerwidthouterheight获取带有paddingborder的宽高-outerwidthtrueouterheighttrue获取带有paddingbordermargin的宽高-9位置offset获取元素距离可视窗口左上角的距离返回一个对象包含top和left两个属性topxxxleftxxxposition获取元素定位值返回一个对象包含top和left两个属性topxxxleft333scrolltop滚动条的上下滚动距离htmlscrolltop300设置文档滚动高度为300windowscrollfunctionwindowscrolltopscrollleft滚动条的左右滚动距离10显示隐藏shows显示s时间毫秒记hides隐藏toggles显示隐藏的切换">jq2:
+1:html()\text()\val():
+html()--innerHTML:元素.html():获取
+元素.html(xxxx):赋值:$(&quot;#box&quot;).html(&quot;12212&quot;)
+text()--innerText:元素.text():获取
+元素.text(xxx):赋值
+val()--value:元素.val():获取
+元素.val(&quot;&quot;):赋值
+$(&quot;#ipt&quot;).blur(function(){
+<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;}&#039; at position 37: …               }̲)
+2:each()和'>(this).val(&quot;cjeiwi&quot;)
+               })
+2:each()和</span>.each
+2.1 元素.each(function(i,v){}):只用来遍历元素
+2.2 $.each(obj,callback):可以循环数组、对象、元素
+遍历元素
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>e</mi><mi>a</mi><mi>c</mi><mi>h</mi><mo>(</mo></mrow><annotation encoding="application/x-tex">.each(</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mopen">(</span></span></span></span>(&quot;li&quot;),function(i,v){
+console.log(i)//索引
+console.log(v)//元素
+})
+遍历数组
+$.each(arr,function(i,v){
+console.log(i)//索引
+console.log(v)//数组元素
+})
+遍历对象：
+<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>e</mi><mi>a</mi><mi>c</mi><mi>h</mi><mo>(</mo><mi>o</mi><mi>b</mi><mi>j</mi><mo separator="true">,</mo><mi>f</mi><mi>u</mi><mi>n</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>(</mo><mi>i</mi><mo separator="true">,</mo><mi>v</mi><mo>)</mo><mrow><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>o</mi><mi>l</mi><mi>e</mi><mi mathvariant="normal">.</mi><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mi>i</mi><mo>)</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">名</mi><mi>c</mi><mi>o</mi><mi>n</mi><mi>s</mi><mi>o</mi><mi>l</mi><mi>e</mi><mi mathvariant="normal">.</mi><mi>l</mi><mi>o</mi><mi>g</mi><mo>(</mo><mi>v</mi><mo>)</mo><mi mathvariant="normal">/</mi><mi mathvariant="normal">/</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">值</mi></mrow><mo>)</mo><mn>3</mn><mo>:</mo><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi><mo>(</mo><mo>)</mo><mo>:</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">：</mi><mi mathvariant="normal">与</mi><mi>l</mi><mi>e</mi><mi>n</mi><mi>g</mi><mi>t</mi><mi>h</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">致</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">都</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">长</mi><mi mathvariant="normal">度</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">但</mi><mi mathvariant="normal">是</mi><mn>2.</mn><mi>x</mi><mi mathvariant="normal">版</mi><mi mathvariant="normal">本</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">上</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">能</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">了</mi><mi mathvariant="normal">。</mi><mn>4</mn><mo>:</mo><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">：</mi><mn>4.1</mn><mi mathvariant="normal">可</mi><mi mathvariant="normal">见</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">：</mi><mo>:</mo><mi>h</mi><mi>i</mi><mi>d</mi><mi>d</mi><mi>e</mi><mi>n</mi><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">隐</mi><mi mathvariant="normal">藏</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">。</mi><mo>:</mo><mi>v</mi><mi>i</mi><mi>s</mi><mi>i</mi><mi>b</mi><mi>l</mi><mi>e</mi><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">没</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">隐</mi><mi mathvariant="normal">藏</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">。</mi><mn>4.2</mn><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi mathvariant="normal">器</mi><mi mathvariant="normal">：</mi><mo>[</mo><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><mo>]</mo><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">该</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mo>[</mo><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><mo>=</mo><mi>v</mi><mi>a</mi><mi>l</mi><mo>]</mo><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">该</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">及</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mo>[</mo><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><mo>!</mo><mo>=</mo><mi>v</mi><mi>a</mi><mi>l</mi><mo>]</mo><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">该</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">。</mi><mo>[</mo><mi>a</mi><mi>t</mi><mi>t</mi><msup><mi>r</mi><mo>=</mo></msup><mi>v</mi><mi>a</mi><mi>l</mi><mo>]</mo><mo>:</mo><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">指</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">值</mi><mi mathvariant="normal">开</mi><mi mathvariant="normal">始</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mo>[</mo><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi></mrow><annotation encoding="application/x-tex">.each(obj,function(i,v){
+              console.log(i)//属性名
+              console.log(v)//属性值
+          })
+3:size():方法：与length属性一致，都是获取长度的，但是2.x版本以上就不能使用了。
+4:选择器：
+  4.1 可见性：
+      :hidden:获取隐藏的元素。
+      :visible:获取没有隐藏的元素。
+  4.2 属性选择器：
+      [attr]:获取有该属性名的元素
+      [attr=val]:获取有该属性名及属性值的元素
+      [attr!=val]:获取不是该属性值的元素。
+      [attr^=val]:获取属性值以指定值开始的元素
+      [attr</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mopen">(</span><span class="mord mathdefault">o</span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathdefault">i</span><span class="mclose">)</span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">名</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mopen">(</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mclose">)</span><span class="mord">/</span><span class="mord">/</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">值</span></span><span class="mclose">)</span><span class="mord">3</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mord mathdefault">e</span><span class="mopen">(</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">：</span><span class="mord cjk_fallback">与</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">致</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">都</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">长</span><span class="mord cjk_fallback">度</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">但</span><span class="mord cjk_fallback">是</span><span class="mord">2</span><span class="mord">.</span><span class="mord mathdefault">x</span><span class="mord cjk_fallback">版</span><span class="mord cjk_fallback">本</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">上</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">能</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">了</span><span class="mord cjk_fallback">。</span><span class="mord">4</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord cjk_fallback">器</span><span class="mord cjk_fallback">：</span><span class="mord">4</span><span class="mord">.</span><span class="mord">1</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">见</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">：</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.43056em;vertical-align:0em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">隐</span><span class="mord cjk_fallback">藏</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">。</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">i</span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">没</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">隐</span><span class="mord cjk_fallback">藏</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">。</span><span class="mord">4</span><span class="mord">.</span><span class="mord">2</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord cjk_fallback">器</span><span class="mord cjk_fallback">：</span><span class="mopen">[</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">该</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mopen">[</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">该</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">及</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mopen">[</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mclose">!</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">该</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">。</span><span class="mopen">[</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.6198089999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mrel mtight">=</span></span></span></span></span></span></span></span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mclose">]</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">指</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">值</span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">始</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mopen">[</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span></span></span></span>=val]:获取属性值以指定值结尾的元素
+[attr*=val]:获取属性值中存在指定值得元素。
+[attr1=val1][attr2=val2][...]:获取满足多个条件的元素。
+4.3 子元素选择器：
+:first-child
+:last-child
+:nth-child()
+:nth-last-child(2):从后向前找第n个元素
+:only-child:获取唯一的子元素。
+:first-of-type:获取一类子元素中的第一个。
+$(&quot;div input:first-of-type&quot;).css(&quot;background&quot;,&quot;red&quot;)
+:last-of-type:获取一类子元素中的最后一个
+:nth-of-type(n):获取一类子元素中的第n个元素：n从1开始
+:nth-last-of-type：从后向前，获取一类子元素中的第n个元素
+:only-of-type:获取一类中唯一的子元素。
+4.4 表单元素：
+:input:获取所有form表单中的元素
+:text:获取type为text的元素
+:password:radio:checkbox...
+4.5 表单元素属性
+:disabled:获取设置了disabled属性的元素。
+:enabled:获取可以使用的元素。
+:checked:获取设置了checked属性的元素
+:selected:获取option中设置了selected属性的元素。
+6:class类：
+6.1 addClass():添加类名: $(&quot;div&quot;).addClass(&quot;box box2&quot;);
+6.2 removeClass():移除类名: $(&quot;div&quot;).removeClass(&quot;box&quot;);
+6.3 toggleClass():切换类名:存在类名就移除，不存在就添加
+$(&quot;div&quot;).toggleClass(&quot;box&quot;)
+7:属性：
+元素.attr(&quot;xx&quot;)/prop(&quot;xxx&quot;):一个参数为获取属性
+元素.attr(&quot;xx&quot;,&quot;222&quot;)/prop(&quot;xxx&quot;,&quot;3333&quot;):2个参数为设置属性
+attr:设置和获取自定义或者自身存在的属性
+prop:设置和获取自身存在的属性:checked--true/false  selected--true/false
+元素.removeAttr(&quot;xxx&quot;):使用该方法，任何属性都可以移除
+元素.removeProp(&quot;xxx&quot;):移除自身属性，但是后来不允许移除。
+8:尺寸：
+width()/height():获取元素设置的宽高
+innerWidth()/innerHeight():获取带有padding的宽高。
+outerWidth()/outerHeight():获取带有padding+border的宽高。
+outerWidth(true)/outerHeight(true):获取带有padding+border+margin的宽高。
+9:位置：
+offset():获取元素距离可视窗口左上角的距离,返回一个对象，包含top和left两个属性
+{top:xxx,left:xxx}
+position():获取元素定位值,返回一个对象，包含top和left两个属性
+{top:xxx,left:333}
+scrollTop():滚动条的上下滚动距离:
+$(&quot;html&quot;).scrollTop(300):设置文档滚动高度为300
+$(window).scroll(function(){
+$(window).scrollTop()
+})
+scrollLeft():滚动条的左右滚动距离
+10:显示隐藏：
+.show(s):显示:s:时间：毫秒记
+.hide(s):隐藏
+.toggle(s):显示隐藏的切换</h2>
+<h2 id="作业1五星-分页2全选-反选3滚动高度考单词">作业;
+1:五星、分页
+2:全选、反选
+3:滚动高度
+考单词</h2>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[React]]></title>
         <id>https://XinLingJ.github.io//post/a-da</id>
@@ -304,15 +2396,17 @@ if(this.props.match.params.n!=prevState.match.params.n)</p>
         <link href="https://XinLingJ.github.io//post/biao-ti-yi">
         </link>
         <updated>2019-07-11T02:13:13.000Z</updated>
-        <content type="html"><![CDATA[<p>vue.js:</p>
-<p>库:jq----js的库
+        <summary type="html"><![CDATA[<center>vue.js:</center>]]></summary>
+        <content type="html"><![CDATA[<center>vue.js:</center>
+<!-- more -->
+库:jq----js的库
 插件:实现某个功能：轮播图
-框架:库和插件同时使用，有自己的语法：bootstrap</p>
+框架:库和插件同时使用，有自己的语法：bootstrap
 <p>vue\react\angular
 Vue.js是一套构建用户界面的框架，只关注是图层，容易上手等。
 vue:可以实现数据的双向绑定：MVVM
 Vue:可以做到结构和数据的分离，类似于ejs</p>
-<p>##优点:
+<p><strong>优点:</strong>
 轻量
 数据双向绑定
 组件化/模块化
@@ -322,14 +2416,16 @@ Vue:可以做到结构和数据的分离，类似于ejs</p>
 MVC:Module(模型)  view(视图)  controller(控制器)
 MVC是单向通信
 View跟Model，必须通过Controller来承上启下</p>
-<h2 id="mvvmvuemmodule指的是后端传递的数据vview指的是所看到的页面vmviewmodule它是连接view和model的桥梁-一是将模型转化成视图即将后端传递的数据转化成所看到的页面-实现的方式是数据绑定二是将视图转化成模型即将所看到的页面转化成后端的数据-实现的方式是dom-事件监听视图和模型是不能直接通信的1什么是vue渐进式框架-使用mvvm设计模式将数据和页面进行分离同时可以实现数据的双向绑定2mvvm和mvchttpbaijiahaobaiducomsid1596277899370862119wfrspiderforpc">MVVM:vue
+<p>MVVM:vue
 M:module:指的是后端传递的数据
 v:view:指的是所看到的页面
 vm:viewModule:它是连接view和model的桥梁。
-一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。实现的方式是：数据绑定
-二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。实现的方式是：DOM 事件监听
-视图和模型是不能直接通信的
-1:什么是vue?
+一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面。
+实现的方式是：数据绑定
+二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。
+实现的方式是：DOM 事件监听
+三、视图和模型是不能直接通信的</p>
+<h2 id="1什么是vue渐进式框架-使用mvvm设计模式将数据和页面进行分离同时可以实现数据的双向绑定2mvvm和mvchttpbaijiahaobaiducomsid1596277899370862119wfrspiderforpc">1:什么是vue?
 渐进式框架   使用mvvm设计模式将数据和页面进行分离，同时可以实现数据的双向绑定
 2:mvvm和mvc?
 http://baijiahao.baidu.com/s?id=1596277899370862119&amp;wfr=spider&amp;for=pc</h2>
