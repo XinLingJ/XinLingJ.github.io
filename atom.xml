@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
     <title>LLW</title>
-    <updated>2019-10-24T01:52:23.718Z</updated>
+    <updated>2019-10-24T02:23:17.042Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
     <link rel="self" href="https://XinLingJ.github.io//atom.xml"/>
@@ -2459,17 +2459,20 @@ true----block
 false---none
 先进行boolean转换，在判断显示隐藏
 4.5 v-if=&quot;xx&quot;:如果表达式成立，添加该元素，如果不成立，移除元素
-他与v-show不同，是dom操作，移除和渲染元素。
+他与v-show不同，是dom操作，移除和渲染元素。</p>
 <div v-if="bool1>2&&bool1<20">我是div1</div>z
-v-else:不需要表达式：前一个必须是v-if或者v-else-if
-如果条件不成立，执行该语句
-<div v-if="bool1>2&&bool1<20">我是div1</div>
-<div v-else>我是div2</div>
-v-else-if=&quot;xxxx&quot;:if的多个条件
-<div v-if="bool1>2&&bool1<10">我是div1</div>
-<div v-else-if="bool1>=10&&bool1<=20">我是div2</div>
-<div v-else>我是div3</div>
-4.6 v-for=&quot;xxxx&quot;:循环：
+	  v-else:不需要表达式：前一个必须是v-if或者v-else-if
+	             如果条件不成立，执行该语句
+<pre><code>		         &lt;div v-if=&quot;bool1&gt;2&amp;&amp;bool1&lt;20&quot;&gt;我是div1&lt;/div&gt;
+		         &lt;div v-else&gt;我是div2&lt;/div&gt;
+						 
+ v-else-if=&quot;xxxx&quot;:if的多个条件
+	 
+             &lt;div v-if=&quot;bool1&gt;2&amp;&amp;bool1&lt;10&quot;&gt;我是div1&lt;/div&gt;
+             &lt;div v-else-if=&quot;bool1&gt;=10&amp;&amp;bool1&lt;=20&quot;&gt;我是div2&lt;/div&gt;
+             &lt;div v-else&gt;我是div3&lt;/div&gt;
+</code></pre>
+<p>4.6 v-for=&quot;xxxx&quot;:循环：
 循环数组：
 <li v-for="i in arr">{{i}}</li>
 加索引和元素;
@@ -2481,10 +2484,11 @@ v-else-if=&quot;xxxx&quot;:if的多个条件
 {{k}}:{{v}}
 </li>
 4.7 v-once:不需要表达式:只渲染元素和组件一次。
-4.8 v-model:在表单控件或者组件上创建双向绑定。
-<div>{{msg}}</div>
-<input type="text" v-model="msg">
-5:template:不会显示该标记，但是可以显示其内容，可以用作一次渲染多个元素时
+4.8 v-model:在表单控件或者组件上创建双向绑定。</p>
+<pre><code>           &lt;div&gt;{{msg}}&lt;/div&gt;
+           &lt;input type=&quot;text&quot; v-model=&quot;msg&quot;&gt;
+</code></pre>
+<p>5:template:不会显示该标记，但是可以显示其内容，可以用作一次渲染多个元素时
 <template v-if="bool">
 <div>11111</div>
 <a href="">超链接1</a>
