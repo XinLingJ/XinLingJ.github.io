@@ -1,0 +1,962 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Vue | LLW</title>
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1573736864225">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://XinLingJ.github.io/">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1573736864225" alt="">
+  </a>
+  <h1 class="site-title">
+    LLW
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Vue
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-07-11 ·
+              </time>
+              
+            </div>
+            
+              <div class="post-feature-image" style="background-image: url('https://XinLingJ.github.io//post-images/vue.jpeg')">
+              </div>
+            
+            <div class="post-content">
+              <center><b><h1>vue</h1></b></center>
+<!-- more -->
+<ul style="list-style-type:square">
+	<li>库:jq----js的库</li>
+  <li>插件:实现某个功能：轮播图</li>
+  <li>框架:库和插件同时使用，有自己的语法：bootstrap</li>
+	<li>三大框架：vue\react\angular</li>
+  <li>Vue.js是一套构建用户界面的框架，只关注是图层，容易上手等。</li>
+  <li>vue:可以实现数据的双向绑定：MVVM</li>
+  <li>Vue:可以做到结构和数据的分离，类似于ejs</li>
+	<li style="list-style-type:none;"><b>优点</b></li>
+  <li>轻量</li>
+  <li>数据双向绑定</li>
+  <li>组件化/模块化</li>
+  <li>有内置指令或自定义指令</li>
+  <li>提供了其他功能：路由、ajax等</li>
+</ul>
+<hr />
+<ul style="list-style-type:square">
+	 <li style="list-style-type:none;"><b>MVC和MVVM设计模式</b></li>
+	 <li>MVC:Module(模型)  view(视图)  controller(控制器)</li>
+	 <li>MVC是单向通信</li>
+	 <li>View跟Model，必须通过Controller来承上启下</li>
+	 <li>MVVM:vue</li>
+	 <li> M:module:指的是后端传递的数据</li>
+	 <li>v:view:指的是所看到的页面</li>
+   <li>vm:viewModule:它是连接view和model的桥梁.</li>
+   <li>一是将【模型】转化成【视图】，即将后端传递的数据转化成所看到的页面</li>
+	 <li>             实现的方式是：数据绑定</li>
+   <li>二是将【视图】转化成【模型】，即将所看到的页面转化成后端的数据。</li>
+	 <li>             实现的方式是：DOM 事件监听</li>
+	 <li>三：视图和模型是不能直接通信的</li>
+   <li>mvvm和mvc链接:</li>
+	<li><a href="http://baijiahao.baidu.com/s?id=1596277899370862119&wfr=spider&for=pc" target="_blank">http://baijiahao.baidu.com/s?id=1596277899370862119&wfr=spider&for=pc</a></li>
+</ul>
+<!-- more -->
+<ul style="list-style-type:square">
+	<li>vue:渐进式框架,使用mvvm设计模式将数据和页面进行分离,同时可以实现数据的双向绑定</li>
+  <li>使用vue:下载vue，script引入--CDN地址--npm下载</li>
+	<li>实例化vue</li>
+  <li style="list-style-type:none">
+		<textarea cols="36" rows="6"> new Vue({
+	   el:"#app",//挂载vue实例的位置
+	     data:{
+		       message:"hello world"
+	        } 
+      })
+   </textarea></li>
+	<li>模板语言：{{变量,语句}}------{{message}}</li>
+</ul>
+<hr />
+<ul style="list-style-type:square">
+	<li style="list-style-type:none"><center><h3><b>vue-4个维度:选项、指令、实例、静态</b></h3></center></li>
+	<li style="list-style-type:none"><b>vue-选项:</b></li>
+	<li>选项/数据: data   props(父子传参属性)  propsData  computed  methods  watch</li>
+	<li>选项/DOM: el(挂载点)  template  render  renderError</n></li>
+	<li>选项/生命周期钩子: beforeCreate/created  beforeMount/mounted  beforeUpdate/updated</li>
+	<li style="list-style-type:none">                                 activated/deactivated  beforeDestroy/destroyed   errorCaptured</li>
+	<li>选项/资源: directives   filters    components</li>
+	<li>选项/组合: parent   mixins  extends    provide/inject</li>
+	<li>选项/其它: name   delimiters  functional   model   inheritAttrs   comments</li>
+	<li style="list-style-type:none"><b>vue-指令:</b></li>
+	<li>v-text  v-html  v-show  v-if  v-else  v-else-if  v-for  v-on  v-bind  v-model</li>
+	<li style="list-style-type:none">v-slot   v-pre    v-cloak    v-once</li>
+	<li style="list-style-type:none"><center><h3><b>vue-全局 API</b></h3></center></li>
+	<li>Vue.extend  Vue.nextTick   Vue.set   Vue.delete   Vue.directive   Vue.filter   Vue.component</li>
+	<li style="list-style-type:none">Vue.use   Vue.mixin{混入}   Vue.compile   Vue.observable   Vue.version</li>
+	<li style="list-style-type:none"><center><h3><b>vue-实例属性</b></h3></center></li>
+	<li>vm.$data   vm.$props   vm.$el   vm.$options   vm.$parent   vm.$root   vm.$children</li>
+	<li style="list-style-type:none">vm.$slots   vm.$scopedSlots   vm.$refs   vm.$isServer   vm.$attrs   vm.$listeners</li>
+	<li style="list-style-type:none"><b>实例方法 / 数据</b></li>
+	<li>vm.$watch   vm.$set   vm.$delete</li>
+	<li style="list-style-type:none"><b>实例方法 / 事件</b></li>
+	<li>vm.$on   vm.$once    vm.$off    vm.$emit</li>
+	<li style="list-style-type:none"><b>实例方法 / 生命周期</b></li>
+	<li>vm.$mount   vm.$forceUpdate   vm.$nextTick    vm.$destroy</li>
+</ul>
+<hr />
+<ul style="list-style-type:square">
+	<li style="list-style-type:none"><b>组件【全局 局部 】</b></li>
+	<li>Vue.component('d',{ })   new Vue({ components:{'d':{},'e':{} } })</li>
+	<li style="list-style-type:none"><b> 过滤器【全局 局部】</b></li>
+	<li>Vue.filter('x',function(v){  })    new Vue({el:'',filters:{'x':function(v){},'y':function(v){}   }  })</li>
+	<li style="list-style-type:none"><b>   指令【全局 局部】</b></li>
+	<li style="list-style-type:none">
+		<textarea cols="50" rows="9">new Vue({
+	    Vue.directive('aa',{ 
+		                                  bind:fn,
+		                                  inserted:fn,
+		                                  update:fn,
+		                                  componentUpdated:fn,
+		                                  unbind:fn
+			                   })
+			  })
+   </textarea></li>
+	<li style="list-style-type:none"> new Vue({directives:{'aa':{},'bb':{} }  })</li>
+	<li style="list-style-type:none"> el binding</li>
+	<li style="list-style-type:none"><b>父子组件传递数据</b></li>
+	<li>组件 和 实例 不能共享数据。因为组件有一套选项 实例也有自己一套选项</li>
+	<li style="list-style-type:none"><b>父传递子</b></li>
+	<li>子标记上写个自定义属性 属性="值"</li>
+	<li>组件上写一个props属性 把自定义属性当成数组的元素写入:  props:["自定义属性名"]</li>
+	<li style="list-style-type:none"><b>子传递父</b></li>
+	<li>子标记上写 v-on:自定义事件="父亲里面的方法($event)"</li>
+	<li>vm.$emit('自定义事件名字','子数据')</li>
+	<li>触发自己身上的自定义事件</li>
+</ul>
+<ul style="list-style-type:square">
+	<li style="list-style:none"><b>sy-指令:</b></li>
+  <li>v-xxx:写在元素上，类似属性的格式</li>
+	<li>v-cloak:不需要表达式</li>
+	<li style="list-style:none" >在vue实例没有准备好之前，不显示{{xxxx}}内容，当实例加载成功，才显示数据</li>
+	<li style="list-style:none">通常与css:[v-cloak]{display:none}配合使用</li>
+	<li>v-text="msg":代替{{msg}},显示数据</li>
+  <li style="list-style:none"><textarea cols="24" rows="1"><p v-text="msg"></p></textarea></li>
+	<li>v-html="msg":修改元素的innerHTML：将标记渲染	</li>
+	<li>v-show="xx":根据变量的布尔值，(切换元素的display:none/block）true----block/false---none，先进行boolean转换，在判断显示隐藏</li>
+	<li>v-if="xx":如果表达式成立，添加该元素，如果不成立，移除元素，他与v-show不同，是dom操作，移除和渲染元素。</li>
+	<li style="list-style:none"><textarea cols="52" rows="1"><div v-if="bool1>2&&bool1<20">我是div1</div></textarea></li>
+	<li>v-else:不需要表达式：前一个必须是v-if或者v-else-if，如果条件不成立，执行该语句</li>
+	<li style="list-style:none"><textarea cols="52" rows="2"><div v-if="bool1>2&&bool1<20">我是div1</div>
+<div v-else>我是div2</div>
+	</textarea></li>
+	<li>v-else-if="xxxx":if的多个条件</li>
+	<li style="list-style:none"><textarea cols="70" rows="3"><div v-if="bool1>2&&bool1<10">我是div1</div>
+<div v-else-if="bool1>=10&&bool1<=20">我是div2</div>
+<div v-else>我是div3</div>
+	</textarea></li>
+	<li style="list-style:none"><textarea cols="80" rows="7">v-for="xxxx":循环：
+循环数组：
+               <li v-for="i in arr">{{i}}</li>
+加索引和元素;
+			         <li v-for="(item,idx) in arr">{{idx}}.{{item}}</li>
+如果是对象：表示属性值、属性名
+				       <li v-for="(v,k) in obj">{{k}}:{{v}}</li>
+	</textarea></li>
+	<li>v-once:不需要表达式:只渲染元素和组件一次。</li>
+	<li style="list-style:none"><textarea cols="80" rows="3">v-model:在表单控件或者组件上创建双向绑定。
+<div>{{msg}}</div>
+<input type="text" v-model="msg">
+	</textarea></li>
+	<li style="list-style:none"><textarea cols="80" rows="5">template:不会显示该标记，但是可以显示其内容，可以用作一次渲染多个元素时
+<template v-if="bool">
+    <div>11111</div>
+    <a href="">超链接1</a>
+</template>
+	</textarea></li>
+	<li style="list-style:none"><textarea cols="80" rows="4">数组的修改：
+操作原数组：push\shift\unshift\pop\splice\sort\reverse:
+不操作原数组，需要使用新数组替换当前数组：filter、concat、slice
+vm.arr=vm.arr.concat(["bbb","ccc"])
+	</textarea></li>
+	<li>获取数据：实例化的对象.数据 vm.arr</li>
+	<li style="list-style:none"><textarea cols="80" rows="17">v-on:绑定事件： v-on:事件名="fn"  v-on:click="add"  简写:@click="add"
+	 js中：
+	    	 需要将事件写在methods对象上
+		         var vm=new Vue({
+				                       el:"#app",
+				            data:{
+				                    	count:0,
+					                    arr:[1,2,3]
+			                       },
+			            	methods:{
+					                     add:function(str,e){
+					                     this.count++;
+						                   console.log(e)
+					                         }
+				                   }
+			         })
+		       如果不传参数，可以不写括号，如果有参数，加括号
+	</textarea></li>
+	<li style="list-style:none"><textarea cols="80" rows="7">事件修饰符：
+        使用.表示的指令后缀来调用修饰符。
+			  .stop:阻止事件冒泡:<div @click.stop.prevent="second"></div>
+			  .prevent：阻止默认事件
+			  .capture:添加事件监听时使用事件捕获模式
+			  .self:当事件在元素本身（不是子元素）触发时触发回调
+			  .once:事件只执行一次	
+	</textarea></li>
+  <li style="list-style:none"><textarea cols="80" rows="13">按键修饰符：监听键盘事件时，可以使用按键修饰符:
+	        .enter:回车
+	        .tab:tab键
+	        .delete:删除和后退
+	        .esc:退出
+	        .space:空格
+	        .up/.down/.left/.right:上下左右
+	        .ctrl/.alt/.shift/.meta(window键、commond键)
+	 或者keyCode:
+	         键盘码为13时。
+	         v-on:keyup.13="xx"     
+		或者
+	         @keyup.13=""
+	</textarea></li>
+</ul>
+<ul style="list-style-type:square">
+	<li style="list-style:none"><b>Vue类的属性和方法:</b></li>
+	<li>new Vue({}):属性和方法:el  data  methods<br/>
+         var vm=new Vue()---vm:属性和方法<br/>
+             vm.$el<br/>
+	           vm.$data<br/>
+         Vue静态类</li>
+	<li style="list-style:none"><textarea cols="80" rows="50">指令:
+  v-pre:正常输出内容，不进行渲染数据，怎么写的怎么输出。
+  v-bind:用来绑定属性，或者class、style等
+         语法糖：:src="a"
+				<img v-bind:src="a" alt="">
+				<div v-for="(item,idx) in arr" :id="'box'+item.id">
+					{{item.desc}}
+				</div>
+		 绑定class：
+		        通过对象的形式，判断属性值，如果为true，则使用该类名
+		        <p :class="{'active':a,'boxs':b}">1111</p>
+				通过数组的形式，直接将数据的值作为类名
+				<div :class="[isActive,isBox]"></div>
+					isActive:"active",
+					isBox:"boxs"
+         绑定style:
+				<div :style="{'color':cols,'font-size':size+'px'}">11111</div>
+				<div :style="styles">11111</div>
+					styles:{
+						color:'yellow',
+						fontSize:"30px"
+					}
+   v-model:数据绑定
+           text：
+		      <p>{{msg}}</p>
+			    <input type="text" v-model="msg">
+		  radio：
+		      单一的单选按钮：直接绑定checked属性，变量为true，则选中
+		      <input type="radio" :checked="res" >
+				多个单选：v-model的变量与任意一个value值相同，则选中
+				<input type="radio" name="sex" value="js" v-model="che">js
+				<input type="radio" name="sex" value="html" v-model="che">html
+				<input type="radio" name="sex" value="css" v-model="che">css
+				  js:  che:"html"
+		  checkbox:
+		     单独的多选，也是绑定checked属性,与单选一致
+				 多个多选按钮时，需要设置数组，数组的值与value值相等的就被选中
+				 <input type="checkbox" value="111" v-model="arr">html
+				 <input type="checkbox" value="222" v-model="arr">js
+				 <input type="checkbox" value="333" v-model="arr">css
+				   arr:["111""222"]
+		  select:
+		         单选时，
+				        <select v-model="sel">
+				      	<option>html</option>
+				      	<option>css</option>
+				      	<option value="javascript">js</option>
+				      </select>
+			 js:  sel:"javascript"
+			多选时，使用数组，与多选按钮一致
+		</textarea></li>
+	<li style="list-style:none"><textarea cols="120" rows="17">
+		计算属性:解决模板内表达式过长或复杂。
+        - 计算属性中可以完成各种复杂的逻辑，包括运算、函数调用等，只要最后返回一个值即可。
+        - 写在computed选项中，内部是不同的函数，最后返回值即可。
+	    <div id="app">{{res}}</div>
+	 computed:{
+	  	res:function(){
+	  		return this.msg.split(",").reverse().join(".")
+	  	}
+	  }
+       - 多个实例之间可以互相使用数据，
+           app2使用app1的数据，需要app1.xxxx
+       - 计算属性缓存与method区别：缓存与method的区别
+     - 使用methods也可以实现computed的效果，区别是什么？
+       计算属性缓存：计算属性只有在相关依赖发生改变时才会重新求值，只有相应数据变化时，才会执行对应的getter
+       而methods内的所有方法，在事件执行时就会都重新触发。
+       所以计算属性用在较大量的计算和改变频率较低的属性
+		</textarea></li>
+	<li style="list-style:none"><b>day03</b></li>
+	<li>new Vue({}):el,data,methods,computed,</li>
+  <li> var vm=new Vue():vm: $el  $data </li>
+  <li>Vue静态类：component</li>
+  <li>指令：v-text\v-html\v-show\v-if\v-else-if\v-else\v-for\v-model\v-on---@click\v-bind--:src="xx"\v-cloak\v-once</li>
+  <li><b>操作数据库：ajax+分页:</b></li>
+  <li>ajax：发送请求---</li>
+  <li>路由：查询数据库，反数据----len:12,arr:[]</li>
+  <li>ajax接收数据，并给vue中设置。</li>
+	<li>页面中展示vue的数据。</li>
+	<li><b>vue的生命周期及钩子函数：也属于选项</b></li>
+  <li>vue从创建到销毁的一个过程：</li>
+  <li>创建前、后---挂载前、后-----更新前、后-----销毁前、后</li>
+  <li>beforeCreate：组件实例刚被创建，但是数据，挂载等都还没有写入</li>
+	<li>created:数据挂载完毕</li>
+	<li>beforeMount：渲染数据之前</li>
+	<li>mounted：数据渲染完毕</li>
+	<li>beforeUpdate:更新前</li>
+	<li>updated：更新后</li>
+	<li>activated:组件激活时</li>
+	<li>deactivated：组件移除时</li>
+	<li>beforeDestroy：销毁前</li>
+	<li>destroyed：销毁后</li>
+	<li>errorCaptured：子孙组件错误时被调用</li>
+	<li>组件：是可复用的 Vue 实例，且带有一个名字,使代码提高重用性。 不需要写el，但是需要写template</li>
+	<li style="list-style:none"><textarea cols="120" rows="67">
+全局组件：Vue.component("名字",{})
+         必须在实例化之前注册。
+	       任何实例中都可以使用当前的组件。
+         名字：是自己定义的组件名
+	        {}：template:写标记，注意，如果有多个同级元素，需要使用一个标记包裹。
+	data:function(){
+			     return {}
+		      }:data是函数，需要返回一个数据
+         methods:{}:事件正常使用
+	       可以进行嵌套组件的使用。
+	局部组件：在某个实例内部注册：只能在当前实例挂载的dom元素内使用，其他挂载元素不能用
+        components:{}
+             var vm=new Vue({
+			       el:"#app1",
+			          data:{
+				            msg:"Hello1"
+		          	},
+		          	components:{
+			          	 "my-com":Child,
+			          	 "aaa":child1
+			              }
+                })
+组件之间的传值：
+ 父组件--子组件：props：单向的，只能父-子
+      <my-com :kk="msg"></my-com>
+	  组件中：props:["kk"]
+	         template:"<div>{{kk}}</div>"
+	  实例中：data:{
+		      msg:"11111"
+	         }
+	  如果组件绑定的属性有连字符-，props中定义的时候，需要写成驼峰式命名法
+	  :my-msg-----myMsg
+  子组件--父组件：使用自定义事件
+      1.子组件:$emit("自定义事件",传输的数据)
+			  <my-button :n="nums" @jianshao="changes"></my-button>
+			  组件：
+				  methods:{
+			   		down(){
+						this.$emit("jianshao",this.datas)
+					}
+				}
+			  实例;
+				 methods:{
+					changes(n){			
+					  this.nums=n	
+					}
+				 }
+   2. 父组件用v-model来监听子组件触发的自定义事件。
+             - v-model也可以用在父组件上，默认触发的是input事件
+               $emit()中第一个事件设置为input
+			 <my-button :n="nums"  v-model="nums"></my-button>
+				methods:{
+					down(){
+						this.$emit("input",this.datas)
+					}
+				}  
+ 非父子组件之间：
+      1：创建一个空的Vue实例bus，作为中间仓库传值
+      2：使用bus.$emit():传值
+      3：使用bus.$on():接收值。
+全局：Vue.component("名字",{template,data,method}):data:function(){return {}}
+局部: components:{名字:{}}
+组件传值：
+   父--子：props:[]
+   子--父：自定义事件：  this.$emit("事件名",传值)
+   非父子：new Vue()----bus.$emit()    bus.$on()
+	</textarea></li>
+	<li style="list-style:none"><textarea cols="80" rows="25">
+自定义指令：
+    全局指令：任何实例中都可以使用。
+        Vue.directive("名字",{钩子函数})
+	  钩子函数：
+	    bind：只调用一次，指令第一次绑定到元素时调用。在这里可以进行一次性的初始化设置
+	    inserted：被绑定元素插入父节点时调用 (仅保证父节点存在，但不一定已被插入文档中)。
+	    update：数据变化时
+	    componentUpdated：指令所在组件的 VNode 及其子 VNode 全部更新后调用。
+	    unbind：只调用一次，指令与元素解绑时调用。
+      函数中的参数：api
+	    el:使用该命令的元素
+		  binding:是个对象，含有所需要的数据等属性。
+		  vnode、oldVnode
+  局部指令：只能该实例中使用。
+      directives:{
+      		   "colors":{
+      			   bind:function(el,binding){
+      				  el.style.background="red" 
+      			   }
+      		   }
+      }
+	</textarea></li>
+	<li style="list-style:none"><textarea cols="80" rows="30">
+过滤器：filter
+  全局：
+	  {{num | filter}}
+	  Vue.filter("Fixed",function(v){
+			return v.toFixed(2)
+	  })
+  局部：
+     filters:{
+  		 "aa":function(v){
+  			   return "!!!!"
+  		 }
+  	 }	
+  - 可以使用多个过滤器：{{num | filter | aa}}
+  - 可以传参数：{{num | filter(2)}}
+    Vue.filter("Fixed",function(v,n){
+    			return v.toFixed(n)
+    })
+3:watch:监听某个变量的变化。属于new Vue({})里面的选项
+4:render:渲染：可以用来渲染标记,可以写在组件中，替代template
+   c:createElement:创建标签
+   render:function(c){
+		 参数为：标记名，内容
+		 return c("h1",22222)
+		 可以嵌套，参数为数组
+		 return c("h1",[
+		 			  "hello",
+		 			  c("span","world"),
+		 ])
+	 }
+	</textarea></li>
+<hr /> 
+<li>vue：MVVM--M:model   v--view   vm--viewModel</li>
+<li>var  vm = new Vue({</li>
+	<li>选项：</li>
+	<li>el:"#app",</li>
+	<li>data:{},</li>
+	<li>methods:{},</li>
+	<li>computed:{},</li>
+	<li>components:{},</li>
+	<li>filters:{},</li>
+	<li>directives:{},</li>
+	<li>生命周期钩子函数：</li>
+	<li>创建前/后----挂在前/后----更新前/后----销毁前/后</li>
+	<li>beforeCreate---created</li>
+	<li>beforeMount---mounted</li>
+	<li>beforeUpdate--updated</li>
+	<li>beforeDestroy---destroyed</li>
+<li>})</li>
+<li>Vue.component("名字"，{})</li>
+<li>Vue.filter("名字",{})</li>
+<li>Vue.directive("名字",{})</li>
+<li>vm.$el</li>
+<li>vm.$data</li>
+<li>指令：</li>
+<li>   v-text:输出数据</li>
+<li>	 v-show="true":显示</li>
+<li>	 v-for="(v,i) in arr "---v:数组的每一项   i---索引</li>
+<li>	            (v,k) in obj  v--属性值   k---属性名</li>
+<li>	 v-model="msg"---数据的双向绑定</li>
+<li>	 v-once---只渲染一次</li>
+<li>	 v-bind:绑定属性：   :src="xxx"</li>
+<li>	 v-on:绑定事件       @click="add($event)"</li>
+<li>	                    .stop   .prevent   ...</li>
+<li>	 v-cloak:数据加载之前不显示。[v-cloak]{display:none}</li>
+<li>	 v-pre:怎么写入怎么输出</li>
+<li>组件传值：</li>
+<li>    父--子：props:[]</li>
+<li>	  子--父：自定义事件</li>
+<li>	    this.$emit("事件名",数据)</li>
+<li>			v-model="msg"</li>
+<li>			this.$emit("input",数据)</li>
+<li>	非父子：创建一个新的vue实例，作为中间仓库</li>
+<li>	    bus.$emit("事件",数据)</li>
+<li>	    bus.$on("事件")</li>
+</ul>
+<ul style="list-style-type:square">
+  <li>vue全家桶：vue2.0   vue-router   vuex   axios  vue-cli   element-ui</li>
+    <li>  vue-cli：是vue官方提供的快速搭建项目的工具</li>
+		<li>  vuex:是vue提供的状态管理工具</li>
+		<li>  vue-router:是vue生态里面的路由工具</li>
+		<li>  axios：ajax的插件</li>
+		<li>  element-ui:基于vue2.0的组件库</li>
+<li>vm.$options:获取自定义属性值时，使用。</li>
+	 <li>  myOptions:"foo",</li>
+	 <li>  mounted:function(){</li>
+	 <li>  console.log(this.$el)</li>
+	 <li>  console.log(this.$options.myOptions)</li>
+	 <li>  }</li>
+  <li>vm.$parent:获取组件的父实例</li>
+  <li>vm.$children:获取组件的子组件</li>
+  <li>vm.$root:根实例</li>
+  <li>....</li>
+	<li style="list-style-type:none"><textarea cols="80" rows="37">
+	3:插槽：slot
+  3.1 单个插槽：显示组件中的内容，slot写在哪，就在哪显示
+  3.2 具名插槽：只有对应名字的才能写入
+      <slot name="p1"></slot>
+	  <p slot="p1"></p>	
+	  没有写name则没有作用。
+4:插件：
+  axios:Axios 是一个基于 promise 的 HTTP 库，可以用在浏览器和 node.js 中。
+        ajax的插件
+  下载,引入
+  使用：axios.get()
+        axios.post()
+5:vue-router:构建单页面应用
+  5.1:下载：引入
+  5.2 配置：
+      1.2.1 写几个组件：
+  		 1.2.2 实例化一个VueRouter
+  		       var vr=new VueRouter({
+  			       routes:xxx 
+       		 })
+  		 1.2.3 定义xxx变量，是一个数组对象，path，component，children等参数
+  		 1.2.4 使用：实例化的Vue中：
+  		       router:vr
+  		 1.2.5 点击不使用超链接：
+  		       <router-link to="/path1">news</router-link>
+  		       <router-link to="/path2">news</router-link>
+  		 1.2.6 显示超链接点击的组件：
+               <router-view></router-view>
+  	注意：如果不好使，换vue版本，2.0版本以上
+拆分路由
+  抛出：export default  {}
+  接收：import  xx  from  "./routers/xxx";
+  components：放所有的组件的
+               coms1.js   coms2.js  coms3.js
+  routes:放路由
+  index.html:写router-link，主页面
+	</textarea></li>
+</ul>
+<ul><center><b>vue复习：</b></center>
+<li>1:设计模式：MVVM</li>
+<li>  M--model</li>
+<li>	v--view</li>
+<li>	vm--viewModel</li>
+<li>2:vue</li>
+<li>  var  vm=new Vue({</li>
+<li>		el:"#app",</li>
+<li>		data:{</li>
+<li>			msg:1111</li>
+<li>		},</li>
+<li>		methods:{</li>
+<li>			fn(){}</li>
+<li>		},</li>
+<li>		components:{//局部组件</li>
+<li>			  my-com:{</li>
+<li>					render(c){</li>
+<li>						//return c("h1",1111)</li>
+<li>						return c("h1",c("span",121212))</li>
+<li>					}</li>
+<li>				}</li>
+<li>		},</li>
+<li>		computed:{//计算属性</li>
+<li>			sum(){</li>
+<li>				return xxxx</li>
+<li>			}</li>
+<li>		},</li>
+<li>		directives:{//自定义指令</li>
+<li>			</li>
+<li>		},</li>
+<li>		filters:{//过滤器</li>
+<li>			</li>
+<li>		}</li>
+<li>		生命周期钩子</li>
+<li>		创建前、后----挂载前、后----更新前、后---销毁前、后</li>
+<li>		beforeCreate(){},</li>
+<li>		created(){},</li>
+<li>		beforeMount(){},</li>
+<li>		mounted(){},</li>
+<li>		beforeUpdate(){},</li>
+<li>		updated(){},</li>
+<li>		beforeDestory(),</li>
+<li>		destoryed(){},</li>
+<li>		watch:{//监听某个变量的变化</li>
+<li>			a(news,old){</li>
+<li>				</li>
+<li>			}</li>
+<li>		}</li>
+<li>	})</li>
+<li>组件传值</li>
+<li>   父--子:子：props:接收值。</li>
+<li>	 子--父：自定义事件：</li>
+<li>	        子：this.$emit("事件",data)</li>
+<li>					父：v-on绑定事件</li>
+<li>					    v-model="msg"</li>
+<li>	 非父子：需要一个中间仓库： var bus=new Vue()</li>
+<li>		        内部：bus.$emit()</li>
+<li>						另一个：bus.$on()</li>
+<li>Vue全家桶：vue  vuex   vue-cli   vue-router   axios(ajax) element-ui</li>		
+</ul>
+<ul style="list-style-type:square">
+<li><b>vue-cli 脚手架</b>：为单页面应用快速搭建繁杂的脚手架</li>		
+<li>                                         用于自动生成vue.js+webpack的项目模板</li>		
+<li>  1.1 全局安装cli</li>
+<li>	    npm install vue-cli -g</li>		
+<li>			检查版本：vue -V</li>		
+<li>  1.2 创建项目目录：</li>		
+<li>	    vue init webpack 项目名Vue-project</li>		
+<li>     选项：回车即可</li>		
+<li>		      Install vue-router?(y/n)y</li>		
+<li>			cd:项目中</li>		
+<li>			npm install</li>		
+<li>			运行：npm run start</li>		
+<li>			      npm run dev</li>		
+<li>2: npm cache clean --force:清除npm缓存</li>		
+<li>3:目录文件:单页面应用</li>		
+<li>  build:webpack的文件</li>		
+<li>	config:vue的配置信息---端口号：index.js---8080</li>		
+<li>	node_modules---依赖包</li>		
+<li>	src:资源文件夹：</li>		
+<li>	assets:静态文件：css等</li>		
+<li>  components:组件：.vue</li>		
+<li>	router:路由</li>		
+<li>  static:静态资源</li>		
+<li>	index.html:首页</li>		
+<li>4:组件格式：</li>		
+<li>  template：写标记内容</li>		
+<li>	script：抛出组件</li>		
+<li>	style：样式</li>		
+<li>5:子路由：</li>		
+<li>  routes:[</li>		
+<li>		{</li>		
+<li>			path:"/aa",</li>	
+<li>			component:aa,</li>	
+<li>			children:[</li>	
+<li>				{</li>	
+<li>					path:"/bb",//aa下的子路由bb</li>	
+<li>					component:bb</li>	
+<li>				}</li>	
+<li>			]</li>	
+<li>		}</li>	
+<li>	]</li>	
+<li>https://m.helijia.com/:小项目</li>	
+<li>1:路由守卫</li>	
+<li>  1.1 通过？传输数据</li>	
+<li>      使用watch对象：监听变化：$route.vue</li>	
+<li>           先使用created获取数据。</li>	
+<li>      				created(){</li>	
+<li>      					console.log(this.$route)</li>	
+<li>       					其中query获取的是地址中的数据</li>	
+<li>       					console.log(this.$route.query.id)</li>	
+<li>       				},</li>	
+<li>       				 但是当路由没变化,数据改变时,不能再一次触发该函数,所以需要watch</li>	
+<li>       				 <textarea cols="60" rows="1"><router-link to="/rou?id=20">ddd</router-link></textarea></li>	
+<li>            watch:{</li>	
+<li>       					'$route'(to,from){</li>	
+<li> 							to:新的数据</li>	
+<li> 							from:之前的数据</li>	
+<li>       						console.log(to.query.id)</li>	
+<li>       					}</li>	
+<li>       				}</li>	
+<li>  1.2 动态路由：</li>	
+<li>		path:"/apple/:id":id就是属性名</li>	
+<li>			访问：</li>	
+<li>		<textarea cols="60" rows="1"><router-link to="/apple/5/test/a3">news</router-link></textarea></li>	
+<li>		http://localhost:8080/#/apple/2</li>	
+<li>		获取：json的格式</li>	
+<li>		this.$route.params----{id:2}</li>	
+<li>		注意：$route不是$router</li>	
+<li>2:脚手架生成的项目中，使用axios：</li>	
+<li>  2.1 安装：npm install axios --save</li>	
+<li>  2.2 main.js中引入：</li>	
+<li>      import  axios from "axios"</li>	
+<li>  2.3 将axios加入到vue中</li>	
+<li>      Vue.prototype.$http=axios;</li>	
+<li>  2.4 使用：任何组件中都能使用</li>	
+<li>      点击时发送ajax:</li>	
+<li>	  this.$http.get("",{}).then(function(d){}).catch(function(){})</li>	
+<li>3:组件中使用其他的组件：</li>	
+<li>  在该组件中使用import引入其它组件：</li>	
+<li>                    import zi from "./zi"</li>	
+<li>  然后设置为局部组件：</li>	
+<li>                     components:{</li>	
+<li>                     	zi,</li>	
+<li>                     	// child</li>	
+<li>                     }</li>	
+<li>  使用组件：<textarea cols="20" rows="1"><zi></zi></textarea></li>	
+<li>4:Vuex</li>	
+<li>  跨页面传输数据：</li>	
+<li>  ？动态路由</li>	
+<li>  cookie</li>	
+<li>  localstorage</li>	
+<li>  Vuex：vue框架中状态管理</li>	
+<li>  应用场景有：单页应用中，组件之间的状态。音乐播放、登录状态、加入购物车</li>	
+<li>  4.1 安装：npm install vuex --save</li>	
+<li>  4.2 引入：main.js</li>	
+<li>  4.3 使用：Vue.use(Vuex)</li>	
+<li>  4.4 实例化:</li>	
+ <li>     const store = new Vuex.Store({</li>	
+ <li>       state: {</li>	
+ <li>         page: 10</li>	
+  <li>      },</li>	
+ <li>       mutations: {</li>	
+ <li>         add (state) {</li>	
+  <li>          state.page++</li>	
+ <li>         }</li>	
+ <li>       }</li>	
+ <li>     })</li>	
+ <li> 4.5 在vue的原型中加入Vuex</li>
+ <li>     Vue.prototype.store=store</li>
+ <li> 4.6 组件中使用：</li>
+<li>      this.store.state.page:获取</li>
+<li>	  this.store.commit("add"):调用mutations中的add事件</li>
+<li>  4.7 拆分：</li>
+ <li>     创建一个store文件夹，在创建一个xxx.js</li>
+<li>			 import Vue from "vue"</li>
+	<li>		 import Vuex from "vuex"</li>
+<li>			 Vue.use(Vuex)</li>
+<li>			 const store = new Vuex.Store({</li>
+<li>			   state: {</li>
+<li>				 page: 10,</li>
+<li>				 a:16</li>
+<li>			   },</li>
+<li>			   mutations: {</li>
+<li>				 add (state) {</li>
+<li>				   state.page++</li>
+<li>				 },</li>
+<li>				down(state){</li>
+<li>					state.a--</li>
+<li>				}</li>
+<li>			   }</li>
+<li>			 })</li>
+<li>			 export default store</li>
+<li>	  在main.js中引入即可</li>
+<li>	4.8 数据拆分：</li>
+<li>	    创建modules文件夹-----mod1.js  mod2.js</li>
+<li>		vuex2.js---引入mod1，mod2</li>
+<li>		实例化中使用：</li>
+<li>		      modules:{</li>
+<li>				  first:mod1,</li>
+<li>				  second:mod2</li>
+<li>			  }</li>
+<li>使用:</li>
+<li>this.store.state.first.xxx</li>
+<li>this.store.state.second.xxx</li>
+<li>方法调用:</li>
+<li>this.store.commit("add")</li>
+<li>this.store.commit("down")</li>
+<li><textarea cols="120" rows="88">
+vue09:
+1:vue-cli：
+  1.1 vue init webpack xxx
+  1.2 安装依赖：npm install
+  1.3 cd xxx
+  1.4 npm run dev
+2:组件的创建：
+  2.1 Vue.component("my-com",{})
+      new Vue({
+		  components:{}
+	  })
+  2.2 组件文件   xxx.vue
+      template(结构)   script(行为)   style(样式)
+3:使用插件：axios   vuex  
+  main.js
+  import axios from "axios"
+4:使用组件：
+  router---index.js
+  import  xxx from  "@/components/xxx"
+  {
+	  path:"/xxxx",
+	  name:"xxx"
+	  component:xxx,
+	  children:[
+		  {path}
+	  ]
+  }
+iview:一套基于 Vue.js 的高质量UI 组件库
+1:使用：
+  1.1 script引入js css  不在脚手架中使用
+  1.2 npm install iview  --save
+  1.3 main.js中引入：
+      import iView from 'iview';
+      import 'iview/dist/styles/iview.css';
+      Vue.use(iView)
+  1.4 组件中使用：
+      xxx.vue中写入程序即可
+element UI:组件库
+1:使用：
+  1.1   npm install element-ui --save
+  1.2   main.js中引入
+		import  ElementUI from 'element-ui';
+		import 'element-ui/lib/theme-chalk/index.css';
+		Vue.use(ElementUI);
+  1.3   组件中使用
+vue复习：
+1：vue.js
+   vue-router
+   axios:ajax
+   vuex:状态管理：页面之间共享数据
+   elementUI---组件库
+2：vue
+   2.1 生命周期：
+       创建前、后---beforeCreate    created
+	   挂在前、后---beforeMounte    mounted
+	   更新前、后---beforeUpdate    updated
+	   销毁前、后---beforeDestory   destoryed
+   2.2 指令：
+       {{xxx}}
+       v-text   v-html   v-for  v-if  v-else-if  v-else   v-show   v-model   v-on:@   v-bind :
+	   v-pre    v-cloak  v-once
+	   自定义指令：全局：Vue.directive("hide",{
+		                   bind(el,binding){},
+						   inserted(){},
+						   update(){},
+						   unbind(){}
+	                    })
+			        v-hide="xxx"
+	               局部:directives:{}
+	2.3 组件：
+	    全局：Vue.component("",data:function(){})
+		局部：components:{}
+    2.4 过滤器：
+	    全局：Vue.filter("名字",fn(){return})
+		局部：filters:{名字：fn}
+		      xxxx|名字|名字2
+    2.5 选项：new Vue({})
+	    el:挂载元素
+		data:数据
+		methods
+		生命周期函数
+		组件
+		过滤器
+		指令
+		计算属性：computed
+		watch：{}：监听变量的改变
+		template：内容需要在一个大的父元素中去写
+		render：渲染标记：createElement()
+    2.6 props:组件之间的传值
+	    父--子：props:[]
+		子--父：自定义事件
+		        this.$emit("xxx",data)
+				v-on="xxx"
+				v-model="mag"   this.$emit("input",xxx)
+	    非父子：创建新的中间仓库：var  bus=new Vue()
+		        bus.$emit()
+				bus.$on()
+    2.7 实例：vm
+	    vm.$el
+		vm.$data
+		vm.$parent
+		vm.$root
+		vm.$children
+		.....
+	2.8 插槽slot：可以将自定义组件的内容渲染
+	      单独;<slot></slot>
+		    具名:<slot name="xx"></slot>
+		            <div slot="xx"><div>
+3:vue-router:构建单页面应用
+   组件：<router-link to="/xxx?id=1"></router-link>
+               watch:$route
+   组件：<router-link to="/xxx/ddd/xxx"></router-link>
+               path:"/xxx/:id/:name"
+              <router-view></router-view>
+</textarea></li>
+	</ul>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://XinLingJ.github.io//post/hello-gridea">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://XinLingJ.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
