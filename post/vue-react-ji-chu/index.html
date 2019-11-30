@@ -1,0 +1,235 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>vue-react 基础 | LLW</title>
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575120249000">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://XinLingJ.github.io/">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1575120249000" alt="">
+  </a>
+  <h1 class="site-title">
+    LLW
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              vue-react 基础
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-11-23 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <xpm>
+                    局部组件实例
+                    注册一个简单的局部组件 runoob，并使用它：
+                    <div id="app">
+                        <runoob></runoob>
+                    </div>
+                    <script>
+                        var Child = {
+                            template: '<h1>自定义组件!</h1>'
+                        }
+                        // 创建根实例
+                        new Vue({
+                            el: '#app',
+                            components: {
+                                // <runoob> 将只在父模板可用
+                                'runoob': Child
+                            }
+                        })
+                    </script>
+                    全局组件实例
+                    注册一个简单的全局组件 runoob，并使用它：
+                    <div id="app">
+                        <runoob></runoob>
+                    </div>
+                    <script>
+                        // 注册
+                        Vue.component('runoob', {
+                            template: '<h1>自定义组件!</h1>'
+                        })
+                        // 创建根实例
+                        new Vue({
+                            el: '#app'
+                        })
+                    </script>
+                </xpm>
+	<ul>
+            <li><h1 style="text-align: center;">生命周期钩子</h1></li>
+            <li>Vue2.0的生命周期钩子一共有10个，同样结合官方文档作出了下表</li>
+            <li>beforeCreate 在实例初始化之后，数据观测(data observer) 和 event/watcher 事件配置之前被调用。</li>
+            <li>created 实例已经创建完成之后被调用。在这一步，实例已完成以下的配置：数据观测(data observer)，属性和方法的运算， watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。</li>
+            <li>beforeMount 在挂载开始之前被调用：相关的 render 函数首次被调用。</li>
+            <li>mounted el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。</li>
+            <li>beforeUpdate 数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前。你可以在这个钩子中进一步地更改状态，这不会触发附加的重渲染过程。</li>
+            <li>updated 由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。</li>
+            <li>activated     keep-alive 组件激活时调用。</li>
+            <li>deactivated    keep-alive 组件停用时调用。</li>
+            <li>beforeDestroy 实例销毁之前调用。在这一步，实例仍然完全可用。</li>
+            <li>destroyed Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</li>
+        </ul>
+<pre><code>&lt;xmp&gt;
+	元素组件：JSX---javaScript XML
+         &lt;script type=&quot;text/babel&quot;&gt;&lt;/script&gt;
+        var Els=&lt;div&gt;&lt;/div&gt;
+ 函数式：
+       var els=function(){
+		   return (&lt;div&gt;11111&lt;div&gt;)
+	   }
+	   ReactDOM.render(els(),app)
+ ES6语法：
+       class Els extends React.Component{
+		   //state={}
+		   constructor(){
+			   super()
+			   this.state={
+				   a:10
+			   }
+		   }
+		   render(){
+			   return (&lt;div&gt;11111&lt;/div&gt;)
+		   }
+	   }
+        一个输出 &quot;Hello World！&quot; 的组件，组件名为 HelloMessage：
+        &lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
+        &lt;script type=&quot;text/babel&quot;&gt;
+            function HelloMessage(props) {
+                return &lt;h1&gt;Hello World!&lt;/h1&gt;;
+            }
+            const element = &lt;HelloMessage /&gt;;
+            ReactDOM.render(
+                element,
+                document.getElementById('example')
+            );
+        &lt;/script&gt;
+        我们可以使用函数定义了一个组件：
+        function HelloMessage(props) {
+        return &lt;h1&gt;Hello World!&lt;/h1&gt;;
+        }
+        你也可以使用 ES6 class 来定义一个组件:
+        class Welcome extends React.Component {
+        render() {
+        return &lt;h1&gt;Hello World!&lt;/h1&gt;;
+        }
+        }
+        1、getDefaultProps()
+        设置默认的props，也可以用dufaultProps设置组件的默认属性.
+        2、getInitialState()
+        在使用es6的class语法时是没有这个钩子函数的，可以直接在constructor中定义this.state。此时可以访问this.props
+        3、componentWillMount()
+        组件初始化时只调用，以后组件更新不调用，整个生命周期只调用一次，此时可以修改state。
+        4、 render()
+        react最重要的步骤，创建虚拟dom，进行diff算法，更新dom树都在此进行。此时就不能更改state了。
+        5、componentDidMount()
+        组件渲染之后调用，只调用一次。
+        更新
+        6、componentWillReceiveProps(nextProps)
+        组件初始化时不调用，组件接受新的props时调用。
+        7、shouldComponentUpdate(nextProps, nextState)
+        react性能优化非常重要的一环。组件接受新的state或者props时调用，我们可以设置在此对比前后两个props和state是否相同，如果相同则返回false阻止更新，因为相同的属性状态一定会生成相同的dom树，这样就不需要创造新的dom树和旧的dom树进行diff算法对比，节省大量性能，尤其是在dom结构复杂的时候
+        8、componentWillUpdata(nextProps, nextState)
+        组件初始化时不调用，只有在组件将要更新时才调用，此时可以修改state
+        9、render()
+        组件渲染
+        10、componentDidUpdate()
+        组件初始化时不调用，组件更新完成后调用，此时可以获取dom节点。
+        卸载
+        11、componentWillUnmount()
+        组件将要卸载时调用，一些事件监听和定时器需要在此时清除。
+    &lt;/xmp&gt;</code></pre>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://XinLingJ.github.io//post/shu-ju-lei-xing-wen-ti">
+              <h3 class="post-title">
+                数据类型问题
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://XinLingJ.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

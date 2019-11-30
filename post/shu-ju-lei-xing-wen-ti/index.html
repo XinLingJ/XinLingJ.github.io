@@ -1,0 +1,178 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>数据类型问题 | LLW</title>
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575120249000">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://XinLingJ.github.io/">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1575120249000" alt="">
+  </a>
+  <h1 class="site-title">
+    LLW
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              数据类型问题
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-11-23 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <ul style="list-style-type:none">
+            <li>
+                <h1 style="text-align: center;">关于数据类型的前端面试题总结</h1>
+            </li>
+            <li><b> JavaScript中的数据类型都有哪些？</b></li>
+            <li>----数据类型有两种：原始数据类型（又称基础数据类型、可变数据类型）和复杂数据类型（又称对象、不可变数据类型）。</li>
+            <li>----原始数据类型包括：undefined，null，数字，字符串，布尔类型，Symbol（ES6 新加入的类型）</li>
+            <li>----复杂数据类型包括：包括对象</li>
+            <li>--------------------其中对象包括：内部对象（Array、String等），宿主对象（window）和自定义对象。</li>
+            <hr />
+            <li><b>如何判断一个变量是否为数组？</b></li>
+            <li>如果是ES5环境的话，可以用Array.isArray()方法。</li>
+            <li>如果不确定运行环境的话，可以用Object.prototype.toString.call()的方法来确认，如果结果是[object Array]则认为数组。</li>
+            <hr />
+            <li><b>undefined和null的相同与不同？</b></li>
+            <li>----相同点：这两个数据类型都只有一个值,都没有方法,都表示“无”，转化为布尔类型时，都是false</li>
+            <li>----不同点：</li>
+            <li>------null是一个关键字，而undefined不是。</li>
+            <li>------null的实质是一个空的对象，而undefined是window的一个属性。</li>
+            <li>------进行数字类型转换时，null返回0，undefined返回NaN</li>
+            <hr />
+            <li><b>隐式类型转化的时候，JavaScript底层都做了哪些处理？</b></li>
+            <li>----对象转成原始数据类型时，先调用对象的valueOf方法，如果返回结果不是原始数据类型的值，再调用toString方法。</li>
+            <li>----原始类型转原始类型时，直接调用对应的构造函数进行转换，如Number('123')，String(true),Boolean(0)。</li>
+            <hr />
+            <li><b>有哪些值转化成布尔型后为false？</b></li>
+            <li>----包括下面这个六种：</li>
+            <li>0、-0、undefined、null、空字符串、NaN</li>
+            <hr />
+            <li><b>讲讲ES6中的Symbol？</b></li>
+            <li>----Symbol是ES6中新加的一个原始类型，他的每个值都是唯一的，即使是用两个完全一样的变量构造出来的Symbol也不相等。</li>
+            <li>----原始类型传入Symbol方法时，会进行转换成字符串 再转成Symbol类型值；如果是对象的话，会先调用改对象的toString方法再转成Symbol类型的值。</li>
+            <li>----Symbol是最大的用处是用来消除“魔法字符串”的。</li>
+            <hr />
+            <li><b>如何把字符串转换为数组？</b></li>
+            <li>是如果是ES6，可以用Array.from()方法。</li>
+            <li>如果不确定环境的话，可以用Array.prototype.slice.call()的方法，将类似数组转换为。</li>
+            <li>
+                <xmp>
+                    Array.from()的详解：（例子来自MDN）
+                    Set类型的转换:
+                    let s = new Set(['foo', window]);
+                    Array.from(s);
+                    // ["foo", window]
+                    Map类型的转换:
+                    let m = new Map([[1, 2], [2, 4], [4, 8]]);
+                    Array.from(m);
+                    // [[1, 2], [2, 4], [4, 8]]
+                    类数组的值:
+                    function f() {
+                    return Array.from(arguments);
+                    }
+                    f(1, 2, 3);
+                    // [1, 2, 3]
+                    Array.from()的第二个参数mapFn也很有用处，可以对于传入的类数组值进行定制化修改:
+                    Array.from([1, 2, 3], x => x + x);
+                    // [2, 4, 6]
+                    Array.from({length: 5}, (v, i) => i);
+                    // [0, 1, 2, 3, 4]
+                </xmp>
+            </li>
+        </ul>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://XinLingJ.github.io//post/css-ti">
+              <h3 class="post-title">
+                CSS题
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://XinLingJ.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

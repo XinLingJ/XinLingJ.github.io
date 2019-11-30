@@ -1,0 +1,181 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>CSS题 | LLW</title>
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575120249000">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://XinLingJ.github.io/">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1575120249000" alt="">
+  </a>
+  <h1 class="site-title">
+    LLW
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              CSS题
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-11-22 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <ul style="list-style: square;">
+        <center>
+            <h1>CSS</h1>
+        </center>
+        <li>加载外部样式文件用的语法：<xmp><link rel=”stylesheet” href=”url” /></xmp></li>
+        <li>设置文字或者图片水平居中到一个盒子中的代码：</li>
+        <li>父元素：margin:auto;position:relative;width:100px;height:100px;</li>
+        <li>子元素：position:absolute;margin:auto;top:0;right:0;bottom:0;left:0;width:30px;height:30px;</li>
+        <li>CSS引入网页中的方法： 行内、内联、外联、@import</li>
+        <li>CSS选择器有:元素、属性、关系、伪类、伪对象</li>
+        <li>CSS如何能够定义列表的项目符号为实心矩形:list-style:square; 或者 list-style-type:square; 圆circle</li>
+        <li>css背景图像定位的参数含义:background-position:center center 前者表示垂直平移（-左正右），后者表示水平平移（上-下正）</li>
+        <li>css中可以使用z-index的定位是：position的层级，越大越往前显示，需要与position共同作用</li>
+        <li>css的颜色定义方式有：16进制、rgb（）、单词</li>
+        <li><xmp>css中实现<b><i><del>标签功能的方式分别是：____ font-weight:900;或者 font-weight:bold; </xmp></li>
+        <li><xmp>---font-style:italic; del 定义删除的文本  text-decoration:line-through;</xmp></li>
+        <li>css伪类中必须放在link后面的是：visited、hover、active</li>
+        <li>取消链接下划线的方法：text-decoration:none;</li>
+        <li>IE浏览器width属性的计算公式：ie的width为正常的width+padding+border</li>
+        <li>css的尺寸单位有：px em in mm vh</li>
+        <li>border中可以设置的属性值有：border-width 、border-style、border-color</li>
+        <li>CSS选择器优先级是怎样的？ !important >style > id >class > 标签 *</li>
+        <hr />
+        <li>什么是盒子模型？ CSS技术所使用的一种思维模型</li>
+        <li>标准盒子占地面积 == css width+padding+border</li>
+        <li>----ie盒子宽 ==width</li>
+        <li>----标准盒子 width（css里面） =content宽</li>
+        <hr />
+        <li style="color: red;">简述清除浮动的方法及各自的优缺点 "父元素 设置高 儿子固定高</li>
+        <li>----父元素 overflow:hidden   任意儿子高度</li>
+        <li>----父元素 overflow:auto   任意</li>
+        <li>----父元素 float:left   父元素本身不占位</li>
+        <li>----父元素 display:table   任意</li>
+        <li>----父元素 :after{ clear:both}    任意 必须display:block</li>
+        <li>----添加兄弟 clear:both   多添加一个儿子</li>
+        <li>----添加br  clear:both   多添加标记</li>
+        <hr />
+        <li>Css使块级元素垂直水平居中的两种方法？ (写出代码)</li>
+        <li>---未知盒子宽高</li>
+        <li>1-----box1 positon: realtive && box2 position: absolute</li>
+        <li>1-----box2盒子 top、left、bottom、right值都设为0></li>
+        <li>1-----box2盒子 添加 margin: auto</li>
+        <li>1-----box2盒子有border属性时，不影响水平垂直居中 //脱离文档流</li>
+        <li>2-----box1 positon: realtive && box2 position: absolute</li>
+        <li>2-----box2: top: 50%；left: 50%</li>
+        <li>2-----box2盒子使用 css3属性 transform: translate(-50%, -50%)代替margin实现偏移量，偏移量根据自身盒子宽高用百分比进行宽高偏移</li>
+        <li>2-----box2盒子有border属性时，不影响水平垂直居中</li>
+        <hr />
+        <li>谈谈定位的理解？</li>
+        <li>----定位可以分为:相对定位(relative)、绝对定位(absolute)、固定定位(fixed)、没有定位(static)</li>
+        <li>----relative-相对定位:相对于自己在网页中原有的位置定位，在网页中占一定位置</li>
+        <li>----absolute-绝对定位:相对于距离自己最近的有position属性的父系元素定位，脱离文档流在网页中不占位置</li>
+        <li>----fixed-固定定位:相对于视窗定位,脱离文档流在网页中不占位置</li>
+        <li>----static-没有定位:正常文档布局，在网页中占位置</li>
+        <hr />
+        <li>你是如何优化你的css?</li>
+        <li>----尽量将样式写在单独的css文件里面，方便复用和浏览器缓存</li>
+        <li>----避免使用复杂的选择器，层级越少越好，最好不要超过3层</li>
+        <li>----利用CSS继承减少代码量,font-size color 可以设置在父系上不用每个单独设置</li>
+        <li>----不使用@import</li>
+        <li>----精简页面的样式文件，去掉不用的样式</li>
+        <li>----慎重使用高性能属性：浮动、定位</li>
+        <hr />
+        <li>margin和padding的区别和联系: 外边距和内边距，共同完成元素的位置，外边距不加入背景</li>
+    </ul>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://XinLingJ.github.io//post/html-ti">
+              <h3 class="post-title">
+                HTML题
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://XinLingJ.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

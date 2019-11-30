@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Css3笔记 | LLW</title>
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575120249000">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://XinLingJ.github.io/">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1575120249000" alt="">
+  </a>
+  <h1 class="site-title">
+    LLW
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Css3笔记
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-11-20 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <ul style="list-style-type:square">
+	      <center><h1>Css3</h1></center>
+        <li><b>Css3-边框:</b>border-radius box-shadow border-images</li>
+        <li>border-image: source slice width outset repeat|initial|inherit;</li>
+        <li>border-image-source 用于指定要用于绘制边框的图像的位置</li>
+        <li>border-image-slice 图像边界向内偏移</li>
+        <li>border-image-width 图像边界的宽度</li>
+        <li>border-image-outset 用于指定在边框外部绘制 border-image-area 的量</li>
+        <li>border-image-repeat 用于设置图像边界是否应重复（repeat）、拉伸（stretch）或铺满（round）。</li>
+        <li><b>Css3-圆角:</b>border-radius box-shadow border-images</li>
+        <li><b>Css3-背景:</b>background-image background-size background-origin background-clip</li>
+        <li>background-clip: border-box|padding-box|content-box;</li>
+        <li>border-box 默认值。背景绘制在边框方框内（剪切成边框方框）。</li>
+        <li>padding-box 背景绘制在衬距方框内（剪切成衬距方框）。</li>
+        <li>content-box 背景绘制在内容方框内（剪切成内容方框）。</li>
+        <li>background-clip 规定背景的绘制区域。</li>
+        <li>background-origin 规定背景图片的定位区域。</li>
+        <li>background-size 规定背景图片的尺寸。</li>
+        <li>background-origin: padding-box|border-box|content-box;
+        <li>padding-box 背景图像填充框的相对位置</li>
+        <li>border-box 背景图像边界框的相对位置</li>
+        <li>content-box 背景图像的相对位置的内容框</li>
+        <li><b>Css3-渐变</b></li>
+        <li>线性渐变（Linear Gradients）- 向下/向上/向左/向右/对角方向</li>
+        <li>background-image: linear-gradient(direction, color-stop1, color-stop2, ...);</li>
+        <li>径向渐变（Radial Gradients）- 由它们的中心定义</li>
+        <li>background-image: radial-gradient(shape size at position, start-color, ..., last-color);</li>
+        <li>repeating-radial-gradient() 函数用于重复径向渐变：</li>
+        <li><b>Css3-文本:</b>text-shadow box-shadow text-overflow 自动换行:word-wrap 单词拆分换行:word-break</li>
+        <li>
+            <h3 style="color:red">文本溢出省略： white-space: nowrap; overflow: hidden; text-overflow: ellipsis;</h3>
+            <h3>文本自动换行： word-wrap:break-word;</h3>
+            <h3>单词拆分换行:word-break normal 使用浏览器默认的换行规则。</h3>
+            <h3> break-all 允许在单词内换行。</h3>
+            <h3> keep-all 只能在半角空格或连字符处换行。</h3>
+        </li>
+        <li><b>Css3-字体：</b> @font-face{font-family: myFirstFont;src: url(sansation_light.woff);}</li>
+        <li><b>Css3-转换：</b>移动 translate(X,Y) 旋转 rotate(xxdeg) 缩放scale(x,y) 切斜skew(x,y) skewX skewY</li>
+        <li> matrix()包含旋转缩放移动倾斜</li>
+        <li><b>Css3-过渡</b></li>
+        <li>--transition 简写属性，用于在一个属性中设置四个过渡属性。</li>
+        <li>--transition-property 规定应用过渡的 CSS 属性的名称。</li>
+        <li>--transition-duration 定义过渡效果花费的时间。默认是 0。 </li>
+        <li>--transition-timing-function 规定过渡效果的时间曲线。默认是 "ease"。 </li>
+        <li>--transition-delay 规定过渡效果何时开始。默认是 0。</li>
+        <li><b>Css3-动画:</b> animation @keyframes</li>
+        <li><b>Css3-多列:</b></li>
+        <li>--column-count 指定元素应该被分割的列数。</li>
+        <li>--column-fill 指定如何填充列</li>
+        <li>--column-gap 指定列与列之间的间隙</li>
+        <li>--column-rule 所有 column-rule-* 属性的简写</li>
+        <li>--column-rule-color 指定两列间边框的颜色</li>
+        <li>--column-rule-style 指定两列间边框的样式</li>
+        <li>--column-rule-width 指定两列间边框的厚度</li>
+        <li>--column-span 指定元素要跨越多少列</li>
+        <li>--column-width 指定列的宽度</li>
+        <li>--columns 设置 column-width 和 column-count 的简写</li>
+        <li><b>Css3-用户界面</b></li>
+        <li>appearance 允许您使一个元素的外观像一个标准的用户界面元素</li>
+        <li>box-sizing 允许你以适应区域而用某种方式定义某些元素</li>
+        <li>icon 为创作者提供了将元素设置为图标等价物的能力。 </li>
+        <li>nav-down 指定在何处使用箭头向下导航键时进行导航 </li>
+        <li>nav-index 指定一个元素的Tab的顺序 </li>
+        <li>nav-left 指定在何处使用左侧的箭头导航键进行导航 </li>
+        <li>nav-right 指定在何处使用右侧的箭头导航键进行导航 </li>
+        <li>nav-up 指定在何处使用箭头向上导航键时进行导航 </li>
+        <li>outline-offset 外轮廓修饰并绘制超出边框的边缘 </li>
+        <li>resize 指定一个元素是否是由用户调整大小</li>
+        <li><b>CSS3-框大小:</b> box-sizing 属性可以设置 width 和 height 属性中包含了 padding(内边距) 和 border(边框)。</li>
+        <li>默认情况下，元素的宽度与高度计算方式如下：</li>
+        <li>width(宽) + padding(内边距) + border(边框) = 元素实际宽度</li>
+        <li>height(高) + padding(内边距) + border(边框) = 元素实际高度</li>
+        <li><b>Css3-弹性盒子属性:</b></li>
+        <li>display 指定 HTML 元素盒子类型。</li>
+        <li>flex-direction 指定了弹性容器中子元素的排列方式</li>
+        <li>--row 默认值。灵活的项目将水平显示，正如一个行一样。</li>
+        <li>--row-reverse 与 row 相同，但是以相反的顺序。</li>
+        <li>--column 灵活的项目将垂直显示，正如一个列一样。</li>
+        <li>--column-reverse 与 column 相同，但是以相反的顺序。</li>
+        <li>--initial 设置该属性为它的默认值。请参阅 initial。</li>
+        <li>--inherit 从父元素继承该属性。请参阅 inherit。</li>
+        <li>justify-content 设置弹性盒子元素在主轴（横轴）方向上的对齐方式。</li>
+        <li>--flex-start 默认值。项目位于容器的开头。</li>
+        <li>--flex-end 项目位于容器的结尾。</li>
+        <li>--center 项目位于容器的中心。</li>
+        <li>--space-between 项目位于各行之间留有空白的容器内。</li>
+        <li>--space-around 项目位于各行之前、之间、之后都留有空白的容器内。</li>
+        <li>--initial 设置该属性为它的默认值。请参阅 initial。</li>
+        <li>--inherit 从父元素继承该属性。请参阅 inherit。</li>
+        <li>align-items 设置弹性盒子元素在侧轴（纵轴）方向上的对齐方式。</li>
+        <li>flex-wrap 设置弹性盒子的子元素超出父容器时是否换行。</li>
+        <li>--flex-wrap: nowrap|wrap 必要的时候拆行|wrap-reverse 反拆|initial|inherit;</li>
+        <li>align-content 修改 flex-wrap 属性的行为，类似 align-items, 但不是设置子元素对齐，而是设置行对齐</li>
+        <li>flex-flow flex-direction 和 flex-wrap 的简写</li>
+        <li>order 设置弹性盒子的子元素排列顺序。</li>
+        <li>align-self 在弹性子元素上使用。覆盖容器的 align-items 属性。</li>
+        <li>flex 属性用于设置或检索弹性盒模型对象的子元素如何分配空间。属性是 flex-grow、flex-shrink 和 flex-basis 属性的简写属性。</li>
+        <li><b>Css3-媒体查询</b></li>
+        <li>--@media screen and (max-width: 699px) and (min-width: 520px) {}</li>
+        <li>--@media screen and (min-width: 1001px) {}</li>
+        <li>--all 用于所有多媒体类型设备|print 用于打印机|screen 用于电脑屏幕，平板，智能手机等。|speech 用于屏幕阅读器</li>
+    </ul>
+<pre><code>&lt;hr /&gt;
+&lt;li&gt;&lt;b&gt;CSS3 多重背景(multiple backgrounds)&lt;/b&gt;&lt;/li&gt;
+&lt;li&gt;多重背景，也就是CSS2里background的属性外加origin、clip和size组成的新background的多次叠加，缩写时为用逗号隔开的每组值；用分解写法时，如果有多个背景图片，而其他属性只有一个（例如background-repeat只有一个），表明所有背景图片应用该属性值。
+&lt;/li&gt;
+&lt;li&gt;语法缩写如下：&lt;/li&gt;
+&lt;li&gt;background ： [background-color] | [background-image] | [background-position][/background-size] |&lt;/li&gt;
+&lt;li&gt;[background-repeat] | [background-attachment] | [background-clip] | [background-origin],...&lt;/li&gt;
+&lt;li&gt;可以把上面的缩写拆解成以下形式：&lt;/li&gt;
+&lt;li&gt;background-image:url1,url2,...,urlN;&lt;/li&gt;
+&lt;li&gt;background-repeat : repeat1,repeat2,...,repeatN;&lt;/li&gt;
+&lt;li&gt; backround-position : position1,position2,...,positionN;&lt;/li&gt;
+&lt;li&gt; background-size : size1,size2,...,sizeN;&lt;/li&gt;
+&lt;li&gt; background-attachment : attachment1,attachment2,...,attachmentN;&lt;/li&gt;
+&lt;li&gt;background-clip : clip1,clip2,...,clipN;&lt;/li&gt;
+&lt;li&gt;background-origin : origin1,origin2,...,originN;&lt;/li&gt;
+&lt;li&gt;background-color : color;&lt;/li&gt;
+&lt;li&gt;注意：&lt;/li&gt;
+&lt;li&gt; 用逗号隔开每组 background 的缩写值；&lt;/li&gt;
+&lt;li&gt; 如果有 size 值，需要紧跟 position 并且用 &quot;/&quot; 隔开；&lt;/li&gt;
+&lt;li&gt; 如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。&lt;/li&gt;
+&lt;li&gt;background-color 只能设置一个。&lt;/li&gt;</code></pre>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://XinLingJ.github.io//post/web-shi-ti">
+              <h3 class="post-title">
+                web 试题
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://XinLingJ.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,278 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>js 笔记 | LLW</title>
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575120249000">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
+
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+
+
+
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="https://XinLingJ.github.io/">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1575120249000" alt="">
+  </a>
+  <h1 class="site-title">
+    LLW
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              js 笔记
+            </h2>
+            <div class="post-info">
+              <time class="post-time">
+                · 2019-11-25 ·
+              </time>
+              
+            </div>
+            
+            <div class="post-content">
+              <p><strong>js组成三大核心内容</strong>
+（1）ECMAScript 2.3.BOM（browser object document ）是（欧洲计算机制造商协会）它规定了js的语法标准。
+（2）DOM（document object model）是文档对象模型，规定了文档的显示结构，可以轻松地删除、添加和替换节点
+（3）BOM是浏览器对象模型，就是浏览器自带的一些功能样式，如搜索框，设置，等学习浏览器窗口交互的对象
+1、核心（ECMAScript）：描述了JS的语法和基本对象。
+2、文档对象模型 （DOM）：处理网页内容的方法和接口。
+3、浏览器对象模型（BOM）：与浏览器交互的方法和接口。</p>
+<pre><code>	      首先，网页是由一个一个xml的节点构成，页面加载成一刻树状。所以我们通过js操作元素的节点，对元素的增、删、改、查，对元素的属性、值、事件等操作属于DOM操作（ document object model 文档对象模型）。对浏览器框架窗口对象的操作属于BOM操作（Browser Object Model 浏览器对象模型）。js里面还有语法、类型、语句、关键字、运算符、对象等一些是ECMAScript。
+</code></pre>
+<p>DOM节点类型
+　　DOM规定文档中的每个成分都是一个节点（Node）,HTML文档可以说由节点构成的集合，DOM节点有:
+　　1. 元素节点（Element）：上图中<html>、<body>、<p>等都是元素节点，即标签。
+　　2. 文本节点（Text）:向用户展示的内容，如<li>...</li>中的JavaScript、DOM、CSS等文本。
+　　3. 属性节点（Attr）:元素属性，元素才有属性,如<a>标签的链接属性href=&quot;http://www.baidu.com&quot;。
+DOM节点三大属性（XML DOM）
+　　1. nodeName：元素节点、属性节点、文本节点分别返回元素的名称、属性的名称和#text的字符串。
+　 2. nodeType：元素节点、属性节点、文本节点的nodeType值分别为1、2、3.、
+　　3. nodeValue：元素节点、属性节点、文本节点的返回值分别为null、属性值和文本节点内容。</p>
+<p>DOM常见操作
+1. 获取/设置 节点--包括获取/设置 元素节点、属性节点、文本节点 ：
+　　获取元素节点：document.getElementById(&quot;ID&quot;)；
+　　获取属性节点：getAttributeNode(attrName)；
+　　获取文本节点：parentNode/childNodes；
+　　设置元素节点： innerHTML属性（innerText属性返回去掉标签的innerHTML）；
+　　设置属性节点： setAttribute(attrName,value);
+　　设置文本节点：通过改变文本节点的nodeValue来设置文本节点的值；
+2. 删除节点
+　　删除元素节点： removeChild();
+　　删除属性节点：removeAttribute();
+　　删除文本节点：textNode.nodeValue='';
+3. 创建和添加节点
+　  创建节点：通过document对象的createElement(eleName)、createTextNode(nodeValue)方法可分别创建元素节点和文本节点。属性节点也有自己的create方法，但是用的少，直接用元素节点的setAttribute()方法即可添加属性。
+　  添加节点：appendChild()和insertBefore()</p>
+<p>BOM对象操作windows对象：
+Window -对象是 JavaScript层级中的顶层对象，代表一个浏览器窗口或一个框架，会在 <body>或<frameset>每次出现时被自动创建。在这里就只列举一些主干操作。
+window.innerHeight - 浏览器窗口的内部高度
+window.innerWidth - 浏览器窗口的内部宽度
+window.open() - 打开新窗口
+window.close() - 关闭当前窗口
+window.moveTo() - 移动当前窗口
+window.resizeTo() - 调整当前窗口的尺寸....
+window.event -事件的状态，例如触发event对象的元素、鼠标的位置及状态、按下的键等等。event对象只在事件发生的过程中才有效。event的某些属性只对特定的事件有意义
+window.document -文档对象，操作文档的基础对象
+document.getElementById(&quot;id&quot;);根据id找最多找一个；
+document.getElementByNames(&quot;name&quot;);根据name找，找出来的是数组；
+document.getElementByTagNames(&quot;name&quot;)；根据表签名找，找出来的是数组；
+document.getElementByClassNames(&quot;name&quot;)；根据表classname找，找出来的是数组；</p>
+<pre><code>BOM（浏览器对象模型）
+1、window对象
+说明：BOM的核心对象是window，
+他表示浏览器的一个实例。
+他既是通过JavaScript访问浏览器窗口的一个接口，
+又是ECMScript规定的Global对象。
+1.1、全局作用域
+    全局变量不能通过delete操作符删除；
+    window对象上的定义可删除；
+1.2、框架
+    如果页面中包含框架，那每个框架都拥有自己的window对象，可通过数值索引（从0开始，从左至右，从上到下）或者框架名称来访问相应的window对象；
+    例：访问上方框架：window.frames[0] 或者 window.frames[&quot;topFrame&quot;] 最好的是top.frames[0];top对象始终指向最高（外）的框架，也就是浏览器窗口；
+1.3、打开/关闭窗口
+    Window.open（&quot;第一部分&quot;，&quot;第二部分&quot;，&quot;第三部分&quot;，&quot;第四部分&quot;）
+        Window.open的特征参数：
+        第一部分：写页面地址。
+        第二部分：_blank 打开的方式，在新窗口还是自身的窗口。
+        第三部分：控制打开的窗口格式，可以写多个，用空格隔开如下：
+              toolbar=no    新打开的窗口无工具条 ；
+              menubar=no     无菜单栏 status=no状态栏 ；
+              width=100 height=100    宽度高度；
+              left=100    打开的窗口距离左边多少距离；
+              resizable=no    窗口大小不可调 ；
+              scrollbars=yes    出现滚动条；
+              location=yes    有地址栏；
+    Window.open也有返回值，它的返回值是：新打开的窗口对象。
+    window.close();    关闭当前窗口
+    w.close()：    关闭保存在变量w中的那个窗口；
+    关闭多个子窗口：先将打开的窗口存入数组内，利用循环将其挨个关闭；
+    window.opener.close()；  关闭打开当前窗口的源窗口
+1.4、间隔与延迟
+    间隔执行一段代码（函数）：window.setInterval(&quot;要执行的代码&quot;，间隔的毫秒数)
+    清除间隔执行：window.clearInterval(间隔的id); 循环一次之后用来清除隔执行的代码
+    延迟一段时间执行某一段代码（函数）：window.setTimeout(&quot;要执行的代码&quot;，延迟的毫秒数)
+    清除延迟：window.clearTimeout(延迟的id)；清除setTimeout
+1.5、系统对话框
+    alert();系统对话框 confirm();yes no 选择框 prompt()；提示框
+	2、location对象
+说明：location最有用的对象之一；既是window对象的属性又是document对象的属性；
+window.location	指向同一个对象
+document.location	指向同一个对象
+2.1、location的属性
+hash	返回url中的hash（#后的字符），如果url中不包含，则返回空字符串
+host	返回服务器名称和端口号
+hostname	返回不带端口号的服务器名称
+href        	返回当前加载页面的完整url。（location对象的toString()也返回这个值）
+pathname	返回url中的目录和文件名
+port    	
+返回url指定的端口号，如果不包含则返回空字符串
+protocol	返回页面使用的协议。通常为http:或者https
+search	返回url查寻字符串 ，？后面的
+2.2、改变浏览器的位置 assign()
+3、navigator对象
+说明：检测显示网页的浏览器类型；常用的是检测是否安装了特定插件；
+//检测插件 IE无效
+function hasPlugin(name) {
+    name = name.toLowerCase();
+    for(var i=0;i &lt; navigator.plugins.length;i++){
+        if(navigator.plugins[i].name.toLowerCase().indexOf(name) &gt; -1) {
+            return true;
+        }
+    }
+    return false;
+}
+// 检测flash
+alert(hasPlugin(&quot;Falsh&quot;));
+//IE中检测
+function hasIEPlugin(name) {
+    try {
+        new ActiveXObject(name);
+        return true;
+    } catch (ex) {
+        return false;
+    }
+}
+// 检测falsh
+alert(hasIEPlugin(&quot;Falsh&quot;));
+		
+window.navigator -浏览器的一些信息，用得比较多的也就是navigator.userAgent获取该浏览器的代理信息，如果在使用过程中客户端出现错误，返回服务器携带这些信息做日志记录，排除浏览器版本问题、兼容性等问题。
+Window.external -一般用来添加收藏夹，貌似只能用于火狐和ie。。
+Window.iframe -文档包含框架（frame 或iframe标签），浏览器会为HTML文档创建一个window对象，并为每个框架创建一个额外的window对象。
+window.frames -返回窗口中所有命名的框架
+Window.parent -父窗口（如果窗口是顶级窗口，那么parent==self==top）
+Window.top -最顶级父窗口（有的窗口中套了好几层frameset或者iframe）
+</code></pre>
+<p>4、srceen对象
+window.screen -用户屏幕信息说明：用处不大，用于站点分析
+window.screen.availWidth - 可用的屏幕宽度
+window.screen.availHeight - 可用的屏幕高度</p>
+<pre><code>Window.self -当前窗口（等价window）
+Window.opener -实际上就是通过window.open打开的窗体的父窗体
+与消息框有关的方法：alert(String)、confirm(String)、prompt(String)
+两种定时器：setTimeout(code,latency) 和setInterval(code,period)
+
+5、history对象
+说明：history对象保存着用户上网的历史记录
+window.history -对象在编写时可不使用 window 这个前缀，就是在html页面里使用的时候不需要window这个前缀，用了的话有些浏览器可能会报错。
+history.back() - 与在浏览器点击后退按钮相同
+history.back()	后退一页等同于history(-1);
+history.forward() - 与在浏览器中点击按钮向前相同  前一个网页
+history.go() - 可以在用户的历史记录中任意跳转
+history.go(-1) - 回退到前一个页面
+</code></pre>
+<p>DOM和BOM区别：
+DOM描述了处理网页内容的方法和接口，BOM描述了与浏览器进行交互的方法和接口
+1) DOM是W3C的标准[所有浏览器都遵循的标准];
+2) DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）;
+3) BOM 各个浏览器厂商根据DOM在各自浏览器上的实现;[表现为不同浏览器定义有差别,实现方式不同;
+4) BOM 主要处理浏览器窗口和框架，
+不过通常浏览器特定的 JavaScript 扩展都被看做 BOM 的一部分。
+这些扩展包括
+window(窗口)、location（地址栏内容相关）、history（历史）、screen（屏幕）、navigator（有很多浏览器相关的内容，通常判断浏览器类型都是通过这个对象）
+DOM 是为了操作文档出现的 API，document 是其的一个对象；
+BOM 是为了操作浏览器出现的 API，window 是其的一个对象。</p>
+
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="https://XinLingJ.github.io//post/vue-react-ji-chu">
+              <h3 class="post-title">
+                vue-react 基础
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> | 
+  <a class="rss" href="https://XinLingJ.github.io//atom.xml" target="_blank">RSS</a>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+      </div>
+    </div>
+  </body>
+</html>
