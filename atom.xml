@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
     <title>LLW</title>
-    <updated>2019-11-30T13:59:27.740Z</updated>
+    <updated>2019-12-01T09:52:20.928Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
     <link rel="self" href="https://XinLingJ.github.io//atom.xml"/>
@@ -10,6 +10,30 @@
     <logo>https://XinLingJ.github.io//images/avatar.png</logo>
     <icon>https://XinLingJ.github.io//favicon.ico</icon>
     <rights>All rights reserved 2019, LLW</rights>
+    <entry>
+        <title type="html"><![CDATA[JQurey 试题]]></title>
+        <id>https://XinLingJ.github.io//post/jqurey-shi-ti</id>
+        <link href="https://XinLingJ.github.io//post/jqurey-shi-ti">
+        </link>
+        <updated>2019-12-01T09:51:13.000Z</updated>
+        <content type="html"><![CDATA[<pre><code> 1 jquery中选择器可以分为 基本选择器、层级选择器、过滤选择器、表单选择器、内容选择器、子元素选择器、属性选择器等
+2 jQuery选择表单&lt;form&gt;&lt;input type=&quot;text&quot; /&gt;&lt;input type=&quot;submit&quot; /&gt;&lt;/form&gt;
+        中的第一个表单元素
+        $('form input[type=text]')
+        $(&quot;form input:first-child&quot;)
+        $('input').first()
+3 jquery中的$(&quot;#box&quot;).outerWidth(false)返回的是盒子的: 宽包括边框和内留白 不包括外留白;如果为true 也包括外留白
+4 jquery中使用过哪些插入节点的方法：prepend prependto append appendto after before insertBefore insertAfter
+5 jquery访问对象中的size（）方法的返回值和jQuery对象的 _length_ 属性一样。
+6 现有一个表格，如果想要匹配所有行数为偶数的，_even()_实现，奇数的用 _odd()_实现。
+7 &quot;在jq中，想让一个元素隐藏用_hide_实现，想让一个元素出现用_show_实现。
+8 假设页面有&lt;p&gt;I would like to say: &lt;/p&gt;一个元素，当执行 $(&quot;p&quot;).append(&quot;&lt;b&gt;Hello&lt;/b&gt;&quot;);时，
+  页面代码会动态加载为 _&lt;p&gt;I would like to say:&lt;b&gt;Hello&lt;/b&gt;&lt;/p&gt;_
+9 &quot;在一个表单里，想要使用jquery找到指定元素的第一个元素用_$(&quot;input&quot;).eq(0)/$(&quot;input&quot;).first()_实现，那么第二个元素用_$(&quot;input&quot;).eq(1)_实现。
+10 写出jquery的5个事件：_click_、_mousedown_、_mouseuo_、_focus_、_blur_  mouseover mouseout
+11 Jquery如何获取元素属性用prop,移除属性使用_removeProp_</code></pre>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[SQL 语句]]></title>
         <id>https://XinLingJ.github.io//post/sql-yu-ju</id>
@@ -50,7 +74,172 @@
 18	JS中可以打开名为&quot;window2&quot;的新窗口的方法是_open(url,&quot;window2&quot;)_	
 19	表单表示下拉列表的标签是_select_，默认选中某项的属性是_selected_	 
 20	&quot;阅读以下代码，在页面中显示的结果是_bc_
-      var s=&quot;abcdef  alert(s.substr(1,2))&quot;	</code></pre>
+      var s=&quot;abcdef  alert(s.substr(1,2))&quot;	
+				
+	21	单元格纵向合并所有的属性是:rowspan ，默认选中某项的属性是: checked
+22	当i等于5时执行一些语句的条件语句是:if(i==5){}
+23	Js循环语句有: while 、do-while 及 for
+24	Es6模板字符串的符号是: 反引号 `` ，箭头函数的符号是: =&gt;	
+25	Es6中定义变量用:let ，定义常量用:const
+26	Javascript中通过ID获取元素的写法是:document.getElementById(&quot;id&quot;)
+27	JavaScript是运行在 客户端 端的脚本语言。	
+28	&quot;阅读以下代码，在页面中会显示出哪个结果：bc
+      var  s=&quot;&quot;abcdefg&quot;&quot;;   
+      alert (s.substr(1,2)); &quot;	
+31	JS有哪些数据类型:字符串(String)、数字(Number)、布尔(Boolean)、空(Null)、未定义(Undefined)
+32	通过  nodeType  属性可以判定一个DOM节点的类型	
+33	每隔2秒钟执行一次函数x，那么应该使用的代码是 setInterval(fn,2000)
+34	&quot;分析下面的JS代码，输出结果为_7__
+    var  mystring=&quot;I am a good student&quot;;
+    var a=mystring.indexOf(&quot;&quot;good&quot;&quot;);
+    document.write(a);&quot;	7
+			
+35	_getElementById()_  属于访问指定节点的方法	
+	
+36	Js中可以使用var today = new Date();这样的方法获得系统当前时间，
+     假设系统时间是2007-7-2 星期一，则today.getDay()的返回值是_1_   
+			 
+37	&quot;执行以下脚本语句在页面输出的内容是_true_
+     var a=3; a+=8*2; alert(a&gt;10&amp;&amp;a&lt;=20);&quot;	
+			 
+38	&quot;function move({x,y} = {x:0,y:0}）{
+         console.log(x,y);
+     }
+      move({x:3})
+      move({})
+     问以上代码输出的内容是_3  undefined_&quot;	
+39	JS动态改变标签中内容可以使用的方法是_innerhtml/innertext	
+40	通过_nodeType_属性可以判定一个DOM节点的类型	
+42	在城市二级联动是使用的是下拉列表的_onChang_事件？
+43	_do-while_循环的循环体至少会被执行一次
+44	cookie的优点是_刷新页面不用再次加载资源，保存用户登录状态，定制页面_
+	
+	
+    1	成员变量与静态变量的特点	
+    a.两个变量的生命周期不同。
+      成员变量随着对象的创建而存在，随着对象的被回收而释放。
+      静态变量随着类的加载而存在，随着类的消失而消失。
+    b.调用方式不同。成员变量只能被对象调用，静态变量可以被对象和类名调用。
+    c.别名不同。成员变量为实例变量，静态变量称为类变量。
+    d.数据存储位置不同。
+      成员变量存储在堆内存中的对象中，所以也叫对象持有的特有数据。
+      静态变量数据存储在方法区（共享数据区）的静态区，也叫对象的共享数据。
+
+2	简述JS的继承原理
+    js中有一种东西叫做原型链,js引擎会沿着原型链搜索直到Object,Object.prototype.__proto__指向null,到这原型链就结束了.
+    如果在这过程中发现属性和方法,那么对象就将拥有 这些属性和方法.
+
+3	循环的种类有几个？写出基本形式
+     for while do-while  for-in
+
+4	写出分支语句的结构形式	
+    if   if--else   if--else if    switch---case
+
+5	闭包的概念及应用
+    闭包就是能够读取其他函数内部变量的函数.
+
+6	内存泄漏产生的原因是什么？如何避免？	
+  内存泄漏:
+    a)不再用到的内存，没有及时释放，就叫做内存泄漏（memory leak）
+    b)函数内没有var的变量会变为全局变量，不会被回收. 解决方法: 局部变量前面加var 
+    c)闭包内的变量被内部函数调用，无法被回收.  解决方法：局部变量引用后赋值为空
+    d)DOM节点添加属性:node.pro={}  解决办法:window.onunload=function(){  node.pro=null } 
+    e)element.attachEvent(&quot;&quot;onclick&quot;&quot;, doClick); 
+      解决办法:window.onunload=function(){  element.detachEvent('onclick', doClick) }&quot;
+
+7	正则表达式的作用，写出表示北京市座机电话号码的正则表达式。	
+   let phoneReg = /((\d{11})|^((\d{7,8})|(\d{4}|\d{3})-(\d{7,8})|(\d{4}|\d{3})-(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1})|(\d{7,8})-(\d{4}|\d{3}|\d{2}|\d{1}))$)/.test(trimString(contactPhone));
+
+8	数组的添加和删除的方法，写出SLICE与SPLICE函数的参数含义	
+    unshift() 方法：从数组的开头添加一个或更多元素，并返回数组的长度    头加  
+    push() 方法：向数组末尾添加一个或多个元素，并返回数组长度。         尾加 
+    shift() 方法：把数组的第一个元素删除，并返回删除的元素值。          头删
+    pop() 方法：把数组最后一个元素删除，并返回最后一个元素的值, 如果数组为空则返回undefined。   尾删 
+
+    slice(start,end) 截取 表示从数组start下标开始截取到end下标为止
+    splice(index, howmany) 截取 表示从index下标开始删除 howmany个 
+
+
+9	写出鼠标事件的相关函数
+    onClick onMouseover onMouseout onMouseDown onMouseUp onMousemove onFocus onBlur onChange
+
+10	JS中的三种弹出式消息提醒的命令是什么？并简要说明	
+    1、警告框alert()，直接弹出不可编辑的框;
+    2、确认框 confirm()，显示一个带有 指定消息和确定及取消按钮 的对话框，根据用户点击确认框上的按钮返回true与false。
+    3、信息输入框prompt() ，显示可提示用户进行输入的对话框。
+       如果用户单击提示框的取消按钮，则返回 null。如果用户单击确认按钮，则返回输入字段当前显示的文本。（字符串类型）
+
+12	分别将下小括号（）、中括号[]、大括号{}、冒号：在JS中的作用
+    （）函数自执行 （）for循环  []数组  {}函数  ：三位运算 
+      
+13	写一个递归函数	(阶乘)
+    function abc(n){if (n == 1){return 1; }return n * abc(n-1);} console.log(abc(5));
+
+14	数组中slice和splice都有两个参数是，每个参数代表的意义是什么？	
+    slice (start,end)  截取 从开始位置到结束位置
+    splice (index,howmany) 截取 开始坐标  截取个数
+
+15	添加、删除、替换、插入节点的方法是哪些？
+    appendChild()追加节点
+    removeChild()删除节点
+    insertBefore()插入节点
+    replaceChild()替换节点
+
+16	什么是事件冒泡？什么是事件捕捉？如何阻止事件冒泡？
+    事件冒泡：事件由小到大,从内到外的传递 
+    事件捕获：事件从大到小,从外到内的传递
+    阻止冒泡：event.stopPropagation;  ie阻止冒泡：event.cancelBubble=true
+
+17	JS中的typeof返回哪些数据类型？
+    typeof的返回值
+    字符串(String); 数字(number); 布尔(boolean); 未定义(undefined); 函数(function); 对象(object);
+
+18	以下代码会在console输出什么内容？为什么？
+    (function(){var a = b = 3;})();
+     console.log(&quot;a defined?&quot; + (typeof a !== 'undefined'));
+     console.log(&quot;b defined?&quot; + (typeof b !== 'undefined'));	
+     a defined?true 
+     b defined?true
+
+19	&quot;在下面的代码中，数字1-4会以什么顺序输出？为什么会这样输出？
+   （funcation(){
+       console.log(1);
+       setTimeout(function(){console.log(2)},1000);
+       setTimeout(function(){console.log(3)},0);
+       console.log(4);
+    })();&quot;	1432
+
+事件委托是什么？
+将自己处理的事件委托给父元素执行的过程
+
+20.JS添加、删除、替换、插入到某个节点的方法有哪些？	
+   appendChild() 添加节点
+   removeChild() 删除节点
+   replaceChild() 替换节点
+   insertBefore() 插入节点
+
+21	JavaScript中的三种弹出式消息提醒的命令是什么？并简要说明。
+    警告框alert(''); 确认框confirm(''); 输入框prompt('');
+    
+	
+23	函数的形参和实参个数是否必须一致，如果不一样，通过什么调用？写一个递归函数
+       可以不一样，从左到右依次识别，缺失的默认为undefined 
+       递归var s = 0;
+       function abc（a,s）{if(a&gt;0){s+=a;a--;return abc(a,s)}else return s;}
+
+24	数组中slice和splice都有两个参数时，每个参数代表的意义是什么？	
+    slice(start,end) 表示从数组start下标开始截取到end下标为止
+    splice(index, howmany) 表示从index下标开始删除 howmany个 
+    
+25	本地存储和cookies之间的区别是什么？	
+    HTML5本地存储是一种让网页可以把键值对存储在用户浏览器客户端的方法。
+    像Cookie一样，这些数据不会因为你打开新网站，刷新页面，乃至关闭你的浏览器而消失。
+    而与Cookie不同的时，这些数据不会每次随着HTTP请求被发送到服务器端(当然如果你需要这么做，你可以自己编程实现 ）. 
+    因为这是HTML5规范的一部分，这一接口会被浏览器原生支持，不用依赖任何第三方插件。
+
+26	为了让网页更快的加载，你如何处理你的css文件和jS文件，以及图片文件，页面性能优化你还知道哪些方法	
+    css和js单独下载一个文件里，图片引用网上的路径	
+</code></pre>
 ]]></content>
     </entry>
     <entry>
@@ -706,395 +895,6 @@ BOM 是为了操作浏览器出现的 API，window 是其的一个对象。</p>
 &lt;li&gt; 如果有 size 值，需要紧跟 position 并且用 &quot;/&quot; 隔开；&lt;/li&gt;
 &lt;li&gt; 如果有多个背景图片，而其他属性只有一个（例如 background-repeat 只有一个），表明所有背景图片应用该属性值。&lt;/li&gt;
 &lt;li&gt;background-color 只能设置一个。&lt;/li&gt;</code></pre>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[web 试题]]></title>
-        <id>https://XinLingJ.github.io//post/web-shi-ti</id>
-        <link href="https://XinLingJ.github.io//post/web-shi-ti">
-        </link>
-        <updated>2019-10-31T00:59:13.000Z</updated>
-        <content type="html"><![CDATA[<p>node+express+sql+ajax
-跨域的处理方案： jsonp法   script法   cros法   proxy法  iframe法 window法  window.name   post messges
-如何前端获取参数数据  var inObj=req.query [get]
-var inObj=req.body [post]
-返回前端json数据 res,json()</p>
-<p>ejs
-基本语法
-&lt;% %&gt; ：内容直接写js代码，遵循js语法
-&lt;%= %&gt;： 输出内部的内容（不识别标签，按照纯文本输出）
-&lt;% -%&gt; ： 输出内部的内容（识别标签，以读取标签的形式输出内容）
-基本写法：</p>
-<h1><%=title %></h1>
-<pre><code>Vue定义组件 全局组件：Vue.component(&quot;名字&quot;,{})
-     必须在实例化之前注册。
-       任何实例中都可以使用当前的组件。
-     名字：是自己定义的组件名
-        {}：template:写标记，注意，如果有多个同级元素，需要使用一个标记包裹。
-data:function(){
-		     return {}
-	      }:data是函数，需要返回一个数据
-     methods:{}:事件正常使用
-       可以进行嵌套组件的使用。
-局部组件：在某个实例内部注册：只能在当前实例挂载的dom元素内使用，其他挂载元素不能用
-    components:{}
-         var vm=new Vue({
-		       el:&quot;#app1&quot;,
-		          data:{
-			            msg:&quot;Hello1&quot;
-	          	},
-	          	components:{
-		          	 &quot;my-com&quot;:Child,
-		          	 &quot;aaa&quot;:child1
-		              }
-            })
-</code></pre>
-<ol>
-<li>js的组成有：ecmascript 基础语法 DOM BOM;</li>
-<li>访问指定DOM节点的方法有: 使用getElementById()方法来访问指定id的节点，并用nodeName属性、nodeType属性和nodeValue属性来显示出该节点名称、节点类型和节点值。</li>
-<li>键盘事件中包括:onkeydown,onkeyup,onkeypress;</li>
-<li>定义数组的方法有: var a=new Array(),  var a=[];a=[3,2,3];</li>
-<li>阻止冒泡的方法有: event.stopPropagation()           event.cancelBubble=true;</li>
-<li>事件监听：addEventListener</li>
-<li>阻止监听事件：event.preventDefault()</li>
-<li>事件冒泡：事件由内到外进行传播小到大</li>
-<li>事件捕获（event.capturing）：事件由外到内进行传播大到小</li>
-<li>获取地址：navigator.geolocation.getCurrentPosition()</li>
-<li>事件委托：将自己处理的时间委托给父元素的过程</li>
-<li>闭包：能够访问函数内部的变量  ； 好处：防止全局变量污染循环添加事件</li>
-<li>递归函数：5！      fuanction x(n){if(n==1){return 1}else{return n*x(n-1)}}  var k=x(5)</li>
-<li>严格模式: use strict</li>
-<li>判断类型：typeof()    alter()   console.log()</li>
-<li>判断复杂类型：instancof     Boolean.prototype.isPrototypeOf</li>
-<li>JS有哪些数据类型:</li>
-<li>表单表示下拉列表的标签是____，默认选中某项的属性是____</li>
-<li>JS获取对象属性的方法是____和____</li>
-<li>单元格纵向合并所有的属性是____，默认选中某项的属性是____</li>
-<li>为组件添加类属性的方法是____</li>
-<li>分析下面的JS代码，输出结果为____
-var  mystring=&quot;I am a good student&quot;;
-var a=mystring.indexOf(&quot;good&quot;);
-document.write(a);</li>
-</ol>
-<p>23.function move({x,y} = {x:0,y:0}）{
-console.log(x,y);
-}
-move({x:3})
-move({})
-问以上代码输出的内容是____
-24.执行以下脚本语句在页面输出的内容是____
-var a=3; a+=8*2; alert(a&gt;10&amp;&amp;a&lt;=20);
-25.Js中可以使用var today = new Date();这样的方法获得系统当前时间，
-假设系统时间是2007-7-2 星期一，则today.getDay()的返回值是____
-26.cookie的优点是____
-27.<strong><strong>循环的循环体至少会被执行一次
-28.通过____属性可以判定一个DOM节点的类型
-29.JS动态改变标签中内容可以使用的方法是</strong></strong>
-30.____属于访问指定节点的方法
-31.成员变量与静态变量的特点
-32.简述JS的继承原理:js中有一种东西叫做原型链,js引擎会沿着原型链搜索直到Object,Object.prototype.__proto__指向null,到这原型链就结束了.如果在这过程中发现属性和方法,那么对象就将拥有 这些属性和方法.
-33.循环的种类有几个？写出基本形式
-34.写出分支语句的结构形式
-35.内存泄漏产生的原因是什么？如何避免？
-36.正则表达式的作用，写出表示北京市座机电话号码的正则表达式。
-37.数组的添加和删除的方法，写出SLICE与SPLICE函数的参数含义
-38.JS中的三种弹出式消息提醒的命令是什么？并简要说明
-39.进入严格模式的标志是什么？两种不同场合的严格模式分别是什么？
-40.分别将下小括号（）、中括号[]、大括号{}、冒号：在JS中的作用
-41.数组中slice和splice都有两个参数是，每个参数代表的意义是什么？
-42.为了让网页更快的加载，你如何处理你的css文件和jS文件，以及图片文件，页面性能优化你还知道哪些方法
-43.本地存储和cookies之间的区别是什么？
-44.数组中slice和splice都有两个参数时，每个参数代表的意义是什么？
-45.函数的形参和实参个数是否必须一致，如果不一样，通过什么调用？写一个递归函数
-46.JS添加、删除、替换、插入到某个节点的方法有哪些？
-47.事件委托是什么？
-48.在下面的代码中，数字1-4会以什么顺序输出？为什么会这样输出？
-（funcation(){
-console.log(1);
-setTimeout(function(){console.log(2)},1000);
-settimeout(function(){console.log(3)},0);
-console.log(4);
-})();</p>
-<p>49.以下代码会在console输出什么内容？为什么？
-(function(){
-var a = b = 3;
-})();
-console.log(&quot;a defined?&quot; + (typeof a !== 'undefined'));
-console.log(&quot;b defined?&quot; + (typeof b !== 'undefined'));
-50.什么是事件冒泡？什么是事件捕捉？如何阻止事件冒泡？
-51.写一个递归函数
-52.使用散列格式定义一个构造函数要求：
-有姓名、年龄和一个获取姓名的方法，并调用这个方法。
-53.使用JS实现数组冒泡排序功能
-54.用JS实现求1-100之间的和，每个100毫秒累加一次（原生JS)
-55.用JS实现表格奇数行为白，偶数行为灰，悬浮为黄色
-56.用自定义函数计算一个长度为3的数组的平均值，并输出。（数组各项为
-57.使用JS实现数组冒泡排序功能
-58.写出代码将
-var str = &quot;a=1&amp;b=2&amp;c=3&quot;转成{a:1,b:2,c:3};
-59.用Es6格式建立&quot;动物&quot;这个对象,定义&quot;猫&quot;这个对象，要求&quot;猫&quot;继承自动物
-60.用面向对象的形式创建一个Animals对象，动物有名字、颜色以及输出名字、颜色的方法。其中狗还有自己的叫声和方法。使用继承完成这道题。
-61.写出数组去重的方法
-62.请在网页上输出九九乘法表
-63.字符串“aaaabbbccccddfggh&quot;中字母个数或统计最多字母数
-64.使用JS实现数组冒泡排序功能</p>
-<p>65.用jQuery来实现动态添加和删除表格行
-66.jQuery实现选项卡效果的代码部分
-67.jQuery实现在表格中，选中其中复选框时，该复选框所在行的背景颜色显示为黄色取消选中复选框时，所在行的背景色恢复
-68.jQuery实现页面滚动到400PX时，DIV固定在页面顶端并跟随页面滑动，小于400PX时，恢复。
-69.jQuery制作一个插件<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>m</mi><mi>a</mi><mi>x</mi><mo>(</mo><mn>4</mn><mo separator="true">,</mo><mn>5</mn><mo>)</mo><mi mathvariant="normal">，</mi><mi mathvariant="normal">能</mi><mi mathvariant="normal">返</mi><mi mathvariant="normal">回</mi><mi mathvariant="normal">两</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">参</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">较</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">.</mi><mi>e</mi><mi>x</mi><mi>t</mi><mi>e</mi><mi>n</mi><mi>d</mi><mo>(</mo><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mo>:</mo><mi>f</mi><mi>u</mi><mi>n</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo><mrow><mi>r</mi><mi>e</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>n</mi><mi>a</mi><mo>&lt;</mo><mi>b</mi><mo>?</mo><mi>a</mi><mo>:</mo><mi>b</mi><mo separator="true">;</mo></mrow><mo separator="true">,</mo><mi>m</mi><mi>a</mi><mi>x</mi><mo>:</mo><mi>f</mi><mi>u</mi><mi>n</mi><mi>c</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi><mo>(</mo><mi>a</mi><mo separator="true">,</mo><mi>b</mi><mo>)</mo><mrow><mi>r</mi><mi>e</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>n</mi><mi>a</mi><mo>&gt;</mo><mi>b</mi><mo>?</mo><mi>a</mi><mo>:</mo><mi>b</mi><mo separator="true">;</mo></mrow></mrow><mo>)</mo><mo separator="true">;</mo><mn>70.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">本</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">修</mi><mi mathvariant="normal">改</mi><mi mathvariant="normal">和</mi><mi mathvariant="normal">确</mi><mi mathvariant="normal">认</mi><mn>71.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">全</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">、</mi><mi mathvariant="normal">全</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">功</mi><mi mathvariant="normal">能</mi><mn>72.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">下</mi><mi mathvariant="normal">拉</mi><mi mathvariant="normal">菜</mi><mi mathvariant="normal">单</mi><mn>73.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">义</mi><mi mathvariant="normal">弹</mi><mi mathvariant="normal">框</mi><mn>74.</mn><mi mathvariant="normal">在</mi><mi>J</mi><mi>Q</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">类</mi><mi mathvariant="normal">名</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">那</mi><mi mathvariant="normal">几</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">？</mi><mn>75.</mn><mi mathvariant="normal">你</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">哪</mi><mi mathvariant="normal">些</mi><mi>J</mi><mi>Q</mi><mi mathvariant="normal">优</mi><mi mathvariant="normal">秀</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">插</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">简</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">说</mi><mi mathvariant="normal">明</mi><mn>76.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">的</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><mi mathvariant="normal">和</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">什</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">区</mi><mi mathvariant="normal">别</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">于</mi><mi>H</mi><mi>T</mi><mi>M</mi><mi>L</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">本</mi><mi mathvariant="normal">身</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">带</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">固</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi><mi mathvariant="normal">处</mi><mi mathvariant="normal">理</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi>p</mi><mi>r</mi><mi>o</mi><mi>p</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">于</mi><mi>H</mi><mi>T</mi><mi>M</mi><mi>L</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">我</mi><mi mathvariant="normal">们</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">己</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">义</mi><mi mathvariant="normal">的</mi><mi>D</mi><mi>O</mi><mi>M</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">在</mi><mi mathvariant="normal">处</mi><mi mathvariant="normal">理</mi><mi mathvariant="normal">时</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">。</mi><mn>77.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">提</mi><mi mathvariant="normal">交</mi><mi mathvariant="normal">前</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">哪</mi><mi mathvariant="normal">些</mi><mi mathvariant="normal">校</mi><mi mathvariant="normal">验</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">？</mi><mn>78.</mn></mrow><annotation encoding="application/x-tex">.max(4,5)，能返回两个参数中较大一个 jQuery.extend({
-  min: function(a, b) { return a &lt; b ? a : b; },
-  max: function(a, b) { return a &gt; b ? a : b; }
-});
-70.jQuery实现对一行文本的修改和确认
-71.jQuery实现全选、全不选功能
-72.jQuery实现下拉菜单
-73.jQuery实现自定义弹框
-74.在JQ中操作元素的类名的方法有那几个？
-75.你用过哪些JQ优秀的插件，简要说明
-76.jQuery中的attr和prop方法有什么区别                            对于HTML元素本身就带有的固有属性，在处理时，使用prop方法。
-对于HTML元素我们自己自定义的DOM属性，在处理时，使用attr方法。
-77.jQuery表单提交前有哪些校验方法？
-78.</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mopen">(</span><span class="mord">4</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">5</span><span class="mclose">)</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">能</span><span class="mord cjk_fallback">返</span><span class="mord cjk_fallback">回</span><span class="mord cjk_fallback">两</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">参</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">较</span><span class="mord cjk_fallback">大</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord">.</span><span class="mord mathdefault">e</span><span class="mord mathdefault">x</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault">m</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">b</span><span class="mclose">?</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">b</span><span class="mpunct">;</span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">m</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">u</span><span class="mord mathdefault">n</span><span class="mord mathdefault">c</span><span class="mord mathdefault">t</span><span class="mord mathdefault">i</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mord mathdefault">a</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mclose">)</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">n</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">b</span><span class="mclose">?</span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">b</span><span class="mpunct">;</span></span></span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">7</span><span class="mord">0</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">本</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">修</span><span class="mord cjk_fallback">改</span><span class="mord cjk_fallback">和</span><span class="mord cjk_fallback">确</span><span class="mord cjk_fallback">认</span><span class="mord">7</span><span class="mord">1</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">全</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">全</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">功</span><span class="mord cjk_fallback">能</span><span class="mord">7</span><span class="mord">2</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">下</span><span class="mord cjk_fallback">拉</span><span class="mord cjk_fallback">菜</span><span class="mord cjk_fallback">单</span><span class="mord">7</span><span class="mord">3</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">弹</span><span class="mord cjk_fallback">框</span><span class="mord">7</span><span class="mord">4</span><span class="mord">.</span><span class="mord cjk_fallback">在</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">Q</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">类</span><span class="mord cjk_fallback">名</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">那</span><span class="mord cjk_fallback">几</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">？</span><span class="mord">7</span><span class="mord">5</span><span class="mord">.</span><span class="mord cjk_fallback">你</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">过</span><span class="mord cjk_fallback">哪</span><span class="mord cjk_fallback">些</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">Q</span><span class="mord cjk_fallback">优</span><span class="mord cjk_fallback">秀</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">插</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">简</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">说</span><span class="mord cjk_fallback">明</span><span class="mord">7</span><span class="mord">6</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">的</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord cjk_fallback">和</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">什</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">区</span><span class="mord cjk_fallback">别</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">于</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">L</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">本</span><span class="mord cjk_fallback">身</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">带</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">固</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">处</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">p</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">于</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">L</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">我</span><span class="mord cjk_fallback">们</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">己</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">义</span><span class="mord cjk_fallback">的</span><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">处</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">。</span><span class="mord">7</span><span class="mord">7</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">提</span><span class="mord cjk_fallback">交</span><span class="mord cjk_fallback">前</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">哪</span><span class="mord cjk_fallback">些</span><span class="mord cjk_fallback">校</span><span class="mord cjk_fallback">验</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">？</span><span class="mord">7</span><span class="mord">8</span><span class="mord">.</span></span></span></span>(DOCUMENT).READY()方法和WINDOW.ONLOAD有什么区别？window.onload方法是在网页中的所有的元素（包括元素的所有关联文件）都完全加载到浏览器之后才执行。而通过jQuery中 的$(document).ready()方法注册的事件处理程序，只要在DOM完全就绪时，就可以调用了，比如一张图片只要<img>标签 完成，不用等这个图片加载完成，就可以设置图片的宽高的属性或样式等。                          <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi>d</mi><mi>o</mi><mi>c</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>n</mi><mi>t</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>r</mi><mi>e</mi><mi>a</mi><mi>d</mi><mi>y</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">次</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">而</mi><mi mathvariant="normal">注</mi><mi mathvariant="normal">册</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">同</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">事</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">处</mi><mi mathvariant="normal">理</mi><mi mathvariant="normal">程</mi><mi mathvariant="normal">序</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">而</mi><mi>w</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi>o</mi><mi>w</mi><mi mathvariant="normal">.</mi><mi>o</mi><mi>n</mi><mi>l</mi><mi>o</mi><mi>a</mi><mi>d</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">次</mi><mi mathvariant="normal">只</mi><mi mathvariant="normal">能</mi><mi mathvariant="normal">保</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">引</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">多</mi><mi mathvariant="normal">次</mi><mi mathvariant="normal">绑</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">只</mi><mi mathvariant="normal">会</mi><mi mathvariant="normal">覆</mi><mi mathvariant="normal">盖</mi><mi mathvariant="normal">前</mi><mi mathvariant="normal">面</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">函</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">。</mi><mn>79.</mn><mi mathvariant="normal">你</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">何</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">择</mi><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">库</mi><mi mathvariant="normal">去</mi><mi mathvariant="normal">开</mi><mi mathvariant="normal">发</mi><mi mathvariant="normal">？</mi><mi mathvariant="normal">开</mi><mi mathvariant="normal">源</mi><mi mathvariant="normal">操</mi><mi mathvariant="normal">作</mi><mi mathvariant="normal">简</mi><mi mathvariant="normal">便</mi><mi mathvariant="normal">封</mi><mi mathvariant="normal">装</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">很</mi><mi mathvariant="normal">多</mi><mn>80.</mn><mi>J</mi><mi>S</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">和</mi><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">相</mi><mi mathvariant="normal">互</mi><mi mathvariant="normal">转</mi><mi mathvariant="normal">换</mi><mi>v</mi><mi>a</mi><mi>r</mi><mi>o</mi><mi>b</mi><mi>j</mi><mo>=</mo></mrow><annotation encoding="application/x-tex">(document).ready()方法可以多次使用而注册不同的事件处理程序，而window.onload一次只能保存对一个函数的引用，多次绑定函数只会覆盖前面的函数。
-79.你为何要选择jQuery库去开发？开源  操作简便  封装的方法很多
-80.JS对象和jQuery对象相互转换  var obj=</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault">c</span><span class="mord mathdefault">u</span><span class="mord mathdefault">m</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">t</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">多</span><span class="mord cjk_fallback">次</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">而</span><span class="mord cjk_fallback">注</span><span class="mord cjk_fallback">册</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">同</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">事</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">处</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">程</span><span class="mord cjk_fallback">序</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">而</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord">.</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">次</span><span class="mord cjk_fallback">只</span><span class="mord cjk_fallback">能</span><span class="mord cjk_fallback">保</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">引</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">多</span><span class="mord cjk_fallback">次</span><span class="mord cjk_fallback">绑</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">只</span><span class="mord cjk_fallback">会</span><span class="mord cjk_fallback">覆</span><span class="mord cjk_fallback">盖</span><span class="mord cjk_fallback">前</span><span class="mord cjk_fallback">面</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">函</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">。</span><span class="mord">7</span><span class="mord">9</span><span class="mord">.</span><span class="mord cjk_fallback">你</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">何</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">择</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">库</span><span class="mord cjk_fallback">去</span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">发</span><span class="mord cjk_fallback">？</span><span class="mord cjk_fallback">开</span><span class="mord cjk_fallback">源</span><span class="mord cjk_fallback">操</span><span class="mord cjk_fallback">作</span><span class="mord cjk_fallback">简</span><span class="mord cjk_fallback">便</span><span class="mord cjk_fallback">封</span><span class="mord cjk_fallback">装</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">很</span><span class="mord cjk_fallback">多</span><span class="mord">8</span><span class="mord">0</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">和</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">相</span><span class="mord cjk_fallback">互</span><span class="mord cjk_fallback">转</span><span class="mord cjk_fallback">换</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">o</span><span class="mord mathdefault">b</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span></span></span></span>(&quot;div&quot;)   obj.innerHTML
-81.jQuery中使用筛选和使用选择器的区别和联系
-82.jQuery中val( )、text（）、html（）的用法分别是什么？有什么区别
-83.jQuery中外部插入的四个方法是after()、before()、insertAfter()、insertBefore()
-84.wrapInner() 内包wrap() 外包unwarp() 去包wrapAll() 全包
-85.假设页面有<p>I would like to say: </p>一个元素，当执行 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>(</mo><mi mathvariant="normal">&quot;</mi><mi>p</mi><mi mathvariant="normal">&quot;</mi><mo>)</mo><mi mathvariant="normal">.</mi><mi>a</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mo>(</mo><mi mathvariant="normal">&quot;</mi><mo>&lt;</mo><mi>b</mi><mo>&gt;</mo><mi>H</mi><mi>e</mi><mi>l</mi><mi>l</mi><mi>o</mi><mo>&lt;</mo><mi mathvariant="normal">/</mi><mi>b</mi><mo>&gt;</mo><mi mathvariant="normal">&quot;</mi><mo>)</mo><mo separator="true">;</mo><mi mathvariant="normal">时</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">页</mi><mi mathvariant="normal">面</mi><mi mathvariant="normal">代</mi><mi mathvariant="normal">码</mi><mi mathvariant="normal">会</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">态</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">载</mi><mi mathvariant="normal">为</mi><mo>&lt;</mo><mi>p</mi><mo>&gt;</mo><mi>I</mi><mi>w</mi><mi>o</mi><mi>u</mi><mi>l</mi><mi>d</mi><mi>l</mi><mi>i</mi><mi>k</mi><mi>e</mi><mi>t</mi><mi>o</mi><mi>s</mi><mi>a</mi><mi>y</mi><mo>:</mo><mo>&lt;</mo><mi>b</mi><mo>&gt;</mo><mi>H</mi><mi>e</mi><mi>l</mi><mi>l</mi><mi>o</mi><mo>&lt;</mo><mi mathvariant="normal">/</mi><mi>b</mi><mo>&gt;</mo><mo>&lt;</mo><mi mathvariant="normal">/</mi><mi>p</mi><mo>&gt;</mo><mi mathvariant="normal">。</mi><mn>86.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">淡</mi><mi mathvariant="normal">入</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">画</mi><mi mathvariant="normal">用</mi><mi>f</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>I</mi><mi>n</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">淡</mi><mi mathvariant="normal">出</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">画</mi><mi mathvariant="normal">用</mi><mi>f</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>O</mi><mi>u</mi><mi>t</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">淡</mi><mi mathvariant="normal">入</mi><mi mathvariant="normal">淡</mi><mi mathvariant="normal">出</mi><mi mathvariant="normal">切</mi><mi mathvariant="normal">换</mi><mi>f</mi><mi>a</mi><mi>d</mi><mi>e</mi><mi>T</mi><mi>o</mi><mi>g</mi><mi>g</mi><mi>l</mi><mi>e</mi><mo>(</mo><mo>)</mo><mn>87.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">如</mi><mi mathvariant="normal">何</mi><mi mathvariant="normal">添</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">式</mi><mi>a</mi><mi>d</mi><mi>d</mi><mi>C</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">、</mi><mi mathvariant="normal">删</mi><mi mathvariant="normal">除</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">式</mi><mi>r</mi><mi>e</mi><mi>m</mi><mi>o</mi><mi>v</mi><mi>e</mi><mi>C</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">、</mi><mi mathvariant="normal">切</mi><mi mathvariant="normal">换</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">式</mi><mi>t</mi><mi>o</mi><mi>g</mi><mi>g</mi><mi>l</mi><mi>e</mi><mi>C</mi><mi>l</mi><mi>a</mi><mi>s</mi><mi>s</mi><mo>(</mo><mo>)</mo><mn>88.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">如</mi><mi mathvariant="normal">何</mi><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">用</mi><mi>a</mi><mi>t</mi><mi>t</mi><mi>r</mi><mo>(</mo><mo>)</mo><mo separator="true">,</mo><mi mathvariant="normal">移</mi><mi mathvariant="normal">除</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi>r</mi><mi>e</mi><mi>m</mi><mi>o</mi><mi>v</mi><mi>e</mi><mi>A</mi><mi>t</mi><mi>t</mi><mi>r</mi><mo>(</mo><mo>)</mo><mn>89.</mn><mi mathvariant="normal">写</mi><mi mathvariant="normal">出</mi><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">的</mi><mn>5</mn><mi mathvariant="normal">个</mi><mi mathvariant="normal">事</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">：</mi><mi>c</mi><mi>l</mi><mi>i</mi><mi>c</mi><mi>k</mi><mi mathvariant="normal">、</mi><mi>o</mi><mi>n</mi><mi mathvariant="normal">、</mi><mi>o</mi><mi>f</mi><mi>f</mi><mi mathvariant="normal">、</mi><mi>b</mi><mi>i</mi><mi>n</mi><mi>d</mi><mi mathvariant="normal">、</mi><mi>o</mi><mi>n</mi><mi>e</mi><mn>90.</mn><mi mathvariant="normal">在</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">里</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">想</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">找</mi><mi mathvariant="normal">到</mi><mi mathvariant="normal">指</mi><mi mathvariant="normal">定</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">第</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">用</mi><mi>e</mi><mi>q</mi><mo>(</mo><mn>0</mn><mo>)</mo><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">那</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">第</mi><mi mathvariant="normal">二</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">用</mi><mi>e</mi><mi>q</mi><mo>(</mo><mn>1</mn><mo>)</mo><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">。</mi><mn>91.</mn><mi mathvariant="normal">在</mi><mi>j</mi><mi>q</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">想</mi><mi mathvariant="normal">让</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">隐</mi><mi mathvariant="normal">藏</mi><mi mathvariant="normal">用</mi><mi>h</mi><mi>i</mi><mi>d</mi><mi>e</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">想</mi><mi mathvariant="normal">让</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">元</mi><mi mathvariant="normal">素</mi><mi mathvariant="normal">出</mi><mi mathvariant="normal">现</mi><msub><mi mathvariant="normal">用</mi><mi>s</mi></msub><mi>h</mi><mi>o</mi><mi>w</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi mathvariant="normal">表</mi><mi mathvariant="normal">格</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">如</mi><mi mathvariant="normal">果</mi><mi mathvariant="normal">想</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">匹</mi><mi mathvariant="normal">配</mi><mi mathvariant="normal">所</mi><mi mathvariant="normal">有</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">为</mi><mi mathvariant="normal">偶</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">用</mi><mi>e</mi><mi>v</mi><mi>e</mi><mi>n</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">奇</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">用</mi><mi>o</mi><mi>d</mi><mi>d</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">实</mi><mi mathvariant="normal">现</mi><mi mathvariant="normal">。</mi><mn>92.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">访</mi><mi mathvariant="normal">问</mi><mi mathvariant="normal">选</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">对</mi><mi mathvariant="normal">象</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">长</mi><mi mathvariant="normal">度</mi><mi mathvariant="normal">可</mi><mi mathvariant="normal">以</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi>l</mi><mi>e</mi><mi>n</mi><mi>g</mi><mi>t</mi><mi>h</mi><mi mathvariant="normal">属</mi><mi mathvariant="normal">性</mi><mi mathvariant="normal">或</mi><mi>s</mi><mi>i</mi><mi>z</mi><mi>e</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mn>93.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">使</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">过</mi><mi mathvariant="normal">哪</mi><mi mathvariant="normal">些</mi><mi mathvariant="normal">插</mi><mi mathvariant="normal">入</mi><mi mathvariant="normal">节</mi><mi mathvariant="normal">点</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">：</mi><mi>a</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi mathvariant="normal">、</mi><mi>a</mi><mi>p</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>T</mi><mi>o</mi><mi mathvariant="normal">、</mi><mi>p</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mi>T</mi><mi>o</mi><mi mathvariant="normal">、</mi><mi>p</mi><mi>r</mi><mi>e</mi><mi>p</mi><mi>e</mi><mi>n</mi><mi>d</mi><mo separator="true">,</mo><mi>a</mi><mi>f</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo separator="true">,</mo><mi>b</mi><mi>e</mi><mi>f</mi><mi>o</mi><mi>r</mi><mi>e</mi><mo separator="true">,</mo><mi>i</mi><mi>n</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>t</mi><mi>A</mi><mi>f</mi><mi>t</mi><mi>e</mi><mi>r</mi><mo separator="true">,</mo><mi>i</mi><mi>n</mi><mi>s</mi><mi>e</mi><mi>r</mi><mi>t</mi><mi>B</mi><mi>e</mi><mi>f</mi><mi>o</mi><mi>r</mi><mi>e</mi><mn>94.</mn><mi>r</mi><mi>e</mi><mi>m</mi><mi>o</mi><mi>v</mi><mi>e</mi><mi>e</mi><mi>m</mi><mi>p</mi><mi>t</mi><mi>y</mi><mi>d</mi><mi>e</mi><mi>t</mi><mi>a</mi><mi>c</mi><mi>h</mi><mn>95.</mn><mi>j</mi><mi>Q</mi><mi>u</mi><mi>e</mi><mi>r</mi><mi>y</mi><mi mathvariant="normal">中</mi><mi mathvariant="normal">的</mi></mrow><annotation encoding="application/x-tex">(&quot;p&quot;).append(&quot;&lt;b&gt;Hello&lt;/b&gt;&quot;);时，页面代码会动态加载为&lt;p&gt;I would like to say:&lt;b&gt;Hello&lt;/b&gt; &lt;/p&gt;。              
-86.jQuery中的淡入动画用fadeIn()淡出动画用fadeOut()淡入淡出切换fadeToggle()
-87.jQuery中如何添加样式addClass()、删除样式removeClass()、切换样式toggleClass()
-88.jQuery如何获取元素属性用attr(),移除属性使用removeAttr()
-89.写出jQuery的5个事件：click、on、off、bind、one
-90.在一个表单里，想要使用jQuery找到指定元素的第一个元素用eq(0)实现，那么第二个元素用eq(1)实现。
-91.在jq中，想让一个元素隐藏用hide()实现，
-想让一个元素出现用_show()实现。
-现有一个表格，如果想要匹配所有行数为偶数的，用even()实现，奇数的用odd()实现。
-92.jQuery访问选中对象的长度可以使用length属性或size()方法
-93.jQuery中使用过哪些插入节点的方法：append、appendTo、prependTo、prepend,after,before,insertAfter,insertBefore
-94.remove     empty    detach
-95.jQuery中的</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mord mathdefault">p</span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mord">.</span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mord">&quot;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">&quot;</span><span class="mclose">)</span><span class="mpunct">;</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">时</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">页</span><span class="mord cjk_fallback">面</span><span class="mord cjk_fallback">代</span><span class="mord cjk_fallback">码</span><span class="mord cjk_fallback">会</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">态</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">载</span><span class="mord cjk_fallback">为</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.7335400000000001em;vertical-align:-0.19444em;"></span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mord mathdefault">o</span><span class="mord mathdefault">u</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">:</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">o</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault">b</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault">p</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord cjk_fallback">。</span><span class="mord">8</span><span class="mord">6</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">淡</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">画</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">淡</span><span class="mord cjk_fallback">出</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">画</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">O</span><span class="mord mathdefault">u</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">淡</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">淡</span><span class="mord cjk_fallback">出</span><span class="mord cjk_fallback">切</span><span class="mord cjk_fallback">换</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord">8</span><span class="mord">7</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">如</span><span class="mord cjk_fallback">何</span><span class="mord cjk_fallback">添</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">式</span><span class="mord mathdefault">a</span><span class="mord mathdefault">d</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">删</span><span class="mord cjk_fallback">除</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">式</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">、</span><span class="mord cjk_fallback">切</span><span class="mord cjk_fallback">换</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">式</span><span class="mord mathdefault">t</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">a</span><span class="mord mathdefault">s</span><span class="mord mathdefault">s</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord">8</span><span class="mord">8</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">如</span><span class="mord cjk_fallback">何</span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">a</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mclose">)</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord cjk_fallback">移</span><span class="mord cjk_fallback">除</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">A</span><span class="mord mathdefault">t</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord">8</span><span class="mord">9</span><span class="mord">.</span><span class="mord cjk_fallback">写</span><span class="mord cjk_fallback">出</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">的</span><span class="mord">5</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">事</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">i</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.03148em;">k</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault">b</span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault">o</span><span class="mord mathdefault">n</span><span class="mord mathdefault">e</span><span class="mord">9</span><span class="mord">0</span><span class="mord">.</span><span class="mord cjk_fallback">在</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">里</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">想</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">找</span><span class="mord cjk_fallback">到</span><span class="mord cjk_fallback">指</span><span class="mord cjk_fallback">定</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">第</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mopen">(</span><span class="mord">0</span><span class="mclose">)</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">那</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">第</span><span class="mord cjk_fallback">二</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mopen">(</span><span class="mord">1</span><span class="mclose">)</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">。</span><span class="mord">9</span><span class="mord">1</span><span class="mord">.</span><span class="mord cjk_fallback">在</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault" style="margin-right:0.03588em;">q</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">想</span><span class="mord cjk_fallback">让</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">隐</span><span class="mord cjk_fallback">藏</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">h</span><span class="mord mathdefault">i</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">想</span><span class="mord cjk_fallback">让</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">元</span><span class="mord cjk_fallback">素</span><span class="mord cjk_fallback">出</span><span class="mord cjk_fallback">现</span><span class="mord"><span class="mord cjk_fallback">用</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathdefault">h</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02691em;">w</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord cjk_fallback">表</span><span class="mord cjk_fallback">格</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">如</span><span class="mord cjk_fallback">果</span><span class="mord cjk_fallback">想</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">匹</span><span class="mord cjk_fallback">配</span><span class="mord cjk_fallback">所</span><span class="mord cjk_fallback">有</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">为</span><span class="mord cjk_fallback">偶</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">奇</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">d</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">实</span><span class="mord cjk_fallback">现</span><span class="mord cjk_fallback">。</span><span class="mord">9</span><span class="mord">2</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">访</span><span class="mord cjk_fallback">问</span><span class="mord cjk_fallback">选</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">对</span><span class="mord cjk_fallback">象</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">长</span><span class="mord cjk_fallback">度</span><span class="mord cjk_fallback">可</span><span class="mord cjk_fallback">以</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord mathdefault" style="margin-right:0.01968em;">l</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">t</span><span class="mord mathdefault">h</span><span class="mord cjk_fallback">属</span><span class="mord cjk_fallback">性</span><span class="mord cjk_fallback">或</span><span class="mord mathdefault">s</span><span class="mord mathdefault">i</span><span class="mord mathdefault" style="margin-right:0.04398em;">z</span><span class="mord mathdefault">e</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord">9</span><span class="mord">3</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">使</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">过</span><span class="mord cjk_fallback">哪</span><span class="mord cjk_fallback">些</span><span class="mord cjk_fallback">插</span><span class="mord cjk_fallback">入</span><span class="mord cjk_fallback">节</span><span class="mord cjk_fallback">点</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">：</span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault">a</span><span class="mord mathdefault">p</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault">o</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault">o</span><span class="mord cjk_fallback">、</span><span class="mord mathdefault">p</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">p</span><span class="mord mathdefault">e</span><span class="mord mathdefault">n</span><span class="mord mathdefault">d</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">t</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">i</span><span class="mord mathdefault">n</span><span class="mord mathdefault">s</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.05017em;">B</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord">9</span><span class="mord">4</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">o</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">e</span><span class="mord mathdefault">e</span><span class="mord mathdefault">m</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault">a</span><span class="mord mathdefault">c</span><span class="mord mathdefault">h</span><span class="mord">9</span><span class="mord">5</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">Q</span><span class="mord mathdefault">u</span><span class="mord mathdefault">e</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mord cjk_fallback">中</span><span class="mord cjk_fallback">的</span></span></span></span>(&quot;#box&quot;).outerWidth(true)返回的是盒子的_width+padding+border+margin
-96.jQuery选择表单<form><input type="text"/><iput type="submit"/></form>中的第一个表单元素input的方法有____、<strong><strong>、</strong></strong>
-97.jQuery中选择器可以分为  子元素、基本、层级、可见性、表单、属性等
-98.HTML5中控制音频视频自动播放的属性  autoplay 。
-99.CSS3中的线性渐变写法_gradient  linear-gradient
-100.CSS3中为了兼容更多浏览器，需要在属性前面添加前缀。在兼容谷歌浏览器时需要添加的前缀-webkit-为了兼容火狐浏览器-moz-为了兼容IE浏览器-ms-为了兼容欧朋浏览器-o-
-101.CSS3中圆角使用border-radius
-102.HTML5支持的视频格式是 mp4 ogg webM
-103.HTML5画布中context.arc(x、y、r、sa、ea、false)方法用语汇至圆形，
-一般其中的第 3 个参数决定圆形的半径？
-HTML5表单中input标记上的提示文字使用 placeholder 属性，自动完成使用 autocomplete 属性
-104.locaStorage和sessionStorage与 cookie的区别        session 会话期变量   无法跨越相当于全局变量  生命周期 仅在当前会话下有效 数据大小 5M         不提交  仅在客户端中保存 不参与和服务器的通信
-local 本地变量      跨越页面                   生命周期 除非被清除 否则永久有效 数据大小5M         不提交 仅在客户端中保存 不参与和服务器的通信
-cookie 本地变量     跨页面                     生命周期 一般由服务器生成 可设置过期时间 数据大小 4k左右  提交  每次携带在http头中 cookie保存过多 会造成性能问题
-105.HTML5中的canvas有什么用途 绘制特殊形状 统计图表 在线绘图  小游戏开发
-106.HTML5新增了哪些新标记、删除了哪些标记  新增 header footer aside nav mark time process article 删除 font center big strike s u
-107.HTML5拖拽事件有哪些?ondrag ondragstart ondragend ondragleave ondragenter ondragover ondrop
-108.CSS3中新增的颜色表示方法 filter:alpha(opacity=50);}
-109.什么是语义化?写出一段有语义化的标记  使用合适的标签或者属性来格式化网页           <header></header><div><article></article></div><footer></footer>
-110.HTML5中的本地存储对象localStorage身上有哪些属性和方法?localStorage.length 属性                  localStorage.setItem()  localStorage.getItem() localStorage.removeItem() localStorage.clear()        localStorage.key()
-111.CSS3中的animate动画有哪些属性可以设置?animation-name 名字 animation-duration 时间  animation-timing-function 加速度 animation-delay 延迟时间  animation-iteration-count 次数 animation-direction 方向 animation-play-state 播放状态 暂停 animation-fill-mode 填充模式
-112.HTML5本地存储将用户名永久存储在本地     localStorage.setItem(&quot;scroll&quot;,t);
-113.canvas中创建一个2D画布用var ctx = id.getContext(&quot;2d&quot;)方法，
-114.如何设置填充颜色ctx.fillStyle=&quot;&quot;，如何描边色ctx.strokeStyle = &quot;&quot;
-115.视频标签video音频标签audio
-116.HTML5实现web程序后台运行的技术是____javascript
-117.在浏览器支持的前提下 <video src="movie.ogg"></video>这行标记不能显示视频时因为没有添加controls属性<br>
-118.context.drawImage(____,x,y,width,height),空白处应为：__<em>image</em>
-119.支持input类型的输入框的消息提示的属性是____placeholder
-120.localStorage数据存储过期时间是多长？____永久
-121.audio元素中src属性的作用是____该属性指定媒体数据的URL地址。
-122.使用canvas创建一个填充色为黄色，
-描边色为红色的矩形，要求写出完成的代码
-123.使用canvas创建一个填充色为黄色，
-描边色为红色的矩形，要求写出完成的代码
-124.window.onload和document.ready的区别是什么？
-125.用bootstrap栅格系统布局的HTML结构，一行4列写出完整代码
-126.使用HTML5中的canvas画出一个矩形   let c=document.getElementById(&quot;canvas&quot;)    let ctx=c.getContext(&quot;2d&quot;)  ctx.fillRect(x,y,width,height)
-127.利用WEBWORKERS实现每500毫秒向页面输出一个数字
-128.将用户名永久存储在页面当中<br>
-129.图片名称为1.png，将该图片中心部位10*10像素矩形区域内容
-绘制到canvas的（100,100）的位置上       let c=document.getElementById(&quot;zz&quot;)                                                  let ctx=c.getContext('2d')                                                                                            let img=document.getElementById(&quot;imgid&quot;)  ctx.drawImage(img,100,100)
-130.搜索文本框，默认有灰色提示信息，点击后输入内容，
-离开时有内容显示并显示内容，无内容显示默认灰色提醒     <input type="text" placeholder="灰色提示信息" /></p>
-<p>131.node.js中加载模块的函数是____
-132.node.js中____模块可以创建WEB服务器？
-133.创建http服务器，并获取浏览器传递过来的get请求的’参数
-134.晚间系统中意不读取文件的方法是____
-<strong><strong>模块可以处理路径
-全局对象下面的____属性可以获取当前模块文件所在目录的完整绝对路径？
-XTMHTTPRequest的reaydstate的五种状态</strong></strong>、<strong><strong>、</strong></strong>、<strong><strong>、</strong></strong>
-Path模块的____方法可以拼接路径
-Nodejs中____函数可以引入模块
-Fs模块的____方法可以异步读取文件
-Fs模块哪个方法可以检查文件文件夹是否存在____
-Ejs模板引擎输出数据到模板的标签写法____
-Npm 安装模块的指令____
-Npm卸载模块的指令____
-Ejs引入外部文件的指令____
-Ejs如何输出解析后的html到模板的标签____
-Fs模块删除文件的方法____
-Res.cookie  设置只允许在服务端访问到cookie 的参数是____
-Nodejs文件上传需要安装____模块
-文件上传form表单的enctype 应该设置成____
-全局变量____存储的是文件所在的文件目录
-全局变量____存储的是文件名称</p>
-<p>什么是npm?使用npm有哪些好处？
-什么是错误优先的回调函数？
-基于nodejs的HTTP框架你最喜欢哪个？为什么？
-node.js是什么？
-node.js中模块require查找过程
-npm是什么？
-什么是错误有限的回调函数？
-HTTP定义了域服务器交互的不同方法中的get、post方式的区别
-node.js开发如何创建一个自定义模块
-cookie和session有哪些明显的不同点？
-请说一下移动端常见的适配不同屏幕大小的方法
-NPM是什么？
-HTTP装填消息200、302、304、403、404、500分别表示什么意思？
-实现一个简单 MySQL 操作模块
-实现一个简单的http服务器
-node中的异步和同步怎么理解
-有哪些方法可以进行异步流程的控制
-express项目的目录大致是什么样子的
-express中如何获取路由的参数
-express response有哪些常用方法
-什么是错误优先的回调函数
-使用NPM有哪些好处
-Node.js 是什么
-写出Math Array String 自带的方法，至少各五个
-node有哪些核心模块
-node中的事件循环是什么样子的
-Ajax的状态码
-Npm 全局安装与本地安装的区别
-Ejs模板引擎的作用是什么
-Cookie和sesstion的区别
-Session是运行原理
-Cookie和localstorage的区别
-常见的数据库产品有哪些?
-写出MySql常用命令:进入某个库,查询某个库中的所有表,创建数据库
-Mysql默认的端口号是多少
-请写出MySql常见的数据类型
-写出MySql创建表的语法
-Mysql中完整性约束有什么作用
-什么是SQL?SQL有什么作用
-写出你认为合理的插入,更新,删除数据记录语句?
-MySQL中limit关键字是做什么的,其参数代表什么意思?
-MySQL中模糊查询如何实现
-请写出常用的聚合函数
-写出一条你认为合理的分组查询语句,并描述其作用?
-请分别写出内连接,左连接,右连接关键字?
-简述GET/POST的区别
-AJAX有什么优点？
-AJAX包含那些技术？
-AJAX请求有哪些CALLBACK?
-如何使用JQ中的AJAX?
-在AJAX中DATA主要有几种方式？</p>
-<p>1	计算一个字符串中的每个字符出现的次数
-2	&quot;有一个关于公司员工信息的数据库empinfo。部门表和员工基本信息表是其中的两个表,表中信息如下:
-部门表depts (dept_id、dept_name、description)
-说明:dept_id  部门编号  dept_name 部门名称description 部门描述员工表employees(id、name、gender、dept_id、join_time、salary、address、age、des)说明:id员工号 name员工姓名gender性别 dept_id所在部门join_time加入时间salary工资 address地址  age年龄des描述</p>
-<ol>
-<li>分析各个表之间的关系,写出建表语句</li>
-<li>为员工表employees添加一个字段image用于记录员工头像</li>
-<li>查询除了名字叫张三以外的员工的记录</li>
-<li>查询薪水在2000-5000之间的员工记录</li>
-<li>查询部门编号是1、3、5的员工的记录</li>
-<li>查询名字以“张”开头的员工的记录</li>
-<li>查询性别为“M”且在2008年1月1日入职的员工的记录</li>
-<li>为employees表的name列创建索引</li>
-<li>创建视图,包括10号部门的信息和所有职员信息
-10)使用node.js 连接mysql的步骤&quot;
-3	分别用异步，同步的方法读取input.txt文件。
-4	向input.txt文件中写入文字&quot;nodejs教程&quot;。
-5	将input.txt文件内容写入到output.txt中
-6	创建http服务器，端口为8000
-7	利用nodejs查询mysql数据库student数据库的user表中的username字段信息
-8	创建http服务器，并获取浏览器传递过来的get请求的’参数	
-D	创建并连接一个mongo数据库
-D	向mongo数据库中插入数据</li>
-</ol>
-<p>1	vue模板语法来声明式地将数据渲染进DOM的方式是____
-2	vue中____指令用来隐藏标签？
-3	vue在表单中绑定数据的指令是____
-4	vue中绑定属性的指令是____
-5	vue中绑定时间的指令是____
-6	vue的事件修饰符有：<strong><strong>、</strong></strong>、____
-7	说出你使用过的vue指令____
-8	Vue单文件组件的组成部分包括____、<strong><strong>、</strong></strong>
-9	Vue模板绑定文本的语法是____
-10	Vue解析html内容的指令是____
-11	Vue绑定属性的指令是____
-12	Vue绑定事件的指令是____
-13	Vue数组渲染的指令是____
-14	事件修饰符哪个可以阻止事件冒泡____
-15	过渡动画的组件是什么____
-16	用于根据条件展示元素的指令____
-17	进行表单双向数据绑定的指令是____
-18	样式绑定的两种语法是____
-19	全局注册组件的方法____
-20	创建路由使用哪个库____
-21	组件有哪两种注册方式____
-22	Vue中进行服务端交互的模块是哪个____
-23	Angular 使用命令行工具创建项目的指令是____
-24	angular启动开发服务器的指令____
-25	生成组件的指令是____
-26	Angualr组件是由哪三个文件组成的____
-27	Angular组件模板中显示数据的方式____
-28	使用 <strong><strong>显示数组属性
-29	通过____进行条件显示
-30	事件绑定的方式</strong></strong>
-31	经常用动态添加或删除 CSS 类的指令____
-32	根据组件的状态动态设置内联样式的指令____
-33	使用____双向绑定到表单元素
-34	从多个可能的元素中根据switch 条件来显示某一个的指令____
-35	 管道操作符____
-36	 路由出口的组件是____
-37	A标签的什么属性设置路由的路径____</p>
-<p>序号	题干
-1	vuejs有哪些特点？
-2	vue中如何遍历数组？
-3	vue组件之间怎样传值？
-4	vue如何让css只在当前组件中起作用？
-5	如何对网站文件和资源进行优化？
-6	vue生命周期的作用是什么？
-7	简述对前端MVVM框架的理解
-8	vue中的指令有哪些？
-9	什么是vue.js？
-10	vue中计算属性和定义方法的区别是什么？
-11	vue如何实现父子组件通信，以及非父子组件通信
-12	简述vue生命周期
-13	怎么定义vue-router的动态路由？怎么获取传来的动态参数？
-14	axios是什么？怎么使用？
-15	vue.js有哪些特点？
-16	vue-router是什么？它有哪些组件？
-17	vue的组件是怎么定义的？父组件怎么给子组件传值？
-18	你觉得哪些项目适合vue框架？
-19	vue.js有哪些特点？
-20	 mvvm框架是什么？它和其它框架（jquery）的区别是什么？哪些场景适合？
-21	vue-router是什么？它有哪些组件
-22	请详细说下你对vue生命周期的理解
-23	请说下封装 vue 组件的过程
-24	请说出vue.cli项目中src目录每个文件夹和文件的用法
-25	vue的组件是怎么定义的？父组件怎么给子组件传值
-26	说出你所使用过的vue指令
-27	vuex有哪几种属性
-28	vue生命周期总共有几个阶段
-29	第一次页面加载会触发哪几个钩子
-30	vue如何实现父子组件通信，以及非父子组件通信
-31	mint-ui是什么？怎么使用？说出至少三个组件使用方法
-32	v-model是什么？怎么使用？ vue中标签怎么绑定事件
-33	vuex是什么？怎么使用
-34	vue-router有哪几种导航钩子
-35	Angular模板怎样遍历数据？
-36	使用Angular 4，和使用Angular 1相比，有什么优势
-37	Angular中父子组件交互的方式有哪些
-38	Angular有哪几种类型的指令
-39	什么是管道
-40	Angular有哪些内置管道
-41	Angular创建路由的步骤
-42	Angular生命周期钩子有哪些</p>
 ]]></content>
     </entry>
 </feed>

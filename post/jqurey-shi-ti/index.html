@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>HTML---CSS笔记 | LLW</title>
+<title>JQurey 试题 | LLW</title>
 <link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575193939342">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,24 +74,33 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              HTML---CSS笔记
+              JQurey 试题
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-11-22 ·
+                · 2019-12-01 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <ul style="list-style-type:square">
-	  <center><li style="list-style: none;"><h1>HTML---CSS</h1></li></center>
-    <li><b>HTML不解析输出：<b></li>
-    <li>方法一：不需要被解析的html代码放入：xmp 双标签</li>
-    <li>备注：从HTML3.2开始反对使用本元素,HTML5规范中本元素已经完全被移除。</li>
-    <li>方法二：不需要被解析的html代码放入: pre 双标签  块级元素,<pre> 但 < 需用"&lt;"，> 需用"&gt;"代替即可输出源码。</pre></li>
-    <li>方法三：不需要被解析的html代码放入: code 双标签  行内元素,<code> 但 < 需用"&lt;"，> 需用"&gt;"代替即可输出源码。</code></li>
-</ul>
+              <pre><code> 1 jquery中选择器可以分为 基本选择器、层级选择器、过滤选择器、表单选择器、内容选择器、子元素选择器、属性选择器等
+2 jQuery选择表单&lt;form&gt;&lt;input type=&quot;text&quot; /&gt;&lt;input type=&quot;submit&quot; /&gt;&lt;/form&gt;
+        中的第一个表单元素
+        $('form input[type=text]')
+        $(&quot;form input:first-child&quot;)
+        $('input').first()
+3 jquery中的$(&quot;#box&quot;).outerWidth(false)返回的是盒子的: 宽包括边框和内留白 不包括外留白;如果为true 也包括外留白
+4 jquery中使用过哪些插入节点的方法：prepend prependto append appendto after before insertBefore insertAfter
+5 jquery访问对象中的size（）方法的返回值和jQuery对象的 _length_ 属性一样。
+6 现有一个表格，如果想要匹配所有行数为偶数的，_even()_实现，奇数的用 _odd()_实现。
+7 &quot;在jq中，想让一个元素隐藏用_hide_实现，想让一个元素出现用_show_实现。
+8 假设页面有&lt;p&gt;I would like to say: &lt;/p&gt;一个元素，当执行 $(&quot;p&quot;).append(&quot;&lt;b&gt;Hello&lt;/b&gt;&quot;);时，
+  页面代码会动态加载为 _&lt;p&gt;I would like to say:&lt;b&gt;Hello&lt;/b&gt;&lt;/p&gt;_
+9 &quot;在一个表单里，想要使用jquery找到指定元素的第一个元素用_$(&quot;input&quot;).eq(0)/$(&quot;input&quot;).first()_实现，那么第二个元素用_$(&quot;input&quot;).eq(1)_实现。
+10 写出jquery的5个事件：_click_、_mousedown_、_mouseuo_、_focus_、_blur_  mouseover mouseout
+11 Jquery如何获取元素属性用prop,移除属性使用_removeProp_</code></pre>
+
             </div>
           </article>
         </div>
@@ -99,9 +108,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://XinLingJ.github.io//post/bi-ji">
+            <a href="https://XinLingJ.github.io//post/sql-yu-ju">
               <h3 class="post-title">
-                Css3笔记
+                SQL 语句
               </h3>
             </a>
           </div>
