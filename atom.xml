@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
     <title>LLW</title>
-    <updated>2019-12-02T04:01:32.243Z</updated>
+    <updated>2019-12-02T06:51:07.476Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
     <link rel="self" href="https://XinLingJ.github.io//atom.xml"/>
@@ -112,6 +112,77 @@ window.location.href</p>
 <p>35	如何检查图像是否已经被完全加载进来？</p>
 <p>36	如何利用JQ将页面上的所有元素边框设置为2PX宽的虚线？
 $ (&quot;*&quot;).css (&quot;border&quot;, &quot;2px dashed&quot;);</p>
+<p>37	删除元素主要方法有几种？这两种方法的区别是什么？<br>
+删除匹配的元素集合中所有的子节点。
+从DOM中删除所有匹配的元素。  这种比较精准</p>
+<p>38	内部插入的方法有哪些？并做文字说明
+append() appendto() prependto() prepend()</p>
+<p>39	外部插入的方法有哪些？并做文字说明
+after()  before()  insertBefore()  insertAfter()</p>
+<p>40	写出五个JQ事件
+blur focus click mousemove mouseup mousedown</p>
+<p>41	JQ的动画效果有哪些？分别概述其实现效果
+基本 show()显示 hide()隐藏
+滑动 slideDown()下滑 slideUp()上滑 slideToggle()滑动
+淡入淡出 fadeIn()淡入  fadeOut()淡出  fadeToggle()淡入淡出切换   fadeTo() 但出到几</p>
+<p>42	&quot;JQ如何复制一个元素？不同参数代表什么意义？
+一个布尔值（true 或者 false）指示事件处理函数是否会被复制。</p>
+<pre><code>2:一个布尔值，指示是否对事件处理程序和克隆的元素的所有子元素的数据应该被复制
+</code></pre>
+<p>44	在JQ中操作元素的类名的方法有那几个？
+addClass()  removeClass()  toggleClass()<br>
+hasClass()方法检查被选元素是否包含指定的类名称。如果被选元素包含指定的类，该方法返回 &quot;true&quot;。</p>
+<p>45	JQ中怎么获取属性和删除属性？
+prop()  attr()      |    removeProp() removeAttr()</p>
+<p>46	JQ替换节点的方法有哪些？
+replaceWith()  replaceAll()</p>
+<p>47	JQ获取子元素、取得匹配元素后面紧邻的同辈元素、取得匹配元素前面紧邻的同辈元素、取得匹配元素前后的所有同辈元素的方法分别是什么？
+children()      next()        prev()      siblings()</p>
+<p>48	JQ获取元素的定位值、在当前视口的相对偏移
+position()              offset()</p>
+<p>49	简述$()有那些用法并举例说明</p>
+<p>插件	JQuery.fn.extend({checked:function(){},check2..})	  $().checked()
+JQuert.extend({checked:function(){}})	  Jquery.checked()</p>
+<p>50	举例说明jquery对象和dom对象是怎样转换的<br>
+jquery转化为dom对象 $().get(0)<br>
+dom转化为jquery对象 var cr = document.getElementsByTagName(&quot;p&quot;)  var $cr = $(cr);</p>
+<p>51	jquery中的动画函数有哪些？举例说明<br>
+animate() 自定义动画  fadeIn（）淡入效果  fadeOut 淡出效果 fadeTo 渐进的方从不透明到指定的不透明 show() 显示效果  hide() 隐藏效果   slideDown() slideUp() slideToggle()  滑上滑下切换   fadeToggle（） 淡入淡出效果</p>
+<p>52	jquery的优点有哪些？
+轻量级 强大的选择器  兼容多中浏览器  dom的封装  链式操作方式  丰富的插件</p>
+<p>53	jquery插件有哪些？举例并说明用途<br>
+js/jquery-ui-1.8.18.custom.min.js    jquery-ui的库文件
+js/jquery-ui-timepicker-addon.js     jquery-ui的时间控件
+js/jquery-ui-sliderAccess.js         jquery-ui的slider控件，就是滑块的那个</p>
+<p>54	jquery中的查找节点函数有哪些？举例说明用途                                                                               $(selector).parent(selector)：获取父节点
+$(selector).parentNode：以node[]的形式存放父节点，如果没有父节点，则返回空数组
+$(selector).parents(selector)：获取祖先元素</p>
+<p>二、jQuery的兄弟节点查找方法
+$(selector).prev() / $(selector).previousSibling()：获取上一个兄弟节点
+$(selector).prevAll()：获取之前所用的兄弟节点
+$(selector).next() / $(selector).nextSibling()：获取下一个兄弟节点
+$(selector).nextAll()：获取之后所有的兄弟节点
+$(selector).siblings()：获取所有的兄弟节点
+三、jQuery的子节点查找方法
+$(selector).children()：获取所有直接子节点
+$(selector).childNodes：以node[]的形式存放子节点，如果没有子节点，则返回空数组
+$(selector).firstChild：获取第一个子节点
+$(selector).lastChild：获取最后一个子节点
+$(selector).contents：获取包含的所有内容，包括空文本
+$(selector).removeChild(selector)：删除并返回指定的子节点
+$(selector).replaceChild(selector)：替换并返回指定的子节点</p>
+<p>55	jquery中如何添加、删除、切换类名？jquery的效果有哪些？
+addClass() removerClass() toggleClass()
+自定义动画：animate()  滑动 slideDown()  slideUp() slideToggle()  淡入淡出 fadeIn fadeOut fadeTo fadeToggle
+show  hide</p>
+<p>56	jquery如何中添加、删除、复制、插入节点的方法是什么？
+append() remove() clone() prepend() after() before() insertAfter()</p>
+<p>57	jquery中attr()、val()、text()、html() 的用法分别是什么？
+attr() 获取匹配的元素集合中的第一个元素的属性的值 或 设置每一个匹配元素的一个或多个属性。
+val() 获得匹配元素的当前值。
+input的输入框<br>
+text() 取得所有匹配元素的内容。
+html()取得第一个匹配元素的html内容</p>
 ]]></content>
     </entry>
     <entry>
