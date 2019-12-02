@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>JQurey 试题 | LLW</title>
-<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575193939342">
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575259289512">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://XinLingJ.github.io/">
-  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1575193939342" alt="">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1575259289512" alt="">
   </a>
   <h1 class="site-title">
     LLW
@@ -99,7 +99,87 @@
   页面代码会动态加载为 _&lt;p&gt;I would like to say:&lt;b&gt;Hello&lt;/b&gt;&lt;/p&gt;_
 9 &quot;在一个表单里，想要使用jquery找到指定元素的第一个元素用_$(&quot;input&quot;).eq(0)/$(&quot;input&quot;).first()_实现，那么第二个元素用_$(&quot;input&quot;).eq(1)_实现。
 10 写出jquery的5个事件：_click_、_mousedown_、_mouseuo_、_focus_、_blur_  mouseover mouseout
-11 Jquery如何获取元素属性用prop,移除属性使用_removeProp_</code></pre>
+11 Jquery如何获取元素属性用prop,移除属性使用_removeProp_
+</code></pre>
+<p>1	使用JQ有什么好处？
+不污染顶级变量   完善的ajax   出色的Dom封装   强大的选择器   轻量级   完善的文档   开源</p>
+<p>2	常用的JQ选择器有哪些？
+基本选择器（#ID，element，.calss,*,selector1,selector2,selectorN）
+层次选择器  基本过滤器选择器  内容  可见性  属性  表单  表单过滤  子元素  子元素过滤</p>
+<p>3	JQ中的选择器和CSS中的选择器有什么区别？
+jq选择器获得的是dom(document object model)对象   css只是给标签加样式</p>
+<p>4	JQ中的选择器有什么优势？
+简了代码，节约了性能   强大的选择器   轻量级  完善的文档</p>
+<p>5	使用JQ选择器的过程中有哪些需要注意的地方？
+引号问题  特殊字符</p>
+<p>6	JQ对象和DOM对象是怎样转换的？
+var domobj=$(&quot;div&quot;)[0];  domobj.innerHTML=&quot;asad&quot;</p>
+<p>7	JQ中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>G</mi><mi>E</mi><mi>T</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">提</mi><mi mathvariant="normal">交</mi><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">.GET()提交和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">G</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">提</span><span class="mord cjk_fallback">交</span><span class="mord cjk_fallback">和</span></span></span></span>.POST()提交有什么区别？
+get会缓存起来有安全问题    储存比较小2k    post可以存很长时间</p>
+<p>8	在JQ中是如何操作样式的？ addClass()  removeClass()  toggleClass()</p>
+<p>9	一般用什么去递交数据，为什么？ submit</p>
+<p>10	在JQ中引入CSS有几种方式？
+$(&quot;&quot;).css(&quot;width&quot;:&quot;&quot;,&quot;&quot;:&quot;&quot;)   $(&quot;&quot;).css(function(){})</p>
+<p>11	在JQ中有哪些插入节点的方法，他们的区别是什么？
+append  appendto  prepend  prependto  after  before  insertAfter  insertBefore</p>
+<p>12	JQ中如何获取或设置属性？
+$(&quot;&quot;).attr(&quot;&quot;,&quot;&quot;) $().attr({&quot;&quot;:&quot;&quot;,&quot;&quot;:,&quot;&quot;,function(){})</p>
+<p>13	JQ中有哪些方法可以遍历节点？  each()   $('div').children()    $('div').find('')</p>
+<p>14	子元素选择器和后代选择器元素有什么区别？
+后代选择器是后代中所有的都包含    子元素是指其中的某个</p>
+<p>15	BEFORSEND方法功能是什么？ beforsend  ajax  向服务器发送请求前添加一些处理函数</p>
+<p>16	$(DOCUMENT).READY()方法和WINDOW.ONLOAD有什么区别？
+网页DOM都加载完后就可以运行 js可执行多次不被覆盖;
+网页内所有内容加载完后  第二次执行会被覆盖;</p>
+<p>17	JQ是如何处理缓存的？  ajax
+1）通过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>p</mi><mi>o</mi><mi>s</mi><mi>t</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">来</mi><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">据</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">那</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">默</mi><mi mathvariant="normal">认</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">禁</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">缓</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">。</mi><mn>2</mn><mi mathvariant="normal">）</mi><mi mathvariant="normal">通</mi><mi mathvariant="normal">过</mi></mrow><annotation encoding="application/x-tex">.post()方法来获取数据，那么默认就是禁用缓存的。
+    2）通过</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">据</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">那</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">默</span><span class="mord cjk_fallback">认</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">禁</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">缓</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">。</span><span class="mord">2</span><span class="mord cjk_fallback">）</span><span class="mord cjk_fallback">通</span><span class="mord cjk_fallback">过</span></span></span></span>.get()方法来获取数据，可以通过设置时间戳来避免缓存。
+3）通过$.ajax方法来获取数据，只要设置参数cache:false即可。</p>
+<p>18	<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>G</mi><mi>E</mi><mi>T</mi><mi>S</mi><mi>C</mi><mi>R</mi><mi>I</mi><mi>P</mi><mi>T</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">.GETSCRIPT()方法和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">G</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">和</span></span></span></span>.GETJSON()方法有什么区别？
+jQuery提供了<code><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>g</mi><mi>e</mi><mi>t</mi><mi>S</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>t</mi><mo>(</mo><mo>)</mo><mo>&lt;</mo><mi mathvariant="normal">/</mi><mi>c</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>&gt;</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">来</mi><mi mathvariant="normal">直</mi><mi mathvariant="normal">接</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">载</mi><mi mathvariant="normal">.</mi><mi>j</mi><mi>s</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">与</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">载</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi>H</mi><mi>T</mi><mi>M</mi><mi>L</mi><mi mathvariant="normal">片</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">简</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">便</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">并</mi><mi mathvariant="normal">且</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">需</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">对</mi><mi>J</mi><mi>a</mi><mi>v</mi><mi>a</mi><mi>S</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>t</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">进</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">处</mi><mi mathvariant="normal">理</mi><mi mathvariant="normal">，</mi><mi>J</mi><mi>a</mi><mi>v</mi><mi>a</mi><mi>S</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>t</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">会</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">执</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">与</mi><mi mathvariant="normal">其</mi><mi mathvariant="normal">他</mi><mi>A</mi><mi>j</mi><mi>a</mi><mi>x</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">，</mi><mo>&lt;</mo><mi>c</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">.getScript()&lt;/code&gt;方法来直接加载.js文件，
+与加载一个HTML片段一样简单方便，并且不需要对JavaScript文件进行处理
+，JavaScript文件会自动执行。
+与其他Ajax方法一样，&lt;code&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">直</span><span class="mord cjk_fallback">接</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">载</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">s</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">与</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">载</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">L</span><span class="mord cjk_fallback">片</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">简</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">便</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">并</span><span class="mord cjk_fallback">且</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">需</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">对</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">进</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">处</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">，</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">会</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">执</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">与</span><span class="mord cjk_fallback">其</span><span class="mord cjk_fallback">他</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">，</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span></span></span>.getScript()</code>方法也有回调函数，
+它会在JavaScript文件成功载入后运行。例如像载入jQuery官方颜色动画插件（jquery.color.js），
+成功后给元素绑定颜色变化动画，就可以用到<code>$.getScript()</code>方法的回调函数。
+19	<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 3: (&quot;#̲MSG&quot;).TEXT();和'>(&quot;#MSG&quot;).TEXT();和</span>(&quot;#MSG&quot;).TEST(&quot;<B>NEW CONTENT</B>&quot;);有什么区别？</p>
+<p>20	RADIO单选组的第二个元素为当前选中值，该如何获取？
+var aa = $('#wrap input[name=&quot;payMethod&quot;]:checked').val();
+checkbox       checked</p>
+<p>21	选择器中ID,CLASS有什么区别？
+当只需要选择一个元素时，使用ID选择器，如果需要选择具有相同 CSS class的元素，就要用class 选择器。</p>
+<p>22	JQ表单提交前有哪些校验方法？</p>
+<p>23	JQ苦衷的$() 是什么意思？<br>
+$就是jquery对象    $()=jquery() 可以传参</p>
+<p>24	网页上有五个<DIV>元素，如何使用JQ来选择他们？
+$(&quot;div&quot;)[0,1,2,3,4]</p>
+<p>25	JQ中的ID选择器和CLASS选择器有何不同？
+当只需要选择一个元素时，使用ID选择器，如果需要选择具有相同 CSS class的元素，就要用class 选择器。</p>
+<p>26	如何在点击一个按钮时使用JQ隐藏一个图片？
+$(&quot;button&quot;).hidden()</p>
+<p>27	$(DOCUMENT).READY()是什么函数？为什么更要用它？
+网页加载完后运行  ,有些特效需要等网页加载后进行</p>
+<p>28	JAVASCRIPT WINDOW.ONLOAD时间和JQ READY函数有什么不同？
+jq中的ready 网页DOM都加载完后就可以运行 可执行多次不被覆盖;
+window.onload网页内所有内容加载完后  第二次执行会被覆盖;</p>
+<p>29	如何找到所有HTML SELECT 标签中的选项？
+$('.class option:selected')</p>
+<p>30	JQ里的EACH()是什么函数？你是如何使用它的？
+遍历   $(&quot;li&quot;).each(function(){alert(aa)});</p>
+<p>31	你是如何将一个HTML元素添加到DOM树中的？
+append() appendTo() prepend() prependto() append() appendto() after() before()
+insertBefore() insertAfter()</p>
+<p>32	如何用JQ代码选择所有在段落内部的超链接？$(&quot;a&quot;)</p>
+<p>33	$(THIS)和THIS关键字在JQ中有何不同？
+代表得对象不同
+$(this) 返回一个 jQuery 对象，你可以对它调用多个 jQuery 方法，比如用 text() 获取文本，用val() 获取值等等。
+而 this 代表当前元素，它是 JavaScript 关键词中的一个，表示上下文中的当前 DOM 元素。
+你不能对它调用 jQuery 方法，直到它被 $() 函数包裹，例如 $(this)。</p>
+<p>34	如何使用一个可点击的链接来替换页面中任何的URL？
+window.location.href</p>
+<p>35	如何检查图像是否已经被完全加载进来？</p>
+<p>36	如何利用JQ将页面上的所有元素边框设置为2PX宽的虚线？
+$ (&quot;*&quot;).css (&quot;border&quot;, &quot;2px dashed&quot;);</p>
 
             </div>
           </article>
