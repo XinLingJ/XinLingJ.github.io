@@ -4,7 +4,7 @@
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>js 笔记 | LLW</title>
-<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1575610836527">
+<link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1620131535330">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
 <link rel="stylesheet" href="https://XinLingJ.github.io//styles/main.css">
@@ -20,7 +20,7 @@
       <div class="main-content">
         <div class="site-header">
   <a href="https://XinLingJ.github.io/">
-  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1575610836527" alt="">
+  <img class="avatar" src="https://XinLingJ.github.io//images/avatar.png?v=1620131535330" alt="">
   </a>
   <h1 class="site-title">
     LLW
@@ -84,52 +84,52 @@
             </div>
             
             <div class="post-content">
-              <p><strong>js组成三大核心内容</strong>
-（1）ECMAScript 2.3.BOM（browser object document ）是（欧洲计算机制造商协会）它规定了js的语法标准。
-（2）DOM（document object model）是文档对象模型，规定了文档的显示结构，可以轻松地删除、添加和替换节点
-（3）BOM是浏览器对象模型，就是浏览器自带的一些功能样式，如搜索框，设置，等学习浏览器窗口交互的对象
-1、核心（ECMAScript）：描述了JS的语法和基本对象。
-2、文档对象模型 （DOM）：处理网页内容的方法和接口。
+              <p><strong>js组成三大核心内容</strong><br>
+（1）ECMAScript 2.3.BOM（browser object document ）是（欧洲计算机制造商协会）它规定了js的语法标准。<br>
+（2）DOM（document object model）是文档对象模型，规定了文档的显示结构，可以轻松地删除、添加和替换节点<br>
+（3）BOM是浏览器对象模型，就是浏览器自带的一些功能样式，如搜索框，设置，等学习浏览器窗口交互的对象<br>
+1、核心（ECMAScript）：描述了JS的语法和基本对象。<br>
+2、文档对象模型 （DOM）：处理网页内容的方法和接口。<br>
 3、浏览器对象模型（BOM）：与浏览器交互的方法和接口。</p>
 <pre><code>	      首先，网页是由一个一个xml的节点构成，页面加载成一刻树状。所以我们通过js操作元素的节点，对元素的增、删、改、查，对元素的属性、值、事件等操作属于DOM操作（ document object model 文档对象模型）。对浏览器框架窗口对象的操作属于BOM操作（Browser Object Model 浏览器对象模型）。js里面还有语法、类型、语句、关键字、运算符、对象等一些是ECMAScript。
 </code></pre>
-<p>DOM节点类型
-　　DOM规定文档中的每个成分都是一个节点（Node）,HTML文档可以说由节点构成的集合，DOM节点有:
-　　1. 元素节点（Element）：上图中<html>、<body>、<p>等都是元素节点，即标签。
-　　2. 文本节点（Text）:向用户展示的内容，如<li>...</li>中的JavaScript、DOM、CSS等文本。
-　　3. 属性节点（Attr）:元素属性，元素才有属性,如<a>标签的链接属性href=&quot;http://www.baidu.com&quot;。
-DOM节点三大属性（XML DOM）
-　　1. nodeName：元素节点、属性节点、文本节点分别返回元素的名称、属性的名称和#text的字符串。
-　 2. nodeType：元素节点、属性节点、文本节点的nodeType值分别为1、2、3.、
+<p>DOM节点类型<br>
+　　DOM规定文档中的每个成分都是一个节点（Node）,HTML文档可以说由节点构成的集合，DOM节点有:<br>
+　　1. 元素节点（Element）：上图中<html>、<body>、<p>等都是元素节点，即标签。<br>
+　　2. 文本节点（Text）:向用户展示的内容，如<li>...</li>中的JavaScript、DOM、CSS等文本。<br>
+　　3. 属性节点（Attr）:元素属性，元素才有属性,如<a>标签的链接属性href=&quot;http://www.baidu.com&quot;。<br>
+DOM节点三大属性（XML DOM）<br>
+　　1. nodeName：元素节点、属性节点、文本节点分别返回元素的名称、属性的名称和#text的字符串。<br>
+　 2. nodeType：元素节点、属性节点、文本节点的nodeType值分别为1、2、3.、<br>
 　　3. nodeValue：元素节点、属性节点、文本节点的返回值分别为null、属性值和文本节点内容。</p>
-<p>DOM常见操作
-1. 获取/设置 节点--包括获取/设置 元素节点、属性节点、文本节点 ：
-　　获取元素节点：document.getElementById(&quot;ID&quot;)；
-　　获取属性节点：getAttributeNode(attrName)；
-　　获取文本节点：parentNode/childNodes；
-　　设置元素节点： innerHTML属性（innerText属性返回去掉标签的innerHTML）；
-　　设置属性节点： setAttribute(attrName,value);
-　　设置文本节点：通过改变文本节点的nodeValue来设置文本节点的值；
-2. 删除节点
-　　删除元素节点： removeChild();
-　　删除属性节点：removeAttribute();
-　　删除文本节点：textNode.nodeValue='';
-3. 创建和添加节点
-　  创建节点：通过document对象的createElement(eleName)、createTextNode(nodeValue)方法可分别创建元素节点和文本节点。属性节点也有自己的create方法，但是用的少，直接用元素节点的setAttribute()方法即可添加属性。
+<p>DOM常见操作<br>
+1. 获取/设置 节点--包括获取/设置 元素节点、属性节点、文本节点 ：<br>
+　　获取元素节点：document.getElementById(&quot;ID&quot;)；<br>
+　　获取属性节点：getAttributeNode(attrName)；<br>
+　　获取文本节点：parentNode/childNodes；<br>
+　　设置元素节点： innerHTML属性（innerText属性返回去掉标签的innerHTML）；<br>
+　　设置属性节点： setAttribute(attrName,value);<br>
+　　设置文本节点：通过改变文本节点的nodeValue来设置文本节点的值；<br>
+2. 删除节点<br>
+　　删除元素节点： removeChild();<br>
+　　删除属性节点：removeAttribute();<br>
+　　删除文本节点：textNode.nodeValue='';<br>
+3. 创建和添加节点<br>
+　  创建节点：通过document对象的createElement(eleName)、createTextNode(nodeValue)方法可分别创建元素节点和文本节点。属性节点也有自己的create方法，但是用的少，直接用元素节点的setAttribute()方法即可添加属性。<br>
 　  添加节点：appendChild()和insertBefore()</p>
-<p>BOM对象操作windows对象：
-Window -对象是 JavaScript层级中的顶层对象，代表一个浏览器窗口或一个框架，会在 <body>或<frameset>每次出现时被自动创建。在这里就只列举一些主干操作。
-window.innerHeight - 浏览器窗口的内部高度
-window.innerWidth - 浏览器窗口的内部宽度
-window.open() - 打开新窗口
-window.close() - 关闭当前窗口
-window.moveTo() - 移动当前窗口
-window.resizeTo() - 调整当前窗口的尺寸....
-window.event -事件的状态，例如触发event对象的元素、鼠标的位置及状态、按下的键等等。event对象只在事件发生的过程中才有效。event的某些属性只对特定的事件有意义
-window.document -文档对象，操作文档的基础对象
-document.getElementById(&quot;id&quot;);根据id找最多找一个；
-document.getElementByNames(&quot;name&quot;);根据name找，找出来的是数组；
-document.getElementByTagNames(&quot;name&quot;)；根据表签名找，找出来的是数组；
+<p>BOM对象操作windows对象：<br>
+Window -对象是 JavaScript层级中的顶层对象，代表一个浏览器窗口或一个框架，会在 <body>或<frameset>每次出现时被自动创建。在这里就只列举一些主干操作。<br>
+window.innerHeight - 浏览器窗口的内部高度<br>
+window.innerWidth - 浏览器窗口的内部宽度<br>
+window.open() - 打开新窗口<br>
+window.close() - 关闭当前窗口<br>
+window.moveTo() - 移动当前窗口<br>
+window.resizeTo() - 调整当前窗口的尺寸....<br>
+window.event -事件的状态，例如触发event对象的元素、鼠标的位置及状态、按下的键等等。event对象只在事件发生的过程中才有效。event的某些属性只对特定的事件有意义<br>
+window.document -文档对象，操作文档的基础对象<br>
+document.getElementById(&quot;id&quot;);根据id找最多找一个；<br>
+document.getElementByNames(&quot;name&quot;);根据name找，找出来的是数组；<br>
+document.getElementByTagNames(&quot;name&quot;)；根据表签名找，找出来的是数组；<br>
 document.getElementByClassNames(&quot;name&quot;)；根据表classname找，找出来的是数组；</p>
 <pre><code>BOM（浏览器对象模型）
 1、window对象
@@ -216,9 +216,9 @@ window.frames -返回窗口中所有命名的框架
 Window.parent -父窗口（如果窗口是顶级窗口，那么parent==self==top）
 Window.top -最顶级父窗口（有的窗口中套了好几层frameset或者iframe）
 </code></pre>
-<p>4、srceen对象
-window.screen -用户屏幕信息说明：用处不大，用于站点分析
-window.screen.availWidth - 可用的屏幕宽度
+<p>4、srceen对象<br>
+window.screen -用户屏幕信息说明：用处不大，用于站点分析<br>
+window.screen.availWidth - 可用的屏幕宽度<br>
 window.screen.availHeight - 可用的屏幕高度</p>
 <pre><code>Window.self -当前窗口（等价window）
 Window.opener -实际上就是通过window.open打开的窗体的父窗体
@@ -234,16 +234,16 @@ history.forward() - 与在浏览器中点击按钮向前相同  前一个网页
 history.go() - 可以在用户的历史记录中任意跳转
 history.go(-1) - 回退到前一个页面
 </code></pre>
-<p>DOM和BOM区别：
-DOM描述了处理网页内容的方法和接口，BOM描述了与浏览器进行交互的方法和接口
-1) DOM是W3C的标准[所有浏览器都遵循的标准];
-2) DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）;
-3) BOM 各个浏览器厂商根据DOM在各自浏览器上的实现;[表现为不同浏览器定义有差别,实现方式不同;
-4) BOM 主要处理浏览器窗口和框架，
-不过通常浏览器特定的 JavaScript 扩展都被看做 BOM 的一部分。
-这些扩展包括
-window(窗口)、location（地址栏内容相关）、history（历史）、screen（屏幕）、navigator（有很多浏览器相关的内容，通常判断浏览器类型都是通过这个对象）
-DOM 是为了操作文档出现的 API，document 是其的一个对象；
+<p>DOM和BOM区别：<br>
+DOM描述了处理网页内容的方法和接口，BOM描述了与浏览器进行交互的方法和接口<br>
+1) DOM是W3C的标准[所有浏览器都遵循的标准];<br>
+2) DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）;<br>
+3) BOM 各个浏览器厂商根据DOM在各自浏览器上的实现;[表现为不同浏览器定义有差别,实现方式不同;<br>
+4) BOM 主要处理浏览器窗口和框架，<br>
+不过通常浏览器特定的 JavaScript 扩展都被看做 BOM 的一部分。<br>
+这些扩展包括<br>
+window(窗口)、location（地址栏内容相关）、history（历史）、screen（屏幕）、navigator（有很多浏览器相关的内容，通常判断浏览器类型都是通过这个对象）<br>
+DOM 是为了操作文档出现的 API，document 是其的一个对象；<br>
 BOM 是为了操作浏览器出现的 API，window 是其的一个对象。</p>
 
             </div>
@@ -253,7 +253,7 @@ BOM 是为了操作浏览器出现的 API，window 是其的一个对象。</p>
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://XinLingJ.github.io//post/vue-react-ji-chu">
+            <a href="https://XinLingJ.github.io/post/vue-react-ji-chu/">
               <h3 class="post-title">
                 vue-react 基础
               </h3>

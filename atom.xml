@@ -2,18 +2,50 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
     <title>LLW</title>
-    <updated>2019-12-06T05:40:40.308Z</updated>
+    <updated>2021-05-04T12:35:02.573Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
-    <link rel="self" href="https://XinLingJ.github.io//atom.xml"/>
+    <link rel="self" href="https://XinLingJ.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
-    <logo>https://XinLingJ.github.io//images/avatar.png</logo>
-    <icon>https://XinLingJ.github.io//favicon.ico</icon>
-    <rights>All rights reserved 2019, LLW</rights>
+    <logo>https://XinLingJ.github.io/images/avatar.png</logo>
+    <icon>https://XinLingJ.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2021, LLW</rights>
+    <entry>
+        <title type="html"><![CDATA[获取元素的常用方式]]></title>
+        <id>https://XinLingJ.github.io/post/huo-qu-yuan-su-de-chang-yong-fang-shi/</id>
+        <link href="https://XinLingJ.github.io/post/huo-qu-yuan-su-de-chang-yong-fang-shi/">
+        </link>
+        <updated>2019-12-28T08:17:19.000Z</updated>
+        <content type="html"><![CDATA[<p>document.getElementById()<br>
+document.getElementsByClassName()<br>
+document.getElementsByTagName()<br>
+document.querySelector()<br>
+document.querySelectorAll()</p>
+<p>独特的标签 document.body     document.head   doucment.title<br>
+document.documentElement (×document.html×)........</p>
+<p>console的打印是引用 之前打印会显示变化后的</p>
+<p>兼容一般考虑到ie8  querySelector  querySelectorAll兼容到ie8 甚至移上 不兼容 ie7以及ie7以下<br>
+性能没有classname  id 好<br>
+ClassName 不兼容 ie8以及ie8以下</p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一些网址]]></title>
+        <id>https://XinLingJ.github.io/post/yi-xie-wang-zhi/</id>
+        <link href="https://XinLingJ.github.io/post/yi-xie-wang-zhi/">
+        </link>
+        <updated>2019-12-22T08:10:44.000Z</updated>
+        <content type="html"><![CDATA[<p>3k资源网    http://www.3kzy.com/<br>
+牛导航       http://www.ziliao6.com/<br>
+自动上色    https://paintschainer.preferred.tech/index_zh.html<br>
+模拟花钱    https://neal.fun/spend<br>
+狗屁文章生成器  https://suulnnka.github.io/BullshitGenerator/index.html</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[闭包]]></title>
-        <id>https://XinLingJ.github.io//post/bi-bao</id>
-        <link href="https://XinLingJ.github.io//post/bi-bao">
+        <id>https://XinLingJ.github.io/post/bi-bao/</id>
+        <link href="https://XinLingJ.github.io/post/bi-bao/">
         </link>
         <updated>2019-12-06T05:37:36.000Z</updated>
         <content type="html"><![CDATA[<p>闭包就是能够读取其他函数内部变量的函数。</p>
@@ -21,46 +53,46 @@
 </code></pre>
 <p>内存消耗很大  内存泄露   解决方法是，在退出函数之前，将不使用的局部变量全部删除。</p>
 <p>（2）闭包会在父函数外部，改变父函数内部变量的值。所以，如果你把父函数当作对象（object）使用，把闭包当作它的公用方法（Public Method），把内部变量当作它的私有属性（private value），这时一定要小心，不要随便改变父函数内部变量的值。</p>
-<p>优点：
-1.保护函数内的变量安全,加强了封装性
-2.在内存中维持一个变量(用的太多就变成了缺点，占内存)
+<p>优点：<br>
+1.保护函数内的变量安全,加强了封装性<br>
+2.在内存中维持一个变量(用的太多就变成了缺点，占内存)<br>
 闭包之所以会占用资源是当函数a执行结束后, 变量i不会因为函数a的结束而销毁, 因为b的执行需要依赖a中的变量。</p>
-<p>缺点：
+<p>缺点：<br>
 闭包有一个非常严重的问题，那就是内存浪费问题，这个内存浪费不仅仅因为它常驻内存，更重要的是，对闭包的使用不当会造成无效内存的产生</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[Npm]]></title>
-        <id>https://XinLingJ.github.io//post/npm</id>
-        <link href="https://XinLingJ.github.io//post/npm">
+        <id>https://XinLingJ.github.io/post/npm/</id>
+        <link href="https://XinLingJ.github.io/post/npm/">
         </link>
         <updated>2019-12-06T01:10:53.000Z</updated>
-        <content type="html"><![CDATA[<p>npm安装模块
-【npm install xxx】利用 npm 安装xxx模块到当前命令行所在目录；
-【npm install -g xxx】利用npm安装全局模块xxx；
+        <content type="html"><![CDATA[<p>npm安装模块<br>
+【npm install xxx】利用 npm 安装xxx模块到当前命令行所在目录；<br>
+【npm install -g xxx】利用npm安装全局模块xxx；<br>
 本地安装时将模块写入package.json中：</p>
-<p>【npm install xxx】安装但不写入package.json；
-【npm install xxx –save】 安装并写入package.json的”dependencies”中；
-【npm install xxx –save-dev】安装并写入package.json的”devDependencies”中。
-npm 删除模块
-【npm uninstall xxx】删除xxx模块；
+<p>【npm install xxx】安装但不写入package.json；<br>
+【npm install xxx –save】 安装并写入package.json的”dependencies”中；<br>
+【npm install xxx –save-dev】安装并写入package.json的”devDependencies”中。<br>
+npm 删除模块<br>
+【npm uninstall xxx】删除xxx模块；<br>
 【npm uninstall -g xxx】删除全局模块xxx；</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[那些年遇到的坑]]></title>
-        <id>https://XinLingJ.github.io//post/na-xie-nian-yu-dao-de-keng</id>
-        <link href="https://XinLingJ.github.io//post/na-xie-nian-yu-dao-de-keng">
+        <id>https://XinLingJ.github.io/post/na-xie-nian-yu-dao-de-keng/</id>
+        <link href="https://XinLingJ.github.io/post/na-xie-nian-yu-dao-de-keng/">
         </link>
         <updated>2019-12-05T09:02:50.000Z</updated>
-        <content type="html"><![CDATA[<p>vue 脚手架  组件<Banner>  可小写
+        <content type="html"><![CDATA[<p>vue 脚手架  组件<Banner>  可小写<br>
 在普通文档中 组件名必须小写</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[JQurey 试题]]></title>
-        <id>https://XinLingJ.github.io//post/jqurey-shi-ti</id>
-        <link href="https://XinLingJ.github.io//post/jqurey-shi-ti">
+        <id>https://XinLingJ.github.io/post/jqurey-shi-ti/</id>
+        <link href="https://XinLingJ.github.io/post/jqurey-shi-ti/">
         </link>
         <updated>2019-12-01T09:51:13.000Z</updated>
         <content type="html"><![CDATA[<pre><code> 1 jquery中选择器可以分为 基本选择器、层级选择器、过滤选择器、表单选择器、内容选择器、子元素选择器、属性选择器等
@@ -80,199 +112,199 @@ npm 删除模块
 10 写出jquery的5个事件：_click_、_mousedown_、_mouseuo_、_focus_、_blur_  mouseover mouseout
 11 Jquery如何获取元素属性用prop,移除属性使用_removeProp_
 </code></pre>
-<p>1	使用JQ有什么好处？
+<p>1	使用JQ有什么好处？<br>
 不污染顶级变量   完善的ajax   出色的Dom封装   强大的选择器   轻量级   完善的文档   开源</p>
-<p>2	常用的JQ选择器有哪些？
-基本选择器（#ID，element，.calss,*,selector1,selector2,selectorN）
+<p>2	常用的JQ选择器有哪些？<br>
+基本选择器（#ID，element，.calss,*,selector1,selector2,selectorN）<br>
 层次选择器  基本过滤器选择器  内容  可见性  属性  表单  表单过滤  子元素  子元素过滤</p>
-<p>3	JQ中的选择器和CSS中的选择器有什么区别？
+<p>3	JQ中的选择器和CSS中的选择器有什么区别？<br>
 jq选择器获得的是dom(document object model)对象   css只是给标签加样式</p>
-<p>4	JQ中的选择器有什么优势？
+<p>4	JQ中的选择器有什么优势？<br>
 简了代码，节约了性能   强大的选择器   轻量级  完善的文档</p>
-<p>5	使用JQ选择器的过程中有哪些需要注意的地方？
+<p>5	使用JQ选择器的过程中有哪些需要注意的地方？<br>
 引号问题  特殊字符</p>
-<p>6	JQ对象和DOM对象是怎样转换的？
+<p>6	JQ对象和DOM对象是怎样转换的？<br>
 var domobj=$(&quot;div&quot;)[0];  domobj.innerHTML=&quot;asad&quot;</p>
-<p>7	JQ中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>G</mi><mi>E</mi><mi>T</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">提</mi><mi mathvariant="normal">交</mi><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">.GET()提交和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">G</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">提</span><span class="mord cjk_fallback">交</span><span class="mord cjk_fallback">和</span></span></span></span>.POST()提交有什么区别？
+<p>7	JQ中<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>G</mi><mi>E</mi><mi>T</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">提</mi><mi mathvariant="normal">交</mi><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">.GET()提交和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">G</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">提</span><span class="mord cjk_fallback">交</span><span class="mord cjk_fallback">和</span></span></span></span>.POST()提交有什么区别？<br>
 get会缓存起来有安全问题    储存比较小2k    post可以存很长时间</p>
 <p>8	在JQ中是如何操作样式的？ addClass()  removeClass()  toggleClass()</p>
 <p>9	一般用什么去递交数据，为什么？ submit</p>
-<p>10	在JQ中引入CSS有几种方式？
+<p>10	在JQ中引入CSS有几种方式？<br>
 $(&quot;&quot;).css(&quot;width&quot;:&quot;&quot;,&quot;&quot;:&quot;&quot;)   $(&quot;&quot;).css(function(){})</p>
-<p>11	在JQ中有哪些插入节点的方法，他们的区别是什么？
+<p>11	在JQ中有哪些插入节点的方法，他们的区别是什么？<br>
 append  appendto  prepend  prependto  after  before  insertAfter  insertBefore</p>
-<p>12	JQ中如何获取或设置属性？
+<p>12	JQ中如何获取或设置属性？<br>
 $(&quot;&quot;).attr(&quot;&quot;,&quot;&quot;) $().attr({&quot;&quot;:&quot;&quot;,&quot;&quot;:,&quot;&quot;,function(){})</p>
 <p>13	JQ中有哪些方法可以遍历节点？  each()   $('div').children()    $('div').find('')</p>
-<p>14	子元素选择器和后代选择器元素有什么区别？
+<p>14	子元素选择器和后代选择器元素有什么区别？<br>
 后代选择器是后代中所有的都包含    子元素是指其中的某个</p>
 <p>15	BEFORSEND方法功能是什么？ beforsend  ajax  向服务器发送请求前添加一些处理函数</p>
-<p>16	$(DOCUMENT).READY()方法和WINDOW.ONLOAD有什么区别？
-网页DOM都加载完后就可以运行 js可执行多次不被覆盖;
+<p>16	$(DOCUMENT).READY()方法和WINDOW.ONLOAD有什么区别？<br>
+网页DOM都加载完后就可以运行 js可执行多次不被覆盖;<br>
 网页内所有内容加载完后  第二次执行会被覆盖;</p>
-<p>17	JQ是如何处理缓存的？  ajax
+<p>17	JQ是如何处理缓存的？  ajax<br>
 1）通过<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>p</mi><mi>o</mi><mi>s</mi><mi>t</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">来</mi><mi mathvariant="normal">获</mi><mi mathvariant="normal">取</mi><mi mathvariant="normal">数</mi><mi mathvariant="normal">据</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">那</mi><mi mathvariant="normal">么</mi><mi mathvariant="normal">默</mi><mi mathvariant="normal">认</mi><mi mathvariant="normal">就</mi><mi mathvariant="normal">是</mi><mi mathvariant="normal">禁</mi><mi mathvariant="normal">用</mi><mi mathvariant="normal">缓</mi><mi mathvariant="normal">存</mi><mi mathvariant="normal">的</mi><mi mathvariant="normal">。</mi><mn>2</mn><mi mathvariant="normal">）</mi><mi mathvariant="normal">通</mi><mi mathvariant="normal">过</mi></mrow><annotation encoding="application/x-tex">.post()方法来获取数据，那么默认就是禁用缓存的。
-    2）通过</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">据</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">那</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">默</span><span class="mord cjk_fallback">认</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">禁</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">缓</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">。</span><span class="mord">2</span><span class="mord cjk_fallback">）</span><span class="mord cjk_fallback">通</span><span class="mord cjk_fallback">过</span></span></span></span>.get()方法来获取数据，可以通过设置时间戳来避免缓存。
+    2）通过</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">p</span><span class="mord mathdefault">o</span><span class="mord mathdefault">s</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">获</span><span class="mord cjk_fallback">取</span><span class="mord cjk_fallback">数</span><span class="mord cjk_fallback">据</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">那</span><span class="mord cjk_fallback">么</span><span class="mord cjk_fallback">默</span><span class="mord cjk_fallback">认</span><span class="mord cjk_fallback">就</span><span class="mord cjk_fallback">是</span><span class="mord cjk_fallback">禁</span><span class="mord cjk_fallback">用</span><span class="mord cjk_fallback">缓</span><span class="mord cjk_fallback">存</span><span class="mord cjk_fallback">的</span><span class="mord cjk_fallback">。</span><span class="mord">2</span><span class="mord cjk_fallback">）</span><span class="mord cjk_fallback">通</span><span class="mord cjk_fallback">过</span></span></span></span>.get()方法来获取数据，可以通过设置时间戳来避免缓存。<br>
 3）通过$.ajax方法来获取数据，只要设置参数cache:false即可。</p>
-<p>18	<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>G</mi><mi>E</mi><mi>T</mi><mi>S</mi><mi>C</mi><mi>R</mi><mi>I</mi><mi>P</mi><mi>T</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">.GETSCRIPT()方法和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">G</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">和</span></span></span></span>.GETJSON()方法有什么区别？
+<p>18	<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>G</mi><mi>E</mi><mi>T</mi><mi>S</mi><mi>C</mi><mi>R</mi><mi>I</mi><mi>P</mi><mi>T</mi><mo>(</mo><mo>)</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">和</mi></mrow><annotation encoding="application/x-tex">.GETSCRIPT()方法和</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault">G</span><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault" style="margin-right:0.07153em;">C</span><span class="mord mathdefault" style="margin-right:0.00773em;">R</span><span class="mord mathdefault" style="margin-right:0.07847em;">I</span><span class="mord mathdefault" style="margin-right:0.13889em;">P</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mclose">)</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">和</span></span></span></span>.GETJSON()方法有什么区别？<br>
 jQuery提供了<code><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">.</mi><mi>g</mi><mi>e</mi><mi>t</mi><mi>S</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>t</mi><mo>(</mo><mo>)</mo><mo>&lt;</mo><mi mathvariant="normal">/</mi><mi>c</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>&gt;</mo><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">来</mi><mi mathvariant="normal">直</mi><mi mathvariant="normal">接</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">载</mi><mi mathvariant="normal">.</mi><mi>j</mi><mi>s</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">与</mi><mi mathvariant="normal">加</mi><mi mathvariant="normal">载</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">个</mi><mi>H</mi><mi>T</mi><mi>M</mi><mi>L</mi><mi mathvariant="normal">片</mi><mi mathvariant="normal">段</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">简</mi><mi mathvariant="normal">单</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">便</mi><mi mathvariant="normal">，</mi><mi mathvariant="normal">并</mi><mi mathvariant="normal">且</mi><mi mathvariant="normal">不</mi><mi mathvariant="normal">需</mi><mi mathvariant="normal">要</mi><mi mathvariant="normal">对</mi><mi>J</mi><mi>a</mi><mi>v</mi><mi>a</mi><mi>S</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>t</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">进</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">处</mi><mi mathvariant="normal">理</mi><mi mathvariant="normal">，</mi><mi>J</mi><mi>a</mi><mi>v</mi><mi>a</mi><mi>S</mi><mi>c</mi><mi>r</mi><mi>i</mi><mi>p</mi><mi>t</mi><mi mathvariant="normal">文</mi><mi mathvariant="normal">件</mi><mi mathvariant="normal">会</mi><mi mathvariant="normal">自</mi><mi mathvariant="normal">动</mi><mi mathvariant="normal">执</mi><mi mathvariant="normal">行</mi><mi mathvariant="normal">。</mi><mi mathvariant="normal">与</mi><mi mathvariant="normal">其</mi><mi mathvariant="normal">他</mi><mi>A</mi><mi>j</mi><mi>a</mi><mi>x</mi><mi mathvariant="normal">方</mi><mi mathvariant="normal">法</mi><mi mathvariant="normal">一</mi><mi mathvariant="normal">样</mi><mi mathvariant="normal">，</mi><mo>&lt;</mo><mi>c</mi><mi>o</mi><mi>d</mi><mi>e</mi><mo>&gt;</mo></mrow><annotation encoding="application/x-tex">.getScript()&lt;/code&gt;方法来直接加载.js文件，
 与加载一个HTML片段一样简单方便，并且不需要对JavaScript文件进行处理
 ，JavaScript文件会自动执行。
-与其他Ajax方法一样，&lt;code&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">直</span><span class="mord cjk_fallback">接</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">载</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">s</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">与</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">载</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">L</span><span class="mord cjk_fallback">片</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">简</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">便</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">并</span><span class="mord cjk_fallback">且</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">需</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">对</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">进</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">处</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">，</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">会</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">执</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">与</span><span class="mord cjk_fallback">其</span><span class="mord cjk_fallback">他</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">，</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span></span></span>.getScript()</code>方法也有回调函数，
-它会在JavaScript文件成功载入后运行。例如像载入jQuery官方颜色动画插件（jquery.color.js），
-成功后给元素绑定颜色变化动画，就可以用到<code>$.getScript()</code>方法的回调函数。
+与其他Ajax方法一样，&lt;code&gt;</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.03588em;">g</span><span class="mord mathdefault">e</span><span class="mord mathdefault">t</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mopen">(</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">/</span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.8777699999999999em;vertical-align:-0.19444em;"></span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">来</span><span class="mord cjk_fallback">直</span><span class="mord cjk_fallback">接</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">载</span><span class="mord">.</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">s</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">与</span><span class="mord cjk_fallback">加</span><span class="mord cjk_fallback">载</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">个</span><span class="mord mathdefault" style="margin-right:0.08125em;">H</span><span class="mord mathdefault" style="margin-right:0.13889em;">T</span><span class="mord mathdefault" style="margin-right:0.10903em;">M</span><span class="mord mathdefault">L</span><span class="mord cjk_fallback">片</span><span class="mord cjk_fallback">段</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">简</span><span class="mord cjk_fallback">单</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">便</span><span class="mord cjk_fallback">，</span><span class="mord cjk_fallback">并</span><span class="mord cjk_fallback">且</span><span class="mord cjk_fallback">不</span><span class="mord cjk_fallback">需</span><span class="mord cjk_fallback">要</span><span class="mord cjk_fallback">对</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">进</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">处</span><span class="mord cjk_fallback">理</span><span class="mord cjk_fallback">，</span><span class="mord mathdefault" style="margin-right:0.09618em;">J</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.03588em;">v</span><span class="mord mathdefault">a</span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mord mathdefault">c</span><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="mord mathdefault">i</span><span class="mord mathdefault">p</span><span class="mord mathdefault">t</span><span class="mord cjk_fallback">文</span><span class="mord cjk_fallback">件</span><span class="mord cjk_fallback">会</span><span class="mord cjk_fallback">自</span><span class="mord cjk_fallback">动</span><span class="mord cjk_fallback">执</span><span class="mord cjk_fallback">行</span><span class="mord cjk_fallback">。</span><span class="mord cjk_fallback">与</span><span class="mord cjk_fallback">其</span><span class="mord cjk_fallback">他</span><span class="mord mathdefault">A</span><span class="mord mathdefault" style="margin-right:0.05724em;">j</span><span class="mord mathdefault">a</span><span class="mord mathdefault">x</span><span class="mord cjk_fallback">方</span><span class="mord cjk_fallback">法</span><span class="mord cjk_fallback">一</span><span class="mord cjk_fallback">样</span><span class="mord cjk_fallback">，</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&lt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:0.73354em;vertical-align:-0.0391em;"></span><span class="mord mathdefault">c</span><span class="mord mathdefault">o</span><span class="mord mathdefault">d</span><span class="mord mathdefault">e</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span></span></span></span>.getScript()</code>方法也有回调函数，<br>
+它会在JavaScript文件成功载入后运行。例如像载入jQuery官方颜色动画插件（jquery.color.js），<br>
+成功后给元素绑定颜色变化动画，就可以用到<code>$.getScript()</code>方法的回调函数。<br>
 19	<span class='katex-error' title='ParseError: KaTeX parse error: Expected &#039;EOF&#039;, got &#039;#&#039; at position 3: (&quot;#̲MSG&quot;).TEXT();和'>(&quot;#MSG&quot;).TEXT();和</span>(&quot;#MSG&quot;).TEST(&quot;<B>NEW CONTENT</B>&quot;);有什么区别？</p>
-<p>20	RADIO单选组的第二个元素为当前选中值，该如何获取？
-var aa = $('#wrap input[name=&quot;payMethod&quot;]:checked').val();
+<p>20	RADIO单选组的第二个元素为当前选中值，该如何获取？<br>
+var aa = $('#wrap input[name=&quot;payMethod&quot;]:checked').val();<br>
 checkbox       checked</p>
-<p>21	选择器中ID,CLASS有什么区别？
+<p>21	选择器中ID,CLASS有什么区别？<br>
 当只需要选择一个元素时，使用ID选择器，如果需要选择具有相同 CSS class的元素，就要用class 选择器。</p>
 <p>22	JQ表单提交前有哪些校验方法？</p>
 <p>23	JQ苦衷的$() 是什么意思？<br>
 $就是jquery对象    $()=jquery() 可以传参</p>
-<p>24	网页上有五个<DIV>元素，如何使用JQ来选择他们？
+<p>24	网页上有五个<DIV>元素，如何使用JQ来选择他们？<br>
 $(&quot;div&quot;)[0,1,2,3,4]</p>
-<p>25	JQ中的ID选择器和CLASS选择器有何不同？
+<p>25	JQ中的ID选择器和CLASS选择器有何不同？<br>
 当只需要选择一个元素时，使用ID选择器，如果需要选择具有相同 CSS class的元素，就要用class 选择器。</p>
-<p>26	如何在点击一个按钮时使用JQ隐藏一个图片？
+<p>26	如何在点击一个按钮时使用JQ隐藏一个图片？<br>
 $(&quot;button&quot;).hidden()</p>
-<p>27	$(DOCUMENT).READY()是什么函数？为什么更要用它？
+<p>27	$(DOCUMENT).READY()是什么函数？为什么更要用它？<br>
 网页加载完后运行  ,有些特效需要等网页加载后进行</p>
-<p>28	JAVASCRIPT WINDOW.ONLOAD时间和JQ READY函数有什么不同？
-jq中的ready 网页DOM都加载完后就可以运行 可执行多次不被覆盖;
+<p>28	JAVASCRIPT WINDOW.ONLOAD时间和JQ READY函数有什么不同？<br>
+jq中的ready 网页DOM都加载完后就可以运行 可执行多次不被覆盖;<br>
 window.onload网页内所有内容加载完后  第二次执行会被覆盖;</p>
-<p>29	如何找到所有HTML SELECT 标签中的选项？
+<p>29	如何找到所有HTML SELECT 标签中的选项？<br>
 $('.class option:selected')</p>
-<p>30	JQ里的EACH()是什么函数？你是如何使用它的？
+<p>30	JQ里的EACH()是什么函数？你是如何使用它的？<br>
 遍历   $(&quot;li&quot;).each(function(){alert(aa)});</p>
-<p>31	你是如何将一个HTML元素添加到DOM树中的？
-append() appendTo() prepend() prependto() append() appendto() after() before()
+<p>31	你是如何将一个HTML元素添加到DOM树中的？<br>
+append() appendTo() prepend() prependto() append() appendto() after() before()<br>
 insertBefore() insertAfter()</p>
 <p>32	如何用JQ代码选择所有在段落内部的超链接？$(&quot;a&quot;)</p>
-<p>33	$(THIS)和THIS关键字在JQ中有何不同？
-代表得对象不同
-$(this) 返回一个 jQuery 对象，你可以对它调用多个 jQuery 方法，比如用 text() 获取文本，用val() 获取值等等。
-而 this 代表当前元素，它是 JavaScript 关键词中的一个，表示上下文中的当前 DOM 元素。
+<p>33	$(THIS)和THIS关键字在JQ中有何不同？<br>
+代表得对象不同<br>
+$(this) 返回一个 jQuery 对象，你可以对它调用多个 jQuery 方法，比如用 text() 获取文本，用val() 获取值等等。<br>
+而 this 代表当前元素，它是 JavaScript 关键词中的一个，表示上下文中的当前 DOM 元素。<br>
 你不能对它调用 jQuery 方法，直到它被 $() 函数包裹，例如 $(this)。</p>
-<p>34	如何使用一个可点击的链接来替换页面中任何的URL？
+<p>34	如何使用一个可点击的链接来替换页面中任何的URL？<br>
 window.location.href</p>
 <p>35	如何检查图像是否已经被完全加载进来？</p>
-<p>36	如何利用JQ将页面上的所有元素边框设置为2PX宽的虚线？
+<p>36	如何利用JQ将页面上的所有元素边框设置为2PX宽的虚线？<br>
 $ (&quot;*&quot;).css (&quot;border&quot;, &quot;2px dashed&quot;);</p>
 <p>37	删除元素主要方法有几种？这两种方法的区别是什么？<br>
-删除匹配的元素集合中所有的子节点。
+删除匹配的元素集合中所有的子节点。<br>
 从DOM中删除所有匹配的元素。  这种比较精准</p>
-<p>38	内部插入的方法有哪些？并做文字说明
+<p>38	内部插入的方法有哪些？并做文字说明<br>
 append() appendto() prependto() prepend()</p>
-<p>39	外部插入的方法有哪些？并做文字说明
+<p>39	外部插入的方法有哪些？并做文字说明<br>
 after()  before()  insertBefore()  insertAfter()</p>
-<p>40	写出五个JQ事件
+<p>40	写出五个JQ事件<br>
 blur focus click mousemove mouseup mousedown</p>
-<p>41	JQ的动画效果有哪些？分别概述其实现效果
-基本 show()显示 hide()隐藏
-滑动 slideDown()下滑 slideUp()上滑 slideToggle()滑动
+<p>41	JQ的动画效果有哪些？分别概述其实现效果<br>
+基本 show()显示 hide()隐藏<br>
+滑动 slideDown()下滑 slideUp()上滑 slideToggle()滑动<br>
 淡入淡出 fadeIn()淡入  fadeOut()淡出  fadeToggle()淡入淡出切换   fadeTo() 但出到几</p>
-<p>42	&quot;JQ如何复制一个元素？不同参数代表什么意义？
+<p>42	&quot;JQ如何复制一个元素？不同参数代表什么意义？<br>
 一个布尔值（true 或者 false）指示事件处理函数是否会被复制。</p>
 <pre><code>2:一个布尔值，指示是否对事件处理程序和克隆的元素的所有子元素的数据应该被复制
 </code></pre>
-<p>44	在JQ中操作元素的类名的方法有那几个？
+<p>44	在JQ中操作元素的类名的方法有那几个？<br>
 addClass()  removeClass()  toggleClass()<br>
 hasClass()方法检查被选元素是否包含指定的类名称。如果被选元素包含指定的类，该方法返回 &quot;true&quot;。</p>
-<p>45	JQ中怎么获取属性和删除属性？
+<p>45	JQ中怎么获取属性和删除属性？<br>
 prop()  attr()      |    removeProp() removeAttr()</p>
-<p>46	JQ替换节点的方法有哪些？
+<p>46	JQ替换节点的方法有哪些？<br>
 replaceWith()  replaceAll()</p>
-<p>47	JQ获取子元素、取得匹配元素后面紧邻的同辈元素、取得匹配元素前面紧邻的同辈元素、取得匹配元素前后的所有同辈元素的方法分别是什么？
+<p>47	JQ获取子元素、取得匹配元素后面紧邻的同辈元素、取得匹配元素前面紧邻的同辈元素、取得匹配元素前后的所有同辈元素的方法分别是什么？<br>
 children()      next()        prev()      siblings()</p>
-<p>48	JQ获取元素的定位值、在当前视口的相对偏移
+<p>48	JQ获取元素的定位值、在当前视口的相对偏移<br>
 position()              offset()</p>
 <p>49	简述$()有那些用法并举例说明</p>
-<p>插件	JQuery.fn.extend({checked:function(){},check2..})	  $().checked()
+<p>插件	JQuery.fn.extend({checked:function(){},check2..})	  $().checked()<br>
 JQuert.extend({checked:function(){}})	  Jquery.checked()</p>
 <p>50	举例说明jquery对象和dom对象是怎样转换的<br>
 jquery转化为dom对象 $().get(0)<br>
 dom转化为jquery对象 var cr = document.getElementsByTagName(&quot;p&quot;)  var $cr = $(cr);</p>
 <p>51	jquery中的动画函数有哪些？举例说明<br>
 animate() 自定义动画  fadeIn（）淡入效果  fadeOut 淡出效果 fadeTo 渐进的方从不透明到指定的不透明 show() 显示效果  hide() 隐藏效果   slideDown() slideUp() slideToggle()  滑上滑下切换   fadeToggle（） 淡入淡出效果</p>
-<p>52	jquery的优点有哪些？
+<p>52	jquery的优点有哪些？<br>
 轻量级 强大的选择器  兼容多中浏览器  dom的封装  链式操作方式  丰富的插件</p>
 <p>53	jquery插件有哪些？举例并说明用途<br>
-js/jquery-ui-1.8.18.custom.min.js    jquery-ui的库文件
-js/jquery-ui-timepicker-addon.js     jquery-ui的时间控件
+js/jquery-ui-1.8.18.custom.min.js    jquery-ui的库文件<br>
+js/jquery-ui-timepicker-addon.js     jquery-ui的时间控件<br>
 js/jquery-ui-sliderAccess.js         jquery-ui的slider控件，就是滑块的那个</p>
-<p>54	jquery中的查找节点函数有哪些？举例说明用途                                                                               $(selector).parent(selector)：获取父节点
-$(selector).parentNode：以node[]的形式存放父节点，如果没有父节点，则返回空数组
+<p>54	jquery中的查找节点函数有哪些？举例说明用途                                                                               $(selector).parent(selector)：获取父节点<br>
+$(selector).parentNode：以node[]的形式存放父节点，如果没有父节点，则返回空数组<br>
 $(selector).parents(selector)：获取祖先元素</p>
-<p>二、jQuery的兄弟节点查找方法
-$(selector).prev() / $(selector).previousSibling()：获取上一个兄弟节点
-$(selector).prevAll()：获取之前所用的兄弟节点
-$(selector).next() / $(selector).nextSibling()：获取下一个兄弟节点
-$(selector).nextAll()：获取之后所有的兄弟节点
-$(selector).siblings()：获取所有的兄弟节点
-三、jQuery的子节点查找方法
-$(selector).children()：获取所有直接子节点
-$(selector).childNodes：以node[]的形式存放子节点，如果没有子节点，则返回空数组
-$(selector).firstChild：获取第一个子节点
-$(selector).lastChild：获取最后一个子节点
-$(selector).contents：获取包含的所有内容，包括空文本
-$(selector).removeChild(selector)：删除并返回指定的子节点
+<p>二、jQuery的兄弟节点查找方法<br>
+$(selector).prev() / $(selector).previousSibling()：获取上一个兄弟节点<br>
+$(selector).prevAll()：获取之前所用的兄弟节点<br>
+$(selector).next() / $(selector).nextSibling()：获取下一个兄弟节点<br>
+$(selector).nextAll()：获取之后所有的兄弟节点<br>
+$(selector).siblings()：获取所有的兄弟节点<br>
+三、jQuery的子节点查找方法<br>
+$(selector).children()：获取所有直接子节点<br>
+$(selector).childNodes：以node[]的形式存放子节点，如果没有子节点，则返回空数组<br>
+$(selector).firstChild：获取第一个子节点<br>
+$(selector).lastChild：获取最后一个子节点<br>
+$(selector).contents：获取包含的所有内容，包括空文本<br>
+$(selector).removeChild(selector)：删除并返回指定的子节点<br>
 $(selector).replaceChild(selector)：替换并返回指定的子节点</p>
-<p>55	jquery中如何添加、删除、切换类名？jquery的效果有哪些？
-addClass() removerClass() toggleClass()
-自定义动画：animate()  滑动 slideDown()  slideUp() slideToggle()  淡入淡出 fadeIn fadeOut fadeTo fadeToggle
+<p>55	jquery中如何添加、删除、切换类名？jquery的效果有哪些？<br>
+addClass() removerClass() toggleClass()<br>
+自定义动画：animate()  滑动 slideDown()  slideUp() slideToggle()  淡入淡出 fadeIn fadeOut fadeTo fadeToggle<br>
 show  hide</p>
-<p>56	jquery如何中添加、删除、复制、插入节点的方法是什么？
+<p>56	jquery如何中添加、删除、复制、插入节点的方法是什么？<br>
 append() remove() clone() prepend() after() before() insertAfter()</p>
-<p>57	jquery中attr()、val()、text()、html() 的用法分别是什么？
-attr() 获取匹配的元素集合中的第一个元素的属性的值 或 设置每一个匹配元素的一个或多个属性。
-val() 获得匹配元素的当前值。
+<p>57	jquery中attr()、val()、text()、html() 的用法分别是什么？<br>
+attr() 获取匹配的元素集合中的第一个元素的属性的值 或 设置每一个匹配元素的一个或多个属性。<br>
+val() 获得匹配元素的当前值。<br>
 input的输入框<br>
-text() 取得所有匹配元素的内容。
+text() 取得所有匹配元素的内容。<br>
 html()取得第一个匹配元素的html内容</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[SQL 语句]]></title>
-        <id>https://XinLingJ.github.io//post/sql-yu-ju</id>
-        <link href="https://XinLingJ.github.io//post/sql-yu-ju">
+        <id>https://XinLingJ.github.io/post/sql-yu-ju/</id>
+        <link href="https://XinLingJ.github.io/post/sql-yu-ju/">
         </link>
         <updated>2019-11-26T13:22:20.000Z</updated>
         <content type="html"><![CDATA[<pre><code>                        增                                      删                                                 改                                                 查
 </code></pre>
-<p>库           create database  库名；   drop  database 库名；       alter database 库名 set charset=utf-8;     show databases;
-表	          create table 表名;	           drop  table  表名;               alter  table  表名 ;                                      show tables;
-字段       alter table                 alter  table
+<p>库           create database  库名；   drop  database 库名；       alter database 库名 set charset=utf-8;     show databases;<br>
+表	          create table 表名;	           drop  table  表名;               alter  table  表名 ;                                      show tables;<br>
+字段       alter table                 alter  table<br>
 数据</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[JS 试题]]></title>
-        <id>https://XinLingJ.github.io//post/js-shi-ti</id>
-        <link href="https://XinLingJ.github.io//post/js-shi-ti">
+        <id>https://XinLingJ.github.io/post/js-shi-ti/</id>
+        <link href="https://XinLingJ.github.io/post/js-shi-ti/">
         </link>
         <updated>2019-11-26T10:23:55.000Z</updated>
-        <content type="html"><![CDATA[<p>html5实现web程序后台运行的技术是 worker多线程
-1	JS的组成有：ecmascript 基础语法、DOM、BOM
-2	访问指定DOM节点的方法有: getElementById(&quot;&quot;)、getElementsByTagName()
-3	键盘事件中包括: onkeydown、onkeyup、onkeypress
-4	定义数组的方法有: var a = new Array();a=[];a=[3,2,3];
-5	DOM结构的顶层元素是: html
-6	每隔2秒执行一次指定函数的方法是: setInterval(function(){ },2000)
-7	阻止冒泡的方法有: event.stopProragation event.cancelBubble=true
-8	JS的基本数据类型有:String、Number、boolean、Null、Undefined
-9	为组件添加类属性的方法是: id.setAttribute('class','val');
-10	JS中通过ID获取元素的写法是: document.getElementById()
-11	根据变量的作用域，可以将变量分为 局部 和 全局
-12	字符串对象中，可以用 replace(oldReg, newStr);  splice(idx, len, newStr1,newStr2); 方法替换字符串	
-13	JS实现继承父元素的构造函数用的是( 原型链 子类.prototype=new 父类()；)方法	
-14	如果只声明变量，未对其赋值默认为_undefined_	
-15	JS获取对象属性的方法是_.<em>和</em>[]_	
-16	JS是运行在_客户端_端的脚本语言	
-17	通过_Math.round(7.25)<em>把7.25四舍五入为最接近的整数？	
-18	JS中可以打开名为&quot;window2&quot;的新窗口的方法是_open(url,&quot;window2&quot;)</em>	
-19	表单表示下拉列表的标签是_select_，默认选中某项的属性是_selected_	
-20	&quot;阅读以下代码，在页面中显示的结果是_bc_
+        <content type="html"><![CDATA[<p>html5实现web程序后台运行的技术是 worker多线程<br>
+1	JS的组成有：ecmascript 基础语法、DOM、BOM<br>
+2	访问指定DOM节点的方法有: getElementById(&quot;&quot;)、getElementsByTagName()<br>
+3	键盘事件中包括: onkeydown、onkeyup、onkeypress<br>
+4	定义数组的方法有: var a = new Array();a=[];a=[3,2,3];<br>
+5	DOM结构的顶层元素是: html<br>
+6	每隔2秒执行一次指定函数的方法是: setInterval(function(){ },2000)<br>
+7	阻止冒泡的方法有: event.stopProragation event.cancelBubble=true<br>
+8	JS的基本数据类型有:String、Number、boolean、Null、Undefined<br>
+9	为组件添加类属性的方法是: id.setAttribute('class','val');<br>
+10	JS中通过ID获取元素的写法是: document.getElementById()<br>
+11	根据变量的作用域，可以将变量分为 局部 和 全局<br>
+12	字符串对象中，可以用 replace(oldReg, newStr);  splice(idx, len, newStr1,newStr2); 方法替换字符串	<br>
+13	JS实现继承父元素的构造函数用的是( 原型链 子类.prototype=new 父类()；)方法	<br>
+14	如果只声明变量，未对其赋值默认为_undefined_	<br>
+15	JS获取对象属性的方法是_.<em>和</em>[]_	<br>
+16	JS是运行在_客户端_端的脚本语言	<br>
+17	通过_Math.round(7.25)<em>把7.25四舍五入为最接近的整数？	<br>
+18	JS中可以打开名为&quot;window2&quot;的新窗口的方法是_open(url,&quot;window2&quot;)</em>	<br>
+19	表单表示下拉列表的标签是_select_，默认选中某项的属性是_selected_	<br>
+20	&quot;阅读以下代码，在页面中显示的结果是_bc_<br>
 var s=&quot;abcdef  alert(s.substr(1,2))&quot;</p>
 <pre><code>	21	单元格纵向合并所有的属性是:rowspan ，默认选中某项的属性是: checked
 22	当i等于5时执行一些语句的条件语句是:if(i==5){}
@@ -442,56 +474,56 @@ var s=&quot;abcdef  alert(s.substr(1,2))&quot;</p>
     </entry>
     <entry>
         <title type="html"><![CDATA[js 笔记]]></title>
-        <id>https://XinLingJ.github.io//post/js-bi-ji</id>
-        <link href="https://XinLingJ.github.io//post/js-bi-ji">
+        <id>https://XinLingJ.github.io/post/js-bi-ji/</id>
+        <link href="https://XinLingJ.github.io/post/js-bi-ji/">
         </link>
         <updated>2019-11-25T02:12:12.000Z</updated>
-        <content type="html"><![CDATA[<p><strong>js组成三大核心内容</strong>
-（1）ECMAScript 2.3.BOM（browser object document ）是（欧洲计算机制造商协会）它规定了js的语法标准。
-（2）DOM（document object model）是文档对象模型，规定了文档的显示结构，可以轻松地删除、添加和替换节点
-（3）BOM是浏览器对象模型，就是浏览器自带的一些功能样式，如搜索框，设置，等学习浏览器窗口交互的对象
-1、核心（ECMAScript）：描述了JS的语法和基本对象。
-2、文档对象模型 （DOM）：处理网页内容的方法和接口。
+        <content type="html"><![CDATA[<p><strong>js组成三大核心内容</strong><br>
+（1）ECMAScript 2.3.BOM（browser object document ）是（欧洲计算机制造商协会）它规定了js的语法标准。<br>
+（2）DOM（document object model）是文档对象模型，规定了文档的显示结构，可以轻松地删除、添加和替换节点<br>
+（3）BOM是浏览器对象模型，就是浏览器自带的一些功能样式，如搜索框，设置，等学习浏览器窗口交互的对象<br>
+1、核心（ECMAScript）：描述了JS的语法和基本对象。<br>
+2、文档对象模型 （DOM）：处理网页内容的方法和接口。<br>
 3、浏览器对象模型（BOM）：与浏览器交互的方法和接口。</p>
 <pre><code>	      首先，网页是由一个一个xml的节点构成，页面加载成一刻树状。所以我们通过js操作元素的节点，对元素的增、删、改、查，对元素的属性、值、事件等操作属于DOM操作（ document object model 文档对象模型）。对浏览器框架窗口对象的操作属于BOM操作（Browser Object Model 浏览器对象模型）。js里面还有语法、类型、语句、关键字、运算符、对象等一些是ECMAScript。
 </code></pre>
-<p>DOM节点类型
-　　DOM规定文档中的每个成分都是一个节点（Node）,HTML文档可以说由节点构成的集合，DOM节点有:
-　　1. 元素节点（Element）：上图中<html>、<body>、<p>等都是元素节点，即标签。
-　　2. 文本节点（Text）:向用户展示的内容，如<li>...</li>中的JavaScript、DOM、CSS等文本。
-　　3. 属性节点（Attr）:元素属性，元素才有属性,如<a>标签的链接属性href=&quot;http://www.baidu.com&quot;。
-DOM节点三大属性（XML DOM）
-　　1. nodeName：元素节点、属性节点、文本节点分别返回元素的名称、属性的名称和#text的字符串。
-　 2. nodeType：元素节点、属性节点、文本节点的nodeType值分别为1、2、3.、
+<p>DOM节点类型<br>
+　　DOM规定文档中的每个成分都是一个节点（Node）,HTML文档可以说由节点构成的集合，DOM节点有:<br>
+　　1. 元素节点（Element）：上图中<html>、<body>、<p>等都是元素节点，即标签。<br>
+　　2. 文本节点（Text）:向用户展示的内容，如<li>...</li>中的JavaScript、DOM、CSS等文本。<br>
+　　3. 属性节点（Attr）:元素属性，元素才有属性,如<a>标签的链接属性href=&quot;http://www.baidu.com&quot;。<br>
+DOM节点三大属性（XML DOM）<br>
+　　1. nodeName：元素节点、属性节点、文本节点分别返回元素的名称、属性的名称和#text的字符串。<br>
+　 2. nodeType：元素节点、属性节点、文本节点的nodeType值分别为1、2、3.、<br>
 　　3. nodeValue：元素节点、属性节点、文本节点的返回值分别为null、属性值和文本节点内容。</p>
-<p>DOM常见操作
-1. 获取/设置 节点--包括获取/设置 元素节点、属性节点、文本节点 ：
-　　获取元素节点：document.getElementById(&quot;ID&quot;)；
-　　获取属性节点：getAttributeNode(attrName)；
-　　获取文本节点：parentNode/childNodes；
-　　设置元素节点： innerHTML属性（innerText属性返回去掉标签的innerHTML）；
-　　设置属性节点： setAttribute(attrName,value);
-　　设置文本节点：通过改变文本节点的nodeValue来设置文本节点的值；
-2. 删除节点
-　　删除元素节点： removeChild();
-　　删除属性节点：removeAttribute();
-　　删除文本节点：textNode.nodeValue='';
-3. 创建和添加节点
-　  创建节点：通过document对象的createElement(eleName)、createTextNode(nodeValue)方法可分别创建元素节点和文本节点。属性节点也有自己的create方法，但是用的少，直接用元素节点的setAttribute()方法即可添加属性。
+<p>DOM常见操作<br>
+1. 获取/设置 节点--包括获取/设置 元素节点、属性节点、文本节点 ：<br>
+　　获取元素节点：document.getElementById(&quot;ID&quot;)；<br>
+　　获取属性节点：getAttributeNode(attrName)；<br>
+　　获取文本节点：parentNode/childNodes；<br>
+　　设置元素节点： innerHTML属性（innerText属性返回去掉标签的innerHTML）；<br>
+　　设置属性节点： setAttribute(attrName,value);<br>
+　　设置文本节点：通过改变文本节点的nodeValue来设置文本节点的值；<br>
+2. 删除节点<br>
+　　删除元素节点： removeChild();<br>
+　　删除属性节点：removeAttribute();<br>
+　　删除文本节点：textNode.nodeValue='';<br>
+3. 创建和添加节点<br>
+　  创建节点：通过document对象的createElement(eleName)、createTextNode(nodeValue)方法可分别创建元素节点和文本节点。属性节点也有自己的create方法，但是用的少，直接用元素节点的setAttribute()方法即可添加属性。<br>
 　  添加节点：appendChild()和insertBefore()</p>
-<p>BOM对象操作windows对象：
-Window -对象是 JavaScript层级中的顶层对象，代表一个浏览器窗口或一个框架，会在 <body>或<frameset>每次出现时被自动创建。在这里就只列举一些主干操作。
-window.innerHeight - 浏览器窗口的内部高度
-window.innerWidth - 浏览器窗口的内部宽度
-window.open() - 打开新窗口
-window.close() - 关闭当前窗口
-window.moveTo() - 移动当前窗口
-window.resizeTo() - 调整当前窗口的尺寸....
-window.event -事件的状态，例如触发event对象的元素、鼠标的位置及状态、按下的键等等。event对象只在事件发生的过程中才有效。event的某些属性只对特定的事件有意义
-window.document -文档对象，操作文档的基础对象
-document.getElementById(&quot;id&quot;);根据id找最多找一个；
-document.getElementByNames(&quot;name&quot;);根据name找，找出来的是数组；
-document.getElementByTagNames(&quot;name&quot;)；根据表签名找，找出来的是数组；
+<p>BOM对象操作windows对象：<br>
+Window -对象是 JavaScript层级中的顶层对象，代表一个浏览器窗口或一个框架，会在 <body>或<frameset>每次出现时被自动创建。在这里就只列举一些主干操作。<br>
+window.innerHeight - 浏览器窗口的内部高度<br>
+window.innerWidth - 浏览器窗口的内部宽度<br>
+window.open() - 打开新窗口<br>
+window.close() - 关闭当前窗口<br>
+window.moveTo() - 移动当前窗口<br>
+window.resizeTo() - 调整当前窗口的尺寸....<br>
+window.event -事件的状态，例如触发event对象的元素、鼠标的位置及状态、按下的键等等。event对象只在事件发生的过程中才有效。event的某些属性只对特定的事件有意义<br>
+window.document -文档对象，操作文档的基础对象<br>
+document.getElementById(&quot;id&quot;);根据id找最多找一个；<br>
+document.getElementByNames(&quot;name&quot;);根据name找，找出来的是数组；<br>
+document.getElementByTagNames(&quot;name&quot;)；根据表签名找，找出来的是数组；<br>
 document.getElementByClassNames(&quot;name&quot;)；根据表classname找，找出来的是数组；</p>
 <pre><code>BOM（浏览器对象模型）
 1、window对象
@@ -578,9 +610,9 @@ window.frames -返回窗口中所有命名的框架
 Window.parent -父窗口（如果窗口是顶级窗口，那么parent==self==top）
 Window.top -最顶级父窗口（有的窗口中套了好几层frameset或者iframe）
 </code></pre>
-<p>4、srceen对象
-window.screen -用户屏幕信息说明：用处不大，用于站点分析
-window.screen.availWidth - 可用的屏幕宽度
+<p>4、srceen对象<br>
+window.screen -用户屏幕信息说明：用处不大，用于站点分析<br>
+window.screen.availWidth - 可用的屏幕宽度<br>
 window.screen.availHeight - 可用的屏幕高度</p>
 <pre><code>Window.self -当前窗口（等价window）
 Window.opener -实际上就是通过window.open打开的窗体的父窗体
@@ -596,23 +628,23 @@ history.forward() - 与在浏览器中点击按钮向前相同  前一个网页
 history.go() - 可以在用户的历史记录中任意跳转
 history.go(-1) - 回退到前一个页面
 </code></pre>
-<p>DOM和BOM区别：
-DOM描述了处理网页内容的方法和接口，BOM描述了与浏览器进行交互的方法和接口
-1) DOM是W3C的标准[所有浏览器都遵循的标准];
-2) DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）;
-3) BOM 各个浏览器厂商根据DOM在各自浏览器上的实现;[表现为不同浏览器定义有差别,实现方式不同;
-4) BOM 主要处理浏览器窗口和框架，
-不过通常浏览器特定的 JavaScript 扩展都被看做 BOM 的一部分。
-这些扩展包括
-window(窗口)、location（地址栏内容相关）、history（历史）、screen（屏幕）、navigator（有很多浏览器相关的内容，通常判断浏览器类型都是通过这个对象）
-DOM 是为了操作文档出现的 API，document 是其的一个对象；
+<p>DOM和BOM区别：<br>
+DOM描述了处理网页内容的方法和接口，BOM描述了与浏览器进行交互的方法和接口<br>
+1) DOM是W3C的标准[所有浏览器都遵循的标准];<br>
+2) DOM（文档对象模型）是 HTML 和 XML 的应用程序接口（API）;<br>
+3) BOM 各个浏览器厂商根据DOM在各自浏览器上的实现;[表现为不同浏览器定义有差别,实现方式不同;<br>
+4) BOM 主要处理浏览器窗口和框架，<br>
+不过通常浏览器特定的 JavaScript 扩展都被看做 BOM 的一部分。<br>
+这些扩展包括<br>
+window(窗口)、location（地址栏内容相关）、history（历史）、screen（屏幕）、navigator（有很多浏览器相关的内容，通常判断浏览器类型都是通过这个对象）<br>
+DOM 是为了操作文档出现的 API，document 是其的一个对象；<br>
 BOM 是为了操作浏览器出现的 API，window 是其的一个对象。</p>
 ]]></content>
     </entry>
     <entry>
         <title type="html"><![CDATA[vue-react 基础]]></title>
-        <id>https://XinLingJ.github.io//post/vue-react-ji-chu</id>
-        <link href="https://XinLingJ.github.io//post/vue-react-ji-chu">
+        <id>https://XinLingJ.github.io/post/vue-react-ji-chu/</id>
+        <link href="https://XinLingJ.github.io/post/vue-react-ji-chu/">
         </link>
         <updated>2019-11-23T05:38:41.000Z</updated>
         <content type="html"><![CDATA[<xpm>
@@ -734,146 +766,5 @@ BOM 是为了操作浏览器出现的 API，window 是其的一个对象。</p>
         组件将要卸载时调用，一些事件监听和定时器需要在此时清除。
     &lt;/xmp&gt;</code></pre>
 ]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[数据类型问题]]></title>
-        <id>https://XinLingJ.github.io//post/shu-ju-lei-xing-wen-ti</id>
-        <link href="https://XinLingJ.github.io//post/shu-ju-lei-xing-wen-ti">
-        </link>
-        <updated>2019-11-23T03:56:23.000Z</updated>
-        <content type="html"><![CDATA[<ul style="list-style-type:none">
-            <li>
-                <h1 style="text-align: center;">关于数据类型的前端面试题总结</h1>
-            </li>
-            <li><b> JavaScript中的数据类型都有哪些？</b></li>
-            <li>----数据类型有两种：原始数据类型（又称基础数据类型、可变数据类型）和复杂数据类型（又称对象、不可变数据类型）。</li>
-            <li>----原始数据类型包括：undefined，null，数字，字符串，布尔类型，Symbol（ES6 新加入的类型）</li>
-            <li>----复杂数据类型包括：包括对象</li>
-            <li>--------------------其中对象包括：内部对象（Array、String等），宿主对象（window）和自定义对象。</li>
-            <hr />
-            <li><b>如何判断一个变量是否为数组？</b></li>
-            <li>如果是ES5环境的话，可以用Array.isArray()方法。</li>
-            <li>如果不确定运行环境的话，可以用Object.prototype.toString.call()的方法来确认，如果结果是[object Array]则认为数组。</li>
-            <hr />
-            <li><b>undefined和null的相同与不同？</b></li>
-            <li>----相同点：这两个数据类型都只有一个值,都没有方法,都表示“无”，转化为布尔类型时，都是false</li>
-            <li>----不同点：</li>
-            <li>------null是一个关键字，而undefined不是。</li>
-            <li>------null的实质是一个空的对象，而undefined是window的一个属性。</li>
-            <li>------进行数字类型转换时，null返回0，undefined返回NaN</li>
-            <hr />
-            <li><b>隐式类型转化的时候，JavaScript底层都做了哪些处理？</b></li>
-            <li>----对象转成原始数据类型时，先调用对象的valueOf方法，如果返回结果不是原始数据类型的值，再调用toString方法。</li>
-            <li>----原始类型转原始类型时，直接调用对应的构造函数进行转换，如Number('123')，String(true),Boolean(0)。</li>
-            <hr />
-            <li><b>有哪些值转化成布尔型后为false？</b></li>
-            <li>----包括下面这个六种：</li>
-            <li>0、-0、undefined、null、空字符串、NaN</li>
-            <hr />
-            <li><b>讲讲ES6中的Symbol？</b></li>
-            <li>----Symbol是ES6中新加的一个原始类型，他的每个值都是唯一的，即使是用两个完全一样的变量构造出来的Symbol也不相等。</li>
-            <li>----原始类型传入Symbol方法时，会进行转换成字符串 再转成Symbol类型值；如果是对象的话，会先调用改对象的toString方法再转成Symbol类型的值。</li>
-            <li>----Symbol是最大的用处是用来消除“魔法字符串”的。</li>
-            <hr />
-            <li><b>如何把字符串转换为数组？</b></li>
-            <li>是如果是ES6，可以用Array.from()方法。</li>
-            <li>如果不确定环境的话，可以用Array.prototype.slice.call()的方法，将类似数组转换为。</li>
-            <li>
-                <xmp>
-                    Array.from()的详解：（例子来自MDN）
-                    Set类型的转换:
-                    let s = new Set(['foo', window]);
-                    Array.from(s);
-                    // ["foo", window]
-                    Map类型的转换:
-                    let m = new Map([[1, 2], [2, 4], [4, 8]]);
-                    Array.from(m);
-                    // [[1, 2], [2, 4], [4, 8]]
-                    类数组的值:
-                    function f() {
-                    return Array.from(arguments);
-                    }
-                    f(1, 2, 3);
-                    // [1, 2, 3]
-                    Array.from()的第二个参数mapFn也很有用处，可以对于传入的类数组值进行定制化修改:
-                    Array.from([1, 2, 3], x => x + x);
-                    // [2, 4, 6]
-                    Array.from({length: 5}, (v, i) => i);
-                    // [0, 1, 2, 3, 4]
-                </xmp>
-            </li>
-        </ul>]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[CSS题]]></title>
-        <id>https://XinLingJ.github.io//post/css-ti</id>
-        <link href="https://XinLingJ.github.io//post/css-ti">
-        </link>
-        <updated>2019-11-22T10:25:32.000Z</updated>
-        <content type="html"><![CDATA[<ul style="list-style: square;">
-        <center>
-            <h1>CSS</h1>
-        </center>
-        <li>加载外部样式文件用的语法：<xmp><link rel=”stylesheet” href=”url” /></xmp></li>
-        <li>设置文字或者图片水平居中到一个盒子中的代码：</li>
-        <li>父元素：margin:auto;position:relative;width:100px;height:100px;</li>
-        <li>子元素：position:absolute;margin:auto;top:0;right:0;bottom:0;left:0;width:30px;height:30px;</li>
-        <li>CSS引入网页中的方法： 行内、内联、外联、@import</li>
-        <li>CSS选择器有:元素、属性、关系、伪类、伪对象</li>
-        <li>CSS如何能够定义列表的项目符号为实心矩形:list-style:square; 或者 list-style-type:square; 圆circle</li>
-        <li>css背景图像定位的参数含义:background-position:center center 前者表示垂直平移（-左正右），后者表示水平平移（上-下正）</li>
-        <li>css中可以使用z-index的定位是：position的层级，越大越往前显示，需要与position共同作用</li>
-        <li>css的颜色定义方式有：16进制、rgb（）、单词</li>
-        <li><xmp>css中实现<b><i><del>标签功能的方式分别是：____ font-weight:900;或者 font-weight:bold; </xmp></li>
-        <li><xmp>---font-style:italic; del 定义删除的文本  text-decoration:line-through;</xmp></li>
-        <li>css伪类中必须放在link后面的是：visited、hover、active</li>
-        <li>取消链接下划线的方法：text-decoration:none;</li>
-        <li>IE浏览器width属性的计算公式：ie的width为正常的width+padding+border</li>
-        <li>css的尺寸单位有：px em in mm vh</li>
-        <li>border中可以设置的属性值有：border-width 、border-style、border-color</li>
-        <li>CSS选择器优先级是怎样的？ !important >style > id >class > 标签 *</li>
-        <hr />
-        <li>什么是盒子模型？ CSS技术所使用的一种思维模型</li>
-        <li>标准盒子占地面积 == css width+padding+border</li>
-        <li>----ie盒子宽 ==width</li>
-        <li>----标准盒子 width（css里面） =content宽</li>
-        <hr />
-        <li style="color: red;">简述清除浮动的方法及各自的优缺点 "父元素 设置高 儿子固定高</li>
-        <li>----父元素 overflow:hidden   任意儿子高度</li>
-        <li>----父元素 overflow:auto   任意</li>
-        <li>----父元素 float:left   父元素本身不占位</li>
-        <li>----父元素 display:table   任意</li>
-        <li>----父元素 :after{ clear:both}    任意 必须display:block</li>
-        <li>----添加兄弟 clear:both   多添加一个儿子</li>
-        <li>----添加br  clear:both   多添加标记</li>
-        <hr />
-        <li>Css使块级元素垂直水平居中的两种方法？ (写出代码)</li>
-        <li>---未知盒子宽高</li>
-        <li>1-----box1 positon: realtive && box2 position: absolute</li>
-        <li>1-----box2盒子 top、left、bottom、right值都设为0></li>
-        <li>1-----box2盒子 添加 margin: auto</li>
-        <li>1-----box2盒子有border属性时，不影响水平垂直居中 //脱离文档流</li>
-        <li>2-----box1 positon: realtive && box2 position: absolute</li>
-        <li>2-----box2: top: 50%；left: 50%</li>
-        <li>2-----box2盒子使用 css3属性 transform: translate(-50%, -50%)代替margin实现偏移量，偏移量根据自身盒子宽高用百分比进行宽高偏移</li>
-        <li>2-----box2盒子有border属性时，不影响水平垂直居中</li>
-        <hr />
-        <li>谈谈定位的理解？</li>
-        <li>----定位可以分为:相对定位(relative)、绝对定位(absolute)、固定定位(fixed)、没有定位(static)</li>
-        <li>----relative-相对定位:相对于自己在网页中原有的位置定位，在网页中占一定位置</li>
-        <li>----absolute-绝对定位:相对于距离自己最近的有position属性的父系元素定位，脱离文档流在网页中不占位置</li>
-        <li>----fixed-固定定位:相对于视窗定位,脱离文档流在网页中不占位置</li>
-        <li>----static-没有定位:正常文档布局，在网页中占位置</li>
-        <hr />
-        <li>你是如何优化你的css?</li>
-        <li>----尽量将样式写在单独的css文件里面，方便复用和浏览器缓存</li>
-        <li>----避免使用复杂的选择器，层级越少越好，最好不要超过3层</li>
-        <li>----利用CSS继承减少代码量,font-size color 可以设置在父系上不用每个单独设置</li>
-        <li>----不使用@import</li>
-        <li>----精简页面的样式文件，去掉不用的样式</li>
-        <li>----慎重使用高性能属性：浮动、定位</li>
-        <hr />
-        <li>margin和padding的区别和联系: 外边距和内边距，共同完成元素的位置，外边距不加入背景</li>
-    </ul>]]></content>
     </entry>
 </feed>

@@ -3,7 +3,7 @@
     <meta charset="utf-8" />
 <meta name="description" content="" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>那些年遇到的坑 | LLW</title>
+<title>获取元素的常用方式 | LLW</title>
 <link rel="shortcut icon" href="https://XinLingJ.github.io//favicon.ico?v=1620131535330">
 <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
@@ -74,18 +74,27 @@
         <div class="post-detail">
           <article class="post">
             <h2 class="post-title">
-              那些年遇到的坑
+              获取元素的常用方式
             </h2>
             <div class="post-info">
               <time class="post-time">
-                · 2019-12-05 ·
+                · 2019-12-28 ·
               </time>
               
             </div>
             
             <div class="post-content">
-              <p>vue 脚手架  组件<Banner>  可小写<br>
-在普通文档中 组件名必须小写</p>
+              <p>document.getElementById()<br>
+document.getElementsByClassName()<br>
+document.getElementsByTagName()<br>
+document.querySelector()<br>
+document.querySelectorAll()</p>
+<p>独特的标签 document.body     document.head   doucment.title<br>
+document.documentElement (×document.html×)........</p>
+<p>console的打印是引用 之前打印会显示变化后的</p>
+<p>兼容一般考虑到ie8  querySelector  querySelectorAll兼容到ie8 甚至移上 不兼容 ie7以及ie7以下<br>
+性能没有classname  id 好<br>
+ClassName 不兼容 ie8以及ie8以下</p>
 
             </div>
           </article>
@@ -94,9 +103,9 @@
         
           <div class="next-post">
             <div class="next">下一篇</div>
-            <a href="https://XinLingJ.github.io/post/jqurey-shi-ti/">
+            <a href="https://XinLingJ.github.io/post/yi-xie-wang-zhi/">
               <h3 class="post-title">
-                JQurey 试题
+                一些网址
               </h3>
             </a>
           </div>
