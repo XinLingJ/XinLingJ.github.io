@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
-    <title>LLW</title>
-    <updated>2021-06-15T06:03:29.358Z</updated>
+    <title>亡灵</title>
+    <updated>2021-06-15T06:04:55.922Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
     <link rel="self" href="https://XinLingJ.github.io/atom.xml"/>
     <subtitle>温故而知新</subtitle>
     <logo>https://XinLingJ.github.io/images/avatar.png</logo>
     <icon>https://XinLingJ.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, LLW</rights>
+    <rights>All rights reserved 2021, 亡灵</rights>
     <entry>
         <title type="html"><![CDATA[其味无穷]]></title>
         <id>https://XinLingJ.github.io/post/qi-wei-wu-qiong/</id>
