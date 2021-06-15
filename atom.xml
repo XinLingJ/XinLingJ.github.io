@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://XinLingJ.github.io/</id>
     <title>LLW</title>
-    <updated>2021-06-15T05:36:51.289Z</updated>
+    <updated>2021-06-15T05:40:40.771Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://XinLingJ.github.io/"/>
     <link rel="self" href="https://XinLingJ.github.io/atom.xml"/>
@@ -10,6 +10,15 @@
     <logo>https://XinLingJ.github.io/images/avatar.png</logo>
     <icon>https://XinLingJ.github.io/favicon.ico</icon>
     <rights>All rights reserved 2021, LLW</rights>
+    <entry>
+        <title type="html"><![CDATA[其味无穷]]></title>
+        <id>https://XinLingJ.github.io/post/qi-wei-wu-qiong/</id>
+        <link href="https://XinLingJ.github.io/post/qi-wei-wu-qiong/">
+        </link>
+        <updated>2021-06-15T05:40:30.000Z</updated>
+        <content type="html"><![CDATA[<p>请问额</p>
+]]></content>
+    </entry>
     <entry>
         <title type="html"><![CDATA[获取元素的常用方式]]></title>
         <id>https://XinLingJ.github.io/post/huo-qu-yuan-su-de-chang-yong-fang-shi/</id>
@@ -639,132 +648,6 @@ DOM描述了处理网页内容的方法和接口，BOM描述了与浏览器进�
 window(窗口)、location（地址栏内容相关）、history（历史）、screen（屏幕）、navigator（有很多浏览器相关的内容，通常判断浏览器类型都是通过这个对象）<br>
 DOM 是为了操作文档出现的 API，document 是其的一个对象；<br>
 BOM 是为了操作浏览器出现的 API，window 是其的一个对象。</p>
-]]></content>
-    </entry>
-    <entry>
-        <title type="html"><![CDATA[vue-react 基础]]></title>
-        <id>https://XinLingJ.github.io/post/vue-react-ji-chu/</id>
-        <link href="https://XinLingJ.github.io/post/vue-react-ji-chu/">
-        </link>
-        <updated>2019-11-23T05:38:41.000Z</updated>
-        <content type="html"><![CDATA[<xpm>
-                    局部组件实例
-                    注册一个简单的局部组件 runoob，并使用它：
-                    <div id="app">
-                        <runoob></runoob>
-                    </div>
-                    <script>
-                        var Child = {
-                            template: '<h1>自定义组件!</h1>'
-                        }
-                        // 创建根实例
-                        new Vue({
-                            el: '#app',
-                            components: {
-                                // <runoob> 将只在父模板可用
-                                'runoob': Child
-                            }
-                        })
-                    </script>
-                    全局组件实例
-                    注册一个简单的全局组件 runoob，并使用它：
-                    <div id="app">
-                        <runoob></runoob>
-                    </div>
-                    <script>
-                        // 注册
-                        Vue.component('runoob', {
-                            template: '<h1>自定义组件!</h1>'
-                        })
-                        // 创建根实例
-                        new Vue({
-                            el: '#app'
-                        })
-                    </script>
-                </xpm>
-	<ul>
-            <li><h1 style="text-align: center;">生命周期钩子</h1></li>
-            <li>Vue2.0的生命周期钩子一共有10个，同样结合官方文档作出了下表</li>
-            <li>beforeCreate 在实例初始化之后，数据观测(data observer) 和 event/watcher 事件配置之前被调用。</li>
-            <li>created 实例已经创建完成之后被调用。在这一步，实例已完成以下的配置：数据观测(data observer)，属性和方法的运算， watch/event 事件回调。然而，挂载阶段还没开始，$el 属性目前不可见。</li>
-            <li>beforeMount 在挂载开始之前被调用：相关的 render 函数首次被调用。</li>
-            <li>mounted el 被新创建的 vm.$el 替换，并挂载到实例上去之后调用该钩子。如果 root 实例挂载了一个文档内元素，当 mounted 被调用时 vm.$el 也在文档内。</li>
-            <li>beforeUpdate 数据更新时调用，发生在虚拟 DOM 重新渲染和打补丁之前。你可以在这个钩子中进一步地更改状态，这不会触发附加的重渲染过程。</li>
-            <li>updated 由于数据更改导致的虚拟 DOM 重新渲染和打补丁，在这之后会调用该钩子。当这个钩子被调用时，组件 DOM 已经更新，所以你现在可以执行依赖于 DOM 的操作。</li>
-            <li>activated     keep-alive 组件激活时调用。</li>
-            <li>deactivated    keep-alive 组件停用时调用。</li>
-            <li>beforeDestroy 实例销毁之前调用。在这一步，实例仍然完全可用。</li>
-            <li>destroyed Vue 实例销毁后调用。调用后，Vue 实例指示的所有东西都会解绑定，所有的事件监听器会被移除，所有的子实例也会被销毁。</li>
-        </ul>
-<pre><code>&lt;xmp&gt;
-	元素组件：JSX---javaScript XML
-         &lt;script type=&quot;text/babel&quot;&gt;&lt;/script&gt;
-        var Els=&lt;div&gt;&lt;/div&gt;
- 函数式：
-       var els=function(){
-		   return (&lt;div&gt;11111&lt;div&gt;)
-	   }
-	   ReactDOM.render(els(),app)
- ES6语法：
-       class Els extends React.Component{
-		   //state={}
-		   constructor(){
-			   super()
-			   this.state={
-				   a:10
-			   }
-		   }
-		   render(){
-			   return (&lt;div&gt;11111&lt;/div&gt;)
-		   }
-	   }
-        一个输出 &quot;Hello World！&quot; 的组件，组件名为 HelloMessage：
-        &lt;div id=&quot;example&quot;&gt;&lt;/div&gt;
-        &lt;script type=&quot;text/babel&quot;&gt;
-            function HelloMessage(props) {
-                return &lt;h1&gt;Hello World!&lt;/h1&gt;;
-            }
-            const element = &lt;HelloMessage /&gt;;
-            ReactDOM.render(
-                element,
-                document.getElementById('example')
-            );
-        &lt;/script&gt;
-        我们可以使用函数定义了一个组件：
-        function HelloMessage(props) {
-        return &lt;h1&gt;Hello World!&lt;/h1&gt;;
-        }
-        你也可以使用 ES6 class 来定义一个组件:
-        class Welcome extends React.Component {
-        render() {
-        return &lt;h1&gt;Hello World!&lt;/h1&gt;;
-        }
-        }
-        1、getDefaultProps()
-        设置默认的props，也可以用dufaultProps设置组件的默认属性.
-        2、getInitialState()
-        在使用es6的class语法时是没有这个钩子函数的，可以直接在constructor中定义this.state。此时可以访问this.props
-        3、componentWillMount()
-        组件初始化时只调用，以后组件更新不调用，整个生命周期只调用一次，此时可以修改state。
-        4、 render()
-        react最重要的步骤，创建虚拟dom，进行diff算法，更新dom树都在此进行。此时就不能更改state了。
-        5、componentDidMount()
-        组件渲染之后调用，只调用一次。
-        更新
-        6、componentWillReceiveProps(nextProps)
-        组件初始化时不调用，组件接受新的props时调用。
-        7、shouldComponentUpdate(nextProps, nextState)
-        react性能优化非常重要的一环。组件接受新的state或者props时调用，我们可以设置在此对比前后两个props和state是否相同，如果相同则返回false阻止更新，因为相同的属性状态一定会生成相同的dom树，这样就不需要创造新的dom树和旧的dom树进行diff算法对比，节省大量性能，尤其是在dom结构复杂的时候
-        8、componentWillUpdata(nextProps, nextState)
-        组件初始化时不调用，只有在组件将要更新时才调用，此时可以修改state
-        9、render()
-        组件渲染
-        10、componentDidUpdate()
-        组件初始化时不调用，组件更新完成后调用，此时可以获取dom节点。
-        卸载
-        11、componentWillUnmount()
-        组件将要卸载时调用，一些事件监听和定时器需要在此时清除。
-    &lt;/xmp&gt;</code></pre>
 ]]></content>
     </entry>
 </feed>
